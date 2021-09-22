@@ -1,0 +1,205 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Custom Tools For GinkGos - Plugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-10 17:52+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.5.3; wp-5.8.1\n"
+"X-Domain: ct4gg"
+
+#: inc/Core/Check/PhpVersionCheck.php:70
+#, php-format
+msgid ""
+" for instructions on how to download a previous version of this plugin "
+"compatible with PHP %2s."
+msgstr ""
+
+#: assets/defaults.php:8
+msgid "\"Classic\" WordPress widgets settings screens"
+msgstr ""
+
+#: inc/Core/Check/PhpVersionCheck.php:68
+msgid "\"What version of PHP Does Support?\""
+msgstr ""
+
+#: templates/admin.php:16 templates/admin.php:44
+msgid "About"
+msgstr ""
+
+#: inc/Pages/Dashboard.php:92
+msgid "Administration - Settings Manager"
+msgstr ""
+
+#: assets/defaults.php:71
+msgid "Change the login screen background."
+msgstr ""
+
+#: assets/defaults.php:60
+msgid "Change the login screen logo."
+msgstr ""
+
+#: inc/Api/Callbacks/ManagerCallbacks.php:97
+msgid "Color:"
+msgstr ""
+
+#: templates/admin.php:46
+msgid "Credit"
+msgstr ""
+
+#. Name of the plugin
+msgid "ct4gg"
+msgstr ""
+
+#. Description of the plugin
+msgid "Customiser Tools For GinkGos - Plugin / Customiser Tools for Wordpress."
+msgstr ""
+
+#: assets/defaults.php:43
+msgid "Day"
+msgstr ""
+
+#: assets/defaults.php:50
+msgid "Disable Jetpack for Automattic"
+msgstr ""
+
+#: assets/defaults.php:51
+msgid "Disable Jetpack offered by Automattic to stop showing banners."
+msgstr ""
+
+#: assets/defaults.php:66
+msgid "Enable change background login screen."
+msgstr ""
+
+#: assets/defaults.php:55
+msgid "Enable change logo on login screen (logo size 84px*84px)."
+msgstr ""
+
+#: assets/defaults.php:14 assets/defaults.php:20 assets/defaults.php:39
+msgid "For Wordpress 5.3 and higher."
+msgstr ""
+
+#: assets/defaults.php:9
+msgid "For Wordpress 5.8."
+msgstr ""
+
+#. Author of the plugin
+msgid "Franck VANHOUCKE"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://ginkgos.net/"
+msgstr ""
+
+#. URI of the plugin
+msgid "https://ginkgos.net/plugin/ct4gg/"
+msgstr ""
+
+#: inc/Core/Check/PhpVersionCheck.php:66
+msgid "If this is not possible, please visit the FAQ link titled "
+msgstr ""
+
+#: assets/defaults.php:18
+msgid "Interval before displaying the administration email verification screen"
+msgstr ""
+
+#: assets/defaults.php:38
+msgid ""
+"Interval Type before displaying the administration email verification screen"
+msgstr ""
+
+#: assets/defaults.php:70
+msgid "login background"
+msgstr ""
+
+#: inc/Pages/Dashboard.php:86
+msgid "Login Manager screen"
+msgstr ""
+
+#: assets/defaults.php:77
+msgid "Login Screen background color:"
+msgstr ""
+
+#: assets/defaults.php:89
+msgid "Login Screen Bottum color:"
+msgstr ""
+
+#: assets/defaults.php:93
+msgid "Login Screen Form  background color:"
+msgstr ""
+
+#: assets/defaults.php:81
+msgid "Login Screen Link color:"
+msgstr ""
+
+#: assets/defaults.php:59
+msgid "login screen logo"
+msgstr ""
+
+#: assets/defaults.php:85
+msgid "Login Screen Text color:"
+msgstr ""
+
+#: templates/admin.php:14
+msgid "Manage Settings"
+msgstr ""
+
+#: inc/Api/Callbacks/ManagerCallbacks.php:38
+msgid "Manage the screen login\t."
+msgstr ""
+
+#: inc/Api/Callbacks/ManagerCallbacks.php:33
+#: inc/Api/Callbacks/ManagerCallbacks.php:43
+msgid ""
+"Manage the Sections and Features of this Plugin by activating the checkboxes "
+"from the following list."
+msgstr ""
+
+#: assets/defaults.php:45
+msgid "Month"
+msgstr ""
+
+#: inc/Core/Check/PhpVersionCheck.php:65
+#, php-format
+msgid ""
+"Please ask your host or server administrator to update to PHP %1s or greater."
+msgstr ""
+
+#: assets/defaults.php:13
+msgid "Semi-annual check of the administration e-mail"
+msgstr ""
+
+#: inc/Pages/Dashboard.php:80
+msgid "Settings Manager"
+msgstr ""
+
+#: templates/admin.php:15 templates/admin.php:33
+msgid "Updates"
+msgstr ""
+
+#: inc/Api/Callbacks/ManagerCallbacks.php:82
+msgid "Upload Menu"
+msgstr ""
+
+#: assets/defaults.php:44
+msgid "Week"
+msgstr ""
+
+#: assets/defaults.php:46
+msgid "Year"
+msgstr ""
+
+#: inc/Core/Check/PhpVersionCheck.php:62
+#, php-format
+msgid ""
+"Your system is running a very old version of PHP (%s) that is no longer "
+"supported by %s.  "
+msgstr ""

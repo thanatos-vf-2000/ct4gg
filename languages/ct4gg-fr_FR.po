@@ -1,0 +1,222 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Custom Tools For GinkGos - Plugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-10 08:23+0000\n"
+"PO-Revision-Date: 2021-09-10 17:53+0000\n"
+"Last-Translator: \n"
+"Language-Team: Français\n"
+"Language: fr_FR\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.5.3; wp-5.8.1\n"
+"X-Domain: ct4gg"
+
+#: inc/Core/Check/PhpVersionCheck.php:70
+#, php-format
+msgid ""
+" for instructions on how to download a previous version of this plugin "
+"compatible with PHP %2s."
+msgstr ""
+" pour obtenir des instructions sur la façon de télécharger une version "
+"antérieure de ce plugin compatible avec PHP %2s."
+
+#: assets/defaults.php:8
+msgid "\"Classic\" WordPress widgets settings screens"
+msgstr "Écrans de réglage des widgets \"classiques\" de WordPress"
+
+#: inc/Core/Check/PhpVersionCheck.php:68
+msgid "\"What version of PHP Does Support?\""
+msgstr "\"Quelle version de PHP est supportée ?\""
+
+#: templates/admin.php:16 templates/admin.php:44
+msgid "About"
+msgstr "À propos"
+
+#: inc/Pages/Dashboard.php:92
+msgid "Administration - Settings Manager"
+msgstr "Administration - Gestionnaire de paramètres"
+
+#: assets/defaults.php:71
+msgid "Change the login screen background."
+msgstr "Modifier l'arrière-plan de l'écran de connexion."
+
+#: assets/defaults.php:60
+msgid "Change the login screen logo."
+msgstr "Modifier le logo de l'écran de connexion."
+
+#: inc/Api/Callbacks/ManagerCallbacks.php:97
+msgid "Color:"
+msgstr "Couleur: "
+
+#: templates/admin.php:46
+msgid "Credit"
+msgstr "Credit"
+
+#. Name of the plugin
+msgid "ct4gg"
+msgstr "ct4gg"
+
+#. Description of the plugin
+msgid "Customiser Tools For GinkGos - Plugin / Customiser Tools for Wordpress."
+msgstr ""
+"Customiser Tools For GinkGos - Plugin / Customiser Tools for Wordpress."
+
+#: assets/defaults.php:43
+msgid "Day"
+msgstr "Jour"
+
+#: assets/defaults.php:50
+msgid "Disable Jetpack for Automattic"
+msgstr "Désactiver Jetpack pour Automattic"
+
+#: assets/defaults.php:51
+msgid "Disable Jetpack offered by Automattic to stop showing banners."
+msgstr ""
+"Désactivez Jetpack offert par Automattic pour ne plus afficher de bannières."
+
+#: assets/defaults.php:66
+msgid "Enable change background login screen."
+msgstr "Activez le changement de fond d'écran de connexion."
+
+#: assets/defaults.php:55
+msgid "Enable change logo on login screen (logo size 84px*84px)."
+msgstr ""
+"Permettre le changement de logo sur l'écran de connexion (taille du logo "
+"84px*84px)."
+
+#: assets/defaults.php:14 assets/defaults.php:20 assets/defaults.php:39
+msgid "For Wordpress 5.3 and higher."
+msgstr "Pour Wordpress 5.3 et supérieur."
+
+#: assets/defaults.php:9
+msgid "For Wordpress 5.8."
+msgstr "Pour Wordpress 5.8."
+
+#. Author of the plugin
+msgid "Franck VANHOUCKE"
+msgstr "Franck VANHOUCKE"
+
+#. Author URI of the plugin
+msgid "https://ginkgos.net/"
+msgstr "https://ginkgos.net/"
+
+#. URI of the plugin
+msgid "https://ginkgos.net/plugin/ct4gg/"
+msgstr "https://ginkgos.net/plugin/ct4gg/"
+
+#: inc/Core/Check/PhpVersionCheck.php:66
+msgid "If this is not possible, please visit the FAQ link titled "
+msgstr "Si cela n'est pas possible, veuillez consulter le lien FAQ intitulé "
+
+#: assets/defaults.php:18
+msgid "Interval before displaying the administration email verification screen"
+msgstr ""
+"Intervalle avant l'affichage de l'écran de vérification de l'e-mail "
+"d'administration"
+
+#: assets/defaults.php:38
+msgid ""
+"Interval Type before displaying the administration email verification screen"
+msgstr ""
+"Type d'intervalle avant l'affichage de l'écran de vérification de l'e-mail "
+"d'administration"
+
+#: assets/defaults.php:70
+msgid "login background"
+msgstr "arrière-plan de connexion"
+
+#: inc/Pages/Dashboard.php:86
+msgid "Login Manager screen"
+msgstr "Écran de Connexion"
+
+#: assets/defaults.php:77
+#| msgid "Login Screean background color:"
+msgid "Login Screen background color:"
+msgstr ""
+"Couleur de fond du Login Screean :\n"
+
+#: assets/defaults.php:89
+msgid "Login Screen Bottum color:"
+msgstr "Écran de connexion couleur Botton :"
+
+#: assets/defaults.php:93
+msgid "Login Screen Form  background color:"
+msgstr "Couleur de fond du formulaire de l'écran de connexion :"
+
+#: assets/defaults.php:81
+msgid "Login Screen Link color:"
+msgstr "Couleur du lien de l'écran de connexion :"
+
+#: assets/defaults.php:59
+msgid "login screen logo"
+msgstr "logo de l'écran de connexion"
+
+#: assets/defaults.php:85
+msgid "Login Screen Text color:"
+msgstr "Couleur du texte de l'écran de connexion :"
+
+#: templates/admin.php:14
+msgid "Manage Settings"
+msgstr "Gérer les paramètres"
+
+#: inc/Api/Callbacks/ManagerCallbacks.php:38
+msgid "Manage the screen login\t."
+msgstr "Gérer l'écran de connexion"
+
+#: inc/Api/Callbacks/ManagerCallbacks.php:33
+#: inc/Api/Callbacks/ManagerCallbacks.php:43
+msgid ""
+"Manage the Sections and Features of this Plugin by activating the checkboxes "
+"from the following list."
+msgstr ""
+"Gérez les sections et les fonctionnalités de ce plugin en activant les cases "
+"à cocher de la liste suivante."
+
+#: assets/defaults.php:45
+msgid "Month"
+msgstr "Mois"
+
+#: inc/Core/Check/PhpVersionCheck.php:65
+#, php-format
+msgid ""
+"Please ask your host or server administrator to update to PHP %1s or greater."
+msgstr ""
+"Veuillez demander à votre hébergeur ou à l'administrateur de votre serveur "
+"d'effectuer une mise à jour vers PHP %1s ou supérieur."
+
+#: assets/defaults.php:13
+msgid "Semi-annual check of the administration e-mail"
+msgstr "Contrôle semestriel du courrier électronique de l'administration"
+
+#: inc/Pages/Dashboard.php:80
+msgid "Settings Manager"
+msgstr "Gestionnaire des paramètres"
+
+#: templates/admin.php:15 templates/admin.php:33
+msgid "Updates"
+msgstr "Mises à jour"
+
+#: inc/Api/Callbacks/ManagerCallbacks.php:82
+msgid "Upload Menu"
+msgstr "Menu de téléchargement"
+
+#: assets/defaults.php:44
+msgid "Week"
+msgstr "Semaine"
+
+#: assets/defaults.php:46
+msgid "Year"
+msgstr "Année"
+
+#: inc/Core/Check/PhpVersionCheck.php:62
+#, php-format
+msgid ""
+"Your system is running a very old version of PHP (%s) that is no longer "
+"supported by %s.  "
+msgstr ""
+"Votre système exécute une très ancienne version de PHP (%s) qui n'est plus "
+"prise en charge par %s. "
