@@ -1,7 +1,7 @@
 <?php
 /**
  * @package  CT4GGPlugin
- * @Version 1.1.0
+ * @Version 1.1.1
  */
 
 namespace CT4GG\Api;
@@ -11,7 +11,7 @@ use CT4GG\Core\Options;
 /**
 * 
 */
-class FileHTAcccess extends BaseController
+class FileHTAccess extends BaseController
 {
     private $location  = '';
     private $items = array();

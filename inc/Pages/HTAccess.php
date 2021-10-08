@@ -1,7 +1,7 @@
 <?php
 /**
  * @package  CT4GGPlugin
- * @Version 1.1.0
+ * @Version 1.1.1
  */
 
 namespace CT4GG\Pages;
@@ -14,7 +14,7 @@ use CT4GG\Api\Callbacks\AdminCallbacks;
 /**
 * 
 */
-class HTAcccess extends BaseController
+class HTAccess extends BaseController
 {
     public $callbacks;
 

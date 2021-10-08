@@ -1,13 +1,13 @@
 <?php
 /**
  * @package  CT4GGPlugin
- * @Version 1.1.0
+ * @Version 1.1.1
  * 
  * Desciption: htaccess
  */
-use CT4GG\Api\FileHTAcccess;
+use CT4GG\Api\FileHTAccess;
 
-$htaccess_file = new FileHTAcccess();
+$htaccess_file = new FileHTAccess();
 
 
 if (isset($_POST[CT4GG_NAME.'-verif']) && wp_verify_nonce($_POST[CT4GG_NAME.'-verif'], CT4GG_NAME.'-opt')) {

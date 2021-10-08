@@ -4,7 +4,7 @@ Tags: tools, customiser, homepage, redirect, Jetpack, performance, login, speed,
 Requires at least: 5.7
 Tested up to: 5.8
 Requires PHP: 7.4
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 License: GPLv2
 
 Wordpress customiser tools for beginer and confirmed users.
@@ -86,6 +86,10 @@ ct4gg is multisite compatible, in case of problem contact me.
 
 
 == Changelog ==
+= 1.1.1 (2110-SFP2) =
+*Release Date - 8 October 2021*
+
+* fixed file ct4gg/inc/Init.php line 62: Fatal error: Uncaught Error: Class 'CT4GG\Pages\HTAcccess' not found .
 
 = 1.1.0 (2110-SFP1) =
 *Release Date - 8 October 2021*
