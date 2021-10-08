@@ -1,9 +1,13 @@
 <?php
 /**
  * @package  CT4GGPlugin
- * @Version 0.0.1
+ * @Version 1.1.0
  */
 return array(
+    'admin_del_logo_wp' => array(
+        'title'     => __('Delete Wordpress Logo on top admin menu.','ct4gg'),
+        'section' => CT4GG_NAME.'_admin_setting',
+        'type'      => 'checkboxField') ,
     'classic_widgets' => array(
         'title'     => __('"Classic" WordPress widgets settings screens','ct4gg'),
         'message'   => __('For Wordpress 5.8.', 'ct4gg'),
@@ -93,4 +97,62 @@ return array(
             'title'     => __('Login Screen Form  background color:','ct4gg'),
             'section'   => CT4GG_NAME.'_admin_login',
             'type'      => 'ColorField') ,
+        'login_redirect_after_logout' => array(
+            'title'     => __('Redirect to home after logout.','ct4gg'),
+            'section'   => CT4GG_NAME.'_admin_login',
+            'type'      => 'checkboxField') ,
+        'login_hide_login_errors' => array(
+            'title'     => __('Hide login errors.','ct4gg'),
+            'section'   => CT4GG_NAME.'_admin_login',
+            'type'      => 'checkboxField') ,
+        'login_no_admin_to_home' => array(
+            'title'     => __('Back to home if not Administrator.','ct4gg'),
+            'section'   => CT4GG_NAME.'_admin_login',
+            'type'      => 'checkboxField') ,
+        'post_search_1_redirect_to_post' => array(
+            'title'     => __('If the result of a search returns only one item then it is displayed.','ct4gg'),
+            'section'   => CT4GG_NAME.'_post_setting',
+            'type'      => 'checkboxField') ,
+        'post_minimal_comment_length' => array(
+            'title'     => __('Minimal comment length.','ct4gg'),
+            'section'   => CT4GG_NAME.'_post_setting',
+            'type'      => 'TextField') ,
+        'post_hide_meta_generator' => array(
+            'title'     => __('Hide meta generator (Wordpress version).','ct4gg'),
+            'section'   => CT4GG_NAME.'_post_setting',
+            'type'      => 'checkboxField') ,
+        'post_old_post_notice' => array(
+            'title'     => __('Old post notice.','ct4gg'),
+            'message'   => __('After xxx Days (default 60 days).', 'ct4gg'),
+            'section'   => CT4GG_NAME.'_post_setting',
+            'type'      => 'TextField') ,
+        'htaccess_disable_show_directory' => array(
+            'title'     => __('Disable display of directory contents.','ct4gg'),
+            'section'   => CT4GG_NAME.'_htaccess',
+            'type'      => 'checkboxField') ,
+        'htaccess_hide_server_information' => array(
+            'title'     => __('Hide server information.','ct4gg'),
+            'section'   => CT4GG_NAME.'_htaccess',
+            'type'      => 'checkboxField') ,
+        'htaccess_protect_files_ht' => array(
+            'title'     => __('Protect .htaccess and .htpasswds files.','ct4gg'),
+            'section'   => CT4GG_NAME.'_htaccess',
+            'type'      => 'checkboxField') ,
+        'htaccess_force_download_enable' => array(
+            'title'     => __('Enable Force download','ct4gg'),
+            'section'   => CT4GG_NAME.'_htaccess',
+            'type'      => 'checkboxField'),
+        'htaccess_force_download' => array(
+            'title'     => __('Force download for these file types.','ct4gg'),
+            'message'   => __('Exemple: .doc .docx .xls .xlsx .csv .mp3 .mp4', 'ct4gg'),
+            'section'   => CT4GG_NAME.'_htaccess',
+            'type'      => 'TextField') ,
+        'htaccess_enable_cache' => array(
+            'title'     => __('Enable cache expires.','ct4gg'),
+            'section'   => CT4GG_NAME.'_htaccess',
+            'type'      => 'checkboxField') ,
+        'htaccess_enable_compress_statics_files' => array(
+            'title'     => __('Compressing static files.','ct4gg'),
+            'section'   => CT4GG_NAME.'_htaccess',
+            'type'      => 'checkboxField') ,
 );

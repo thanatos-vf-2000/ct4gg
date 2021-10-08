@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Custom Tools For GinkGos - Plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-10 17:52+0000\n"
+"POT-Creation-Date: 2021-10-08 08:34+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -23,7 +23,11 @@ msgid ""
 "compatible with PHP %2s."
 msgstr ""
 
-#: assets/defaults.php:8
+#: templates-part/htaccess/tab-content.php:22
+msgid " updated on "
+msgstr ""
+
+#: assets/defaults.php:12
 msgid "\"Classic\" WordPress widgets settings screens"
 msgstr ""
 
@@ -31,7 +35,11 @@ msgstr ""
 msgid "\"What version of PHP Does Support?\""
 msgstr ""
 
-#: templates/admin.php:16 templates/admin.php:44
+#: assets/messages/htaccess.php:11
+msgid "$_POST error (ct4gg-htaccess-ko)"
+msgstr ""
+
+#: templates-part/admin/tab-content.php:46 templates-part/admin/nav-tabs.php:12
 msgid "About"
 msgstr ""
 
@@ -39,19 +47,59 @@ msgstr ""
 msgid "Administration - Settings Manager"
 msgstr ""
 
-#: assets/defaults.php:71
+#: assets/defaults.php:126
+msgid "After xxx Days (default 60 days)."
+msgstr ""
+
+#: assets/defaults.php:109
+msgid "Back to home if not Administrator."
+msgstr ""
+
+#: assets/messages/htaccess.php:19
+msgid "Backup failed!"
+msgstr ""
+
+#: assets/messages/htaccess.php:21
+msgid "backup file .htaccess failed. "
+msgstr ""
+
+#: assets/defaults.php:75
 msgid "Change the login screen background."
 msgstr ""
 
-#: assets/defaults.php:60
+#: assets/defaults.php:64
 msgid "Change the login screen logo."
 msgstr ""
 
-#: inc/Api/Callbacks/ManagerCallbacks.php:97
+#: inc/Ui/Post.php:65
+msgid "characters."
+msgstr ""
+
+#: inc/Api/Callbacks/ManagerCallbacks.php:108
 msgid "Color:"
 msgstr ""
 
-#: templates/admin.php:46
+#: inc/Ui/Post.php:65
+msgid "Comments must contain at least "
+msgstr ""
+
+#: assets/defaults.php:155
+msgid "Compressing static files."
+msgstr ""
+
+#: assets/messages/htaccess.php:43
+msgid "Copy failed!"
+msgstr ""
+
+#: assets/messages/htaccess.php:51
+msgid "Copy file successfuly."
+msgstr ""
+
+#: assets/messages/htaccess.php:53
+msgid "Copy file: "
+msgstr ""
+
+#: templates-part/admin/tab-content.php:48
 msgid "Credit"
 msgstr ""
 
@@ -63,36 +111,100 @@ msgstr ""
 msgid "Customiser Tools For GinkGos - Plugin / Customiser Tools for Wordpress."
 msgstr ""
 
-#: assets/defaults.php:43
+#: assets/defaults.php:47
 msgid "Day"
 msgstr ""
 
-#: assets/defaults.php:50
+#: templates-part/htaccess/tab-content.php:48
+msgid "Delete"
+msgstr ""
+
+#: assets/messages/htaccess.php:27
+msgid "Delete failed!"
+msgstr ""
+
+#: assets/messages/htaccess.php:35
+msgid "Delete file successfuly."
+msgstr ""
+
+#: assets/messages/htaccess.php:37
+msgid "Delete file: "
+msgstr ""
+
+#: assets/defaults.php:8
+msgid "Delete Wordpress Logo on top admin menu."
+msgstr ""
+
+#: assets/defaults.php:130
+msgid "Disable display of directory contents."
+msgstr ""
+
+#: assets/defaults.php:54
 msgid "Disable Jetpack for Automattic"
 msgstr ""
 
-#: assets/defaults.php:51
+#: assets/defaults.php:55
 msgid "Disable Jetpack offered by Automattic to stop showing banners."
 msgstr ""
 
-#: assets/defaults.php:66
+#: templates-part/htaccess/nav-tabs.php:10
+msgid "Display"
+msgstr ""
+
+#: assets/defaults.php:151
+msgid "Enable cache expires."
+msgstr ""
+
+#: assets/defaults.php:70
 msgid "Enable change background login screen."
 msgstr ""
 
-#: assets/defaults.php:55
+#: assets/defaults.php:59
 msgid "Enable change logo on login screen (logo size 84px*84px)."
 msgstr ""
 
-#: assets/defaults.php:14 assets/defaults.php:20 assets/defaults.php:39
+#: assets/defaults.php:142
+msgid "Enable Force download"
+msgstr ""
+
+#: assets/defaults.php:147
+msgid "Exemple: .doc .docx .xls .xlsx .csv .mp3 .mp4"
+msgstr ""
+
+#: assets/defaults.php:18 assets/defaults.php:24 assets/defaults.php:43
 msgid "For Wordpress 5.3 and higher."
 msgstr ""
 
-#: assets/defaults.php:9
+#: assets/defaults.php:13
 msgid "For Wordpress 5.8."
+msgstr ""
+
+#: assets/defaults.php:146
+msgid "Force download for these file types."
 msgstr ""
 
 #. Author of the plugin
 msgid "Franck VANHOUCKE"
+msgstr ""
+
+#: assets/defaults.php:105
+msgid "Hide login errors."
+msgstr ""
+
+#: assets/defaults.php:121
+msgid "Hide meta generator (Wordpress version)."
+msgstr ""
+
+#: assets/defaults.php:134
+msgid "Hide server information."
+msgstr ""
+
+#: inc/Pages/Dashboard.php:104
+msgid "Htaccess"
+msgstr ""
+
+#: templates-part/htaccess/tab-content.php:29
+msgid "Htaccess file(s)"
 msgstr ""
 
 #. Author URI of the plugin
@@ -103,20 +215,32 @@ msgstr ""
 msgid "https://ginkgos.net/plugin/ct4gg/"
 msgstr ""
 
+#: assets/defaults.php:113
+msgid "If the result of a search returns only one item then it is displayed."
+msgstr ""
+
 #: inc/Core/Check/PhpVersionCheck.php:66
 msgid "If this is not possible, please visit the FAQ link titled "
 msgstr ""
 
-#: assets/defaults.php:18
+#: assets/messages/htaccess.php:13
+msgid "impossible to retrieve the variable <strong>ct4gg-htaccess-ko</strong>."
+msgstr ""
+
+#: inc/Ui/Login.php:37
+msgid "incorrect!"
+msgstr ""
+
+#: assets/defaults.php:22
 msgid "Interval before displaying the administration email verification screen"
 msgstr ""
 
-#: assets/defaults.php:38
+#: assets/defaults.php:42
 msgid ""
 "Interval Type before displaying the administration email verification screen"
 msgstr ""
 
-#: assets/defaults.php:70
+#: assets/defaults.php:74
 msgid "login background"
 msgstr ""
 
@@ -124,47 +248,76 @@ msgstr ""
 msgid "Login Manager screen"
 msgstr ""
 
-#: assets/defaults.php:77
+#: assets/defaults.php:81
 msgid "Login Screen background color:"
 msgstr ""
 
-#: assets/defaults.php:89
+#: assets/defaults.php:93
 msgid "Login Screen Bottum color:"
 msgstr ""
 
-#: assets/defaults.php:93
+#: assets/defaults.php:97
 msgid "Login Screen Form  background color:"
 msgstr ""
 
-#: assets/defaults.php:81
+#: assets/defaults.php:85
 msgid "Login Screen Link color:"
 msgstr ""
 
-#: assets/defaults.php:59
+#: assets/defaults.php:63
 msgid "login screen logo"
 msgstr ""
 
-#: assets/defaults.php:85
+#: assets/defaults.php:89
 msgid "Login Screen Text color:"
 msgstr ""
 
-#: templates/admin.php:14
+#: templates-part/admin/nav-tabs.php:10
 msgid "Manage Settings"
 msgstr ""
 
-#: inc/Api/Callbacks/ManagerCallbacks.php:38
+#: inc/Api/Callbacks/ManagerCallbacks.php:39
 msgid "Manage the screen login\t."
 msgstr ""
 
-#: inc/Api/Callbacks/ManagerCallbacks.php:33
-#: inc/Api/Callbacks/ManagerCallbacks.php:43
+#: inc/Api/Callbacks/ManagerCallbacks.php:49
+msgid ""
+"Manage the Sections and Features of post and articles activating the "
+"checkboxes from the following list."
+msgstr ""
+
+#: inc/Api/Callbacks/ManagerCallbacks.php:34
 msgid ""
 "Manage the Sections and Features of this Plugin by activating the checkboxes "
 "from the following list."
 msgstr ""
 
-#: assets/defaults.php:45
+#: inc/Api/Callbacks/ManagerCallbacks.php:44
+msgid ""
+"Manage the Sections and Features of WP Administration Dashboard by "
+"activating the checkboxes from the following list."
+msgstr ""
+
+#: inc/Api/Callbacks/ManagerCallbacks.php:54
+msgid ""
+"Management of options to be included in the .htaccess file. <b style=\"color:"
+"red\">Please go to htaccess menu for apply this parameters.</b>"
+msgstr ""
+
+#: assets/defaults.php:117
+msgid "Minimal comment length."
+msgstr ""
+
+#: assets/defaults.php:49
 msgid "Month"
+msgstr ""
+
+#: templates-part/htaccess/tab-content.php:54
+msgid "No .htaccess fils found."
+msgstr ""
+
+#: assets/defaults.php:125
+msgid "Old post notice."
 msgstr ""
 
 #: inc/Core/Check/PhpVersionCheck.php:65
@@ -173,7 +326,27 @@ msgid ""
 "Please ask your host or server administrator to update to PHP %1s or greater."
 msgstr ""
 
-#: assets/defaults.php:13
+#: inc/Pages/Dashboard.php:98
+msgid "Post - Settings Manager"
+msgstr ""
+
+#: assets/defaults.php:138
+msgid "Protect .htaccess and .htpasswds files."
+msgstr ""
+
+#: assets/defaults.php:101
+msgid "Redirect to home after logout."
+msgstr ""
+
+#: templates-part/htaccess/tab-content.php:47
+msgid "Restore"
+msgstr ""
+
+#: templates-part/htaccess/nav-tabs.php:11
+msgid "Restore .htaccess"
+msgstr ""
+
+#: assets/defaults.php:17
 msgid "Semi-annual check of the administration e-mail"
 msgstr ""
 
@@ -181,19 +354,53 @@ msgstr ""
 msgid "Settings Manager"
 msgstr ""
 
-#: templates/admin.php:15 templates/admin.php:33
+#: assets/messages/htaccess.php:45
+msgid "Unable to copy the file: "
+msgstr ""
+
+#: assets/messages/htaccess.php:29
+msgid "Unable to delete the file: "
+msgstr ""
+
+#: assets/messages/htaccess.php:61
+msgid "Unable to update the file: "
+msgstr ""
+
+#: assets/messages/htaccess.php:59
+msgid "Update failed!"
+msgstr ""
+
+#: assets/messages/htaccess.php:67
+msgid "Update file successfuly."
+msgstr ""
+
+#: assets/messages/htaccess.php:69
+msgid "Update file: "
+msgstr ""
+
+#: templates-part/htaccess/tab-content.php:17
+msgid "Update Htaccess"
+msgstr ""
+
+#: templates-part/admin/tab-content.php:22 templates-part/admin/nav-tabs.php:11
 msgid "Updates"
 msgstr ""
 
-#: inc/Api/Callbacks/ManagerCallbacks.php:82
+#: inc/Api/Callbacks/ManagerCallbacks.php:96
 msgid "Upload Menu"
 msgstr ""
 
-#: assets/defaults.php:44
+#: inc/Ui/Post.php:92
+#, php-format
+msgid ""
+"WARNING: This article is more than %s days old and may no longer be current."
+msgstr ""
+
+#: assets/defaults.php:48
 msgid "Week"
 msgstr ""
 
-#: assets/defaults.php:46
+#: assets/defaults.php:50
 msgid "Year"
 msgstr ""
 

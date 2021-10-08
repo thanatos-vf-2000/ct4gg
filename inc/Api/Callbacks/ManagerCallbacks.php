@@ -1,6 +1,7 @@
 <?php 
 /**
- * @package  AlecadddPlugin
+ * @package  CT4GGPlugin
+ * @Version 1.0.0
  */
 namespace CT4GG\Api\Callbacks;
 
@@ -40,7 +41,17 @@ class ManagerCallbacks extends BaseController
 
 	public function adminSettingSectionManager()
 	{
-		echo __('Manage the Sections and Features of this Plugin by activating the checkboxes from the following list.','ct4gg');
+		echo __('Manage the Sections and Features of WP Administration Dashboard by activating the checkboxes from the following list.','ct4gg');
+	}
+
+	public function postSettingSectionManager()
+	{
+		echo __('Manage the Sections and Features of post and articles activating the checkboxes from the following list.','ct4gg');
+	}
+
+	public function htaccessSettingSectionManager()
+	{
+		echo __('Management of options to be included in the .htaccess file. <b style="color:red">Please go to htaccess menu for apply this parameters.</b>','ct4gg');
 	}
 
 	public function checkboxField( $args )
@@ -93,13 +104,21 @@ class ManagerCallbacks extends BaseController
 		$name = $args['label_for'];
 		$classes = $args['class'];
 		$option_name = $args['option_name'];
-
-		//echo "<input type='text' class='color-field'>";
-		
 		echo '<p>
 			<label for="' . $option_name . '[' . $name . ']" style="display:block;">' . __( 'Color:', 'ct4gg' ) .'</label> 
 			<input class="color-picker" id="' . esc_attr($option_name) . '[' . esc_attr($name) . ']" name="' . esc_attr($option_name) . '[' . esc_attr($name) . ']" type="text" value="' . esc_attr($args['value']) . '" />
 		</p>';
+	}
+
+	public function TextField($args)
+	{
+		$name = $args['label_for'];
+		$classes = $args['class'];
+		$option_name = $args['option_name'];
+		echo '<div class="' . esc_attr($classes) . '">
+				<input id="'. esc_attr($name) .'" type="text" size="50" name="' . esc_attr($option_name) . '[' . esc_attr($name) . ']" value="' . esc_attr($args['value']) . '" /> 
+			</div>';
+		if ($args['message'] <> '') {echo '<p class="description">' . esc_html($args['message']) . '</p>';}
 	}
 
 	private function loadPHPConfig($path)

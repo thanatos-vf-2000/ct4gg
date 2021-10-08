@@ -1,6 +1,7 @@
 <?php 
 /**
- * @package  AlecadddPlugin
+ * @package  CT4GGPlugin
+ * @Version 1.0.0
  */
 namespace CT4GG\Api;
 

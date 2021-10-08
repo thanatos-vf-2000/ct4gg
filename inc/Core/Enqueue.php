@@ -1,7 +1,7 @@
 <?php
 /**
  * @package  CT4GGPlugin
- * @Version 0.0.1
+ * @Version 1.0.0
  */
 namespace CT4GG\Core;
 
@@ -59,11 +59,13 @@ class Enqueue
 					content: url(data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2020%2020%27%3E%3Cpath%20d%3D%27M14.83%204.89l1.34.94-5.81%208.38H9.02L5.78%209.67l1.34-1.25%202.57%202.4z%27%20fill%3D%27%23" . $color_img . "%27%2F%3E%3C%2Fsvg%3E);}
 				.wp-core-ui .button-group.button-large .button, .wp-core-ui .button.button-large {background: " . $opt['login_screen_btn_color'] . "; border-color: " . $opt['login_screen_btn_color'] . "; color: " . $opt['login_screen_form_bg_color'] . ";	}
 				.login form .input, .login form {background: " . $opt['login_screen_form_bg_color'] . ";}
+				.login #login_error, .login .message, .login .success {
+					color: " . $opt['login_screen_text_color'] . ";	border-left: 4px solid " . $opt['login_screen_text_color'] . ";	background-color: " . $opt['login_screen_form_bg_color'] . ";}
 				";
 			}
 
 			if ( $custom_css != '') {
-				if (WP_DEBUG) {$custom_css = $this->compress_css($custom_css);}
+				if (!WP_DEBUG) {$custom_css = $this->compress_css($custom_css);}
 				wp_add_inline_style( CT4GG_NAME, $custom_css );
 			}
 		}

@@ -1,7 +1,7 @@
 <?php
 /**
  * @package  CT4GGPlugin
- * @Version 0.0.1
+ * @Version 1.1.0
  */
 
 namespace CT4GG\Pages;
@@ -92,6 +92,18 @@ class Dashboard extends BaseController
 				'title' => __('Administration - Settings Manager', 'ct4gg'),
 				'callback' => array( $this->callbacks_mngr, 'adminSettingSectionManager' ),
 				'page' => CT4GG_NAME.'_plugin'
+			),
+			array(
+				'id' => CT4GG_NAME.'_post_setting',
+				'title' => __('Post - Settings Manager', 'ct4gg'),
+				'callback' => array( $this->callbacks_mngr, 'postSettingSectionManager' ),
+				'page' => CT4GG_NAME.'_plugin'
+			),
+			array(
+				'id' => CT4GG_NAME.'_htaccess',
+				'title' => __('Htaccess', 'ct4gg'),
+				'callback' => array( $this->callbacks_mngr, 'htaccessSettingSectionManager' ),
+				'page' => CT4GG_NAME.'_plugin'
 			)
 		);
 
@@ -119,7 +131,7 @@ class Dashboard extends BaseController
 								'label_for' => $key,
 								'value'	=> $value,
 								'message'	=> $config['message'],
-								'class' => 'ui-toggle'
+								'class' => 'ct4gg-ui-toggle'
 							)
 						);
 						break;
@@ -135,7 +147,7 @@ class Dashboard extends BaseController
 								'label_for' => $key,
 								'value'	=> $value,
 								'message'	=> $config['message'],
-								'class' => 'ui-toggle',
+								'class' => 'ct4gg-ui-toggle',
 								'choices' => $config['choices']
 							)
 						);
@@ -152,7 +164,7 @@ class Dashboard extends BaseController
 								'label_for' => $key,
 								'value'	=> $value,
 								'message'	=> $config['message'],
-								'class' => 'ui-toggle',
+								'class' => 'ct4gg-ui-toggle',
 								'height'	=> $config['height'],
 								'width'		=> $config['width']
 							)
@@ -170,7 +182,23 @@ class Dashboard extends BaseController
 								'label_for' => $key,
 								'value'	=> $value,
 								'message'	=> $config['message'],
-								'class' => 'ui-toggle'
+								'class' => 'ct4gg-ui-toggle'
+							)
+						);
+						break;
+					case 'TextField':
+						$args[] = array(
+							'id' => $key,
+							'title' => $config['title'],
+							'callback' => array( $this->callbacks_mngr, 'TextField' ),
+							'page' => CT4GG_NAME.'_plugin',
+							'section' => $config['section'],
+							'args' => array(
+								'option_name' => CT4GG_NAME.'_plugin',
+								'label_for' => $key,
+								'value'	=> $value,
+								'message'	=> $config['message'],
+								'class' => 'ct4gg-ui-toggle'
 							)
 						);
 						break;

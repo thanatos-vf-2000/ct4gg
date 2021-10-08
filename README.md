@@ -1,10 +1,10 @@
 # ct4gg
 Contributors: vanhoucke
-Tags: tools, customiser
+Tags: tools, customiser, homepage, redirect, Jetpack, performance, login, speed, comments, min comments, meta generator, htaccess, cache
 Requires at least: 5.7
 Tested up to: 5.8
 Requires PHP: 7.4
-Stable tag: 0.0.1
+Stable tag: 1.1.0
 License: GPLv2
 
 Wordpress customiser tools for beginer and confirmed users.
@@ -21,6 +21,15 @@ CT4GG is the Wordpress complementary tool which adds additional options. It allo
 * Used "Classic" Widget settings screens
 * Managed the interval before displaying the administration email verification screen
 * Disable Jetpack for Automattic
+* Delete Wordpress logo in dashboard administration,
+* Redirect to home page after logout,
+* Hide login errors,
+* No admin user to go back home,
+* If the result of search return one post, display them,
+* Force the minimum comment lenght,
+* Hide meta generator (Wordpress Version),
+* Display message on old post,
+* Manage option in .htaccess file (caches and security).
 
 ### Please Note
 Adding an additional customization option to help us personalize our sites is a help for everyone. We all seek to hide or personalize options or displays; that's why your feedback is important to me. Thank you for helping me make WordPress the best blogging platform in the world.
@@ -33,8 +42,9 @@ This plugin doesn't require technical knowledge or to be a web developer. The ac
 
 ## Screenshots
 
-1. Logo
-2. Exemple of login screen
+1. Logo,
+2. Exemple of login screen,
+3. Exemple of screen shot htaccess file.
 
 ## Frequently Asked Questions
 
@@ -48,7 +58,57 @@ The ct4gg requires php 7.4 or higher.
 ### Is this plugin compatible with WordPress multisite (MU)?
 ct4gg is multisite compatible, in case of problem contact me.
 
+### wich options
+* Customiser Screen Login,
+* Used "Classic" Widget settings screens,
+* Managed the interval before displaying the administration email verification screen,
+* Disable Jetpack for Automattic,
+* Delete Wordpress logo in dashboard administration,
+* Redirect to home page after logout,
+* Hide login errors,
+* No admin user to go back home,
+* If the result of search return one post, display them,
+* Force the minimum comment lenght,
+* Hide meta generator (Wordpress Version),
+* Display message on old post,
+* Management of the .htaccess file:
+ Disable display of directory contents
+ Hide server information
+ Protect .htaccess and .htpasswds files
+ Enable Force download
+ Enable cache expires
+ Compressing static files
+
+### Apply changes in the file .htaccess
+1. Activate the settings and save them
+2. go to the htaccess menu
+3. click on "Update Htaccess" button
+
 ## Changelog
+
+### 1.1.0 (2021-10-08)
+
+* fixed file inc/Ui/Post.php line 22 & 28 add test is_array
+* Added management of the .htaccess file
+* .htaccess: Disable display of directory contents
+* .htaccess: Hide server information
+* .htaccess: Protect .htaccess and .htpasswds files
+* .htaccess: Enable Force download
+* .htaccess: Enable cache expires
+* .htaccess: Compressing static files
+
+### 1.0.0 (2020-10-01)
+
+* fixed style login message
+* fixed style ct4gg
+* Add option to delete Wordpress logo in dashboard administration
+* Add option to redirect to home page after logout
+* Add option to hide login errors
+* Add option for no admin user to go back home
+* Add option, if the result of search return one post, display them
+* Add option to force the minimum comment lenght
+* Add option hide meta generator (Wordpress Version)
+* Add option to display message on old post 
 
 ### 0.0.1 (2021-09-14)
 

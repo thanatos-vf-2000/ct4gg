@@ -1,0 +1,37 @@
+=== Customiser Tools For GinkGos ===
+
+== Archived Changelog Entries ==
+
+This file contains older changelog entries, so we can keep the size of the standard WordPress readme.txt file reasonable.
+For the latest changes, please see the "Changelog" section of the [readme.txt file](https://plugins.svn.wordpress.org/ct4gg/trunk/readme.txt).
+
+= 1.1.0 (2110-SFP1) =
+*Release Date - 8 October 2021*
+
+* fixed file inc/Ui/Post.php line 22 & 28 add test is_array
+* Added management of the .htaccess file
+* .htaccess: Disable display of directory contents
+* .htaccess: Hide server information
+* .htaccess: Protect .htaccess and .htpasswds files
+* .htaccess: Enable Force download
+* .htaccess: Enable cache expires
+* .htaccess: Compressing static files
+
+= 1.0.0 (2110) =
+*Release Date - 1 October 2021*
+
+* fixed style login message
+* fixed style ct4gg
+* Add option to delete Wordpress logo in dashboard administration
+* Add option to redirect to home page after logout
+* Add option to hide login errors
+* Add option for no admin user to go back home
+* Add option, if the result of search return one post, display them
+* Add option to force the minimum comment lenght
+* Add option hide meta generator (Wordpress Version)
+* Add option to display message on old post 
+
+= 0.0.1 (2109) =
+*Release Date - 14 September 2021*
+
+* Initial version

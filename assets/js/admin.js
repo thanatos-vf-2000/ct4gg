@@ -33,10 +33,10 @@
   /**
    * Admin Tab
    */
-  on('click', 'ul.nav-tabs > li', function(e) {
+  on('click', 'ul.ct4gg-nav-tabs > li', function(e) {
     e.preventDefault(),
-	document.querySelector("ul.nav-tabs li.active").classList.remove("active"),
-		document.querySelector(".tab-pane.active").classList.remove("active");
+	document.querySelector("ul.ct4gg-nav-tabs li.active").classList.remove("active"),
+		document.querySelector(".ct4gg-tab-pane.active").classList.remove("active");
 	var t=e.currentTarget,
 		n=e.target.getAttribute("href");
 	t.classList.add("active"),
@@ -85,6 +85,17 @@
   //color picker
   on('click', '.color-picker',function(e) {
     jQuery(this).wpColorPicker()
+  }, true)
+
+  //Checkbox ct4gg-htaccess
+  on('click', '#ct4gg-htaccess',function(e) {
+    console.log('OK');
+    var checkboxes = document.getElementsByName('ct4gg-htaccess');
+    var box = (this);
+        checkboxes.forEach((item) => {
+            if (item !== box) 
+            item.checked = false;
+        })
   }, true)
 
 })()

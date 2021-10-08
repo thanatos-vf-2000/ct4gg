@@ -1,10 +1,12 @@
 <?php
 /**
  * @package  CT4GGPlugin
- * @Version 0.0.1
+ * @Version 1.1.0
  */
 
 namespace CT4GG;
+
+use CT4GG\Core\Options;
 
 final class Init
 {
@@ -18,7 +20,10 @@ final class Init
 			Core\SettingsLinks::class,
 			Core\Enqueue::class,
 			Pages\Dashboard::class,
-			Ui\Admin::class
+			Pages\HTAcccess::class,
+			Ui\Admin::class,
+			Ui\Login::class,
+			Ui\Post::class
 		];
 	}
 
@@ -29,6 +34,16 @@ final class Init
 	 */
 	public static function register_services() 
 	{
+
+		$opt = get_option( CT4GG_NAME . '_plugin' );
+		if (is_array($opt)) {
+			if ( !array_key_exists('version',$opt) || $opt['version'] != CT4GG_VERSION) {
+				Options::set_option('version',CT4GG_VERSION);
+			}
+		}
+
+		
+		
 		foreach ( self::get_services() as $class ) {
 			$service = self::instantiate( $class );
 			if ( method_exists( $service, 'register' ) ) {

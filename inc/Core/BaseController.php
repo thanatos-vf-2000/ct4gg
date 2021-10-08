@@ -1,6 +1,7 @@
 <?php 
 /**
- * @package  AlecadddPlugin
+ * @package  CT4GGPlugin
+ * @Version 1.1.0
  */
 namespace CT4GG\Core;
 
@@ -27,4 +28,51 @@ class BaseController
 
 		return isset( $option[ $key ] ) ? $option[ $key ] : false;
 	}
+
+	/**
+     * Get Template File
+     *
+     * @param $template
+     * @param array $args
+     */
+    public static function get_template($template)
+    {
+
+        // Check Load single file or array list
+        if (is_string($template)) {
+            $template = explode(" ", $template);
+        }
+
+        // Load File
+        foreach ($template as $file) {
+
+            $template_file = CT4GG_PATH . "templates-part/" . $file . ".php";
+            if (!file_exists($template_file)) {
+                continue;
+            }
+
+            // include File
+            include $template_file;
+        }
+    }
+
+    /**
+     * Get Template File
+     *
+     * @param $template
+     * @param array $args
+     */
+    public static function view( $name, array $args = array() ) {
+        $args = apply_filters( 'ct4gg_view_arguments', $args, $name );
+        
+        foreach ( $args AS $key => $val ) {
+            $$key = $val;
+        }
+        
+        load_plugin_textdomain( 'ct4gg' );
+
+        $file = CT4GG_PATH . 'assets/messages/'. $name . '.php';
+
+        include( $file );
+    }
 }
