@@ -4,7 +4,7 @@
     "keywords": ["tools", "customiser", "homepage", "redirect", "Jetpack", "performance", "login", "speed", "comments", "min comments", "meta generator", "htaccess", "cache"],
     "homepage": "https://ginkgos.net",
     "type": "project",
-    "license": "GPLv2",
+    "license": "GPL-2.0-or-later",
     "authors": [
         {
             "name": "Franck VANHOUCKE",
