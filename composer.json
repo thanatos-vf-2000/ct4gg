@@ -1,0 +1,22 @@
+{
+    "name": "thanatos-vf-2000/ct4gg",
+    "description": "Wordpress customiser tools for beginer and confirmed users.",
+    "keywords": ["tools", "customiser", "homepage", "redirect", "Jetpack", "performance", "login", "speed", "comments", "min comments", "meta generator", "htaccess", "cache"],
+    "homepage": "https://ginkgos.net",
+    "type": "project",
+    "license": "GPLv2",
+    "authors": [
+        {
+            "name": "Franck VANHOUCKE",
+            "email": "contact@ginkgos.net",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=7.3"
+    },
+	"autoload": {
+			"psr-4": {"CT4GG\\": "./inc"}
+			}
+}
