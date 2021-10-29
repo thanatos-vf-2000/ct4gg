@@ -52,7 +52,10 @@ This plugin doesn't require technical knowledge or to be a web developer. The ac
 1. Logo,
 2. Exemple of login screen,
 3. Exemple of screen shot htaccess file.
-<img src="https://github.com/thanatos-vf-2000/ct4gg/blob/master/assets/img/screenshot-2.png" width="45%"></img> <img src="https://github.com/thanatos-vf-2000/ct4gg/blob/master/assets/img/screenshot-3.png" width="45%"></img> 
+
+
+<img src="https://github.com/thanatos-vf-2000/ct4gg/blob/master/assets/img/screenshot-1.png" width="30%"></img> <img src="https://github.com/thanatos-vf-2000/ct4gg/blob/master/assets/img/screenshot-2.png" width="30%"></img> <img src="https://github.com/thanatos-vf-2000/ct4gg/blob/master/assets/img/screenshot-3.png" width="30%"></img> 
+
 
 ## Frequently Asked Questions
 
