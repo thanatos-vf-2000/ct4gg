@@ -2,7 +2,7 @@
 
 # ct4gg
 
-[![Latest Stable Version](http://poser.pugx.org/thanatos-vf-2000/ct4gg/v)](https://packagist.org/packages/thanatos-vf-2000/ct4gg)
+[![GitHub version](https://badge.fury.io/gh/thanatos-vf-2000%2Fct4gg.svg)](https://badge.fury.io/gh/thanatos-vf-2000%2Fct4gg)
 [![License](http://poser.pugx.org/thanatos-vf-2000/ct4gg/license)](https://packagist.org/packages/thanatos-vf-2000/ct4gg)
 [![PHP Version Require](http://poser.pugx.org/thanatos-vf-2000/ct4gg/require/php)](https://packagist.org/packages/thanatos-vf-2000/ct4gg)
 
