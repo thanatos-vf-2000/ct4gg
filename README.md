@@ -1,4 +1,11 @@
+<img src="https://github.com/thanatos-vf-2000/ct4gg/blob/master/assets/img/banner772x250.png" width="400">
+
 # ct4gg
+
+[![Latest Stable Version](http://poser.pugx.org/thanatos-vf-2000/ct4gg/v)](https://packagist.org/packages/thanatos-vf-2000/ct4gg)
+[![License](http://poser.pugx.org/thanatos-vf-2000/ct4gg/license)](https://packagist.org/packages/thanatos-vf-2000/ct4gg)
+[![PHP Version Require](http://poser.pugx.org/thanatos-vf-2000/ct4gg/require/php)](https://packagist.org/packages/thanatos-vf-2000/ct4gg)
+
 Contributors: vanhoucke
 Tags: tools, customiser, homepage, redirect, Jetpack, performance, login, speed, comments, min comments, meta generator, htaccess, cache
 Requires at least: 5.7
