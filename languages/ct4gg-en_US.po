@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Custom Tools For GinkGos - Plugin\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-10 08:19+0000\n"
-"PO-Revision-Date: 2021-10-08 08:38+0000\n"
+"PO-Revision-Date: 2021-11-15 22:23+0000\n"
 "Last-Translator: \n"
 "Language-Team: English (United States)\n"
 "Language: en_US\n"
@@ -24,7 +24,9 @@ msgstr ""
 " for instructions on how to download a previous version of this plugin "
 "compatible with PHP %2s."
 
-#: templates-part/htaccess/tab-content.php:22
+#: templates-part/htaccess/tab-content.php:23
+#: templates-part/robots/tab-content.php:22
+#: templates-part/humans/tab-content.php:22
 msgid " updated on "
 msgstr " updated on "
 
@@ -40,9 +42,21 @@ msgstr "\"What version of PHP Does Support?\""
 msgid "$_POST error (ct4gg-htaccess-ko)"
 msgstr "$_POST error (ct4gg-htaccess-ko)"
 
+#: assets/messages/humans.php:11
+msgid "$_POST error (ct4gg-humans-ko)"
+msgstr "$_POST error (ct4gg-humans-ko)"
+
+#: assets/messages/robots.php:11
+msgid "$_POST error (ct4gg-robots-ko)"
+msgstr "$_POST error (ct4gg-robots-ko)"
+
 #: templates-part/admin/tab-content.php:46 templates-part/admin/nav-tabs.php:12
 msgid "About"
 msgstr "About"
+
+#: assets/defaults.php:159
+msgid "Add site Maps Yoast SEO (/sitemap_index.xml)."
+msgstr "Add site Maps Yoast SEO (/sitemap_index.xml)."
 
 #: inc/Pages/Dashboard.php:92
 msgid "Administration - Settings Manager"
@@ -56,13 +70,22 @@ msgstr "After xxx Days (default 60 days)."
 msgid "Back to home if not Administrator."
 msgstr "Back to home if not Administrator."
 
-#: assets/messages/htaccess.php:19
+#: assets/messages/htaccess.php:19 assets/messages/humans.php:19
+#: assets/messages/robots.php:19
 msgid "Backup failed!"
 msgstr "Backup failed!"
 
 #: assets/messages/htaccess.php:21
 msgid "backup file .htaccess failed. "
 msgstr "backup file .htaccess failed. "
+
+#: assets/messages/humans.php:21
+msgid "backup file humans.txt failed. "
+msgstr "backup file humans.txt failed. "
+
+#: assets/messages/robots.php:21
+msgid "backup file robots.txt failed. "
+msgstr "backup file robots.txt failed. "
 
 #: assets/defaults.php:75
 msgid "Change the login screen background."
@@ -76,7 +99,7 @@ msgstr "Change the login screen logo."
 msgid "characters."
 msgstr "characters."
 
-#: inc/Api/Callbacks/ManagerCallbacks.php:108
+#: inc/Api/Callbacks/ManagerCallbacks.php:118
 msgid "Color:"
 msgstr "Color:"
 
@@ -88,15 +111,18 @@ msgstr "Comments must contain at least "
 msgid "Compressing static files."
 msgstr "Compressing static files."
 
-#: assets/messages/htaccess.php:43
+#: assets/messages/htaccess.php:43 assets/messages/humans.php:43
+#: assets/messages/robots.php:43
 msgid "Copy failed!"
 msgstr "Copy failed!"
 
-#: assets/messages/htaccess.php:51
+#: assets/messages/htaccess.php:51 assets/messages/humans.php:51
+#: assets/messages/robots.php:51
 msgid "Copy file successfuly."
 msgstr "Copy file successfuly."
 
-#: assets/messages/htaccess.php:53
+#: assets/messages/htaccess.php:53 assets/messages/humans.php:53
+#: assets/messages/robots.php:53
 msgid "Copy file: "
 msgstr "Copy file: "
 
@@ -117,19 +143,24 @@ msgstr ""
 msgid "Day"
 msgstr "Day"
 
-#: templates-part/htaccess/tab-content.php:48
+#: templates-part/htaccess/tab-content.php:49
+#: templates-part/robots/tab-content.php:48
+#: templates-part/humans/tab-content.php:48
 msgid "Delete"
 msgstr "Delete"
 
-#: assets/messages/htaccess.php:27
+#: assets/messages/htaccess.php:27 assets/messages/humans.php:27
+#: assets/messages/robots.php:27
 msgid "Delete failed!"
 msgstr "Delete failed!"
 
-#: assets/messages/htaccess.php:35
+#: assets/messages/htaccess.php:35 assets/messages/humans.php:35
+#: assets/messages/robots.php:35
 msgid "Delete file successfuly."
 msgstr "Delete file successfuly."
 
-#: assets/messages/htaccess.php:37
+#: assets/messages/htaccess.php:37 assets/messages/humans.php:37
+#: assets/messages/robots.php:37
 msgid "Delete file: "
 msgstr "Delete file: "
 
@@ -150,6 +181,7 @@ msgid "Disable Jetpack offered by Automattic to stop showing banners."
 msgstr "Disable Jetpack offered by Automattic to stop showing banners."
 
 #: templates-part/htaccess/nav-tabs.php:10
+#: templates-part/robots/nav-tabs.php:10 templates-part/humans/nav-tabs.php:10
 msgid "Display"
 msgstr "Display"
 
@@ -205,7 +237,7 @@ msgstr "Hide server information."
 msgid "Htaccess"
 msgstr "Htaccess"
 
-#: templates-part/htaccess/tab-content.php:29
+#: templates-part/htaccess/tab-content.php:30
 msgid "Htaccess file(s)"
 msgstr "Htaccess file(s)"
 
@@ -216,6 +248,14 @@ msgstr "https://ginkgos.net/"
 #. URI of the plugin
 msgid "https://ginkgos.net/plugin/ct4gg/"
 msgstr "https://ginkgos.net/plugin/ct4gg/"
+
+#: inc/Pages/Dashboard.php:116
+msgid "Humans"
+msgstr "Humans"
+
+#: templates-part/humans/tab-content.php:29
+msgid "Humans.txt file(s)"
+msgstr "Humans.txt file(s)"
 
 #: assets/defaults.php:113
 msgid "If the result of a search returns only one item then it is displayed."
@@ -229,6 +269,14 @@ msgstr "If this is not possible, please visit the FAQ link titled "
 msgid "impossible to retrieve the variable <strong>ct4gg-htaccess-ko</strong>."
 msgstr ""
 "Impossible to retrieve the variable <strong>ct4gg-htaccess-ko</strong>."
+
+#: assets/messages/humans.php:13
+msgid "impossible to retrieve the variable <strong>ct4gg-humans-ko</strong>."
+msgstr "impossible to retrieve the variable <strong>ct4gg-humans-ko</strong>."
+
+#: assets/messages/robots.php:13
+msgid "impossible to retrieve the variable <strong>ct4gg-robots-ko</strong>."
+msgstr "impossible to retrieve the variable <strong>ct4gg-robots-ko</strong>."
 
 #: inc/Ui/Login.php:37
 msgid "incorrect!"
@@ -322,6 +370,22 @@ msgstr ""
 "Management of options to be included in the .htaccess file. <b style=\"color:"
 "red\">Please go to htaccess menu for apply this parameters.</b>"
 
+#: inc/Api/Callbacks/ManagerCallbacks.php:64
+msgid ""
+"Management of options to be included in the humans.txt file. <b "
+"style=\"color:red\">Please go to humans menu for apply this parameters.</b>"
+msgstr ""
+"Management of options to be included in the humans.txt file. <b "
+"style=\"color:red\">Please go to humans menu for apply this parameters.</b>"
+
+#: inc/Api/Callbacks/ManagerCallbacks.php:59
+msgid ""
+"Management of options to be included in the robots.txt file. <b "
+"style=\"color:red\">Please go to robots menu for apply this parameters.</b>"
+msgstr ""
+"Management of options to be included in the robots.txt file. <b "
+"style=\"color:red\">Please go to robots menu for apply this parameters.</b>"
+
 #: assets/defaults.php:117
 msgid "Minimal comment length."
 msgstr "Minimal comment length."
@@ -330,9 +394,17 @@ msgstr "Minimal comment length."
 msgid "Month"
 msgstr "Month"
 
-#: templates-part/htaccess/tab-content.php:54
+#: templates-part/htaccess/tab-content.php:55
 msgid "No .htaccess fils found."
 msgstr "No .htaccess fils found."
+
+#: templates-part/humans/tab-content.php:54
+msgid "No humans.txt fils found."
+msgstr "No humans.txt fils found."
+
+#: templates-part/robots/tab-content.php:54
+msgid "No robots.txt fils found."
+msgstr "No robots.txt fils found."
 
 #: assets/defaults.php:125
 msgid "Old post notice."
@@ -357,13 +429,31 @@ msgstr "Protect .htaccess and .htpasswds files."
 msgid "Redirect to home after logout."
 msgstr "Redirect to home after logout."
 
-#: templates-part/htaccess/tab-content.php:47
+#: templates-part/htaccess/tab-content.php:48
+#: templates-part/robots/tab-content.php:47
+#: templates-part/humans/tab-content.php:47
 msgid "Restore"
 msgstr "Restore"
 
 #: templates-part/htaccess/nav-tabs.php:11
 msgid "Restore .htaccess"
 msgstr "Restore .htaccess"
+
+#: templates-part/humans/nav-tabs.php:11
+msgid "Restore humans.txt"
+msgstr "Restore humans.txt"
+
+#: templates-part/robots/nav-tabs.php:11
+msgid "Restore robots.txt"
+msgstr "Restore robots.txt"
+
+#: inc/Pages/Dashboard.php:110
+msgid "Robots"
+msgstr "Robots"
+
+#: templates-part/robots/tab-content.php:29
+msgid "Robots.txt file(s)"
+msgstr "Robots"
 
 #: assets/defaults.php:17
 msgid "Semi-annual check of the administration e-mail"
@@ -373,39 +463,65 @@ msgstr "Semi-annual check of the administration e-mail"
 msgid "Settings Manager"
 msgstr "Settings Manager"
 
-#: assets/messages/htaccess.php:45
+#: assets/defaults.php:179
+msgid "Site."
+msgstr "Site."
+
+#: assets/defaults.php:167
+msgid "Team."
+msgstr "Team."
+
+#: assets/defaults.php:173
+msgid "Thanks."
+msgstr "Thanks."
+
+#: assets/messages/htaccess.php:45 assets/messages/humans.php:45
+#: assets/messages/robots.php:45
 msgid "Unable to copy the file: "
 msgstr "Unable to copy the file: "
 
-#: assets/messages/htaccess.php:29
+#: assets/messages/htaccess.php:29 assets/messages/humans.php:29
+#: assets/messages/robots.php:29
 msgid "Unable to delete the file: "
 msgstr "Unable to delete the file: "
 
-#: assets/messages/htaccess.php:61
+#: assets/messages/htaccess.php:61 assets/messages/humans.php:61
+#: assets/messages/robots.php:61
 msgid "Unable to update the file: "
 msgstr "Unable to update the file: "
 
-#: assets/messages/htaccess.php:59
+#: assets/messages/htaccess.php:59 assets/messages/humans.php:59
+#: assets/messages/robots.php:59
 msgid "Update failed!"
 msgstr "Update failed!"
 
-#: assets/messages/htaccess.php:67
+#: assets/messages/htaccess.php:67 assets/messages/humans.php:67
+#: assets/messages/robots.php:67
 msgid "Update file successfuly."
 msgstr "Update file successfuly."
 
-#: assets/messages/htaccess.php:69
+#: assets/messages/htaccess.php:69 assets/messages/humans.php:69
+#: assets/messages/robots.php:69
 msgid "Update file: "
 msgstr "Update file: "
 
-#: templates-part/htaccess/tab-content.php:17
+#: templates-part/htaccess/tab-content.php:18
 msgid "Update Htaccess"
 msgstr "Update Htaccess"
+
+#: templates-part/humans/tab-content.php:17
+msgid "Update Humans.txt"
+msgstr "Update Humans.txt"
+
+#: templates-part/robots/tab-content.php:17
+msgid "Update Robots.txt"
+msgstr "Update Robots.txt"
 
 #: templates-part/admin/tab-content.php:22 templates-part/admin/nav-tabs.php:11
 msgid "Updates"
 msgstr "Updates"
 
-#: inc/Api/Callbacks/ManagerCallbacks.php:96
+#: inc/Api/Callbacks/ManagerCallbacks.php:106
 msgid "Upload Menu"
 msgstr "Upload Menu"
 
@@ -419,6 +535,10 @@ msgstr ""
 #: assets/defaults.php:48
 msgid "Week"
 msgstr "Week"
+
+#: assets/defaults.php:163
+msgid "Wordpress default options."
+msgstr "Wordpress default options."
 
 #: assets/defaults.php:50
 msgid "Year"

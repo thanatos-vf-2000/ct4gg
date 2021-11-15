@@ -1,7 +1,7 @@
 <?php
 /**
  * @package  CT4GGPlugin
- * @Version 1.1.1
+ * @Version 1.2.0
  */
 
 namespace CT4GG;
@@ -21,9 +21,12 @@ final class Init
 			Core\Enqueue::class,
 			Pages\Dashboard::class,
 			Pages\HTAccess::class,
+			Pages\Robots::class,
+			Pages\Humans::class,
 			Ui\Admin::class,
 			Ui\Login::class,
-			Ui\Post::class
+			Ui\Post::class,
+			Ui\Humans_Header::class
 		];
 	}
 

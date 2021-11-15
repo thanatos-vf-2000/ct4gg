@@ -1,7 +1,7 @@
 {
     "name": "thanatos-vf-2000/ct4gg",
     "description": "Wordpress customiser tools for beginer and confirmed users.",
-    "keywords": ["tools", "customiser", "homepage", "redirect", "Jetpack", "performance", "login", "speed", "comments", "min comments", "meta generator", "htaccess", "cache"],
+    "keywords": ["tools", "customiser", "homepage", "redirect", "Jetpack", "performance", "login", "speed", "comments", "min comments", "meta generator", "htaccess", "cache", "robots.txt", "robots", "humans.txt"],
     "homepage": "https://ginkgos.net",
     "type": "project",
     "license": "GPL-2.0-or-later",

@@ -1,7 +1,7 @@
 <?php
 /**
  * @package  CT4GGPlugin
- * @Version 1.1.0
+ * @Version 1.2.0
  * 
  * Desciption: nav-content for htaccess
  */
@@ -14,6 +14,7 @@ use CT4GG\Api\FileHTAcccess;
 			<input type="hidden" name="page" value="ct4gg_htaccess"/>
 			<input type="hidden" name="tab" value="tab-1"/>
 			<?php wp_nonce_field(CT4GG_NAME.'-opt', CT4GG_NAME.'-verif'); ?>
+			<p style="color:red">Management of options to be included in the .htaccess file on Dashbord option.</p>
 			<p><?php submit_button( __("Update Htaccess", 'ct4gg'), 'primary', 'submit-build-htaccess',false); ?></p>
 		</form>
 		<?php

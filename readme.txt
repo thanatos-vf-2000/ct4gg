@@ -1,10 +1,10 @@
 === ct4gg ===
 Contributors: vanhoucke
-Tags: tools, customiser, homepage, redirect, Jetpack, performance, login, speed, comments, min comments, meta generator, htaccess, cache
+Tags: tools, customiser, homepage, redirect, Jetpack, performance, login, speed, comments, min comments, meta generator, htaccess, cache, robots.txt, robots, humans.txt
 Requires at least: 5.7
 Tested up to: 5.8
 Requires PHP: 7.4
-Stable tag: 1.1.1
+Stable tag: 1.2.1
 License: GPLv2
 
 Wordpress customiser tools for beginer and confirmed users.
@@ -30,6 +30,7 @@ CT4GG is the Wordpress complementary tool which adds additional customiser optio
 * Hide meta generator (Wordpress Version),
 * Display message on old post,
 * Manage option in .htaccess file (caches and security).
+* Build robots.txt and humans.txt
 
 = Please Note =
 Adding an additional customization option to help us personalize our sites is a help for everyone. We all seek to hide or personalize options or displays; that's why your feedback is important to me. Thank you for helping me make WordPress the best blogging platform in the world.
@@ -44,7 +45,10 @@ This plugin doesn't require technical knowledge or to be a web developer. The ac
 
 1. Logo,
 2. Exemple of login screen,
-3. Exemple of screen shot htaccess file.
+3. Exemple of screenshot .htaccess file,
+4. Exemple of screenshot robots.txt file
+5. Exemple of screenshot humans.txt file
+6. Example of restoration menu for htaccess files.
 
 == Frequently Asked Questions ==
 
@@ -78,30 +82,33 @@ ct4gg is multisite compatible, in case of problem contact me.
  Enable Force download
  Enable cache expires
  Compressing static files
+* Generate robots.txt
+* Generate humans.txt
 
 = Apply changes in the file .htaccess =
-1. Activate the settings and save them
+1. Activate the settings in Dashboard menu and save them
 2. go to the htaccess menu
 3. click on "Update Htaccess" button
 
+= Apply changes in the file robots.txt =
+1. Activate the settings in Dashboard menu and save them
+2. go to the robots menu
+3. click on "Update Robots.txt" button
+
+= Apply changes in the file humans.txt =
+1. Activate the settings in Dashboard menu and save them
+2. go to the humans menu
+3. click on "Update Humans.txt" button
+
+= new features =
+If you want a new feature, you can contact me by email at contact@ginkgos.net 
 
 == Changelog ==
-= 1.1.1 (2110-SFP2) =
-*Release Date - 8 October 2021*
+= 1.2.1 (2111-SFP2) =
+*Release Date - 15 November 2021*
 
-* fixed file ct4gg/inc/Init.php line 62: Fatal error: Uncaught Error: Class 'CT4GG\Pages\HTAcccess' not found .
-
-= 1.1.0 (2110-SFP1) =
-*Release Date - 8 October 2021*
-
-* fixed file inc/Ui/Post.php line 22 & 28 add test is_array
-* Added management of the .htaccess file
-* .htaccess: Disable display of directory contents
-* .htaccess: Hide server information
-* .htaccess: Protect .htaccess and .htpasswds files
-* .htaccess: Enable Force download
-* .htaccess: Enable cache expires
-* .htaccess: Compressing static files
+* Add generator for robots.txt
+* Add generator for humans.txt
 
 See [changelog.txt](https://plugins.svn.wordpress.org/ct4gg/trunk/changelog.txt) for older changelog
 

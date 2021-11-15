@@ -1,7 +1,7 @@
 <?php 
 /**
  * @package  CT4GGPlugin
- * @Version 1.0.0
+ * @Version 1.2.0
  */
 namespace CT4GG\Api\Callbacks;
 
@@ -52,6 +52,16 @@ class ManagerCallbacks extends BaseController
 	public function htaccessSettingSectionManager()
 	{
 		echo __('Management of options to be included in the .htaccess file. <b style="color:red">Please go to htaccess menu for apply this parameters.</b>','ct4gg');
+	}
+
+	public function robotsSettingSectionManager()
+	{
+		echo __('Management of options to be included in the robots.txt file. <b style="color:red">Please go to robots menu for apply this parameters.</b>','ct4gg');
+	}
+
+	public function humansSettingSectionManager()
+	{
+		echo __('Management of options to be included in the humans.txt file. <b style="color:red">Please go to humans menu for apply this parameters.</b>','ct4gg');
 	}
 
 	public function checkboxField( $args )
@@ -117,6 +127,17 @@ class ManagerCallbacks extends BaseController
 		$option_name = $args['option_name'];
 		echo '<div class="' . esc_attr($classes) . '">
 				<input id="'. esc_attr($name) .'" type="text" size="50" name="' . esc_attr($option_name) . '[' . esc_attr($name) . ']" value="' . esc_attr($args['value']) . '" /> 
+			</div>';
+		if ($args['message'] <> '') {echo '<p class="description">' . esc_html($args['message']) . '</p>';}
+	}
+
+	public function TextAreaField($args)
+	{
+		$name = $args['label_for'];
+		$classes = $args['class'];
+		$option_name = $args['option_name'];
+		echo '<div class="' . esc_attr($classes) . '">
+				<textarea id="'. esc_attr($name) .'" name="' . esc_attr($option_name) . '[' . esc_attr($name) . ']" rows="'. esc_attr($args['rows']) .'" cols="'. esc_attr($args['cols']) .'" >' . esc_attr($args['value']) . '</textarea> 
 			</div>';
 		if ($args['message'] <> '') {echo '<p class="description">' . esc_html($args['message']) . '</p>';}
 	}

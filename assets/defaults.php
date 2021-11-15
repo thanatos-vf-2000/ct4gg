@@ -1,7 +1,7 @@
 <?php
 /**
  * @package  CT4GGPlugin
- * @Version 1.1.0
+ * @Version 1.2.0
  */
 return array(
     'admin_del_logo_wp' => array(
@@ -155,4 +155,30 @@ return array(
             'title'     => __('Compressing static files.','ct4gg'),
             'section'   => CT4GG_NAME.'_htaccess',
             'type'      => 'checkboxField') ,
+        'robots_sitemap' => array(
+            'title'     => __('Add site Maps Yoast SEO (/sitemap_index.xml).','ct4gg'),
+            'section'   => CT4GG_NAME.'_robots',
+            'type'      => 'checkboxField') ,
+        'robots_wordpress' => array(
+            'title'     => __('Wordpress default options.','ct4gg'),
+            'section'   => CT4GG_NAME.'_robots',
+            'type'      => 'checkboxField') ,
+        'humans_team' => array(
+            'title'     => __('Team.','ct4gg'),
+            'section'   => CT4GG_NAME.'_humans',
+            'rows'      => 3,
+            'cols'      => 100,
+            'type'      => 'TextAreaField') ,
+        'humans_thanks' => array(
+            'title'     => __('Thanks.','ct4gg'),
+            'section'   => CT4GG_NAME.'_humans',
+            'rows'      => 4,
+            'cols'      => 100,
+            'type'      => 'TextAreaField') ,
+        'humans_site' => array(
+            'title'     => __('Site.','ct4gg'),
+            'section'   => CT4GG_NAME.'_humans',
+            'rows'      => 7,
+            'cols'      => 100,
+            'type'      => 'TextAreaField') ,
 );

@@ -11,7 +11,7 @@ Tags: tools, customiser, homepage, redirect, Jetpack, performance, login, speed,
 Requires at least: 5.7
 Tested up to: 5.8
 Requires PHP: 7.4
-Stable tag: 1.1.0
+Stable tag: 1.2.1
 License: GPLv2
 
 Wordpress customiser tools for beginer and confirmed users.
@@ -37,6 +37,7 @@ CT4GG is the Wordpress complementary tool which adds additional options. It allo
 * Hide meta generator (Wordpress Version),
 * Display message on old post,
 * Manage option in .htaccess file (caches and security).
+* Build robots.txt and humans.txt
 
 ### Please Note
 Adding an additional customization option to help us personalize our sites is a help for everyone. We all seek to hide or personalize options or displays; that's why your feedback is important to me. Thank you for helping me make WordPress the best blogging platform in the world.
@@ -51,10 +52,13 @@ This plugin doesn't require technical knowledge or to be a web developer. The ac
 
 1. Logo,
 2. Exemple of login screen,
-3. Exemple of screen shot htaccess file.
+3. Exemple of screenshot .htaccess file,
+4. Exemple of screenshot robots.txt file
+5. Exemple of screenshot humans.txt file
+6. Example of restoration menu for htaccess files.
 
 
-<img src="https://github.com/thanatos-vf-2000/ct4gg/blob/master/assets/img/screenshot-1.png" width="30%"></img> <img src="https://github.com/thanatos-vf-2000/ct4gg/blob/master/assets/img/screenshot-2.png" width="30%"></img> <img src="https://github.com/thanatos-vf-2000/ct4gg/blob/master/assets/img/screenshot-3.png" width="30%"></img> 
+<img src="https://github.com/thanatos-vf-2000/ct4gg/blob/master/assets/img/screenshot-1.png" width="30%"></img> <img src="https://github.com/thanatos-vf-2000/ct4gg/blob/master/assets/img/screenshot-2.png" width="30%"></img> <img src="https://github.com/thanatos-vf-2000/ct4gg/blob/master/assets/img/screenshot-3.png" width="30%"></img><img src="https://github.com/thanatos-vf-2000/ct4gg/blob/master/assets/img/screenshot-4.png" width="30%"></img><img src="https://github.com/thanatos-vf-2000/ct4gg/blob/master/assets/img/screenshot-5.png" width="30%"></img><img src="https://github.com/thanatos-vf-2000/ct4gg/blob/master/assets/img/screenshot-6.png" width="30%"></img> 
 
 
 ## Frequently Asked Questions
@@ -89,13 +93,32 @@ ct4gg is multisite compatible, in case of problem contact me.
  Enable Force download
  Enable cache expires
  Compressing static files
+* Generate robots.txt
+* Generate humans.txt
 
 ### Apply changes in the file .htaccess
 1. Activate the settings and save them
 2. go to the htaccess menu
 3. click on "Update Htaccess" button
 
+### Apply changes in the file robots.txt
+1. Activate the settings in Dashboard menu and save them
+2. go to the robots menu
+3. click on "Update Robots.txt" button
+
+### Apply changes in the file humans.txt
+1. Activate the settings in Dashboard menu and save them
+2. go to the humans menu
+3. click on "Update Humans.txt" button
+
+## new features
+If you want a new feature, you can contact me by email at contact@ginkgos.net 
+
 ## Changelog
+
+### 1.2.1 (2021-11-15)
+* Add generator for robots.txt
+* Add generator for humans.txt
 
 ### 1.1.0 (2021-10-08)
 

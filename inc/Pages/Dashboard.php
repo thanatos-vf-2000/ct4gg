@@ -1,7 +1,7 @@
 <?php
 /**
  * @package  CT4GGPlugin
- * @Version 1.1.0
+ * @Version 1.2.0
  */
 
 namespace CT4GG\Pages;
@@ -104,6 +104,18 @@ class Dashboard extends BaseController
 				'title' => __('Htaccess', 'ct4gg'),
 				'callback' => array( $this->callbacks_mngr, 'htaccessSettingSectionManager' ),
 				'page' => CT4GG_NAME.'_plugin'
+			),
+			array(
+				'id' => CT4GG_NAME.'_robots',
+				'title' => __('Robots', 'ct4gg'),
+				'callback' => array( $this->callbacks_mngr, 'robotsSettingSectionManager' ),
+				'page' => CT4GG_NAME.'_plugin'
+			),
+			array(
+				'id' => CT4GG_NAME.'_humans',
+				'title' => __('Humans', 'ct4gg'),
+				'callback' => array( $this->callbacks_mngr, 'humansSettingSectionManager' ),
+				'page' => CT4GG_NAME.'_plugin'
 			)
 		);
 
@@ -202,6 +214,24 @@ class Dashboard extends BaseController
 							)
 						);
 						break;
+					case 'TextAreaField':
+						$args[] = array(
+							'id' => $key,
+							'title' => $config['title'],
+							'callback' => array( $this->callbacks_mngr, 'TextAreaField' ),
+							'page' => CT4GG_NAME.'_plugin',
+							'section' => $config['section'],
+							'args' => array(
+								'option_name' => CT4GG_NAME.'_plugin',
+								'label_for' => $key,
+								'value'	=> $value,
+								'message'	=> $config['message'],
+								'cols'	=> $config['cols'],
+								'rows'	=> $config['rows'],
+								'class' => 'ct4gg-ui-toggle'
+							)
+						);
+						break;
 				}
 			}
 		}
@@ -218,7 +248,9 @@ class Dashboard extends BaseController
 				'message'	=> '',
 				'section' 	=> CT4GG_NAME.'_admin_index',
 				'height'	=> null,
-				'width'		=> null
+				'width'		=> null,
+				'cols'		=> 50,
+				'rows'		=> 5
 			)
 		);
 	}

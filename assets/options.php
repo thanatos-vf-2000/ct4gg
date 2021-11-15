@@ -1,7 +1,7 @@
 <?php
 /**
  * @package  CT4GGPlugin
- * @Version 1.1.0
+ * @Version 1.2.0
  */
 return array(
     'admin_del_logo_wp'                 => false,
@@ -33,4 +33,21 @@ return array(
     'htaccess_force_download'           => '',
     'htaccess_enable_cache'             => false,
     'htaccess_enable_compress_statics_files' => false,
+    'robots_sitemap'                    => false,
+    'robots_wordpress'                  => false,
+    'humans_team'                       => 'Founder: Dupont DUPOND
+Contact: dupont.dupond [at] test.com
+From: Paris, France
+',
+    'humans_thanks'                     => 'Host: 
+Twitter: 
+Contact: 
+From: ',
+    'humans_site'                       => 'Last update: 2021/11/14
+Language: French
+Doctype: HTML5
+IDE: Coda 2
+Standards: HTML5, CSS3
+Components: jQuery, PHP
+Software: WordPress',
 );

@@ -5,6 +5,12 @@
 This file contains older changelog entries, so we can keep the size of the standard WordPress readme.txt file reasonable.
 For the latest changes, please see the "Changelog" section of the [readme.txt file](https://plugins.svn.wordpress.org/ct4gg/trunk/readme.txt).
 
+= 1.2.1 (2111-SFP2) =
+*Release Date - 15 November 2021*
+
+* Add generator for robots.txt
+* Add generator for humans.txt
+
 = 1.1.1 (2110-SFP2) =
 *Release Date - 8 October 2021*
 
