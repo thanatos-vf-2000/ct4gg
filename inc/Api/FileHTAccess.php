@@ -1,7 +1,7 @@
 <?php
 /**
  * @package  CT4GGPlugin
- * @Version 1.1.1
+ * @Version 1.3.0
  */
 
 namespace CT4GG\Api;
@@ -35,6 +35,47 @@ class FileHTAccess extends BaseController
 			}
 		}
 	}
+
+    private function add_login_screen_v2() {
+        $all_defaults = Options::loadPHPConfig(CT4GG_PATH . 'assets/options.php');
+        $head=0;
+        foreach ($all_defaults as $key => $value) {
+            $opt_test = explode("_",$key);
+            if ($opt_test[0] == "login" && $opt_test[1] == "slugs" ) {
+                if ($head == 0) {
+                    $this->items[] = '# RewriteRule for wp-login.php';
+                    $this->items[] = '<IfModule mod_rewrite.c>';
+                    $this->items[] = 'RewriteEngine On';
+                    $this->items[] = 'RewriteBase /';
+                    $head++;
+                }
+                switch ( $key ) {
+                    case 'login_slugs_login':
+                        $this->items[] = 'RewriteRule ^'. Options::get_option($key) .'/?$ /wp-login.php [QSA,L]';
+                        break;
+                    case 'login_slugs_logout':
+                        $this->items[] = 'RewriteRule ^'. Options::get_option($key)  .'/?$ /wp-login.php?action=logout [QSA,L]';
+                        break;
+                    case 'login_slugs_register':
+                        $this->items[] = 'RewriteRule ^'. Options::get_option($key)  .'/?$ /wp-login.php?action=register [QSA,L]';
+                        break;
+                    case 'login_slugs_lostpassword':
+                        $this->items[] = 'RewriteRule ^'. Options::get_option($key)  .'/?$ /wp-login.php?action=lostpassword [QSA,L]';
+                        break;
+                    case 'login_slugs_resetpass':
+                        $this->items[] = 'RewriteRule ^'. Options::get_option($key)  .'/?$ /wp-login.php?action=resetpass [QSA,L]';
+                        break;
+                    case 'login_slugs_postpass':
+                        $this->items[] = 'RewriteRule ^'. Options::get_option($key)  .'/?$ /wp-login.php?action=postpass [QSA,L]';
+                        break;
+                }
+            }
+        }
+        if ($head > 0) {
+            $this->items[] = '</IfModule>';
+            $this->items[] = '';
+        }
+    }
 
     private function add_htaccess_disable_show_directory() {
         $this->items[] = '# Desactiver l affichage du contenu des repertoires';

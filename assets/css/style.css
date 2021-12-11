@@ -2,7 +2,7 @@
 Plugin Name: ct4gg
 Author: Franck VANHOUCKE
 Author URI: https://ginkgos.net/
-Version: 1.2.1
+Version: 1.3.0
 */
 /*
 Variables global
@@ -87,8 +87,8 @@ div.ct4gg-ui-toggle {
   div.ct4gg-ui-toggle.mb-10 {
     margin-bottom: 10px; }
 
-.form-table th {
-  width: 50%; }
+.ct4gg-infos .form-table th {
+  width: 40%; }
 
 .ct4gg-footer-copyright p {
   text-align: right; }
@@ -104,3 +104,89 @@ input#submit-htaccess-delete:hover {
 input#submit-htaccess-restore, input#submit-htaccess-delete {
   min-width: 150px;
   margin: 0px 20px; }
+
+.ct4gg-tab-pane h2 {
+  box-shadow: 8px 8px 12px #767676;
+  padding: 10px; }
+
+.ct4gg-infos {
+  box-sizing: border-box;
+  width: 70%;
+  float: left;
+  padding-right: 30px;
+  padding-top: 25px; }
+
+.ct4gg-advertise {
+  float: right;
+  max-width: 335px;
+  width: 30%; }
+
+.ct4gg-support {
+  background-color: #f0f0f1;
+  padding: 13px;
+  margin-top: 25px;
+  box-shadow: 8px 8px 12px #767676; }
+
+.ct4gg-support h3 {
+  margin-bottom: 0; }
+
+/*
+Variables Admin Customizer
+*/
+/* ==========================================================================
+   Panel / Section
+   ========================================================================== */
+li#accordion-panel-ct4gg_login_panel h3.accordion-section-title {
+  background: linear-gradient(to right, #ce9e27, #ddb34b);
+  color: #fff; }
+
+li#accordion-panel-ct4gg_login_panel:hover .accordion-section-title {
+  background: linear-gradient(to right, #ce9e27, #ddb34b) !important;
+  color: #5c5c5c !important; }
+
+.accordion-section-title {
+  color: #5c5c5c; }
+
+li#accordion-section-ct4gg_logo_section h3.accordion-section-title {
+  background: linear-gradient(to right, #ce9e27, #ddb34b);
+  color: #fff; }
+
+li#accordion-section-ct4gg_logo_section:hover .accordion-section-title {
+  background: linear-gradient(to right, #ce9e27, #ddb34b) !important;
+  color: #5c5c5c !important; }
+
+.accordion-section-title {
+  color: #5c5c5c; }
+
+li#accordion-section-ct4gg_background_section h3.accordion-section-title {
+  background: linear-gradient(to right, #ce9e27, #ddb34b);
+  color: #fff; }
+
+li#accordion-section-ct4gg_background_section:hover .accordion-section-title {
+  background: linear-gradient(to right, #ce9e27, #ddb34b) !important;
+  color: #5c5c5c !important; }
+
+.accordion-section-title {
+  color: #5c5c5c; }
+
+li#accordion-section-ct4gg_form_section h3.accordion-section-title {
+  background: linear-gradient(to right, #ce9e27, #ddb34b);
+  color: #fff; }
+
+li#accordion-section-ct4gg_form_section:hover .accordion-section-title {
+  background: linear-gradient(to right, #ce9e27, #ddb34b) !important;
+  color: #5c5c5c !important; }
+
+.accordion-section-title {
+  color: #5c5c5c; }
+
+li#accordion-section-ct4gg_other_section h3.accordion-section-title {
+  background: linear-gradient(to right, #ce9e27, #ddb34b);
+  color: #fff; }
+
+li#accordion-section-ct4gg_other_section:hover .accordion-section-title {
+  background: linear-gradient(to right, #ce9e27, #ddb34b) !important;
+  color: #5c5c5c !important; }
+
+.accordion-section-title {
+  color: #5c5c5c; }

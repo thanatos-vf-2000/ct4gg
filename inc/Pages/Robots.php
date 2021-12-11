@@ -36,8 +36,8 @@ class Robots extends BaseController
 		$this->subpages = array(
 			array(
 				'parent_slug' => CT4GG_NAME.'_plugin', 
-				'page_title' => 'robots', 
-				'menu_title' => 'robots', 
+				'page_title' => 'Robots', 
+				'menu_title' => 'Robots', 
 				'capability' => 'manage_options', 
 				'menu_slug' => CT4GG_NAME.'_robots', 
 				'callback' => array( $this->callbacks, 'adminRobots' )

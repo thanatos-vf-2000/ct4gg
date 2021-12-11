@@ -1,7 +1,7 @@
 <?php
 /**
  * @package  CT4GGPlugin
- * @Version 1.2.0
+ * @Version 1.3.0
  */
 
 namespace CT4GG\Pages;
@@ -37,7 +37,7 @@ class Dashboard extends BaseController
 		$this->setSections();
 		$this->setFields();
 
-		$this->settings->addPages( $this->pages )->withSubPage( 'Dashboard' )->register();
+		$this->settings->addPages( $this->pages )->withSubPage( __('Settings', 'ct4gg') )->register();
 	}
 
 	public function setPages() 
@@ -88,6 +88,12 @@ class Dashboard extends BaseController
 				'page' => CT4GG_NAME.'_plugin'
 			),
 			array(
+				'id' => CT4GG_NAME.'_login',
+				'title' => __('Login Custom', 'ct4gg'),
+				'callback' => array( $this->callbacks_mngr, 'loginSettingSectionManager' ),
+				'page' => CT4GG_NAME.'_plugin'
+			),
+			array(
 				'id' => CT4GG_NAME.'_admin_setting',
 				'title' => __('Administration - Settings Manager', 'ct4gg'),
 				'callback' => array( $this->callbacks_mngr, 'adminSettingSectionManager' ),
@@ -127,7 +133,9 @@ class Dashboard extends BaseController
 		$args = array();
 		$defaults = $this->get_customizer_configuration_defaults();
 		$all_defaults = $this->loadPHPConfig(CT4GG_PATH . 'assets/defaults.php');
+		$all_options = $this->loadPHPConfig(CT4GG_PATH . 'assets/options.php');
 		foreach ( $this->managers as $key => $value ) {
+			$value = ($value == '') ? $all_options[$key] : $value;
 			if (!in_array($key,array('version','t'))) {
 				$config = wp_parse_args( $all_defaults[$key], $defaults );
 				switch ( $config['type'] ) {
@@ -203,6 +211,22 @@ class Dashboard extends BaseController
 							'id' => $key,
 							'title' => $config['title'],
 							'callback' => array( $this->callbacks_mngr, 'TextField' ),
+							'page' => CT4GG_NAME.'_plugin',
+							'section' => $config['section'],
+							'args' => array(
+								'option_name' => CT4GG_NAME.'_plugin',
+								'label_for' => $key,
+								'value'	=> $value,
+								'message'	=> $config['message'],
+								'class' => 'ct4gg-ui-toggle'
+							)
+						);
+						break;
+					case 'TextFieldUrl':
+						$args[] = array(
+							'id' => $key,
+							'title' => $config['title'],
+							'callback' => array( $this->callbacks_mngr,'TextFieldUrl' ),
 							'page' => CT4GG_NAME.'_plugin',
 							'section' => $config['section'],
 							'args' => array(

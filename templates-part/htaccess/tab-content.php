@@ -14,7 +14,7 @@ use CT4GG\Api\FileHTAcccess;
 			<input type="hidden" name="page" value="ct4gg_htaccess"/>
 			<input type="hidden" name="tab" value="tab-1"/>
 			<?php wp_nonce_field(CT4GG_NAME.'-opt', CT4GG_NAME.'-verif'); ?>
-			<p style="color:red">Management of options to be included in the .htaccess file on Dashbord option.</p>
+			<p style="color:red"><?php _e('Management of options to be included in the .htaccess file on Settings option.', 'ct4gg'); ?></p>
 			<p><?php submit_button( __("Update Htaccess", 'ct4gg'), 'primary', 'submit-build-htaccess',false); ?></p>
 		</form>
 		<?php

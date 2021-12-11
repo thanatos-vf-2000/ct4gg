@@ -36,8 +36,8 @@ class HTAccess extends BaseController
 		$this->subpages = array(
 			array(
 				'parent_slug' => CT4GG_NAME.'_plugin', 
-				'page_title' => 'htaccess', 
-				'menu_title' => 'htaccess', 
+				'page_title' => 'Htaccess', 
+				'menu_title' => 'Htaccess', 
 				'capability' => 'manage_options', 
 				'menu_slug' => CT4GG_NAME.'_htaccess', 
 				'callback' => array( $this->callbacks, 'adminHtaccess' )

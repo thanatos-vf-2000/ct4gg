@@ -1,7 +1,7 @@
 <?php
 /**
  * @package  CT4GGPlugin
- * @Version 1.2.0
+ * @Version 1.3.0
  */
 
 namespace CT4GG;
@@ -23,6 +23,7 @@ final class Init
 			Pages\HTAccess::class,
 			Pages\Robots::class,
 			Pages\Humans::class,
+			Theme\Login::class,
 			Ui\Admin::class,
 			Ui\Login::class,
 			Ui\Post::class,

@@ -1,7 +1,7 @@
 <?php
 /**
  * @package  CT4GGPlugin
- * @Version 1.2.0
+ * @Version 1.3.0
  */
 return array(
     'admin_del_logo_wp'                 => false,
@@ -10,6 +10,7 @@ return array(
     'admin_email_check_interval_val'    => "6",
     'admin_email_check_interval_type'   => "MONTH_IN_SECONDS",
     'disable_jetpack_Automattic'        => true,
+    'login_screen_v2'                   => false,
     'login_screen_logo_enable'          => false,
     'login_screen_logo'                 => '/wp-admin/images/wordpress-logo.svg?ver=20131107',
     'login_screen_background_enable'    => false,
@@ -50,4 +51,10 @@ IDE: Coda 2
 Standards: HTML5, CSS3
 Components: jQuery, PHP
 Software: WordPress',
+    'login_slugs_login'         => 'login',
+    'login_slugs_logout'        => 'logout',
+    'login_slugs_register'      => 'register',
+    'login_slugs_lostpassword'  => 'lostpassword',
+    'login_slugs_resetpass'     => 'resetpass',
+    'login_slugs_postpass'      => 'postpass',
 );

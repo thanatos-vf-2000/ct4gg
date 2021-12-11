@@ -1,7 +1,7 @@
 <?php
 /**
  * @package  CT4GGPlugin
- * @Version 1.1.0
+ * @Version 1.3.0
  */
 
 namespace CT4GG\ui;
@@ -88,7 +88,7 @@ class Post extends BaseController
 		$anciennete_jours = (($anciennete_secondes/86400));
 
 		// If the article is more than xxx days old, we display our alert
-		if ($anciennete_jours > $opt['post_old_post_notice']) {
+		if ($anciennete_jours > $opt['post_old_post_notice'] && (!is_front_page() && !is_home()) && get_post_type() != 'page') {
             $message = sprintf( __( 'WARNING: This article is more than %s days old and may no longer be current.', 'ct4gg' ), $opt['post_old_post_notice'] );
 			$content = "<div style='background-color: #f4f4f4; padding: 15px; margin-bottom: 30px;'>" . $message ."</div>" . $content;
 		}

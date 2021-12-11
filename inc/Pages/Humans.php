@@ -36,8 +36,8 @@ class Humans extends BaseController
 		$this->subpages = array(
 			array(
 				'parent_slug' => CT4GG_NAME.'_plugin', 
-				'page_title' => 'humans', 
-				'menu_title' => 'humans', 
+				'page_title' => 'Humans', 
+				'menu_title' => 'Humans', 
 				'capability' => 'manage_options', 
 				'menu_slug' => CT4GG_NAME.'_Humans', 
 				'callback' => array( $this->callbacks, 'adminHumans' )

@@ -1,7 +1,7 @@
 <?php
 /**
  * @package  CT4GGPlugin
- * @Version 0.0.1
+ * @Version 1.3.0
  */
 namespace CT4GG\Core;
 
@@ -49,10 +49,10 @@ class Options
     /**
      * LoadPHPConfig - load default config for plugin
      * 
-     * @since 0.0.1
+     * @since 1.3.0
      * @return array()
      */
-    private static function loadPHPConfig($path)
+    public static function loadPHPConfig($path)
     {
         
         if ( ! file_exists($path)) {

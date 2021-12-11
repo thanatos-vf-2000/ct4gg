@@ -4,7 +4,7 @@ Tags: tools, customiser, homepage, redirect, Jetpack, performance, login, speed,
 Requires at least: 5.7
 Tested up to: 5.8
 Requires PHP: 7.4
-Stable tag: 1.2.1
+Stable tag: 1.3.1
 License: GPLv2
 
 Wordpress customiser tools for beginer and confirmed users.
@@ -104,11 +104,24 @@ ct4gg is multisite compatible, in case of problem contact me.
 If you want a new feature, you can contact me by email at contact@ginkgos.net 
 
 == Changelog ==
-= 1.2.1 (2111-SFP2) =
-*Release Date - 15 November 2021*
 
-* Add generator for robots.txt
-* Add generator for humans.txt
+= 1.3.1 (2112-SFP2) =
+*Release Date - 11 December 2021*
+
+* fixed SVN commit
+
+= 1.3.0 (2112-SFP1) =
+*Release Date - 11 December 2021*
+
+* fixed for front page (home) not display a message at the top of articles older than X days,
+* fixed options not display,
+* fixed for post type as page not display a message at the top of articles older than X days,
+* Add Auto update .htaccess, humans.txt and robots.txt after saving options,
+* Add Rewrite URL for wp-login.php options (login, logout, ...),
+* Change management wp-login.php (New Version),
+* Add new options for customize login page (New Version only),
+* Add support information and link.
+
 
 See [changelog.txt](https://plugins.svn.wordpress.org/ct4gg/trunk/changelog.txt) for older changelog
 

@@ -1,7 +1,7 @@
 <?php 
 /**
  * @package  CT4GGPlugin
- * @Version 1.2.0
+ * @Version 1.3.0
  */
 namespace CT4GG\Api\Callbacks;
 
@@ -31,17 +31,17 @@ class ManagerCallbacks extends BaseController
 
 	public function adminIndexSectionManager()
 	{
-		echo __('Manage the Sections and Features of this Plugin by activating the checkboxes from the following list.','ct4gg');
+		echo __('Manage the Sections and Features of this Plugin by activating options.','ct4gg');
 	}
 
 	public function adminLoginSectionManager()
 	{
-		echo __('Manage the screen login	.','ct4gg');
+		echo __('Manage the screen login <b style="color:red">Old version please use the new version section "Login Custom"</b>.','ct4gg');
 	}
 
 	public function adminSettingSectionManager()
 	{
-		echo __('Manage the Sections and Features of WP Administration Dashboard by activating the checkboxes from the following list.','ct4gg');
+		echo __('Manage the Sections and Features of WP Administration Dashboard by activating options.','ct4gg');
 	}
 
 	public function postSettingSectionManager()
@@ -51,17 +51,22 @@ class ManagerCallbacks extends BaseController
 
 	public function htaccessSettingSectionManager()
 	{
-		echo __('Management of options to be included in the .htaccess file. <b style="color:red">Please go to htaccess menu for apply this parameters.</b>','ct4gg');
+		echo __('Management of options to be included in the .htaccess file.','ct4gg');
 	}
 
 	public function robotsSettingSectionManager()
 	{
-		echo __('Management of options to be included in the robots.txt file. <b style="color:red">Please go to robots menu for apply this parameters.</b>','ct4gg');
+		echo __('Management of options to be included in the robots.txt file.','ct4gg');
 	}
 
 	public function humansSettingSectionManager()
 	{
-		echo __('Management of options to be included in the humans.txt file. <b style="color:red">Please go to humans menu for apply this parameters.</b>','ct4gg');
+		echo __('Management of options to be included in the humans.txt file.','ct4gg');
+	}
+
+	public function loginSettingSectionManager()
+	{
+		_e('Manage the screen login <b style="color:blue">New version</b>.<br>After saving the options go to <b>"Appearance (Themes)"</b> and choose <b>"Login Custom"</b> <b style="color:red">or</b> in the menu of <b>this plugin</b> chose <b>"Login Custom"</b>.','ct4gg');
 	}
 
 	public function checkboxField( $args )
@@ -140,6 +145,20 @@ class ManagerCallbacks extends BaseController
 				<textarea id="'. esc_attr($name) .'" name="' . esc_attr($option_name) . '[' . esc_attr($name) . ']" rows="'. esc_attr($args['rows']) .'" cols="'. esc_attr($args['cols']) .'" >' . esc_attr($args['value']) . '</textarea> 
 			</div>';
 		if ($args['message'] <> '') {echo '<p class="description">' . esc_html($args['message']) . '</p>';}
+	}
+
+	public function TextFieldUrl($args)
+	{
+		$value = $args['value'];
+		$name = $args['label_for'];
+		$classes = $args['class'];
+		$option_name = $args['option_name'];
+		$class = explode("_",$name);
+		
+		echo '<div class="' . esc_attr($classes) . '" >
+				<input id="'. esc_attr($name) .'" type="text" size="20" name="' . esc_attr($option_name) . '[' . esc_attr($name) . ']" value="' . esc_attr($value) . '" class="' . esc_attr($class[0] . '-'.$class[1]).'"/>
+				<em>' . site_url() . '/<b id="'. esc_attr($name) .'_txt">' . esc_attr($value) . '</b></em>
+			</div>';
 	}
 
 	private function loadPHPConfig($path)

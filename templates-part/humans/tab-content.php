@@ -14,6 +14,7 @@ use CT4GG\Api\FileHumans;
 			<input type="hidden" name="page" value="ct4gg_humans"/>
 			<input type="hidden" name="tab" value="tab-1"/>
 			<?php wp_nonce_field(CT4GG_NAME.'-opt', CT4GG_NAME.'-verif'); ?>
+			<p style="color:red"><?php _e('Management of options to be included in the .htaccess file on Settings option.', 'ct4gg'); ?></p>
 			<p><?php submit_button( __("Update Humans.txt", 'ct4gg'), 'primary', 'submit-build-humans',false); ?></p>
 		</form>
 		<?php

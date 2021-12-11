@@ -1,7 +1,7 @@
 <?php
 /**
  * @package  CT4GGPlugin
- * @Version 1.1.1
+ * @Version 1.3.0
  * 
  * Desciption: htaccess
  */
@@ -37,7 +37,8 @@ if (isset($_POST[CT4GG_NAME.'-verif']) && wp_verify_nonce($_POST[CT4GG_NAME.'-ve
         }
         
     } else {
-        $htaccess_params = array('htaccess_disable_show_directory',
+        $htaccess_params = array('login_screen_v2',
+            'htaccess_disable_show_directory',
             'htaccess_hide_server_information',
             'htaccess_protect_files_ht',
             'htaccess_force_download_enable',

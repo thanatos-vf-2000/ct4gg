@@ -1,7 +1,7 @@
 <?php
 /**
  * @package  CT4GGPlugin
- * @Version 1.2.0
+ * @Version 1.3.0
  */
 return array(
     'admin_del_logo_wp' => array(
@@ -54,6 +54,10 @@ return array(
             'title'     => __('Disable Jetpack for Automattic','ct4gg'),
             'message'   => __('Disable Jetpack offered by Automattic to stop showing banners.', 'ct4gg'),
             'section'   => CT4GG_NAME.'_admin_setting',
+            'type'      => 'checkboxField') ,
+        'login_screen_v2' => array(
+            'title'     => __('Use the new management version of the login screen.','ct4gg'),
+            'section'   => CT4GG_NAME.'_admin_login',
             'type'      => 'checkboxField') ,
         'login_screen_logo_enable' => array(
             'title'     => __('Enable change logo on login screen (logo size 84px*84px).','ct4gg'),
@@ -181,4 +185,28 @@ return array(
             'rows'      => 7,
             'cols'      => 100,
             'type'      => 'TextAreaField') ,
+        'login_slugs_login' => array(
+            'title'     => __('login','ct4gg'),
+            'section'   => CT4GG_NAME.'_login',
+            'type'      => 'TextFieldUrl') ,
+        'login_slugs_logout' => array(
+            'title'     => __('Logout','ct4gg'),
+            'section'   => CT4GG_NAME.'_login',
+            'type'      => 'TextFieldUrl') ,
+        'login_slugs_register' => array(
+            'title'     => __('Register','ct4gg'),
+            'section'   => CT4GG_NAME.'_login',
+            'type'      => 'TextFieldUrl') ,
+        'login_slugs_lostpassword' => array(
+            'title'     => __('Lost password','ct4gg'),
+            'section'   => CT4GG_NAME.'_login',
+            'type'      => 'TextFieldUrl') ,
+        'login_slugs_resetpass' => array(
+            'title'     => __('Reset password','ct4gg'),
+            'section'   => CT4GG_NAME.'_login',
+            'type'      => 'TextFieldUrl') ,
+        'login_slugs_postpass' => array(
+            'title'     => __('Post Password','ct4gg'),
+            'section'   => CT4GG_NAME.'_login',
+            'type'      => 'TextFieldUrl') ,
 );
