@@ -1,7 +1,7 @@
 <?php
 /**
  * @package  CT4GGPlugin
- * @Version 1.0.0
+ * @Version 1.4.0
  */
 
 namespace CT4GG\ui;
@@ -38,6 +38,8 @@ class Admin extends BaseController
         if ( $this->activated( 'admin_del_logo_wp' ) ) {
             add_action( 'admin_bar_menu', array( $this, 'del_logo_wp'), 999 );
         }
+
+        add_filter( 'admin_footer_text', array( $this, 'admin_footer_text' ) );
     }
 
     public function admin_email_check_interval() 
@@ -58,5 +60,35 @@ class Admin extends BaseController
           $wp_admin_bar->remove_node( 'wp-logo-external');
         }
         $wp_admin_bar->remove_node( 'wp-logo' );
-      }
+    }
+
+    /**
+	 * Admin footer text.
+	 *
+	 * Modifies the "Thank you" text displayed in the admin footer.
+	 *
+	 * Fired by `admin_footer_text` filter.
+	 *
+	 * @since 1.4.0
+	 * @access public
+	 *
+	 * @param string $footer_text The content that will be printed.
+	 *
+	 * @return string The content that will be printed.
+	 */
+	public function admin_footer_text( $footer_text ) {
+		$current_screen = get_current_screen();
+		$is_ct4gg_screen = ( $current_screen && false !== strpos( $current_screen->id, 'ct4gg' ) );
+
+		if ( $is_ct4gg_screen ) {
+			$footer_text = sprintf(
+				/* translators: 1: Elementor, 2: Link to plugin review */
+				__( 'Enjoyed %1$s? Please leave us a %2$s rating. We really appreciate your support!', 'ct4gg' ),
+				'<strong>' . esc_html__( 'CT4GG', 'ct4gg' ) . '</strong>',
+				'<a href="https://wordpress.org/support/plugin/ct4gg/reviews/#new-post" target="_blank" class ="ct4gg-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</a>'
+			);
+		}
+
+		return $footer_text;
+	}
 }

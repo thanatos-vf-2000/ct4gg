@@ -1,7 +1,7 @@
 <?php 
 /**
  * @package  CT4GGPlugin
- * @Version 1.3.0
+ * @Version 1.4.0
  */
 namespace CT4GG\Api\Callbacks;
 
@@ -67,6 +67,11 @@ class ManagerCallbacks extends BaseController
 	public function loginSettingSectionManager()
 	{
 		_e('Manage the screen login <b style="color:blue">New version</b>.<br>After saving the options go to <b>"Appearance (Themes)"</b> and choose <b>"Login Custom"</b> <b style="color:red">or</b> in the menu of <b>this plugin</b> chose <b>"Login Custom"</b>.','ct4gg');
+	}
+
+	public function socialbuttonsSettingSectionManager()
+	{
+		_e('Management of options for Social Buttons.<br>This will create a wordpress shortcode <b style="color:blue">[ct4gg_social]</b>.','ct4gg');
 	}
 
 	public function checkboxField( $args )

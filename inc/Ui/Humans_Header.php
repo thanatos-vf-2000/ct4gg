@@ -1,7 +1,7 @@
 <?php
 /**
  * @package  CT4GGPlugin
- * @Version 1.2.0
+ * @Version 1.4.0
  */
 
 namespace CT4GG\ui;
@@ -15,7 +15,7 @@ class Humans_Header extends BaseController
 {
     public function register()
     {
-        $robots_file = ABSPATH."robots.txt";
+        $robots_file = ABSPATH."humans.txt";
         if (file_exists($robots_file)) {
             add_action('wp_head', array( $this, 'head_author'));
         }

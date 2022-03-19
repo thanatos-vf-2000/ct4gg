@@ -2,7 +2,7 @@
 Plugin Name: ct4gg
 Author: Franck VANHOUCKE
 Author URI: https://ginkgos.net/
-Version: 1.3.0
+Version: 1.4.1
 */
 /*
 Variables global
@@ -13,180 +13,142 @@ Base
 /*
 Import Core
 */
-.ct4gg-nav-tabs {
-  float: left;
-  width: 100%;
-  margin: 0;
-  list-style-type: none;
-  border-bottom: 1px solid transparent; }
-  .ct4gg-nav-tabs > li {
-    float: left;
-    margin-bottom: -1px; }
-    .ct4gg-nav-tabs > li > a {
-      margin-right: 2px;
-      line-height: 1.5;
-      padding: 10px;
-      border: 1px solid transparent;
-      border-radius: 4px 4px 0 0;
-      float: left;
-      text-decoration: none; }
-      .ct4gg-nav-tabs > li > a:hover {
-        border-color: #eee #eee #ddd; }
-    .ct4gg-nav-tabs > li.active > a, .ct4gg-nav-tabs > li.active > a:hover, .ct4gg-nav-tabs > li.active > a:focus {
-      color: #555;
-      cursor: default;
-      background-color: #fff;
-      border-color: transparent; }
+.ct4gg-social-box {
+  display: block;
+  margin: -20px 0 40px;
+  padding: 0 6rem 0; }
 
-.ct4gg-tab-content > .ct4gg-tab-pane {
-  float: left;
-  width: 98%;
+.ct4gg-social-box:last-of-type {
+  margin: 0 0 40px; }
+
+.ct4gg-social-btn {
+  display: block;
+  width: 100%; }
+
+a.ct4gg-social-2.sbtn span {
   display: none; }
-  .ct4gg-tab-content > .ct4gg-tab-pane.active {
-    display: block;
-    padding: 10px;
-    background-color: #fff;
-    box-shadow: 0 5px 4px -2px rgba(0, 0, 0, 0.15); }
 
-div.ct4gg-ui-toggle {
-  margin: 0;
-  padding: 0; }
-  div.ct4gg-ui-toggle input[type='checkbox'] {
-    display: none; }
-    div.ct4gg-ui-toggle input[type='checkbox']:checked + label {
-      border-color: #ce9e27;
-      background: #ce9e27;
-      box-shadow: inset 0 0 0 10px #ce9e27; }
-      div.ct4gg-ui-toggle input[type='checkbox']:checked + label > div {
-        margin-left: 20px; }
-  div.ct4gg-ui-toggle label {
-    transition: all 200ms ease;
+a.ct4gg-social-1.sbtn {
+  width: 180px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50px;
+  padding: 10px;
+  color: #fff;
+  margin: 0 0.5% 0 0;
+  font-size: 15px; }
+
+a.ct4gg-social-1.sbtn span {
+  margin: 0 0 0 15px; }
+
+a.ct4gg-social-2.sbtn {
+  width: 6%;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50px;
+  padding: 10px;
+  color: #fff;
+  margin: 0 0.5% 0 0;
+  line-height: 1.825 !important;
+  max-width: 50px;
+  min-width: 50px; }
+
+.ct4gg-twitter {
+  background: #03A9F4; }
+
+.ct4gg-twitter::before {
+  font-family: fontawesome;
+  content: '\f099'; }
+
+.ct4gg-twitter:hover {
+  background: #0093d6; }
+
+.ct4gg-facebook {
+  background: #3F51B5; }
+
+.ct4gg-facebook::before {
+  font-family: fontawesome;
+  content: '\f09a'; }
+
+a.ct4gg-social-1.sbtn.ct4gg-facebook:hover {
+  background: #2f409f; }
+
+.ct4gg-googleplus {
+  background: #F44336; }
+
+.ct4gg-googleplus::before {
+  font-family: fontawesome;
+  content: '\f0d5'; }
+
+.ct4gg-googleplus:hover {
+  background: #c82c21; }
+
+.ct4gg-whatsapp {
+  background: #4CAF50; }
+
+.ct4gg-whatsapp::before {
+  font-family: fontawesome;
+  content: '\f232'; }
+
+a.ct4gg-social-2.sbtn.ct4gg-whatsapp:hover {
+  background: #3d9440; }
+
+.ct4gg-linkedin {
+  background: #1a7baa; }
+
+.ct4gg-linkedin::before {
+  font-family: fontawesome;
+  content: '\f0e1'; }
+
+a.ct4gg-social-2.sbtn.ct4gg-linkedin:hover {
+  background: #136288; }
+
+.ct4gg-pinterest {
+  background: #bd081c; }
+
+.ct4gg-pinterest::before {
+  font-family: fontawesome;
+  content: '\f231'; }
+
+a.ct4gg-social-2.sbtn.ct4gg-pinterest:hover {
+  background: #a10718; }
+
+.ct4gg-buffer {
+  background: #ced7df; }
+
+.ct4gg-buffer::before {
+  font-family: fontawesome;
+  content: '\f2d5'; }
+
+a.ct4gg-social-2.sbtn.ct4gg-buffer:hover {
+  background: #c3c5c8; }
+
+.ct4gg-email {
+  background: #ced7df; }
+
+.ct4gg-email::before {
+  font-family: fontawesome;
+  content: '\f199'; }
+
+a.ct4gg-social-2.sbtn.ct4gg-email:hover {
+  background: #c3c5c8; }
+
+.ct4gg-social-btn a:last-of-type {
+  margin: 0; }
+
+@media only screen and (max-width: 1200px) {
+  a.ct4gg-social-1.sbtn {
+    width: 180px;
     display: inline-block;
-    position: relative;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    background: #5c5c5c;
-    box-shadow: inset 0 0 0 0 #ce9e27;
-    border: 2px solid #5c5c5c;
-    border-radius: 22px;
-    width: 40px;
-    height: 20px; }
-    div.ct4gg-ui-toggle label div {
-      transition: all 200ms ease;
-      background: #FFFFFF;
-      width: 20px;
-      height: 20px;
-      border-radius: 10px; }
-    div.ct4gg-ui-toggle label:hover,
-    div.ct4gg-ui-toggle label > div:hover {
-      cursor: pointer; }
-  div.ct4gg-ui-toggle.mb-10 {
-    margin-bottom: 10px; }
+    text-align: center;
+    border-radius: 50px;
+    padding: 10px;
+    color: #fff;
+    margin: 0 0.5% 0 0;
+    font-size: 15px; } }
 
-.ct4gg-infos .form-table th {
-  width: 40%; }
-
-.ct4gg-footer-copyright p {
-  text-align: right; }
-
-input#submit-htaccess-delete {
-  color: #f6f7f7;
-  border-color: #f6f7f7;
-  background: #e23939; }
-
-input#submit-htaccess-delete:hover {
-  background: #bd3030; }
-
-input#submit-htaccess-restore, input#submit-htaccess-delete {
-  min-width: 150px;
-  margin: 0px 20px; }
-
-.ct4gg-tab-pane h2 {
-  box-shadow: 8px 8px 12px #767676;
-  padding: 10px; }
-
-.ct4gg-infos {
-  box-sizing: border-box;
-  width: 70%;
-  float: left;
-  padding-right: 30px;
-  padding-top: 25px; }
-
-.ct4gg-advertise {
-  float: right;
-  max-width: 335px;
-  width: 30%; }
-
-.ct4gg-support {
-  background-color: #f0f0f1;
-  padding: 13px;
-  margin-top: 25px;
-  box-shadow: 8px 8px 12px #767676; }
-
-.ct4gg-support h3 {
-  margin-bottom: 0; }
-
-/*
-Variables Admin Customizer
-*/
-/* ==========================================================================
-   Panel / Section
-   ========================================================================== */
-li#accordion-panel-ct4gg_login_panel h3.accordion-section-title {
-  background: linear-gradient(to right, #ce9e27, #ddb34b);
-  color: #fff; }
-
-li#accordion-panel-ct4gg_login_panel:hover .accordion-section-title {
-  background: linear-gradient(to right, #ce9e27, #ddb34b) !important;
-  color: #5c5c5c !important; }
-
-.accordion-section-title {
-  color: #5c5c5c; }
-
-li#accordion-section-ct4gg_logo_section h3.accordion-section-title {
-  background: linear-gradient(to right, #ce9e27, #ddb34b);
-  color: #fff; }
-
-li#accordion-section-ct4gg_logo_section:hover .accordion-section-title {
-  background: linear-gradient(to right, #ce9e27, #ddb34b) !important;
-  color: #5c5c5c !important; }
-
-.accordion-section-title {
-  color: #5c5c5c; }
-
-li#accordion-section-ct4gg_background_section h3.accordion-section-title {
-  background: linear-gradient(to right, #ce9e27, #ddb34b);
-  color: #fff; }
-
-li#accordion-section-ct4gg_background_section:hover .accordion-section-title {
-  background: linear-gradient(to right, #ce9e27, #ddb34b) !important;
-  color: #5c5c5c !important; }
-
-.accordion-section-title {
-  color: #5c5c5c; }
-
-li#accordion-section-ct4gg_form_section h3.accordion-section-title {
-  background: linear-gradient(to right, #ce9e27, #ddb34b);
-  color: #fff; }
-
-li#accordion-section-ct4gg_form_section:hover .accordion-section-title {
-  background: linear-gradient(to right, #ce9e27, #ddb34b) !important;
-  color: #5c5c5c !important; }
-
-.accordion-section-title {
-  color: #5c5c5c; }
-
-li#accordion-section-ct4gg_other_section h3.accordion-section-title {
-  background: linear-gradient(to right, #ce9e27, #ddb34b);
-  color: #fff; }
-
-li#accordion-section-ct4gg_other_section:hover .accordion-section-title {
-  background: linear-gradient(to right, #ce9e27, #ddb34b) !important;
-  color: #5c5c5c !important; }
-
-.accordion-section-title {
-  color: #5c5c5c; }
+@media only screen and (max-width: 768px) {
+  a.ct4gg-social-1.sbtn {
+    width: 46px; }
+  a.ct4gg-social-1.sbtn span {
+    display: none; } }

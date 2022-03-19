@@ -1,7 +1,7 @@
 <?php
 /**
  * @package  CT4GGPlugin
- * @Version 1.3.0
+ * @Version 1.4.0
  */
 return array(
     'admin_del_logo_wp' => array(
@@ -209,4 +209,41 @@ return array(
             'title'     => __('Post Password','ct4gg'),
             'section'   => CT4GG_NAME.'_login',
             'type'      => 'TextFieldUrl') ,
+        'socialbuttons_activated' => array(
+            'title'     => __('Activate Social Buttons.','ct4gg'),
+            'section'   => CT4GG_NAME.'_socialbuttons',
+            'type'      => 'checkboxField') ,
+        'socialbuttons_txt' => array(
+            'title'     => __('Show Texte.','ct4gg'),
+            'section'   => CT4GG_NAME.'_socialbuttons',
+            'type'      => 'checkboxField') ,
+        'socialbuttons_twitter' => array(
+            'title'     => __('Activate twitter.','ct4gg'),
+            'section'   => CT4GG_NAME.'_socialbuttons',
+            'type'      => 'checkboxField') ,
+        'socialbuttons_facebook' => array(
+            'title'     => __('Activate facebook.','ct4gg'),
+            'section'   => CT4GG_NAME.'_socialbuttons',
+            'type'      => 'checkboxField') ,
+        'socialbuttons_whatsapp' => array(
+            'title'     => __('Activate whatsapp.','ct4gg'),
+            'message'   => __('Display only on max size 640px.', 'ct4gg'),
+            'section'   => CT4GG_NAME.'_socialbuttons',
+            'type'      => 'checkboxField') ,
+        'socialbuttons_pinterest' => array(
+            'title'     => __('Activate pinterest.','ct4gg'),
+            'section'   => CT4GG_NAME.'_socialbuttons',
+            'type'      => 'checkboxField') ,
+        'socialbuttons_linkedin' => array(
+            'title'     => __('Activate linkedin.','ct4gg'),
+            'section'   => CT4GG_NAME.'_socialbuttons',
+            'type'      => 'checkboxField') ,
+        'socialbuttons_buffer' => array(
+            'title'     => __('Activate buffer.','ct4gg'),
+            'section'   => CT4GG_NAME.'_socialbuttons',
+            'type'      => 'checkboxField') ,
+        'socialbuttons_email' => array(
+            'title'     => __('Activate email.','ct4gg'),
+            'section'   => CT4GG_NAME.'_socialbuttons',
+            'type'      => 'checkboxField') ,
 );

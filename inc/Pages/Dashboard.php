@@ -1,7 +1,7 @@
 <?php
 /**
  * @package  CT4GGPlugin
- * @Version 1.3.0
+ * @Version 1.4.0
  */
 
 namespace CT4GG\Pages;
@@ -103,6 +103,12 @@ class Dashboard extends BaseController
 				'id' => CT4GG_NAME.'_post_setting',
 				'title' => __('Post - Settings Manager', 'ct4gg'),
 				'callback' => array( $this->callbacks_mngr, 'postSettingSectionManager' ),
+				'page' => CT4GG_NAME.'_plugin'
+			),
+			array(
+				'id' => CT4GG_NAME.'_socialbuttons',
+				'title' => __('Social Buttons', 'ct4gg'),
+				'callback' => array( $this->callbacks_mngr, 'socialbuttonsSettingSectionManager' ),
 				'page' => CT4GG_NAME.'_plugin'
 			),
 			array(

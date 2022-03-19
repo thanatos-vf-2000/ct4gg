@@ -1,7 +1,7 @@
 <?php
 /**
  * @package  CT4GGPlugin
- * @Version 1.3.0
+ * @Version 1.4.0
  */
 return array(
     'admin_del_logo_wp'                 => false,
@@ -57,4 +57,13 @@ Software: WordPress',
     'login_slugs_lostpassword'  => 'lostpassword',
     'login_slugs_resetpass'     => 'resetpass',
     'login_slugs_postpass'      => 'postpass',
+    'socialbuttons_activated'   => false,
+    'socialbuttons_txt'         => false,
+    'socialbuttons_twitter'     => true,
+    'socialbuttons_facebook'    => true,
+    'socialbuttons_whatsapp'    => true,
+    'socialbuttons_pinterest'   => true,
+    'socialbuttons_linkedin'    => true,
+    'socialbuttons_buffer'      => true,
+    'socialbuttons_email'       => true,
 );

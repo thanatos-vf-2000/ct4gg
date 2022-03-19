@@ -1,10 +1,10 @@
 === ct4gg ===
 Contributors: vanhoucke
-Tags: tools, customiser, homepage, redirect, Jetpack, performance, login, speed, comments, min comments, meta generator, htaccess, cache, robots.txt, robots, humans.txt
-Requires at least: 5.7
-Tested up to: 5.8
+Tags: tools, customiser, homepage, redirect, Jetpack, performance, login, speed, comments, min comments, meta generator, htaccess, cache, robots.txt, robots, humans.txt, Share, sharing, share buttons, share button, share social media, share icons, social buttons, sharing buttons, sharing icons, social media icons, social share, social sharing
+Requires at least: 5.2
+Tested up to: 5.9
 Requires PHP: 7.4
-Stable tag: 1.3.1
+Stable tag: 1.4.2
 License: GPLv2
 
 Wordpress customiser tools for beginer and confirmed users.
@@ -76,14 +76,21 @@ ct4gg is multisite compatible, in case of problem contact me.
 * Hide meta generator (Wordpress Version),
 * Display message on old post,
 * Management of the .htaccess file:
- Disable display of directory contents
- Hide server information
- Protect .htaccess and .htpasswds files
- Enable Force download
- Enable cache expires
- Compressing static files
-* Generate robots.txt
-* Generate humans.txt
+    Disable display of directory contents
+    Hide server information
+    Protect .htaccess and .htpasswds files
+    Enable Force download
+    Enable cache expires
+    Compressing static files
+* Generate robots.txt,
+* Generate humans.txt,
+* Social media sharing buttons.
+
+= Can I use a shortcode to place the share buttons? =
+
+Yes, it's [ct4gg_social]. You can place it into any editor. If the sharing buttons still don't show, there might be an issue with your theme.
+
+Alternatively, you can place the followin into your codes: <?php echo do_shortcode('[ct4gg_social]'); ?>
 
 = Apply changes in the file .htaccess =
 1. Activate the settings in Dashboard menu and save them
@@ -105,22 +112,11 @@ If you want a new feature, you can contact me by email at contact@ginkgos.net
 
 == Changelog ==
 
-= 1.3.1 (2112-SFP2) =
-*Release Date - 11 December 2021*
+= 1.4.2 (2203-SFP2) =
+*Release Date - 6 March 2022*
 
-* fixed SVN commit
-
-= 1.3.0 (2112-SFP1) =
-*Release Date - 11 December 2021*
-
-* fixed for front page (home) not display a message at the top of articles older than X days,
-* fixed options not display,
-* fixed for post type as page not display a message at the top of articles older than X days,
-* Add Auto update .htaccess, humans.txt and robots.txt after saving options,
-* Add Rewrite URL for wp-login.php options (login, logout, ...),
-* Change management wp-login.php (New Version),
-* Add new options for customize login page (New Version only),
-* Add support information and link.
+* Test for Wordpress 5.9,
+* Adjustment Administration Login Custom.
 
 
 See [changelog.txt](https://plugins.svn.wordpress.org/ct4gg/trunk/changelog.txt) for older changelog

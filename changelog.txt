@@ -5,8 +5,22 @@
 This file contains older changelog entries, so we can keep the size of the standard WordPress readme.txt file reasonable.
 For the latest changes, please see the "Changelog" section of the [readme.txt file](https://plugins.svn.wordpress.org/ct4gg/trunk/readme.txt).
 
+= 1.4.2 (2203-SFP2) =
+*Release Date - 6 March 2022*
+
+* Test for Wordpress 5.9,
+* Adjustment Administration Login Custom.
+
+= 1.4.0 (2201-SFP1) =
+*Release Date - 11 January 2022*
+
+* Fixed error on Humans_Header class,
+* Add social media sharing buttons,
+
 = 1.3.1 (2112-SFP2) =
 *Release Date - 11 December 2021*
+
+* fixed SVN commit.
 
 = 1.3.0 (2112-SFP1) =
 *Release Date - 11 Decembre 2021*

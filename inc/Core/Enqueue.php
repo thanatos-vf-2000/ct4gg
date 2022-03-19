@@ -1,7 +1,7 @@
 <?php
 /**
  * @package  CT4GGPlugin
- * @Version 1.0.0
+ * @Version 1.4.0
  */
 namespace CT4GG\Core;
 
@@ -9,8 +9,9 @@ class Enqueue
 {
     public function register() {
 		add_action( 'init', array( $this, 'init' ) );
-		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue' ) );
-		add_action( 'login_enqueue_scripts', array( $this, 'enqueue' ) );
+		add_action('wp_enqueue_scripts', array( $this, 'enqueue' ));
+		add_action( 'admin_enqueue_scripts', array( $this, 'admin_enqueue' ) );
+		add_action( 'login_enqueue_scripts', array( $this, 'admin_enqueue' ) );
 	}
 
 	function init() {
@@ -18,6 +19,14 @@ class Enqueue
 	}
 	
 	function enqueue() {
+		if (WP_DEBUG) {
+            wp_enqueue_style( CT4GG_NAME, CT4GG_URL . 'assets/css/style.css' );
+       } else {
+            wp_enqueue_style( CT4GG_NAME, CT4GG_URL . 'assets/css/style.min.css' );
+       }
+	}
+
+	function admin_enqueue() {
 		// enqueue all our scripts
 		//wp_enqueue_script( 'media-upload' );
 		wp_enqueue_media();
@@ -26,10 +35,10 @@ class Enqueue
 		wp_enqueue_script('wp-color-picker');
 		
         if (WP_DEBUG) {
-            wp_enqueue_style( CT4GG_NAME, CT4GG_URL . 'assets/css/style.css' );
+            wp_enqueue_style( CT4GG_NAME, CT4GG_URL . 'assets/css/admin.css' );
 			wp_enqueue_script( CT4GG_NAME, CT4GG_URL . 'assets/js/admin.js', array('jquery','wp-color-picker'), CT4GG_VERSION, true  );
         } else {
-            wp_enqueue_style( CT4GG_NAME, CT4GG_URL . 'assets/css/style.min.css' );
+            wp_enqueue_style( CT4GG_NAME, CT4GG_URL . 'assets/css/admin.min.css' );
 			wp_enqueue_script( CT4GG_NAME, CT4GG_URL . 'assets/js/admin.min.js', array('jquery','wp-color-picker'), CT4GG_VERSION, true   );
         }
 
