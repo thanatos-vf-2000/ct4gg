@@ -1,11 +1,12 @@
 <?php 
 /**
  * @package  CT4GGPlugin
- * @Version 1.4.0
+ * @Version 1.4.3
  */
 namespace CT4GG\Api\Callbacks;
 
 use CT4GG\Core\BaseController;
+use CT4GG\Core\Options;
 
 class ManagerCallbacks extends BaseController
 {
@@ -36,7 +37,10 @@ class ManagerCallbacks extends BaseController
 
 	public function adminLoginSectionManager()
 	{
-		echo __('Manage the screen login <b style="color:red">Old version please use the new version section "Login Custom"</b>.','ct4gg');
+		if (Options::get_option('login_screen_v2') == false) {
+			echo __('Manage the screen login <b style="color:red">Old version please use the new version section "Login Custom"</b>.','ct4gg');
+		}
+		
 	}
 
 	public function adminSettingSectionManager()

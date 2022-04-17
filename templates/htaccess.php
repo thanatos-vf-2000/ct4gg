@@ -1,7 +1,7 @@
 <?php
 /**
  * @package  CT4GGPlugin
- * @Version 1.3.0
+ * @Version 1.4.3
  * 
  * Desciption: htaccess
  */
@@ -36,6 +36,11 @@ if (isset($_POST[CT4GG_NAME.'-verif']) && wp_verify_nonce($_POST[CT4GG_NAME.'-ve
             self::view('htaccess',array('type' => 'ct4gg-htaccess-ko'));
         }
         
+    } elseif (isset($_POST['submit-build-htaccess'])) {
+        if (file_exists(ABSPATH.'.htaccess')) {
+            $htaccess_file->backup();
+            $htaccess_file->save_mod($_POST['htaccess-content']);
+        }
     } else {
         $htaccess_params = array('login_screen_v2',
             'htaccess_disable_show_directory',

@@ -1,7 +1,7 @@
 <?php
 /**
  * @package  CT4GGPlugin
- * @Version 1.2.0
+ * @Version 1.4.3
  */
 
 namespace CT4GG\Api;
@@ -123,6 +123,21 @@ class FileHumans extends BaseController
 
 		return false;
 	}
+
+	public function save_mod($txt) {
+
+        $filename = $this->location .'humans.txt';
+        
+        $file = @fopen( $filename, 'w' );
+		if ( $file ) {
+			$result = fwrite( $file, str_replace('\\','',$txt) );
+			fclose( $file );
+
+			return $result !== false;
+		}
+
+		return true;
+    }
 
     public function backup() {
         $day = date('Ymd');

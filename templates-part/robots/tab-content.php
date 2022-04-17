@@ -1,7 +1,7 @@
 <?php
 /**
  * @package  CT4GGPlugin
- * @Version 1.2.0
+ * @Version 1.4.3
  * 
  * Desciption: nav-content for robots
  */
@@ -14,16 +14,15 @@ use CT4GG\Api\FileRobots;
 			<input type="hidden" name="page" value="ct4gg_robots"/>
 			<input type="hidden" name="tab" value="tab-1"/>
 			<?php wp_nonce_field(CT4GG_NAME.'-opt', CT4GG_NAME.'-verif'); ?>
-			<p style="color:red"><?php _e('Management of options to be included in the .htaccess file on Settings option.', 'ct4gg'); ?></p>
 			<p><?php submit_button( __("Update Robots.txt", 'ct4gg'), 'primary', 'submit-build-robots',false); ?></p>
+			<?php
+			$robots_file = ABSPATH."robots.txt";
+			if (file_exists($robots_file)) {
+				echo "<p>" . esc_html($robots_file. __(' updated on ', 'ct4gg'). date ("F d Y H:i:s.", filemtime($robots_file)) ) ."</p>";
+			?>
+				<textarea cols="150" style="margin-top: 0px; margin-bottom: 0px; height: 500px;" name="robots-content"><?php echo esc_html(file_get_contents($robots_file)); ?></textarea>
+			<?php } ?>
 		</form>
-		<?php
-		$robots_file = ABSPATH."robots.txt";
-		if (file_exists($robots_file)) {
-			echo esc_html($robots_file. __(' updated on ', 'ct4gg'). date ("F d Y H:i:s.", filemtime($robots_file)) );
-		?>
-			<textarea cols="150" style="margin-top: 0px; margin-bottom: 0px; height: 500px;" disabled><?php echo esc_html(file_get_contents($robots_file)); ?></textarea>
-		<?php } ?>
 		</div>
 
 		<div id="tab-2" class="ct4gg-tab-pane <?php echo esc_html((isset($_POST['tab']) && $_POST['tab'] == 'tab-2') ? 'active' : '');?>" >

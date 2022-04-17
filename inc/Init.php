@@ -1,7 +1,7 @@
 <?php
 /**
  * @package  CT4GGPlugin
- * @Version 1.4.0
+ * @Version 1.4.3
  */
 
 namespace CT4GG;
@@ -28,7 +28,8 @@ final class Init
 			Ui\Login::class,
 			Ui\Post::class,
 			Ui\Humans_Header::class,
-			Ui\SocialButtons::class
+			Ui\SocialButtons::class,
+			Ui\Messages::class
 		];
 	}
 

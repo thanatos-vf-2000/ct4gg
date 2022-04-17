@@ -4,7 +4,7 @@ Tags: tools, customiser, homepage, redirect, Jetpack, performance, login, speed,
 Requires at least: 5.2
 Tested up to: 5.9
 Requires PHP: 7.4
-Stable tag: 1.4.2
+Stable tag: 1.4.3
 License: GPLv2
 
 Wordpress customiser tools for beginer and confirmed users.
@@ -82,8 +82,8 @@ ct4gg is multisite compatible, in case of problem contact me.
     Enable Force download
     Enable cache expires
     Compressing static files
-* Generate robots.txt,
-* Generate humans.txt,
+* Management robots.txt,
+* Management humans.txt,
 * Social media sharing buttons.
 
 = Can I use a shortcode to place the share buttons? =
@@ -95,28 +95,34 @@ Alternatively, you can place the followin into your codes: <?php echo do_shortco
 = Apply changes in the file .htaccess =
 1. Activate the settings in Dashboard menu and save them
 2. go to the htaccess menu
-3. click on "Update Htaccess" button
+3. you can modify the file if needed
+4. click on "Update Htaccess" button
 
 = Apply changes in the file robots.txt =
 1. Activate the settings in Dashboard menu and save them
 2. go to the robots menu
-3. click on "Update Robots.txt" button
+3. you can modify the file if needed
+4. click on "Update Robots.txt" button
 
 = Apply changes in the file humans.txt =
 1. Activate the settings in Dashboard menu and save them
 2. go to the humans menu
-3. click on "Update Humans.txt" button
+3. you can modify the file if needed
+4. click on "Update Humans.txt" button
 
 = new features =
 If you want a new feature, you can contact me by email at contact@ginkgos.net 
 
 == Changelog ==
 
-= 1.4.2 (2203-SFP2) =
-*Release Date - 6 March 2022*
+= 1.4.3 (2204-SFP1) =
+*Release Date - 17 April 2022*
 
-* Test for Wordpress 5.9,
-* Adjustment Administration Login Custom.
+* Add Message for new options for customize login page (New Version only),
+* Fixed styles,
+* Add manual file modification .htaccess,
+* Add manual file modification robots.txt,
+* Add manual file modification humans.txt,
 
 
 See [changelog.txt](https://plugins.svn.wordpress.org/ct4gg/trunk/changelog.txt) for older changelog

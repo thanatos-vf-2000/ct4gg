@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Custom Tools For GinkGos - Plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-11 17:25+0000\n"
+"POT-Creation-Date: 2022-04-17 12:08+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -23,9 +23,9 @@ msgid ""
 "compatible with PHP %2s."
 msgstr ""
 
-#: templates-part/htaccess/tab-content.php:23
-#: templates-part/robots/tab-content.php:23
-#: templates-part/humans/tab-content.php:23
+#: templates-part/htaccess/tab-content.php:21
+#: templates-part/robots/tab-content.php:21
+#: templates-part/humans/tab-content.php:21
 msgid " updated on "
 msgstr ""
 
@@ -57,6 +57,38 @@ msgstr ""
 msgid "About"
 msgstr ""
 
+#: assets/defaults.php:242
+msgid "Activate buffer."
+msgstr ""
+
+#: assets/defaults.php:246
+msgid "Activate email."
+msgstr ""
+
+#: assets/defaults.php:225
+msgid "Activate facebook."
+msgstr ""
+
+#: assets/defaults.php:238
+msgid "Activate linkedin."
+msgstr ""
+
+#: assets/defaults.php:234
+msgid "Activate pinterest."
+msgstr ""
+
+#: assets/defaults.php:213
+msgid "Activate Social Buttons."
+msgstr ""
+
+#: assets/defaults.php:221
+msgid "Activate twitter."
+msgstr ""
+
+#: assets/defaults.php:229
+msgid "Activate whatsapp."
+msgstr ""
+
 #: assets/defaults.php:163
 msgid "Add site Maps Yoast SEO (/sitemap_index.xml)."
 msgstr ""
@@ -73,23 +105,49 @@ msgstr ""
 msgid "Back to home if not Administrator."
 msgstr ""
 
+#: inc/Theme/Login/Sections-Old/01-Background.php:10
+#: inc/Theme/Login/Sections-Old/04-Fields.php:129
+#: inc/Theme/Login/Sections-Old/05-Button.php:16
+#: inc/Theme/Login/Sections/01-Background.php:10
+#: inc/Theme/Login/Sections/04-Fields.php:129
+#: inc/Theme/Login/Sections/05-Button.php:16
 #: inc/Theme/Login/Sections/02-Background.php:10
 msgid "Background"
 msgstr ""
 
+#: inc/Theme/Login/Sections-Old/05-Button.php:25
+#: inc/Theme/Login/Sections/05-Button.php:25
+msgid "Background (Hover)"
+msgstr ""
+
+#: inc/Theme/Login/Sections-Old/01-Background.php:16
+#: inc/Theme/Login/Sections-Old/03-Form.php:24
+#: inc/Theme/Login/Sections/01-Background.php:16
 #: inc/Theme/Login/Sections/03-Form.php:16
 #: inc/Theme/Login/Sections/02-Background.php:16
 msgid "Background Color"
 msgstr ""
 
+#: inc/Theme/Login/Sections-Old/01-Background.php:25
+#: inc/Theme/Login/Sections-Old/03-Form.php:16
+#: inc/Theme/Login/Sections/01-Background.php:25
 #: inc/Theme/Login/Sections/02-Background.php:25
 msgid "Background Image"
 msgstr ""
 
+#: inc/Theme/Login/Sections-Old/01-Background.php:69
+#: inc/Theme/Login/Sections/01-Background.php:69
+msgid "Background Position"
+msgstr ""
+
+#: inc/Theme/Login/Sections-Old/01-Background.php:55
+#: inc/Theme/Login/Sections/01-Background.php:55
 #: inc/Theme/Login/Sections/02-Background.php:55
 msgid "Background Repeat"
 msgstr ""
 
+#: inc/Theme/Login/Sections-Old/01-Background.php:33
+#: inc/Theme/Login/Sections/01-Background.php:33
 #: inc/Theme/Login/Sections/02-Background.php:33
 msgid "Background Size"
 msgstr ""
@@ -111,8 +169,38 @@ msgstr ""
 msgid "backup file robots.txt failed. "
 msgstr ""
 
+#: inc/Theme/Login/Sections-Old/05-Button.php:148
+#: inc/Theme/Login/Sections/05-Button.php:148
+msgid "Border"
+msgstr ""
+
+#: inc/Theme/Login/Sections-Old/05-Button.php:157
+#: inc/Theme/Login/Sections/05-Button.php:157
+msgid "Border (Hover)"
+msgstr ""
+
+#: inc/Theme/Login/Sections-Old/04-Fields.php:76
 #: inc/Theme/Login/Sections/03-Form.php:25
+#: inc/Theme/Login/Sections/04-Fields.php:76
 msgid "Border Color"
+msgstr ""
+
+#: inc/Theme/Login/Sections-Old/04-Fields.php:59
+#: inc/Theme/Login/Sections-Old/05-Button.php:131
+#: inc/Theme/Login/Sections/04-Fields.php:59
+#: inc/Theme/Login/Sections/05-Button.php:131
+msgid "Border Width"
+msgstr ""
+
+#: inc/Theme/Login/Sections-Old/03-Form.php:110
+#: inc/Theme/Login/Sections-Old/05-Button.php:183
+#: inc/Theme/Login/Sections/05-Button.php:183
+msgid "Box Shadow"
+msgstr ""
+
+#: inc/Theme/Login/Sections-Old/05-Button.php:10
+#: inc/Theme/Login/Sections/05-Button.php:10
+msgid "Button"
 msgstr ""
 
 #: inc/Theme/Login/Sections/03-Form.php:43
@@ -121,6 +209,11 @@ msgstr ""
 
 #: inc/Theme/Login/Sections/03-Form.php:52
 msgid "Button Background (Hover)"
+msgstr ""
+
+#: inc/Theme/Login/Sections-Old/05-Button.php:34
+#: inc/Theme/Login/Sections/05-Button.php:34
+msgid "Button Size"
 msgstr ""
 
 #: inc/Theme/Login/Sections/03-Form.php:61
@@ -139,7 +232,7 @@ msgstr ""
 msgid "characters."
 msgstr ""
 
-#: inc/Api/Callbacks/ManagerCallbacks.php:123
+#: inc/Api/Callbacks/ManagerCallbacks.php:132
 msgid "Color:"
 msgstr ""
 
@@ -170,14 +263,22 @@ msgstr ""
 msgid "Credit"
 msgstr ""
 
+#: inc/Ui/Admin.php:87
+msgid "CT4GG"
+msgstr ""
+
 #. Name of the plugin
 msgid "ct4gg"
 msgstr ""
 
+#: inc/Theme/Login/Sections-Old/01-Background.php:41
+#: inc/Theme/Login/Sections/01-Background.php:41
 #: inc/Theme/Login/Sections/02-Background.php:41
 msgid "Custom"
 msgstr ""
 
+#: inc/Theme/Login/Sections-Old/01-Background.php:47
+#: inc/Theme/Login/Sections/01-Background.php:47
 #: inc/Theme/Login/Sections/02-Background.php:47
 msgid "Custom Size"
 msgstr ""
@@ -191,8 +292,8 @@ msgid "Day"
 msgstr ""
 
 #: templates-part/htaccess/tab-content.php:49
-#: templates-part/robots/tab-content.php:49
-#: templates-part/humans/tab-content.php:49
+#: templates-part/robots/tab-content.php:48
+#: templates-part/humans/tab-content.php:48
 msgid "Delete"
 msgstr ""
 
@@ -215,8 +316,15 @@ msgstr ""
 msgid "Delete Wordpress Logo on top admin menu."
 msgstr ""
 
+#: inc/Theme/Login/Sections-Old/06-Other.php:43
+#: inc/Theme/Login/Sections/06-Other.php:43
 #: inc/Theme/Login/Sections/04-Other.php:34
 msgid "Disable \"Back to Website\"?"
+msgstr ""
+
+#: inc/Theme/Login/Sections-Old/04-Fields.php:102
+#: inc/Theme/Login/Sections/04-Fields.php:102
+msgid "Disable Box Shadow?"
 msgstr ""
 
 #: assets/defaults.php:134
@@ -231,21 +339,41 @@ msgstr ""
 msgid "Disable Jetpack offered by Automattic to stop showing banners."
 msgstr ""
 
+#: inc/Theme/Login/Sections-Old/02-Logo.php:16
 #: inc/Theme/Login/Sections/01-Logo.php:16
+#: inc/Theme/Login/Sections/02-Logo.php:16
 msgid "Disable Logo?"
 msgstr ""
 
+#: inc/Theme/Login/Sections-Old/06-Other.php:25
+#: inc/Theme/Login/Sections/06-Other.php:25
 #: inc/Theme/Login/Sections/04-Other.php:25
 msgid "Disable Lost Password?"
 msgstr ""
 
+#: inc/Theme/Login/Sections-Old/06-Other.php:34
+#: inc/Theme/Login/Sections/06-Other.php:34
+msgid "Disable Privacy policy?"
+msgstr ""
+
+#: inc/Theme/Login/Sections-Old/06-Other.php:16
+#: inc/Theme/Login/Sections/06-Other.php:16
 #: inc/Theme/Login/Sections/04-Other.php:16
 msgid "Disable Register Link?"
+msgstr ""
+
+#: inc/Theme/Login/Sections-Old/04-Fields.php:16
+#: inc/Theme/Login/Sections/04-Fields.php:16
+msgid "Disable Remember Me?"
 msgstr ""
 
 #: templates-part/htaccess/nav-tabs.php:10
 #: templates-part/robots/nav-tabs.php:10 templates-part/humans/nav-tabs.php:10
 msgid "Display"
+msgstr ""
+
+#: assets/defaults.php:230
+msgid "Display only on max size 640px."
 msgstr ""
 
 #: inc/Theme/Login/Controls/Padding.php:39
@@ -268,20 +396,48 @@ msgstr ""
 msgid "Enable Force download"
 msgstr ""
 
+#. 1: Elementor, 2: Link to plugin review
+#: inc/Ui/Admin.php:86
+#, php-format
+msgid ""
+"Enjoyed %1$s? Please leave us a %2$s rating. We really appreciate your "
+"support!"
+msgstr ""
+
 #: assets/defaults.php:151
 msgid "Exemple: .doc .docx .xls .xlsx .csv .mp3 .mp4"
 msgstr ""
 
+#: inc/Theme/Login/Sections-Old/06-Other.php:78
+#: inc/Theme/Login/Sections/06-Other.php:78
 #: inc/Theme/Login/Sections/04-Other.php:52
 msgid "ext Color (Hover)"
 msgstr ""
 
+#: inc/Theme/Login/Sections-Old/04-Fields.php:10
+#: inc/Theme/Login/Sections/04-Fields.php:10
+msgid "Fields"
+msgstr ""
+
+#: inc/Theme/Login/Sections-Old/01-Background.php:40
+#: inc/Theme/Login/Sections/01-Background.php:40
 #: inc/Theme/Login/Sections/02-Background.php:40
 msgid "Fill Screen"
 msgstr ""
 
+#: inc/Theme/Login/Sections-Old/01-Background.php:39
+#: inc/Theme/Login/Sections/01-Background.php:39
 #: inc/Theme/Login/Sections/02-Background.php:39
 msgid "Fit to Screen"
+msgstr ""
+
+#: inc/Theme/Login/Sections-Old/06-Other.php:52
+#: inc/Theme/Login/Sections-Old/04-Fields.php:42
+#: inc/Theme/Login/Sections-Old/05-Button.php:96
+#: inc/Theme/Login/Sections/06-Other.php:52
+#: inc/Theme/Login/Sections/04-Fields.php:42
+#: inc/Theme/Login/Sections/05-Button.php:96
+msgid "Font Size"
 msgstr ""
 
 #: assets/defaults.php:18 assets/defaults.php:24 assets/defaults.php:43
@@ -296,6 +452,7 @@ msgstr ""
 msgid "Force download for these file types."
 msgstr ""
 
+#: inc/Theme/Login/Sections-Old/03-Form.php:10
 #: inc/Theme/Login/Sections/03-Form.php:10
 msgid "Form"
 msgstr ""
@@ -306,6 +463,19 @@ msgstr ""
 
 #: templates-part/admin/support.php:5
 msgid "Got a Question an Idea or a Problem?"
+msgstr ""
+
+#: inc/Theme/Login/Sections-Old/03-Form.php:50
+#: inc/Theme/Login/Sections-Old/05-Button.php:79
+#: inc/Theme/Login/Sections/05-Button.php:79
+msgid "Height"
+msgstr ""
+
+#: inc/Ui/Messages.php:48
+#, php-format
+msgid ""
+"Hey <b>%1$s</b>, %2$s v1.3.0 add a new options for customize login page (New "
+"Version only), see %3$s."
 msgstr ""
 
 #: assets/defaults.php:109
@@ -320,7 +490,7 @@ msgstr ""
 msgid "Hide server information."
 msgstr ""
 
-#: inc/Pages/Dashboard.php:110
+#: inc/Pages/Dashboard.php:116
 msgid "Htaccess"
 msgstr ""
 
@@ -336,11 +506,11 @@ msgstr ""
 msgid "https://ginkgos.net/plugin/ct4gg/"
 msgstr ""
 
-#: inc/Pages/Dashboard.php:122
+#: inc/Pages/Dashboard.php:128
 msgid "Humans"
 msgstr ""
 
-#: templates-part/humans/tab-content.php:30
+#: templates-part/humans/tab-content.php:29
 msgid "Humans.txt file(s)"
 msgstr ""
 
@@ -377,6 +547,16 @@ msgid ""
 "Interval Type before displaying the administration email verification screen"
 msgstr ""
 
+#: inc/Theme/Login/Sections-Old/04-Fields.php:147
+#: inc/Theme/Login/Sections/04-Fields.php:147
+msgid "Label Color"
+msgstr ""
+
+#: inc/Theme/Login/Sections-Old/04-Fields.php:156
+#: inc/Theme/Login/Sections/04-Fields.php:156
+msgid "Label Font Size"
+msgstr ""
+
 #: inc/Theme/Login/Controls/Padding.php:41
 msgid "Left"
 msgstr ""
@@ -395,6 +575,16 @@ msgstr ""
 
 #: inc/Pages/Dashboard.php:86
 msgid "Login Manager screen"
+msgstr ""
+
+#: inc/Theme/Login/Sections-Old/02-Logo.php:93
+#: inc/Theme/Login/Sections/02-Logo.php:93
+msgid "Login Page title"
+msgstr ""
+
+#: inc/Theme/Login/Sections-Old/02-Logo.php:98
+#: inc/Theme/Login/Sections/02-Logo.php:98
+msgid "Login page title that is shown on WordPress login page."
 msgstr ""
 
 #: assets/defaults.php:85
@@ -421,13 +611,29 @@ msgstr ""
 msgid "Login Screen Text color:"
 msgstr ""
 
+#: inc/Theme/Login/Sections-Old/02-Logo.php:10
+#: inc/Theme/Login/Sections-Old/02-Logo.php:24
 #: inc/Theme/Login/Sections/01-Logo.php:10
 #: inc/Theme/Login/Sections/01-Logo.php:24
+#: inc/Theme/Login/Sections/02-Logo.php:10
+#: inc/Theme/Login/Sections/02-Logo.php:24
 msgid "Logo"
 msgstr ""
 
+#: inc/Theme/Login/Sections-Old/02-Logo.php:49
+#: inc/Theme/Login/Sections/02-Logo.php:49
+msgid "Logo Height"
+msgstr ""
+
+#: inc/Theme/Login/Sections-Old/02-Logo.php:83
 #: inc/Theme/Login/Sections/01-Logo.php:32
+#: inc/Theme/Login/Sections/02-Logo.php:83
 msgid "Logo URL"
+msgstr ""
+
+#: inc/Theme/Login/Sections-Old/02-Logo.php:32
+#: inc/Theme/Login/Sections/02-Logo.php:32
+msgid "Logo Width"
 msgstr ""
 
 #: assets/defaults.php:193
@@ -442,7 +648,7 @@ msgstr ""
 msgid "Manage Settings"
 msgstr ""
 
-#: inc/Api/Callbacks/ManagerCallbacks.php:69
+#: inc/Api/Callbacks/ManagerCallbacks.php:73
 msgid ""
 "Manage the screen login <b style=\"color:blue\">New version</b>.<br>After "
 "saving the options go to <b>\"Appearance (Themes)\"</b> and choose <b>"
@@ -450,46 +656,49 @@ msgid ""
 "plugin</b> chose <b>\"Login Custom\"</b>."
 msgstr ""
 
-#: inc/Api/Callbacks/ManagerCallbacks.php:39
+#: inc/Api/Callbacks/ManagerCallbacks.php:41
 msgid ""
 "Manage the screen login <b style=\"color:red\">Old version please use the "
 "new version section \"Login Custom\"</b>."
 msgstr ""
 
-#: inc/Api/Callbacks/ManagerCallbacks.php:49
+#: inc/Api/Callbacks/ManagerCallbacks.php:53
 msgid ""
 "Manage the Sections and Features of post and articles activating the "
 "checkboxes from the following list."
 msgstr ""
 
-#: inc/Api/Callbacks/ManagerCallbacks.php:34
+#: inc/Api/Callbacks/ManagerCallbacks.php:35
 msgid "Manage the Sections and Features of this Plugin by activating options."
 msgstr ""
 
-#: inc/Api/Callbacks/ManagerCallbacks.php:44
+#: inc/Api/Callbacks/ManagerCallbacks.php:48
 msgid ""
 "Manage the Sections and Features of WP Administration Dashboard by "
 "activating options."
 msgstr ""
 
-#: templates-part/htaccess/tab-content.php:17
-#: templates-part/robots/tab-content.php:17
-#: templates-part/humans/tab-content.php:17
+#: inc/Api/Callbacks/ManagerCallbacks.php:78
 msgid ""
-"Management of options to be included in the .htaccess file on Settings "
-"option."
+"Management of options for Social Buttons.<br>This will create a wordpress "
+"shortcode <b style=\"color:blue\">[ct4gg_social]</b>."
 msgstr ""
 
-#: inc/Api/Callbacks/ManagerCallbacks.php:54
+#: inc/Api/Callbacks/ManagerCallbacks.php:58
 msgid "Management of options to be included in the .htaccess file."
 msgstr ""
 
-#: inc/Api/Callbacks/ManagerCallbacks.php:64
+#: inc/Api/Callbacks/ManagerCallbacks.php:68
 msgid "Management of options to be included in the humans.txt file."
 msgstr ""
 
-#: inc/Api/Callbacks/ManagerCallbacks.php:59
+#: inc/Api/Callbacks/ManagerCallbacks.php:63
 msgid "Management of options to be included in the robots.txt file."
+msgstr ""
+
+#: inc/Theme/Login/Sections-Old/04-Fields.php:111
+#: inc/Theme/Login/Sections/04-Fields.php:111
+msgid "Margin"
 msgstr ""
 
 #: assets/defaults.php:121
@@ -504,15 +713,17 @@ msgstr ""
 msgid "No .htaccess fils found."
 msgstr ""
 
-#: templates-part/humans/tab-content.php:55
+#: templates-part/humans/tab-content.php:54
 msgid "No humans.txt fils found."
 msgstr ""
 
+#: inc/Theme/Login/Sections-Old/01-Background.php:60
+#: inc/Theme/Login/Sections/01-Background.php:60
 #: inc/Theme/Login/Sections/02-Background.php:60
 msgid "No Repeat"
 msgstr ""
 
-#: templates-part/robots/tab-content.php:55
+#: templates-part/robots/tab-content.php:54
 msgid "No robots.txt fils found."
 msgstr ""
 
@@ -520,12 +731,29 @@ msgstr ""
 msgid "Old post notice."
 msgstr ""
 
+#: inc/Theme/Login/Sections-Old/01-Background.php:38
+#: inc/Theme/Login/Sections/01-Background.php:38
 #: inc/Theme/Login/Sections/02-Background.php:38
 msgid "Original"
 msgstr ""
 
+#: inc/Theme/Login/Sections-Old/06-Other.php:10
+#: inc/Theme/Login/Sections/06-Other.php:10
 #: inc/Theme/Login/Sections/04-Other.php:10
 msgid "Other"
+msgstr ""
+
+#: inc/Theme/Login/Sections-Old/03-Form.php:67
+#: inc/Theme/Login/Sections-Old/04-Fields.php:120
+#: inc/Theme/Login/Sections-Old/05-Button.php:122
+#: inc/Theme/Login/Sections/04-Fields.php:120
+#: inc/Theme/Login/Sections/05-Button.php:122
+msgid "Padding"
+msgstr ""
+
+#: inc/Theme/Login/Sections-Old/02-Logo.php:66
+#: inc/Theme/Login/Sections/02-Logo.php:66
+msgid "Padding Bottom"
 msgstr ""
 
 #: inc/Core/Check/PhpVersionCheck.php:65
@@ -554,6 +782,12 @@ msgstr ""
 msgid "px"
 msgstr ""
 
+#: inc/Theme/Login/Sections-Old/03-Form.php:76
+#: inc/Theme/Login/Sections-Old/04-Fields.php:85
+#: inc/Theme/Login/Sections/04-Fields.php:85
+msgid "Radius"
+msgstr ""
+
 #: assets/defaults.php:105
 msgid "Redirect to home after logout."
 msgstr ""
@@ -562,14 +796,20 @@ msgstr ""
 msgid "Register"
 msgstr ""
 
+#: inc/Theme/Login/Sections-Old/01-Background.php:61
+#: inc/Theme/Login/Sections/01-Background.php:61
 #: inc/Theme/Login/Sections/02-Background.php:61
 msgid "Repeat"
 msgstr ""
 
+#: inc/Theme/Login/Sections-Old/01-Background.php:62
+#: inc/Theme/Login/Sections/01-Background.php:62
 #: inc/Theme/Login/Sections/02-Background.php:62
 msgid "Repeat Horizontally"
 msgstr ""
 
+#: inc/Theme/Login/Sections-Old/01-Background.php:63
+#: inc/Theme/Login/Sections/01-Background.php:63
 #: inc/Theme/Login/Sections/02-Background.php:63
 msgid "Repeat Vertically"
 msgstr ""
@@ -583,8 +823,8 @@ msgid "Reset password"
 msgstr ""
 
 #: templates-part/htaccess/tab-content.php:48
-#: templates-part/robots/tab-content.php:48
-#: templates-part/humans/tab-content.php:48
+#: templates-part/robots/tab-content.php:47
+#: templates-part/humans/tab-content.php:47
 msgid "Restore"
 msgstr ""
 
@@ -604,11 +844,11 @@ msgstr ""
 msgid "Right"
 msgstr ""
 
-#: inc/Pages/Dashboard.php:116
+#: inc/Pages/Dashboard.php:122
 msgid "Robots"
 msgstr ""
 
-#: templates-part/robots/tab-content.php:30
+#: templates-part/robots/tab-content.php:29
 msgid "Robots.txt file(s)"
 msgstr ""
 
@@ -616,7 +856,7 @@ msgstr ""
 msgid "Semi-annual check of the administration e-mail"
 msgstr ""
 
-#: inc/Pages/Dashboard.php:40
+#: inc/Ui/Messages.php:48 inc/Pages/Dashboard.php:40
 msgid "Settings"
 msgstr ""
 
@@ -624,8 +864,22 @@ msgstr ""
 msgid "Settings Manager"
 msgstr ""
 
+#: inc/Theme/Login/Sections-Old/03-Form.php:93
+#: inc/Theme/Login/Sections-Old/05-Button.php:166
+#: inc/Theme/Login/Sections/05-Button.php:166
+msgid "Shadow Spread"
+msgstr ""
+
+#: assets/defaults.php:217
+msgid "Show Texte."
+msgstr ""
+
 #: assets/defaults.php:183
 msgid "Site."
+msgstr ""
+
+#: inc/Pages/Dashboard.php:110
+msgid "Social Buttons"
 msgstr ""
 
 #: templates-part/admin/support.php:7
@@ -636,16 +890,36 @@ msgstr ""
 msgid "Team."
 msgstr ""
 
+#: inc/Theme/Login/Sections-Old/00-Templates.php:10
+#: inc/Theme/Login/Sections-Old/00-Templates.php:16
+#: inc/Theme/Login/Sections/00-Templates.php:10
+#: inc/Theme/Login/Sections/00-Templates.php:16
+msgid "Templates"
+msgstr ""
+
+#: inc/Theme/Login/Sections-Old/06-Other.php:69
+#: inc/Theme/Login/Sections-Old/04-Fields.php:138
+#: inc/Theme/Login/Sections-Old/05-Button.php:113
 #: inc/Theme/Login/Sections/03-Form.php:34
+#: inc/Theme/Login/Sections/06-Other.php:69
+#: inc/Theme/Login/Sections/04-Fields.php:138
+#: inc/Theme/Login/Sections/05-Button.php:113
 #: inc/Theme/Login/Sections/04-Other.php:43
 msgid "Text Color"
+msgstr ""
+
+#: inc/Theme/Login/Sections-Old/05-Button.php:192
+#: inc/Theme/Login/Sections/05-Button.php:192
+msgid "Text Shadow"
 msgstr ""
 
 #: assets/defaults.php:177
 msgid "Thanks."
 msgstr ""
 
+#: inc/Theme/Login/Sections-Old/02-Logo.php:88
 #: inc/Theme/Login/Sections/01-Logo.php:37
+#: inc/Theme/Login/Sections/02-Logo.php:88
 msgid "The page where your logo will take you."
 msgstr ""
 
@@ -683,15 +957,15 @@ msgstr ""
 msgid "Update file: "
 msgstr ""
 
-#: templates-part/htaccess/tab-content.php:18
+#: templates-part/htaccess/tab-content.php:17
 msgid "Update Htaccess"
 msgstr ""
 
-#: templates-part/humans/tab-content.php:18
+#: templates-part/humans/tab-content.php:17
 msgid "Update Humans.txt"
 msgstr ""
 
-#: templates-part/robots/tab-content.php:18
+#: templates-part/robots/tab-content.php:17
 msgid "Update Robots.txt"
 msgstr ""
 
@@ -699,7 +973,7 @@ msgstr ""
 msgid "Updates"
 msgstr ""
 
-#: inc/Api/Callbacks/ManagerCallbacks.php:111
+#: inc/Api/Callbacks/ManagerCallbacks.php:120
 msgid "Upload Menu"
 msgstr ""
 
@@ -717,12 +991,27 @@ msgstr ""
 msgid "Week"
 msgstr ""
 
+#: inc/Theme/Login/Sections-Old/03-Form.php:33
+#: inc/Theme/Login/Sections-Old/05-Button.php:62
+#: inc/Theme/Login/Sections/05-Button.php:62
+msgid "Width"
+msgstr ""
+
+#: inc/Theme/Login/Sections-Old/04-Fields.php:25
+#: inc/Theme/Login/Sections/04-Fields.php:25
+msgid "Widtht"
+msgstr ""
+
 #: assets/defaults.php:167
 msgid "Wordpress default options."
 msgstr ""
 
 #: assets/defaults.php:50
 msgid "Year"
+msgstr ""
+
+#: inc/Ui/SocialButtons.php:67
+msgid "Your friend has shared an article you with you."
 msgstr ""
 
 #: inc/Core/Check/PhpVersionCheck.php:62

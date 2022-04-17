@@ -1,7 +1,7 @@
 <?php
 /**
  * @package  CT4GGPlugin
- * @Version 1.2.0
+ * @Version 1.4.3
  * 
  * Desciption: nav-content for htaccess
  */
@@ -10,20 +10,20 @@ use CT4GG\Api\FileHTAcccess;
 	<div class="ct4gg-tab-content">
 		<div id="tab-1" class="ct4gg-tab-pane <?php echo esc_html(((isset($_POST['tab']) && $_POST['tab'] == 'tab-1') || !isset($_POST['tab'])) ? 'active':'');?>">
 
-		<form method="post" >
-			<input type="hidden" name="page" value="ct4gg_htaccess"/>
-			<input type="hidden" name="tab" value="tab-1"/>
-			<?php wp_nonce_field(CT4GG_NAME.'-opt', CT4GG_NAME.'-verif'); ?>
-			<p style="color:red"><?php _e('Management of options to be included in the .htaccess file on Settings option.', 'ct4gg'); ?></p>
-			<p><?php submit_button( __("Update Htaccess", 'ct4gg'), 'primary', 'submit-build-htaccess',false); ?></p>
-		</form>
-		<?php
-		$htaccess_file = ABSPATH.".htaccess";
-		if (file_exists($htaccess_file)) {
-			echo esc_html($htaccess_file. __(' updated on ', 'ct4gg'). date ("F d Y H:i:s.", filemtime($htaccess_file)) );
-		?>
-			<textarea cols="150" style="margin-top: 0px; margin-bottom: 0px; height: 500px;" disabled><?php echo esc_html(file_get_contents($htaccess_file)); ?></textarea>
-		<?php } ?>
+			<form method="post" >
+				<input type="hidden" name="page" value="ct4gg_htaccess"/>
+				<input type="hidden" name="tab" value="tab-1"/>
+				<?php wp_nonce_field(CT4GG_NAME.'-opt', CT4GG_NAME.'-verif'); ?>
+				<p><?php submit_button( __("Update Htaccess", 'ct4gg'), 'primary', 'submit-build-htaccess',false); ?></p>
+				<?php
+				$htaccess_file = ABSPATH.".htaccess";
+				if (file_exists($htaccess_file)) {
+					echo "<p>" . esc_html($htaccess_file. __(' updated on ', 'ct4gg'). date ("F d Y H:i:s.", filemtime($htaccess_file)) ) . "</p>";
+				?>
+					<textarea cols="150" style="margin-top: 0px; margin-bottom: 0px; height: 500px;" name="htaccess-content" ><?php echo esc_html(file_get_contents($htaccess_file)); ?></textarea>
+				<?php } ?>
+			</form>
+
 		</div>
 
 		<div id="tab-2" class="ct4gg-tab-pane <?php echo esc_html((isset($_POST['tab']) && $_POST['tab'] == 'tab-2') ? 'active' : '');?>" >

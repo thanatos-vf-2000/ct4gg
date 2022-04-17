@@ -1,7 +1,7 @@
 <?php
 /**
  * @package  CT4GGPlugin
- * @Version 1.2.0
+ * @Version 1.4.3
  * 
  * Desciption: robots
  */
@@ -36,6 +36,11 @@ if (isset($_POST[CT4GG_NAME.'-verif']) && wp_verify_nonce($_POST[CT4GG_NAME.'-ve
             self::view('robots',array('type' => 'ct4gg-robots-ko'));
         }
         
+    } elseif (isset($_POST['submit-build-robots'])) {
+        if (file_exists(ABSPATH.'.htaccess')) {
+            $robots_file->backup();
+            $robots_file->save_mod($_POST['robots-content']);
+        }
     } else {
         $robots_params = array('robots_sitemap',
             'robots_wordpress');

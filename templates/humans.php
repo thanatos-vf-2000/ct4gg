@@ -1,7 +1,7 @@
 <?php
 /**
  * @package  CT4GGPlugin
- * @Version 1.2.0
+ * @Version 1.4.3
  * 
  * Desciption: humans
  */
@@ -36,6 +36,11 @@ if (isset($_POST[CT4GG_NAME.'-verif']) && wp_verify_nonce($_POST[CT4GG_NAME.'-ve
             self::view('humans',array('type' => 'ct4gg-humans-ko'));
         }
         
+    } elseif (isset($_POST['submit-build-humans'])) {
+        if (file_exists(ABSPATH.'.htaccess')) {
+            $humans_file->backup();
+            $humans_file->save_mod($_POST['humans-content']);
+        }
     } else {
         $humans_params = array('humans_team',
             'humans_thanks',

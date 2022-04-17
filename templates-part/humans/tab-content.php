@@ -1,7 +1,7 @@
 <?php
 /**
  * @package  CT4GGPlugin
- * @Version 1.2.0
+ * @Version 1.4.3
  * 
  * Desciption: nav-content for humans
  */
@@ -10,20 +10,19 @@ use CT4GG\Api\FileHumans;
 	<div class="ct4gg-tab-content">
 		<div id="tab-1" class="ct4gg-tab-pane <?php echo esc_html(((isset($_POST['tab']) && $_POST['tab'] == 'tab-1') || !isset($_POST['tab'])) ? 'active':'');?>">
 
-		<form method="post" >
-			<input type="hidden" name="page" value="ct4gg_humans"/>
-			<input type="hidden" name="tab" value="tab-1"/>
-			<?php wp_nonce_field(CT4GG_NAME.'-opt', CT4GG_NAME.'-verif'); ?>
-			<p style="color:red"><?php _e('Management of options to be included in the .htaccess file on Settings option.', 'ct4gg'); ?></p>
-			<p><?php submit_button( __("Update Humans.txt", 'ct4gg'), 'primary', 'submit-build-humans',false); ?></p>
-		</form>
-		<?php
-		$humans_file = ABSPATH."humans.txt";
-		if (file_exists($humans_file)) {
-			echo esc_html($humans_file. __(' updated on ', 'ct4gg'). date ("F d Y H:i:s.", filemtime($humans_file)) );
-		?>
-			<textarea cols="150" style="margin-top: 0px; margin-bottom: 0px; height: 500px;" disabled><?php echo esc_html(file_get_contents($humans_file)); ?></textarea>
-		<?php } ?>
+			<form method="post" >
+				<input type="hidden" name="page" value="ct4gg_humans"/>
+				<input type="hidden" name="tab" value="tab-1"/>
+				<?php wp_nonce_field(CT4GG_NAME.'-opt', CT4GG_NAME.'-verif'); ?>
+				<p><?php submit_button( __("Update Humans.txt", 'ct4gg'), 'primary', 'submit-build-humans',false); ?></p>
+				<?php
+				$humans_file = ABSPATH."humans.txt";
+				if (file_exists($humans_file)) {
+					echo "<p>" . esc_html($humans_file. __(' updated on ', 'ct4gg'). date ("F d Y H:i:s.", filemtime($humans_file)) ) . "</p>";
+				?>
+					<textarea cols="150" style="margin-top: 0px; margin-bottom: 0px; height: 500px;" name="humans-content"><?php echo esc_html(file_get_contents($humans_file)); ?></textarea>
+				<?php } ?>
+			</form>
 		</div>
 
 		<div id="tab-2" class="ct4gg-tab-pane <?php echo esc_html((isset($_POST['tab']) && $_POST['tab'] == 'tab-2') ? 'active' : '');?>" >
