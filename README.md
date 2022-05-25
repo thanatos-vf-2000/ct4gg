@@ -9,7 +9,7 @@
 Contributors: vanhoucke
 Tags: tools, customiser, homepage, redirect, Jetpack, performance, login, speed, comments, min comments, meta generator, htaccess, cache
 Requires at least: 5.7
-Tested up to: 5.8
+Tested up to: 6.0
 Requires PHP: 7.4
 Stable tag: 1.3.1
 License: GPLv2
@@ -116,51 +116,10 @@ If you want a new feature, you can contact me by email at contact@ginkgos.net
 
 ## Changelog
 
-### 1.3.1 (2021-12-11)
+### 1.4.4 (2205-SFP1)
+*Release Date - 25 May 2022*
 
-* fixed SVN commit
-
-### 1.3.0 (2121-12-11)
-* fixed for front page (home) not display a message at the top of articles older than X days,
-* fixed options not display,
-* fixed for post type as page not display a message at the top of articles older than X days,
-* Add Auto update .htaccess, humans.txt and robots.txt after saving options,
-* Add Rewrite URL for wp-login.php options (login, logout, ...),
-* Change management wp-login.php (New Version),
-* Add new options for customize login page (New Version only),
-* Add support information and link.
-
-### 1.2.1 (2021-11-15)
-* Add generator for robots.txt
-* Add generator for humans.txt
-
-### 1.1.0 (2021-10-08)
-
-* fixed file inc/Ui/Post.php line 22 & 28 add test is_array
-* Added management of the .htaccess file
-* .htaccess: Disable display of directory contents
-* .htaccess: Hide server information
-* .htaccess: Protect .htaccess and .htpasswds files
-* .htaccess: Enable Force download
-* .htaccess: Enable cache expires
-* .htaccess: Compressing static files
-
-### 1.0.0 (2020-10-01)
-
-* fixed style login message
-* fixed style ct4gg
-* Add option to delete Wordpress logo in dashboard administration
-* Add option to redirect to home page after logout
-* Add option to hide login errors
-* Add option for no admin user to go back home
-* Add option, if the result of search return one post, display them
-* Add option to force the minimum comment lenght
-* Add option hide meta generator (Wordpress Version)
-* Add option to display message on old post 
-
-### 0.0.1 (2021-09-14)
-
-* Initial version
+* Test up to Wordpress 6.0.
 
 See [changelog.txt](https://plugins.svn.wordpress.org/ct4gg/trunk/changelog.txt) for older changelog
 

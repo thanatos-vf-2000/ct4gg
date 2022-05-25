@@ -2,9 +2,9 @@
 Contributors: vanhoucke
 Tags: tools, customiser, homepage, redirect, Jetpack, performance, login, speed, comments, min comments, meta generator, htaccess, cache, robots.txt, robots, humans.txt, Share, sharing, share buttons, share button, share social media, share icons, social buttons, sharing buttons, sharing icons, social media icons, social share, social sharing
 Requires at least: 5.2
-Tested up to: 5.9
+Tested up to: 6.0
 Requires PHP: 7.4
-Stable tag: 1.4.3
+Stable tag: 1.4.4
 License: GPLv2
 
 Wordpress customiser tools for beginer and confirmed users.
@@ -115,14 +115,10 @@ If you want a new feature, you can contact me by email at contact@ginkgos.net
 
 == Changelog ==
 
-= 1.4.3 (2204-SFP1) =
-*Release Date - 17 April 2022*
+= 1.4.4 (2205-SFP1) =
+*Release Date - 25 May 2022*
 
-* Add Message for new options for customize login page (New Version only),
-* Fixed styles,
-* Add manual file modification .htaccess,
-* Add manual file modification robots.txt,
-* Add manual file modification humans.txt,
+* Test up to Wordpress 6.0.
 
 
 See [changelog.txt](https://plugins.svn.wordpress.org/ct4gg/trunk/changelog.txt) for older changelog

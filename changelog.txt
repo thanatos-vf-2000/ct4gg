@@ -5,6 +5,11 @@
 This file contains older changelog entries, so we can keep the size of the standard WordPress readme.txt file reasonable.
 For the latest changes, please see the "Changelog" section of the [readme.txt file](https://plugins.svn.wordpress.org/ct4gg/trunk/readme.txt).
 
+= 1.4.4 (2205-SFP1) =
+*Release Date - 25 May 2022*
+
+* Test up to Wordpress 6.0.
+
 = 1.4.3 (2204-SFP1) =
 *Release Date - 17 April 2022*
 
@@ -13,7 +18,6 @@ For the latest changes, please see the "Changelog" section of the [readme.txt fi
 * Add manual file modification .htaccess,
 * Add manual file modification robots.txt,
 * Add manual file modification humans.txt,
-
 * Test for Wordpress 5.9
 
 = 1.4.2 (2203-SFP2) =
