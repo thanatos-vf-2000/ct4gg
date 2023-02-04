@@ -2,7 +2,7 @@
 Plugin Name: ct4gg
 Author: Franck VANHOUCKE
 Author URI: https://ginkgos.net/
-Version: 1.4.1
+Version: 1.4.5
 */
 /*
 Variables global
@@ -114,6 +114,18 @@ input#submit-humans-delete:hover {
   background: #bd3030; }
 
 input#submit-humans-restore, input#submit-humans-delete {
+  min-width: 150px;
+  margin: 0px 20px; }
+
+input#submit-security-delete {
+  color: #f6f7f7;
+  border-color: #f6f7f7;
+  background: #e23939; }
+
+input#submit-security-delete:hover {
+  background: #bd3030; }
+
+input#submit-security-restore, input#submit-security-delete {
   min-width: 150px;
   margin: 0px 20px; }
 

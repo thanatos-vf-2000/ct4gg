@@ -1,7 +1,7 @@
 <?php
 /**
  * @package  CT4GGPlugin
- * @Version 1.3.0
+ * @Version 1.4.5
  * 
  * Desciption: Admin Page
  */
@@ -10,6 +10,7 @@ use CT4GG\Core\BaseController;
 use CT4GG\Api\FileHTAccess;
 use CT4GG\Api\FileHumans;
 use CT4GG\Api\FileRobots;
+use CT4GG\Api\FileSecurity;
 
 if (strpos($_SERVER['REQUEST_URI'], 'settings-updated=true') !== false) {
     //File htaccess
@@ -96,6 +97,39 @@ if (strpos($_SERVER['REQUEST_URI'], 'settings-updated=true') !== false) {
             self::view('robots',array('type' => 'update-ko'));
         } else {
             self::view('robots',array('type' => 'update-ok'));
+        }
+    }
+
+    //File security
+    $security_file = new Filesecurity();
+    $security_params = array('security_contact',
+        'security_expires_date',
+        'security_encryption',
+        'security_acknowledgments',
+        'security_preferred_languages',
+        'security_canonical',
+        'security_policy',
+        'security_hiring');
+    foreach($security_params as $security_param) {
+        if ($this->activated( $security_param)) {
+            $security_file->add( $security_param );
+        }
+    }
+    if (file_exists(ABSPATH.'security.txt')) {
+        if ($security_file->backup())  {
+            if (!$security_file->save()) {
+                self::view('security',array('type' => 'update-ko'));
+            } else {
+                self::view('security',array('type' => 'update-ok'));
+            }
+        } else {
+            self::view('security',array('type' => 'backup-ko'));
+        }
+    } else {
+        if (!$security_file->save()) {
+            self::view('security',array('type' => 'update-ko'));
+        } else {
+            self::view('security',array('type' => 'update-ok'));
         }
     }
 }

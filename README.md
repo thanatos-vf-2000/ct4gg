@@ -9,7 +9,7 @@
 Contributors: vanhoucke
 Tags: tools, customiser, homepage, redirect, Jetpack, performance, login, speed, comments, min comments, meta generator, htaccess, cache
 Requires at least: 5.7
-Tested up to: 6.0
+Tested up to: 6.1.1
 Requires PHP: 7.4
 Stable tag: 1.3.1
 License: GPLv2
@@ -24,10 +24,10 @@ For complete details visit [ct4gg @ ginkgos.net](https://ginkgos.net/plugin/ct4g
 ### Overview
 CT4GG is the Wordpress complementary tool which adds additional options. It allows you to:
 
-* Customiser Screen Login
-* Used "Classic" Widget settings screens
-* Managed the interval before displaying the administration email verification screen
-* Disable Jetpack for Automattic
+* Customiser Screen Login,
+* Used "Classic" Widget settings screens,
+* Managed the interval before displaying the administration email verification screen,
+* Disable Jetpack for Automattic,
 * Delete Wordpress logo in dashboard administration,
 * Redirect to home page after logout,
 * Hide login errors,
@@ -37,7 +37,7 @@ CT4GG is the Wordpress complementary tool which adds additional options. It allo
 * Hide meta generator (Wordpress Version),
 * Display message on old post,
 * Manage option in .htaccess file (caches and security).
-* Build robots.txt and humans.txt
+* Build robots.txt, humans.txt and security.txt
 
 ### Please Note
 Adding an additional customization option to help us personalize our sites is a help for everyone. We all seek to hide or personalize options or displays; that's why your feedback is important to me. Thank you for helping me make WordPress the best blogging platform in the world.
@@ -53,12 +53,13 @@ This plugin doesn't require technical knowledge or to be a web developer. The ac
 1. Logo,
 2. Exemple of login screen,
 3. Exemple of screenshot .htaccess file,
-4. Exemple of screenshot robots.txt file
-5. Exemple of screenshot humans.txt file
-6. Example of restoration menu for htaccess files.
+4. Exemple of screenshot robots.txt file,
+5. Exemple of screenshot humans.txt file,
+6. Exemple of screenshot security.txt file,
+7. Example of restoration menu for htaccess files.
 
 
-<img src="https://github.com/thanatos-vf-2000/ct4gg/blob/master/assets/img/screenshot-1.png" width="30%"></img> <img src="https://github.com/thanatos-vf-2000/ct4gg/blob/master/assets/img/screenshot-2.png" width="30%"></img> <img src="https://github.com/thanatos-vf-2000/ct4gg/blob/master/assets/img/screenshot-3.png" width="30%"></img><img src="https://github.com/thanatos-vf-2000/ct4gg/blob/master/assets/img/screenshot-4.png" width="30%"></img><img src="https://github.com/thanatos-vf-2000/ct4gg/blob/master/assets/img/screenshot-5.png" width="30%"></img><img src="https://github.com/thanatos-vf-2000/ct4gg/blob/master/assets/img/screenshot-6.png" width="30%"></img> 
+<img src="https://github.com/thanatos-vf-2000/ct4gg/blob/master/assets/img/screenshot-1.png" width="30%"></img> <img src="https://github.com/thanatos-vf-2000/ct4gg/blob/master/assets/img/screenshot-2.png" width="30%"></img> <img src="https://github.com/thanatos-vf-2000/ct4gg/blob/master/assets/img/screenshot-3.png" width="30%"></img><img src="https://github.com/thanatos-vf-2000/ct4gg/blob/master/assets/img/screenshot-4.png" width="30%"></img><img src="https://github.com/thanatos-vf-2000/ct4gg/blob/master/assets/img/screenshot-5.png" width="30%"></img><img src="https://github.com/thanatos-vf-2000/ct4gg/blob/master/assets/img/screenshot-6.png" width="30%"></img><img src="https://github.com/thanatos-vf-2000/ct4gg/blob/master/assets/img/screenshot-7.png" width="30%"></img> 
 
 
 ## Frequently Asked Questions
@@ -95,6 +96,7 @@ ct4gg is multisite compatible, in case of problem contact me.
  Compressing static files
 * Generate robots.txt
 * Generate humans.txt
+* Generate security.txt
 
 ### Apply changes in the file .htaccess
 1. Activate the settings and save them
@@ -111,15 +113,22 @@ ct4gg is multisite compatible, in case of problem contact me.
 2. go to the humans menu
 3. click on "Update Humans.txt" button
 
+### Apply changes in the file security.txt
+1. Activate the settings in Dashboard menu and save them
+2. go to the security menu
+3. you can modify the file if needed
+4. click on "Update security.txt" button
+
 ## new features
 If you want a new feature, you can contact me by email at contact@ginkgos.net 
 
 ## Changelog
 
-### 1.4.4 (2205-SFP1)
-*Release Date - 25 May 2022*
+### 1.4.5 (2302-SFP1)
+*Release Date - 04 Febrary 2023*
 
-* Test up to Wordpress 6.0.
+* Test up to Wordpress 6.1.1,
+* Add management of file security.txt.
 
 See [changelog.txt](https://plugins.svn.wordpress.org/ct4gg/trunk/changelog.txt) for older changelog
 

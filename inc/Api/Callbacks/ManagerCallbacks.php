@@ -1,7 +1,7 @@
 <?php 
 /**
  * @package  CT4GGPlugin
- * @Version 1.4.3
+ * @Version 1.4.5
  */
 namespace CT4GG\Api\Callbacks;
 
@@ -66,6 +66,11 @@ class ManagerCallbacks extends BaseController
 	public function humansSettingSectionManager()
 	{
 		echo __('Management of options to be included in the humans.txt file.','ct4gg');
+	}
+
+	public function securitySettingSectionManager()
+	{
+		echo __('Security of options to be included in the security.txt file.','ct4gg');
 	}
 
 	public function loginSettingSectionManager()
@@ -168,6 +173,28 @@ class ManagerCallbacks extends BaseController
 				<input id="'. esc_attr($name) .'" type="text" size="20" name="' . esc_attr($option_name) . '[' . esc_attr($name) . ']" value="' . esc_attr($value) . '" class="' . esc_attr($class[0] . '-'.$class[1]).'"/>
 				<em>' . site_url() . '/<b id="'. esc_attr($name) .'_txt">' . esc_attr($value) . '</b></em>
 			</div>';
+	}
+
+	public function DateField($args)
+	{
+		$name = $args['label_for'];
+		$classes = $args['class'];
+		$option_name = $args['option_name'];
+		echo '<div class="' . esc_attr($classes) . '">
+				<input id="'. esc_attr($name) .'" type="date" placeholder="YYYY-MM-DD" name="' . esc_attr($option_name) . '[' . esc_attr($name) . ']" value="' . esc_attr($args['value']) . '" /> 
+			</div>';
+		if ($args['message'] <> '') {echo '<p class="description">' . esc_html($args['message']) . '</p>';}
+	}
+
+	public function TimeField($args)
+	{
+		$name = $args['label_for'];
+		$classes = $args['class'];
+		$option_name = $args['option_name'];
+		echo '<div class="' . esc_attr($classes) . '">
+				<input id="'. esc_attr($name) .'" type="time" placeholder="HH:MM" name="' . esc_attr($option_name) . '[' . esc_attr($name) . ']" value="' . esc_attr($args['value']) . '" /> 
+			</div>';
+		if ($args['message'] <> '') {echo '<p class="description">' . esc_html($args['message']) . '</p>';}
 	}
 
 	private function loadPHPConfig($path)

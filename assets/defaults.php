@@ -1,7 +1,7 @@
 <?php
 /**
  * @package  CT4GGPlugin
- * @Version 1.4.0
+ * @Version 1.4.5
  */
 return array(
     'admin_del_logo_wp' => array(
@@ -246,4 +246,48 @@ return array(
             'title'     => __('Activate email.','ct4gg'),
             'section'   => CT4GG_NAME.'_socialbuttons',
             'type'      => 'checkboxField') ,
+        'security_contact' => array(
+            'title'     => __('Contact.','ct4gg'),
+            'message'   => __('A link or e-mail address for people to contact you about security issues. Remember to include "https://" for URLs, and "mailto:" for e-mails.', 'ct4gg'),
+            'section'   => CT4GG_NAME.'_security',
+            'type'      => 'TextField') ,
+        'security_expires_date' => array(
+            'title'     => __('Expire date.','ct4gg'),
+            'message'   => __('The date and time when the content of the security.txt file should be considered stale (so security researchers should then not trust it). Make sure you update this value periodically and keep your file under review.', 'ct4gg'),
+            'section'   => CT4GG_NAME.'_security',
+            'type'      => 'DateField') ,
+        'security_expires_time' => array(
+            'title'     => __('Expire time.','ct4gg'),
+            'section'   => CT4GG_NAME.'_security',
+            'type'      => 'TimeField') ,
+        'security_encryption' => array(
+            'title'     => __('Encryption.','ct4gg'),
+            'message'   => __('A link to a key which security researchers should use to securely talk to you. Remember to include "https://".', 'ct4gg'),
+            'section'   => CT4GG_NAME.'_security',
+            'type'      => 'TextField') ,
+        'security_acknowledgments' => array(
+            'title'     => __('Acknowledgments.','ct4gg'),
+            'message'   => __('A link to a web page where you say thank you to security researchers who have helped you. Remember to include "https://.', 'ct4gg'),
+            'section'   => CT4GG_NAME.'_security',
+            'type'      => 'TextField') ,
+        'security_preferred_languages' => array(
+            'title'     => __('Preferred-Languages.','ct4gg'),
+            'message'   => __('A comma-separated list of language codes that your security team speaks. You may include more than one language.', 'ct4gg'),
+            'section'   => CT4GG_NAME.'_security',
+            'type'      => 'TextField') ,
+        'security_canonical' => array(
+            'title'     => __('Canonical.','ct4gg'),
+            'message'   => __('The URLs for accessing your security.txt file. It is important to include this if you are digitally signing the security.txt file, so that the location of the security.txt file can be digitally signed too.', 'ct4gg'),
+            'section'   => CT4GG_NAME.'_security',
+            'type'      => 'TextField') ,
+        'security_policy' => array(
+            'title'     => __('Policy.','ct4gg'),
+            'message'   => __('A link to a policy detailing what security researchers should do when searching for or reporting security issues. Remember to include "https://".', 'ct4gg'),
+            'section'   => CT4GG_NAME.'_security',
+            'type'      => 'TextField') ,
+        'security_hiring' => array(
+            'title'     => __('Hiring.','ct4gg'),
+            'message'   => __('A link to any security-related job openings in your organisation. Remember to include "https://".', 'ct4gg'),
+            'section'   => CT4GG_NAME.'_security',
+            'type'      => 'TextField') ,
 );

@@ -1,7 +1,7 @@
 <?php
 /**
  * @package  CT4GGPlugin
- * @Version 1.4.0
+ * @Version 1.4.5
  */
 return array(
     'admin_del_logo_wp'                 => false,
@@ -37,7 +37,7 @@ return array(
     'robots_sitemap'                    => false,
     'robots_wordpress'                  => false,
     'humans_team'                       => 'Founder: Dupont DUPOND
-Contact: dupont.dupond [at] test.com
+Contact: dupont.dupond [at] exemple.com
 From: Paris, France
 ',
     'humans_thanks'                     => 'Host: 
@@ -66,4 +66,13 @@ Software: WordPress',
     'socialbuttons_linkedin'    => true,
     'socialbuttons_buffer'      => true,
     'socialbuttons_email'       => true,
+    'security_contact'          => 'dupont.dupond [at] exemple.com',
+    'security_expires_date'     => '2024-02-01',
+    'security_expires_time'     => '12:00',
+    'security_encryption'       => 'None',
+    'security_acknowledgments'  => 'https://example.com/hall-of-fame.html',
+    'security_preferred_languages'  => 'fr, en',
+    'security_canonical'        => 'https://example.com/security.txt',
+    'security_policy'           => 'None',
+    'security_hiring'           => 'None',
 );

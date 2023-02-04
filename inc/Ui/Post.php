@@ -1,7 +1,7 @@
 <?php
 /**
  * @package  CT4GGPlugin
- * @Version 1.3.0
+ * @Version 1.4.5
  */
 
 namespace CT4GG\ui;
@@ -74,23 +74,25 @@ class Post extends BaseController
 
     // Display a message at the top of articles older than X days
 	public static function old_post_notice($content){
+		if ( ! is_front_page() && ! is_home() && ! is_admin()) {
+			$opt = get_option( CT4GG_NAME . '_plugin' );
 
-        $opt = get_option( CT4GG_NAME . '_plugin' );
+			// Calculation of the "seniority" of the article since January 1, 1970, called Unix time
+			$anciennete_unix = get_the_time('U');
 
-		// Calculation of the "seniority" of the article since January 1, 1970, called Unix time
-		$anciennete_unix = get_the_time('U');
+			// We calculate the age in seconds of the article between the present time and its age in Unix time.
+			// time() returns the current time, measured in seconds since the beginning of the UNIX era, (January 1st 1970 00:00:00 GMT).
+			$anciennete_secondes = ((time() - $anciennete_unix));
 
-		// We calculate the age in seconds of the article between the present time and its age in Unix time.
-		// time() returns the current time, measured in seconds since the beginning of the UNIX era, (January 1st 1970 00:00:00 GMT).
-		$anciennete_secondes = ((time() - $anciennete_unix));
+			// We calculate its age in days (1 day = 86400 seconds)
+			$anciennete_jours = (($anciennete_secondes/86400));
 
-		// We calculate its age in days (1 day = 86400 seconds)
-		$anciennete_jours = (($anciennete_secondes/86400));
+			// If the article is more than xxx days old, we display our alert
+			if ($anciennete_jours > $opt['post_old_post_notice'] && (!is_front_page() && !is_home()) && get_post_type() != 'page') {
+				$message = sprintf( __( 'WARNING: This article is more than %s days old and may no longer be current.', 'ct4gg' ), $opt['post_old_post_notice'] );
+				$content = "<div style='background-color: #f4f4f4; padding: 15px; margin-bottom: 30px;'>" . $message ."</div>" . $content;
+			}
 
-		// If the article is more than xxx days old, we display our alert
-		if ($anciennete_jours > $opt['post_old_post_notice'] && (!is_front_page() && !is_home()) && get_post_type() != 'page') {
-            $message = sprintf( __( 'WARNING: This article is more than %s days old and may no longer be current.', 'ct4gg' ), $opt['post_old_post_notice'] );
-			$content = "<div style='background-color: #f4f4f4; padding: 15px; margin-bottom: 30px;'>" . $message ."</div>" . $content;
 		}
 
 		return $content;

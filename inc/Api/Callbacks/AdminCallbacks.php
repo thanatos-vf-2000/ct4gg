@@ -1,7 +1,7 @@
 <?php 
 /**
  * @package  CT4GGPlugin
- * @Version 1.2.0
+ * @Version 1.4.5
  */
 namespace CT4GG\Api\Callbacks;
 
@@ -27,6 +27,11 @@ class AdminCallbacks extends BaseController
 	public function adminHumans()
 	{
 		return require_once( "$this->plugin_path/templates/humans.php" );
+	}
+
+	public function adminSecurity()
+	{
+		return require_once( "$this->plugin_path/templates/security.php" );
 	}
 
 }
