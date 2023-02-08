@@ -3,7 +3,7 @@
 Plugin Name: ct4gg
 Plugin URI: https://ginkgos.net/plugin/ct4gg/
 Description: Customiser Tools For GinkGos - Plugin / Customiser Tools for Wordpress.
-Version: 1.4.5
+Version: 1.4.6
 Requires at least: 5.2
 Tested up to: 6.1.1
 Requires PHP: 7.4
@@ -40,7 +40,7 @@ if ( file_exists( dirname( __FILE__ ) . '/vendor/autoload.php' ) ) {
 /**
  * Plugin variable information
  */
-define( 'CT4GG_VERSION', '1.4.5' );
+define( 'CT4GG_VERSION', '1.4.6' );
 define( 'CT4GG_NAME', 'ct4gg' );
 define( 'CT4GG_FILE', __FILE__ );
 define( 'CT4GG_PATH', plugin_dir_path( CT4GG_FILE ) );

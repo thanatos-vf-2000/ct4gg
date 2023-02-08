@@ -4,7 +4,7 @@ Tags: tools, customiser, homepage, redirect, Jetpack, performance, login, speed,
 Requires at least: 5.2
 Tested up to: 6.1.1
 Requires PHP: 7.4
-Stable tag: 1.4.5
+Stable tag: 1.4.6
 License: GPLv2
 
 Wordpress customiser tools for beginer and confirmed users.
@@ -123,9 +123,10 @@ If you want a new feature, you can contact me by email at contact@ginkgos.net
 
 == Changelog ==
 
-= 1.4.5 (2302-SFP1) =
-*Release Date - 04 Febrary 2023*
+= 1.4.6 (2302-SFP2) =
+*Release Date - 08 Febrary 2023*
 
+* Bug 1.4.5,
 * Test up to Wordpress 6.1.1,
 * Add management of file security.txt.
 
