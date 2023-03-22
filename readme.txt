@@ -2,9 +2,9 @@
 Contributors: vanhoucke
 Tags: tools, customiser, homepage, redirect, Jetpack, performance, login, speed, comments, min comments, meta generator, htaccess, cache, robots.txt, robots, humans.txt, Share, sharing, share buttons, share button, share social media, share icons, social buttons, sharing buttons, sharing icons, social media icons, social share, social sharing
 Requires at least: 5.2
-Tested up to: 6.1.1
+Tested up to: 6.2
 Requires PHP: 7.4
-Stable tag: 1.4.6
+Stable tag: 1.4.7
 License: GPLv2
 
 Wordpress customiser tools for beginer and confirmed users.
@@ -123,12 +123,10 @@ If you want a new feature, you can contact me by email at contact@ginkgos.net
 
 == Changelog ==
 
-= 1.4.6 (2302-SFP2) =
-*Release Date - 08 Febrary 2023*
+= 1.4.7 (2303-SFP1) =
+*Release Date - 22 March 2023*
 
-* Bug 1.4.5,
-* Test up to Wordpress 6.1.1,
-* Add management of file security.txt.
+* Test up Woodpress 6.2.
 
 
 See [changelog.txt](https://plugins.svn.wordpress.org/ct4gg/trunk/changelog.txt) for older changelog
