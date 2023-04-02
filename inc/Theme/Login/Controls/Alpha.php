@@ -28,41 +28,47 @@ include_once ABSPATH . 'wp-includes/class-wp-customize-control.php';
 /**
  * Alpha Color Control Class for Customizer
  * @author Hardeep Asrani
- * @version 2.2.0 
+ * @version 2.2.0
+ * @correction F. VANHOUCKE 1.4.8
  */
 
-class Alpha extends \WP_Customize_Control {
+class Alpha extends \WP_Customize_Control
+{
 
-	public $type = 'alphacolor';
-	public $palette = true;
-	public $default = array();
+    public $type = 'alphacolor';
+    public $palette = true;
+    public $default = array();
 
-	public function to_json() {
-		if ( ! empty( $this->setting->default ) ) {
-			$this->json['default'] = $this->setting->default;
-		} else {
-			$this->json['default'] = false;
-		}
-		parent::to_json();
-	}
+    public function to_json()
+    {
+        if (! empty($this->setting->default)) {
+            $this->json['default'] = $this->setting->default;
+        } else {
+            $this->json['default'] = false;
+        }
+        parent::to_json();
+    }
 
-	/**
-	 * Function to Enqueue styling and scripts
-	 *
-	 * @return void
-	 */
-	public function enqueue() {
-		wp_enqueue_script( CT4GG_NAME.'-alpha', CT4GG_URL . 'assets/js/Login/Controls/alpha-control.js', array( 'jquery' ), null, true );
-		wp_enqueue_style( CT4GG_NAME.'-alpha', CT4GG_URL . 'assets/css/Login/Controls/alpha_control.css' );
-	}
+    /**
+     * Function to Enqueue styling and scripts
+     *
+     * @return void
+     */
+    public function enqueue()
+    {
+        wp_enqueue_script(CT4GG_NAME.'-alpha', CT4GG_URL . 'assets/js/Login/Controls/alpha-control.js', array( 'jquery' ), null, true);
+        wp_enqueue_style(CT4GG_NAME.'-alpha', CT4GG_URL . 'assets/css/Login/Controls/alpha_control.css');
+    }
 
-	public function render_content() { ?>
-		<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
-		<span class="customize-control-description"><?php echo esc_html( $this->description ); ?></span>
-		<label>
-			<input type="text" data-palette="<?php echo $this->palette; ?>" data-default-color="<?php echo $this->setting->default; ?>" value="<?php echo intval( $this->value() ); ?>" class="ct4gg-color-control" <?php $this->link(); ?>  />
-		</label>
-		<?php
-	}
+    public function render_content()
+    {
+        ?>
+        <span class="customize-control-title"><?php echo esc_html($this->label); ?></span>
+        <span class="customize-control-description"><?php echo esc_html($this->description); ?></span>
+        <label>
+            <input type="text" data-palette="<?php echo  esc_attr($this->palette); ?>" data-default-color="<?php echo  esc_attr($this->setting->default); ?>" value="<?php echo intval($this->value()); ?>" class="ct4gg-color-control" <?php $this->link(); ?>  />
+        </label>
+        <?php
+    }
 }
 

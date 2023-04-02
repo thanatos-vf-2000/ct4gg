@@ -1,11 +1,11 @@
 <?php
 /**
- * @package  CT4GGPlugin
- * @Version 0.0.1
+ * @package CT4GGPlugin
+ * @version 1.4.8
  */
 namespace CT4GG\Core\Check;
 
-class PhpVersionCheck 
+class PhpVersionCheck
 {
     /**
      * Class instance.
@@ -16,20 +16,21 @@ class PhpVersionCheck
      */
     private static $instance;
 
-    public function register() {
-		if ( ! isset( self::$instance ) ) {
+    public function register()
+    {
+        if (! isset(self::$instance)) {
             self::$instance = new self();
         }
-        if ( is_admin() ) {
-            if( ! function_exists('get_plugin_data') ){
-                require_once(ABSPATH . 'wp-admin/includes/plugin.php' );
+        if (is_admin()) {
+            if (! function_exists('get_plugin_data')) {
+                require_once(ABSPATH . 'wp-admin/includes/plugin.php');
             }
-            $plugin_data = get_plugin_data(CT4GG_FILE );
+            $plugin_data = get_plugin_data(CT4GG_FILE);
             if (self::check($plugin_data['RequiresPHP'], '8.0.10') === false) {
                 return;
             }
         }
-	}
+    }
 
 
     public static function check($minVer, $suggestedVer)
@@ -51,10 +52,10 @@ class PhpVersionCheck
 
     public static function notice()
     {
-        if( ! function_exists('get_plugin_data') ){
-            require_once(ABSPATH . 'wp-admin/includes/plugin.php' );
+        if (! function_exists('get_plugin_data')) {
+            require_once(ABSPATH . 'wp-admin/includes/plugin.php');
         }
-        $plugin_data = get_plugin_data(CT4GG_FILE );
+        $plugin_data = get_plugin_data(CT4GG_FILE);
         ?>
         <div class="error notice">
             <p>

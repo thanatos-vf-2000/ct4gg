@@ -2,11 +2,12 @@
 /**
  * Message version
  *
- * @package tfm4ct4ggwp
- * @since 1.3.0
+ * @package ct4gg
+ * @since   1.3.0
+ * @version 1.4.8
  */
 
-if ( $type == 'ct4gg-robots-ko' ) :?>
+if ($type == 'ct4gg-robots-ko') :?>
     <div class="notice notice-alt notice-error notice-large">
         <h4><?php _e('$_POST error (ct4gg-robots-ko)', 'ct4gg'); ?></h4>
         <p>
@@ -14,7 +15,7 @@ if ( $type == 'ct4gg-robots-ko' ) :?>
         </p>
     </div>
 <?php endif;
-if ( $type == 'backup-ko' ) :?>
+if ($type == 'backup-ko') :?>
     <div class="notice notice-alt notice-error notice-large">
         <h4><?php _e('Backup failed!', 'ct4gg'); ?></h4>
         <p>
@@ -22,7 +23,7 @@ if ( $type == 'backup-ko' ) :?>
         </p>
     </div>
 <?php endif;
-if ( $type == 'delete-ko' ) :?>
+if ($type == 'delete-ko') :?>
     <div class="notice notice-alt notice-error notice-large">
         <h4><?php _e('Delete failed!', 'ct4gg'); ?></h4>
         <p>
@@ -30,7 +31,7 @@ if ( $type == 'delete-ko' ) :?>
         </p>
     </div>
 <?php endif;
-if ( $type == 'delete-ok' ) :?>
+if ($type == 'delete-ok') :?>
     <div class="notice notice-alt notice-success notice-large">
         <h4><?php _e('Delete file successfuly.', 'ct4gg'); ?></h4>
         <p>
@@ -38,7 +39,7 @@ if ( $type == 'delete-ok' ) :?>
         </p>
     </div>
 <?php endif;
-if ( $type == 'copy-ko' ) :?>
+if ($type == 'copy-ko') :?>
     <div class="notice notice-alt notice-error notice-large">
         <h4><?php _e('Copy failed!', 'ct4gg'); ?></h4>
         <p>
@@ -46,7 +47,7 @@ if ( $type == 'copy-ko' ) :?>
         </p>
     </div>
 <?php endif;
-if ( $type == 'copy-ok' ) :?>
+if ($type == 'copy-ok') :?>
     <div class="notice notice-alt notice-success notice-large">
         <h4><?php _e('Copy file successfuly.', 'ct4gg'); ?></h4>
         <p>
@@ -54,7 +55,7 @@ if ( $type == 'copy-ok' ) :?>
         </p>
     </div>
 <?php endif;
-if ( $type == 'update-ko' ) :?>
+if ($type == 'update-ko') :?>
     <div class="notice notice-alt notice-error notice-large">
         <h4><?php _e('Update failed!', 'ct4gg'); ?></h4>
         <p>
@@ -62,7 +63,7 @@ if ( $type == 'update-ko' ) :?>
         </p>
     </div>
 <?php endif;
-if ( $type == 'update-ok' ) :?>
+if ($type == 'update-ok') :?>
     <div class="notice notice-alt notice-success notice-large">
         <h4><?php _e('Update file successfuly.', 'ct4gg'); ?></h4>
         <p>

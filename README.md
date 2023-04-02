@@ -9,9 +9,9 @@
 Contributors: vanhoucke
 Tags: tools, customiser, homepage, redirect, Jetpack, performance, login, speed, comments, min comments, meta generator, htaccess, cache
 Requires at least: 5.7
-Tested up to: 6.1.1
+Tested up to: 6.2
 Requires PHP: 7.4
-Stable tag: 1.4.6
+Stable tag: 1.4.8
 License: GPLv2
 
 Wordpress customiser tools for beginer and confirmed users.
@@ -124,10 +124,11 @@ If you want a new feature, you can contact me by email at contact@ginkgos.net
 
 ## Changelog
 
-### 1.4.7 (2303-SFP1)
-*Release Date - 22 March 2023*
+### 1.4.8 (2304-SFP1)
+*Release Date - 2 April 2023*
 
-* Test up Wordpress 6.2.
+* Sanitized Data, Escaped, and Validated (used sanitize_text_field),
+* Variables and options must be escaped.
 
 See [changelog.txt](https://plugins.svn.wordpress.org/ct4gg/trunk/changelog.txt) for older changelog
 

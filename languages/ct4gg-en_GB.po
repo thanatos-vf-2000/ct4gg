@@ -1,19 +1,18 @@
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Custom Tools For GinkGos - Plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-02 15:24+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: \n"
-"Language: \n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"POT-Creation-Date: 2021-09-10 08:19+0000\n"
+"PO-Revision-Date: 2023-04-02 15:31+0000\n"
+"Last-Translator: Franck VANHOUCKE\n"
+"Language-Team: English (UK)\n"
+"Language: en_GB\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.5.3; wp-5.8.1\n"
+"X-Loco-Version: 2.6.4; wp-6.2\n"
 "X-Domain: ct4gg"
 
 #: inc/Core/Check/PhpVersionCheck.php:71
@@ -22,354 +21,369 @@ msgid ""
 " for instructions on how to download a previous version of this plugin "
 "compatible with PHP %2s."
 msgstr ""
+" for instructions on how to download a previous version of this plugin "
+"compatible with PHP %2s."
 
 #: templates-part/htaccess/tab-content.php:21
 #: templates-part/security/tab-content.php:21
 #: templates-part/robots/tab-content.php:21
 #: templates-part/humans/tab-content.php:21
 msgid " updated on "
-msgstr ""
+msgstr " updated on "
 
 #: assets/defaults.php:12
 msgid "\"Classic\" WordPress widgets settings screens"
-msgstr ""
+msgstr "\"Classic\" WordPress widgets settings screens"
 
 #: inc/Core/Check/PhpVersionCheck.php:69
 msgid "\"What version of PHP Does Support?\""
-msgstr ""
+msgstr "\"What version of PHP Does Support?\""
 
 #: assets/messages/htaccess.php:12
 msgid "$_POST error (ct4gg-htaccess-ko)"
-msgstr ""
+msgstr "$_POST error (ct4gg-htaccess-ko)"
 
 #: assets/messages/humans.php:12
 msgid "$_POST error (ct4gg-humans-ko)"
-msgstr ""
+msgstr "$_POST error (ct4gg-humans-ko)"
 
 #: assets/messages/robots.php:12
 msgid "$_POST error (ct4gg-robots-ko)"
-msgstr ""
+msgstr "$_POST error (ct4gg-robots-ko)"
 
 #: assets/messages/security.php:12
 msgid "$_POST error (ct4gg-security-ko)"
-msgstr ""
+msgstr "$_POST error (ct4gg-security-ko)"
 
 #: inc/Theme/Login/Controls/Range_Slider.php:74
 msgid "%"
-msgstr ""
+msgstr "%"
 
 #: assets/defaults.php:275
 msgid ""
 "A comma-separated list of language codes that your security team speaks. You "
 "may include more than one language."
 msgstr ""
+"A comma-separated list of language codes that your security team speaks. You "
+"may include more than one language."
 
 #: assets/defaults.php:251
 msgid ""
 "A link or e-mail address for people to contact you about security issues. "
 "Remember to include \"https://\" for URLs, and \"mailto:\" for e-mails."
 msgstr ""
+"A link or e-mail address for people to contact you about security issues. "
+"Remember to include \"https://\" for URLs, and \"mailto:\" for e-mails."
 
 #: assets/defaults.php:265
 msgid ""
 "A link to a key which security researchers should use to securely talk to "
 "you. Remember to include \"https://\"."
 msgstr ""
+"A link to a key which security researchers should use to securely talk to "
+"you. Remember to include \"https://\"."
 
 #: assets/defaults.php:285
 msgid ""
 "A link to a policy detailing what security researchers should do when "
 "searching for or reporting security issues. Remember to include \"https://\"."
 msgstr ""
+"A link to a policy detailing what security researchers should do when "
+"searching for or reporting security issues. Remember to include \"https://\"."
 
 #: assets/defaults.php:270
 msgid ""
 "A link to a web page where you say thank you to security researchers who "
 "have helped you. Remember to include \"https://."
 msgstr ""
+"A link to a web page where you say thank you to security researchers who "
+"have helped you. Remember to include \"https://."
 
 #: assets/defaults.php:290
 msgid ""
 "A link to any security-related job openings in your organisation. Remember "
 "to include \"https://\"."
 msgstr ""
+"A link to any security-related job openings in your organisation. Remember "
+"to include \"https://\"."
 
 #: templates-part/admin/tab-content.php:56 templates-part/admin/nav-tabs.php:12
 msgid "About"
-msgstr ""
+msgstr "About"
 
 #: assets/defaults.php:269
 msgid "Acknowledgments."
-msgstr ""
+msgstr "Acknowledgments."
 
 #: assets/defaults.php:242
 msgid "Activate buffer."
-msgstr ""
+msgstr "Activate buffer."
 
 #: assets/defaults.php:246
 msgid "Activate email."
-msgstr ""
+msgstr "Activate email."
 
 #: assets/defaults.php:225
 msgid "Activate facebook."
-msgstr ""
+msgstr "Activate facebook."
 
 #: assets/defaults.php:238
 msgid "Activate linkedin."
-msgstr ""
+msgstr "Activate linkedin."
 
 #: assets/defaults.php:234
 msgid "Activate pinterest."
-msgstr ""
+msgstr "Activate pinterest."
 
 #: assets/defaults.php:213
 msgid "Activate Social Buttons."
-msgstr ""
+msgstr "Activate Social Buttons."
 
 #: assets/defaults.php:221
 msgid "Activate twitter."
-msgstr ""
+msgstr "Activate twitter."
 
 #: assets/defaults.php:229
 msgid "Activate whatsapp."
-msgstr ""
+msgstr "Activate whatsapp."
 
 #: assets/defaults.php:163
 msgid "Add site Maps Yoast SEO (/sitemap_index.xml)."
-msgstr ""
+msgstr "Add site Maps Yoast SEO (/sitemap_index.xml)."
 
 #: inc/Pages/Dashboard.php:99
 msgid "Administration - Settings Manager"
-msgstr ""
+msgstr "Administration - Settings Manager"
 
 #: assets/defaults.php:130
 msgid "After xxx Days (default 60 days)."
-msgstr ""
+msgstr "After xxx Days (default 60 days)."
 
 #: assets/defaults.php:113
 msgid "Back to home if not Administrator."
-msgstr ""
+msgstr "Back to home if not Administrator."
 
 #: inc/Theme/Login/Sections/02-Background.php:10
 msgid "Background"
-msgstr ""
+msgstr "Background"
 
 #: inc/Theme/Login/Sections/03-Form.php:16
 #: inc/Theme/Login/Sections/02-Background.php:16
 msgid "Background Color"
-msgstr ""
+msgstr "Background Color"
 
 #: inc/Theme/Login/Sections/02-Background.php:25
 msgid "Background Image"
-msgstr ""
+msgstr "Background Image"
 
 #: inc/Theme/Login/Sections/02-Background.php:55
 msgid "Background Repeat"
-msgstr ""
+msgstr "Background Repeat"
 
 #: inc/Theme/Login/Sections/02-Background.php:33
 msgid "Background Size"
-msgstr ""
+msgstr "Background Size"
 
 #: assets/messages/htaccess.php:20 assets/messages/humans.php:20
 #: assets/messages/robots.php:20 assets/messages/security.php:20
 msgid "Backup failed!"
-msgstr ""
+msgstr "Backup failed!"
 
 #: assets/messages/htaccess.php:22
 msgid "backup file .htaccess failed. "
-msgstr ""
+msgstr "backup file .htaccess failed. "
 
 #: assets/messages/humans.php:22
 msgid "backup file humans.txt failed. "
-msgstr ""
+msgstr "backup file humans.txt failed. "
 
 #: assets/messages/robots.php:22
 msgid "backup file robots.txt failed. "
-msgstr ""
+msgstr "backup file robots.txt failed. "
 
 #: assets/messages/security.php:22
 msgid "backup file security.txt failed. "
-msgstr ""
+msgstr "backup file security.txt failed. "
 
 #: inc/Theme/Login/Sections/03-Form.php:25
 msgid "Border Color"
-msgstr ""
+msgstr "Border Color"
 
 #: inc/Theme/Login/Sections/03-Form.php:43
 msgid "Button Background"
-msgstr ""
+msgstr "Button Background"
 
 #: inc/Theme/Login/Sections/03-Form.php:52
 msgid "Button Background (Hover)"
-msgstr ""
+msgstr "Button Background (Hover)"
 
 #: inc/Theme/Login/Sections/03-Form.php:61
 msgid "Button Text Color"
-msgstr ""
+msgstr "Button Text Color"
 
 #: assets/defaults.php:279
 msgid "Canonical."
-msgstr ""
+msgstr "Canonical."
 
 #: assets/defaults.php:79
 msgid "Change the login screen background."
-msgstr ""
+msgstr "Change the login screen background."
 
 #: assets/defaults.php:68
 msgid "Change the login screen logo."
-msgstr ""
+msgstr "Change the login screen logo."
 
 #: inc/Ui/Post.php:67
 msgid "characters."
-msgstr ""
+msgstr "characters."
 
 #: inc/Api/Callbacks/ManagerCallbacks.php:139
 msgid "Color:"
-msgstr ""
+msgstr "Color:"
 
 #: inc/Ui/Post.php:67
 msgid "Comments must contain at least "
-msgstr ""
+msgstr "Comments must contain at least "
 
 #: assets/defaults.php:159
 msgid "Compressing static files."
-msgstr ""
+msgstr "Compressing static files."
 
 #: assets/defaults.php:250
 msgid "Contact."
-msgstr ""
+msgstr "Contact."
 
 #: assets/messages/htaccess.php:44 assets/messages/humans.php:44
 #: assets/messages/robots.php:44 assets/messages/security.php:44
 msgid "Copy failed!"
-msgstr ""
+msgstr "Copy failed!"
 
 #: assets/messages/htaccess.php:52 assets/messages/humans.php:52
 #: assets/messages/robots.php:52 assets/messages/security.php:52
 msgid "Copy file successfuly."
-msgstr ""
+msgstr "Copy file successfuly."
 
 #: assets/messages/htaccess.php:54 assets/messages/humans.php:54
 #: assets/messages/robots.php:54 assets/messages/security.php:54
 msgid "Copy file: "
-msgstr ""
+msgstr "Copy file: "
 
 #: templates-part/admin/tab-content.php:58
 msgid "Credit"
-msgstr ""
+msgstr "Credit"
 
 #: inc/Ui/Admin.php:90
 msgid "CT4GG"
-msgstr ""
+msgstr "CT4GG"
 
 #. Name of the plugin
 msgid "ct4gg"
-msgstr ""
+msgstr "ct4gg"
 
 #: inc/Theme/Login/Sections/02-Background.php:41
 msgid "Custom"
-msgstr ""
+msgstr "Custom"
 
 #: inc/Theme/Login/Sections/02-Background.php:47
 msgid "Custom Size"
-msgstr ""
+msgstr "Custom Size"
 
 #. Description of the plugin
 msgid "Customiser Tools For GinkGos - Plugin / Customiser Tools for Wordpress."
 msgstr ""
+"Customiser Tools For GinkGos - Plugin / Customiser Tools for Wordpress."
 
 #: assets/defaults.php:47
 msgid "Day"
-msgstr ""
+msgstr "Day"
 
 #: templates-part/htaccess/tab-content.php:49
 #: templates-part/security/tab-content.php:48
 #: templates-part/robots/tab-content.php:48
 #: templates-part/humans/tab-content.php:48
 msgid "Delete"
-msgstr ""
+msgstr "Delete"
 
 #: assets/messages/htaccess.php:28 assets/messages/humans.php:28
 #: assets/messages/robots.php:28 assets/messages/security.php:28
 msgid "Delete failed!"
-msgstr ""
+msgstr "Delete failed!"
 
 #: assets/messages/htaccess.php:36 assets/messages/humans.php:36
 #: assets/messages/robots.php:36 assets/messages/security.php:36
 msgid "Delete file successfuly."
-msgstr ""
+msgstr "Delete file successfuly."
 
 #: assets/messages/htaccess.php:38 assets/messages/humans.php:38
 #: assets/messages/robots.php:38 assets/messages/security.php:38
 msgid "Delete file: "
-msgstr ""
+msgstr "Delete file: "
 
 #: assets/defaults.php:8
 msgid "Delete Wordpress Logo on top admin menu."
-msgstr ""
+msgstr "Delete Wordpress Logo on top admin menu."
 
 #: inc/Theme/Login/Sections/04-Other.php:34
 msgid "Disable \"Back to Website\"?"
-msgstr ""
+msgstr "Disable \"Back to Website\"?"
 
 #: assets/defaults.php:134
 msgid "Disable display of directory contents."
-msgstr ""
+msgstr "Disable display of directory contents."
 
 #: assets/defaults.php:54
 msgid "Disable Jetpack for Automattic"
-msgstr ""
+msgstr "Disable Jetpack for Automattic"
 
 #: assets/defaults.php:55
 msgid "Disable Jetpack offered by Automattic to stop showing banners."
-msgstr ""
+msgstr "Disable Jetpack offered by Automattic to stop showing banners."
 
 #: inc/Theme/Login/Sections/01-Logo.php:16
 msgid "Disable Logo?"
-msgstr ""
+msgstr "Disable Logo?"
 
 #: inc/Theme/Login/Sections/04-Other.php:25
 msgid "Disable Lost Password?"
-msgstr ""
+msgstr "Disable Lost Password?"
 
 #: inc/Theme/Login/Sections/04-Other.php:16
 msgid "Disable Register Link?"
-msgstr ""
+msgstr "Disable Register Link?"
 
 #: templates-part/htaccess/nav-tabs.php:10
 #: templates-part/security/nav-tabs.php:10
 #: templates-part/robots/nav-tabs.php:10 templates-part/humans/nav-tabs.php:10
 msgid "Display"
-msgstr ""
+msgstr "Display"
 
 #: assets/defaults.php:230
 msgid "Display only on max size 640px."
-msgstr ""
+msgstr "Display only on max size 640px."
 
 #: inc/Theme/Login/Controls/Padding.php:44
 msgid "Down"
-msgstr ""
+msgstr "Down"
 
 #: assets/defaults.php:155
 msgid "Enable cache expires."
-msgstr ""
+msgstr "Enable cache expires."
 
 #: assets/defaults.php:74
 msgid "Enable change background login screen."
-msgstr ""
+msgstr "Enable change background login screen."
 
 #: assets/defaults.php:63
 msgid "Enable change logo on login screen (logo size 84px*84px)."
-msgstr ""
+msgstr "Enable change logo on login screen (logo size 84px*84px)."
 
 #: assets/defaults.php:146
 msgid "Enable Force download"
-msgstr ""
+msgstr "Enable Force download"
 
 #: assets/defaults.php:264
 msgid "Encryption."
-msgstr ""
+msgstr "Encryption."
 
 #. 1: Elementor, 2: Link to plugin review
 #: inc/Ui/Admin.php:89
@@ -378,54 +392,56 @@ msgid ""
 "Enjoyed %1$s? Please leave us a %2$s rating. We really appreciate your "
 "support!"
 msgstr ""
+"Enjoyed %1$s? Please leave us a %2$s rating. We really appreciate your "
+"support!"
 
 #: assets/defaults.php:151
 msgid "Exemple: .doc .docx .xls .xlsx .csv .mp3 .mp4"
-msgstr ""
+msgstr "Exemple: .doc .docx .xls .xlsx .csv .mp3 .mp4"
 
 #: assets/defaults.php:255
 msgid "Expire date."
-msgstr ""
+msgstr "Expire date."
 
 #: assets/defaults.php:260
 msgid "Expire time."
-msgstr ""
+msgstr "Expire time."
 
 #: inc/Theme/Login/Sections/04-Other.php:52
 msgid "ext Color (Hover)"
-msgstr ""
+msgstr "ext Color (Hover)"
 
 #: inc/Theme/Login/Sections/02-Background.php:40
 msgid "Fill Screen"
-msgstr ""
+msgstr "Fill Screen"
 
 #: inc/Theme/Login/Sections/02-Background.php:39
 msgid "Fit to Screen"
-msgstr ""
+msgstr "Fit to Screen"
 
 #: assets/defaults.php:18 assets/defaults.php:24 assets/defaults.php:43
 msgid "For Wordpress 5.3 and higher."
-msgstr ""
+msgstr "For Wordpress 5.3 and higher."
 
 #: assets/defaults.php:13
 msgid "For Wordpress 5.8."
-msgstr ""
+msgstr "For Wordpress 5.8."
 
 #: assets/defaults.php:150
 msgid "Force download for these file types."
-msgstr ""
+msgstr "Force download for these file types."
 
 #: inc/Theme/Login/Sections/03-Form.php:10
 msgid "Form"
-msgstr ""
+msgstr "Form"
 
 #. Author of the plugin
 msgid "Franck VANHOUCKE"
-msgstr ""
+msgstr "Franck VANHOUCKE"
 
 #: templates-part/admin/support.php:5
 msgid "Got a Question an Idea or a Problem?"
-msgstr ""
+msgstr "Got a Question an Idea or a Problem?"
 
 #: inc/Ui/Messages.php:49
 #, php-format
@@ -433,149 +449,160 @@ msgid ""
 "Hey <b>%1$s</b>, %2$s v1.3.0 add a new options for customize login page (New "
 "Version only), see %3$s."
 msgstr ""
+"Hey <b>%1$s</b>, %2$s v1.3.0 add a new options for customize login page (New "
+"Version only), see %3$s."
 
 #: assets/defaults.php:109
 msgid "Hide login errors."
-msgstr ""
+msgstr "Hide login errors."
 
 #: assets/defaults.php:125
 msgid "Hide meta generator (Wordpress version)."
-msgstr ""
+msgstr "Hide meta generator (Wordpress version)."
 
 #: assets/defaults.php:138
 msgid "Hide server information."
-msgstr ""
+msgstr "Hide server information."
 
 #: assets/defaults.php:289
 msgid "Hiring."
-msgstr ""
+msgstr "Hiring."
 
 #: inc/Pages/Dashboard.php:117
 msgid "Htaccess"
-msgstr ""
+msgstr "Htaccess"
 
 #: templates-part/htaccess/tab-content.php:30
 msgid "Htaccess file(s)"
-msgstr ""
+msgstr "Htaccess file(s)"
 
 #. Author URI of the plugin
 msgid "https://ginkgos.net/"
-msgstr ""
+msgstr "https://ginkgos.net/"
 
 #. URI of the plugin
 msgid "https://ginkgos.net/plugin/ct4gg/"
-msgstr ""
+msgstr "https://ginkgos.net/plugin/ct4gg/"
 
 #: inc/Pages/Dashboard.php:129
 msgid "Humans"
-msgstr ""
+msgstr "Humans"
 
 #: templates-part/security/tab-content.php:29
 #: templates-part/humans/tab-content.php:29
 msgid "Humans.txt file(s)"
-msgstr ""
+msgstr "Humans.txt file(s)"
 
 #: assets/defaults.php:117
 msgid "If the result of a search returns only one item then it is displayed."
-msgstr ""
+msgstr "If the result of a search returns only one item then it is displayed."
 
 #: inc/Core/Check/PhpVersionCheck.php:67
 msgid "If this is not possible, please visit the FAQ link titled "
-msgstr ""
+msgstr "If this is not possible, please visit the FAQ link titled "
 
 #: assets/messages/htaccess.php:14
 msgid "impossible to retrieve the variable <strong>ct4gg-htaccess-ko</strong>."
 msgstr ""
+"Impossible to retrieve the variable <strong>ct4gg-htaccess-ko</strong>."
 
 #: assets/messages/humans.php:14
 msgid "impossible to retrieve the variable <strong>ct4gg-humans-ko</strong>."
-msgstr ""
+msgstr "impossible to retrieve the variable <strong>ct4gg-humans-ko</strong>."
 
 #: assets/messages/robots.php:14
 msgid "impossible to retrieve the variable <strong>ct4gg-robots-ko</strong>."
-msgstr ""
+msgstr "impossible to retrieve the variable <strong>ct4gg-robots-ko</strong>."
 
 #: assets/messages/security.php:14
 msgid "impossible to retrieve the variable <strong>ct4gg-security-ko</strong>."
 msgstr ""
+"impossible to retrieve the variable <strong>ct4gg-security-ko</strong>."
 
 #: inc/Ui/Login.php:39
 msgid "incorrect!"
-msgstr ""
+msgstr "incorrect!"
 
 #: assets/defaults.php:22
 msgid "Interval before displaying the administration email verification screen"
 msgstr ""
+"Interval before displaying the administration email verification screen"
 
 #: assets/defaults.php:42
 msgid ""
 "Interval Type before displaying the administration email verification screen"
 msgstr ""
+"Interval Type before displaying the administration email verification screen"
 
 #: inc/Theme/Login/Controls/Padding.php:46
 msgid "Left"
-msgstr ""
+msgstr "Left"
 
 #: assets/defaults.php:189
 msgid "login"
-msgstr ""
+msgstr "login"
 
 #: assets/defaults.php:78
 msgid "login background"
-msgstr ""
+msgstr "login background"
 
 #: inc/Pages/Dashboard.php:93
 msgid "Login Custom"
-msgstr ""
+msgstr "Login Custom"
 
 #: inc/Pages/Dashboard.php:87
 msgid "Login Manager screen"
-msgstr ""
+msgstr "Login Manager screen"
 
 #: assets/defaults.php:85
+#| msgid "Login Screean background color:"
 msgid "Login Screen background color:"
-msgstr ""
+msgstr "Login Screen background color:"
 
 #: assets/defaults.php:97
+#| msgid "Login Screean Bottum color:"
 msgid "Login Screen Bottum color:"
-msgstr ""
+msgstr "Login Screen Bottum color:"
 
 #: assets/defaults.php:101
+#| msgid "Login Screean Form  background color:"
 msgid "Login Screen Form  background color:"
-msgstr ""
+msgstr "Login Screen Form  background color:"
 
 #: assets/defaults.php:89
+#| msgid "Login Screean Link color:"
 msgid "Login Screen Link color:"
-msgstr ""
+msgstr "Login Screen Link color:"
 
 #: assets/defaults.php:67
 msgid "login screen logo"
-msgstr ""
+msgstr "login screen logo"
 
 #: assets/defaults.php:93
+#| msgid "Login Screean Text color:"
 msgid "Login Screen Text color:"
-msgstr ""
+msgstr "Login Screen Text color:"
 
 #: inc/Theme/Login/Sections/01-Logo.php:10
 #: inc/Theme/Login/Sections/01-Logo.php:24
 msgid "Logo"
-msgstr ""
+msgstr "Logo"
 
 #: inc/Theme/Login/Sections/01-Logo.php:32
 msgid "Logo URL"
-msgstr ""
+msgstr "Logo URL"
 
 #: assets/defaults.php:193
 msgid "Logout"
-msgstr ""
+msgstr "Logout"
 
 #: assets/defaults.php:201
 msgid "Lost password"
-msgstr ""
+msgstr "Lost password"
 
 #: templates-part/admin/nav-tabs.php:10
 msgid "Manage Settings"
-msgstr ""
+msgstr "Manage Settings"
 
 #: inc/Api/Callbacks/ManagerCallbacks.php:77
 msgid ""
@@ -584,232 +611,245 @@ msgid ""
 "\"Login Custom\"</b> <b style=\"color:red\">or</b> in the menu of <b>this "
 "plugin</b> chose <b>\"Login Custom\"</b>."
 msgstr ""
+"Manage the screen login <b style=\"color:blue\">New version</b>.<br>After "
+"saving the options go to <b>\"Appearance (Themes)\"</b> and choose <b>"
+"\"Login Custom\"</b> <b style=\"color:red\">or</b> in the menu of <b>this "
+"plugin</b> chose <b>\"Login Custom\"</b>."
 
 #: inc/Api/Callbacks/ManagerCallbacks.php:41
 msgid ""
 "Manage the screen login <b style=\"color:red\">Old version please use the "
 "new version section \"Login Custom\"</b>."
 msgstr ""
+"Manage the screen login <b style=\"color:red\">Old version please use the "
+"new version section \"Login Custom\"</b>."
 
 #: inc/Api/Callbacks/ManagerCallbacks.php:52
 msgid ""
 "Manage the Sections and Features of post and articles activating the "
 "checkboxes from the following list."
 msgstr ""
+"Manage the Sections and Features of post and articles activating the "
+"checkboxes from the following list."
 
 #: inc/Api/Callbacks/ManagerCallbacks.php:35
 msgid "Manage the Sections and Features of this Plugin by activating options."
-msgstr ""
+msgstr "Manage the Sections and Features of this Plugin by activating options."
 
 #: inc/Api/Callbacks/ManagerCallbacks.php:47
 msgid ""
 "Manage the Sections and Features of WP Administration Dashboard by "
 "activating options."
 msgstr ""
+"Manage the Sections and Features of WP Administration Dashboard by "
+"activating options."
 
 #: inc/Api/Callbacks/ManagerCallbacks.php:82
 msgid ""
 "Management of options for Social Buttons.<br>This will create a wordpress "
 "shortcode <b style=\"color:blue\">[ct4gg_social]</b>."
 msgstr ""
+"Management of options for Social Buttons.<br>This will create a wordpress "
+"shortcode <b style=\"color:blue\">[ct4gg_social]</b>."
 
 #: inc/Api/Callbacks/ManagerCallbacks.php:57
 msgid "Management of options to be included in the .htaccess file."
-msgstr ""
+msgstr "Management of options to be included in the .htaccess file."
 
 #: inc/Api/Callbacks/ManagerCallbacks.php:67
 msgid "Management of options to be included in the humans.txt file."
-msgstr ""
+msgstr "Management of options to be included in the humans.txt file."
 
 #: inc/Api/Callbacks/ManagerCallbacks.php:62
 msgid "Management of options to be included in the robots.txt file."
-msgstr ""
+msgstr "Management of options to be included in the robots.txt file."
 
 #: assets/defaults.php:121
 msgid "Minimal comment length."
-msgstr ""
+msgstr "Minimal comment length."
 
 #: assets/defaults.php:49
 msgid "Month"
-msgstr ""
+msgstr "Month"
 
 #: templates-part/htaccess/tab-content.php:55
 msgid "No .htaccess fils found."
-msgstr ""
+msgstr "No .htaccess fils found."
 
 #: templates-part/humans/tab-content.php:54
 msgid "No humans.txt fils found."
-msgstr ""
+msgstr "No humans.txt fils found."
 
 #: inc/Theme/Login/Sections/02-Background.php:60
 msgid "No Repeat"
-msgstr ""
+msgstr "No Repeat"
 
 #: templates-part/robots/tab-content.php:54
 msgid "No robots.txt fils found."
-msgstr ""
+msgstr "No robots.txt fils found."
 
 #: templates-part/security/tab-content.php:54
 msgid "No security.txt fils found."
-msgstr ""
+msgstr "No security.txt fils found."
 
 #: assets/defaults.php:129
 msgid "Old post notice."
-msgstr ""
+msgstr "Old post notice."
 
 #: inc/Theme/Login/Sections/02-Background.php:38
 msgid "Original"
-msgstr ""
+msgstr "Original"
 
 #: inc/Theme/Login/Sections/04-Other.php:10
 msgid "Other"
-msgstr ""
+msgstr "Other"
 
 #: inc/Core/Check/PhpVersionCheck.php:66
 #, php-format
 msgid ""
 "Please ask your host or server administrator to update to PHP %1s or greater."
 msgstr ""
+"Please ask your host or server administrator to update to PHP %1s or greater."
 
 #: templates-part/admin/support.php:2
 msgid "Plugin Support"
-msgstr ""
+msgstr "Plugin Support"
 
 #: assets/defaults.php:284
 msgid "Policy."
-msgstr ""
+msgstr "Policy."
 
 #: inc/Pages/Dashboard.php:105
 msgid "Post - Settings Manager"
-msgstr ""
+msgstr "Post - Settings Manager"
 
 #: assets/defaults.php:209
 msgid "Post Password"
-msgstr ""
+msgstr "Post Password"
 
 #: assets/defaults.php:274
 msgid "Preferred-Languages."
-msgstr ""
+msgstr "Preferred-Languages."
 
 #: assets/defaults.php:142
 msgid "Protect .htaccess and .htpasswds files."
-msgstr ""
+msgstr "Protect .htaccess and .htpasswds files."
 
 #: inc/Theme/Login/Controls/Range_Slider.php:72
 msgid "px"
-msgstr ""
+msgstr "px"
 
 #: assets/defaults.php:105
 msgid "Redirect to home after logout."
-msgstr ""
+msgstr "Redirect to home after logout."
 
 #: assets/defaults.php:197
 msgid "Register"
-msgstr ""
+msgstr "Register"
 
 #: inc/Theme/Login/Sections/02-Background.php:61
 msgid "Repeat"
-msgstr ""
+msgstr "Repeat"
 
 #: inc/Theme/Login/Sections/02-Background.php:62
 msgid "Repeat Horizontally"
-msgstr ""
+msgstr "Repeat Horizontally"
 
 #: inc/Theme/Login/Sections/02-Background.php:63
 msgid "Repeat Vertically"
-msgstr ""
+msgstr "Repeat Vertically"
 
 #: inc/Theme/Login/Controls/Range_Slider.php:88
 msgid "Reset"
-msgstr ""
+msgstr "Reset"
 
 #: assets/defaults.php:205
 msgid "Reset password"
-msgstr ""
+msgstr "Reset password"
 
 #: templates-part/htaccess/tab-content.php:48
 #: templates-part/security/tab-content.php:47
 #: templates-part/robots/tab-content.php:47
 #: templates-part/humans/tab-content.php:47
 msgid "Restore"
-msgstr ""
+msgstr "Restore"
 
 #: templates-part/htaccess/nav-tabs.php:11
 msgid "Restore .htaccess"
-msgstr ""
+msgstr "Restore .htaccess"
 
 #: templates-part/humans/nav-tabs.php:11
 msgid "Restore humans.txt"
-msgstr ""
+msgstr "Restore humans.txt"
 
 #: templates-part/robots/nav-tabs.php:11
 msgid "Restore robots.txt"
-msgstr ""
+msgstr "Restore robots.txt"
 
 #: templates-part/security/nav-tabs.php:11
 msgid "Restore security.txt"
-msgstr ""
+msgstr "Restore security.txt"
 
 #: inc/Theme/Login/Controls/Padding.php:40
 msgid "Right"
-msgstr ""
+msgstr "Right"
 
 #: inc/Pages/Dashboard.php:123
 msgid "Robots"
-msgstr ""
+msgstr "Robots"
 
 #: templates-part/robots/tab-content.php:29
 msgid "Robots.txt file(s)"
-msgstr ""
+msgstr "Robots"
 
 #: inc/Pages/Dashboard.php:135
 msgid "Security"
-msgstr ""
+msgstr "Security"
 
 #: inc/Api/Callbacks/ManagerCallbacks.php:72
 msgid "Security of options to be included in the security.txt file."
-msgstr ""
+msgstr "Security of options to be included in the security.txt file."
 
 #: assets/defaults.php:17
 msgid "Semi-annual check of the administration e-mail"
-msgstr ""
+msgstr "Semi-annual check of the administration e-mail"
 
 #: inc/Ui/Messages.php:49 inc/Pages/Dashboard.php:41
 msgid "Settings"
-msgstr ""
+msgstr "Settings"
 
 #: inc/Pages/Dashboard.php:81
 msgid "Settings Manager"
-msgstr ""
+msgstr "Settings Manager"
 
 #: assets/defaults.php:217
 msgid "Show Texte."
-msgstr ""
+msgstr "Show Texte."
 
 #: assets/defaults.php:183
 msgid "Site."
-msgstr ""
+msgstr "Site."
 
 #: inc/Pages/Dashboard.php:111
 msgid "Social Buttons"
-msgstr ""
+msgstr "Social Buttons"
 
 #: templates-part/admin/support.php:7
 msgid "Support Request"
-msgstr ""
+msgstr "Support Request"
 
 #: assets/defaults.php:171
 msgid "Team."
-msgstr ""
+msgstr "Team."
 
 #: inc/Theme/Login/Sections/03-Form.php:34
 #: inc/Theme/Login/Sections/04-Other.php:43
 msgid "Text Color"
-msgstr ""
+msgstr "Text Color"
 
 #: assets/defaults.php:177
 msgid "Thanks."
-msgstr ""
+msgstr "Thanks."
 
 #: assets/defaults.php:256
 msgid ""
@@ -817,10 +857,13 @@ msgid ""
 "considered stale (so security researchers should then not trust it). Make "
 "sure you update this value periodically and keep your file under review."
 msgstr ""
+"The date and time when the content of the security.txt file should be "
+"considered stale (so security researchers should then not trust it). Make "
+"sure you update this value periodically and keep your file under review."
 
 #: inc/Theme/Login/Sections/01-Logo.php:37
 msgid "The page where your logo will take you."
-msgstr ""
+msgstr "The page where your logo will take you."
 
 #: assets/defaults.php:280
 msgid ""
@@ -828,87 +871,91 @@ msgid ""
 "this if you are digitally signing the security.txt file, so that the "
 "location of the security.txt file can be digitally signed too."
 msgstr ""
+"The URLs for accessing your security.txt file. It is important to include "
+"this if you are digitally signing the security.txt file, so that the "
+"location of the security.txt file can be digitally signed too."
 
 #: inc/Theme/Login/Controls/Padding.php:38
 msgid "Top"
-msgstr ""
+msgstr "Top"
 
 #: assets/messages/htaccess.php:46 assets/messages/humans.php:46
 #: assets/messages/robots.php:46 assets/messages/security.php:46
 msgid "Unable to copy the file: "
-msgstr ""
+msgstr "Unable to copy the file: "
 
 #: assets/messages/htaccess.php:30 assets/messages/humans.php:30
 #: assets/messages/robots.php:30 assets/messages/security.php:30
 msgid "Unable to delete the file: "
-msgstr ""
+msgstr "Unable to delete the file: "
 
 #: assets/messages/htaccess.php:62 assets/messages/humans.php:62
 #: assets/messages/robots.php:62 assets/messages/security.php:62
 msgid "Unable to update the file: "
-msgstr ""
+msgstr "Unable to update the file: "
 
 #: assets/messages/htaccess.php:60 assets/messages/humans.php:60
 #: assets/messages/robots.php:60 assets/messages/security.php:60
 msgid "Update failed!"
-msgstr ""
+msgstr "Update failed!"
 
 #: assets/messages/htaccess.php:68 assets/messages/humans.php:68
 #: assets/messages/robots.php:68 assets/messages/security.php:68
 msgid "Update file successfuly."
-msgstr ""
+msgstr "Update file successfuly."
 
 #: assets/messages/htaccess.php:70 assets/messages/humans.php:70
 #: assets/messages/robots.php:70 assets/messages/security.php:70
 msgid "Update file: "
-msgstr ""
+msgstr "Update file: "
 
 #: templates-part/htaccess/tab-content.php:17
 msgid "Update Htaccess"
-msgstr ""
+msgstr "Update Htaccess"
 
 #: templates-part/security/tab-content.php:17
 #: templates-part/humans/tab-content.php:17
 msgid "Update Humans.txt"
-msgstr ""
+msgstr "Update Humans.txt"
 
 #: templates-part/robots/tab-content.php:17
 msgid "Update Robots.txt"
-msgstr ""
+msgstr "Update Robots.txt"
 
 #: templates-part/admin/tab-content.php:27 templates-part/admin/nav-tabs.php:11
 msgid "Updates"
-msgstr ""
+msgstr "Updates"
 
 #: inc/Api/Callbacks/ManagerCallbacks.php:127
 msgid "Upload Menu"
-msgstr ""
+msgstr "Upload Menu"
 
 #: assets/defaults.php:59
 msgid "Use the new management version of the login screen."
-msgstr ""
+msgstr "Use the new management version of the login screen."
 
 #: inc/Ui/Post.php:96
 #, php-format
 msgid ""
 "WARNING: This article is more than %s days old and may no longer be current."
 msgstr ""
+"WARNING: This article is more than %s days old and may no longer be current."
 
 #: assets/defaults.php:48
 msgid "Week"
-msgstr ""
+msgstr "Week"
 
 #: assets/defaults.php:167
 msgid "Wordpress default options."
-msgstr ""
+msgstr "Wordpress default options."
 
 #: assets/defaults.php:50
 msgid "Year"
-msgstr ""
+msgstr "Year"
 
 #: inc/Ui/SocialButtons.php:65
 msgid "Your friend has shared an article you with you."
-msgstr ""
+msgstr "Your friend has shared an article you with you."
 
 #: inc/Core/Check/PhpVersionCheck.php:63
 #, php-format
@@ -916,3 +963,5 @@ msgid ""
 "Your system is running a very old version of PHP (%s) that is no longer "
 "supported by %s.  "
 msgstr ""
+"Your system is running a very old version of PHP (%s) that is no longer "
+"supported by %s.  "

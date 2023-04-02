@@ -1,8 +1,8 @@
 <?php
 /**
- * @package  CT4GGPlugin
- * @Version 1.1.0
- * 
+ * @package CT4GGPlugin
+ * @version 1.4.8
+ *
  * Desciption: Footer
  */
 ?>

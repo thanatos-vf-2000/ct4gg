@@ -1,58 +1,62 @@
 <?php
 /**
- * @package  CT4GGPlugin
- * @Version 1.4.0
+ * @package CT4GGPlugin
+ * @version 1.4.8
  */
 namespace CT4GG\Core;
 
 class Enqueue
 {
-    public function register() {
-		add_action( 'init', array( $this, 'init' ) );
-		add_action('wp_enqueue_scripts', array( $this, 'enqueue' ));
-		add_action( 'admin_enqueue_scripts', array( $this, 'admin_enqueue' ) );
-		add_action( 'login_enqueue_scripts', array( $this, 'admin_enqueue' ) );
-	}
+    public function register()
+    {
+        add_action('init', array( $this, 'init' ));
+        add_action('wp_enqueue_scripts', array( $this, 'enqueue' ));
+        add_action('admin_enqueue_scripts', array( $this, 'admin_enqueue' ));
+        add_action('login_enqueue_scripts', array( $this, 'admin_enqueue' ));
+    }
 
-	function init() {
-		load_plugin_textdomain( 'ct4gg', false, CT4GG_PATH . '/languages');
-	}
-	
-	function enqueue() {
-		if (WP_DEBUG) {
-            wp_enqueue_style( CT4GG_NAME, CT4GG_URL . 'assets/css/style.css' );
-       } else {
-            wp_enqueue_style( CT4GG_NAME, CT4GG_URL . 'assets/css/style.min.css' );
-       }
-	}
-
-	function admin_enqueue() {
-		// enqueue all our scripts
-		//wp_enqueue_script( 'media-upload' );
-		wp_enqueue_media();
-		wp_enqueue_script('jquery');
-		wp_enqueue_style('wp-color-picker');
-		wp_enqueue_script('wp-color-picker');
-		
+    function init()
+    {
+        load_plugin_textdomain('ct4gg', false, CT4GG_PATH . '/languages');
+    }
+    
+    function enqueue()
+    {
         if (WP_DEBUG) {
-            wp_enqueue_style( CT4GG_NAME, CT4GG_URL . 'assets/css/admin.css' );
-			wp_enqueue_script( CT4GG_NAME, CT4GG_URL . 'assets/js/admin.js', array('jquery','wp-color-picker'), CT4GG_VERSION, true  );
+            wp_enqueue_style(CT4GG_NAME, CT4GG_URL . 'assets/css/style.css');
         } else {
-            wp_enqueue_style( CT4GG_NAME, CT4GG_URL . 'assets/css/admin.min.css' );
-			wp_enqueue_script( CT4GG_NAME, CT4GG_URL . 'assets/js/admin.min.js', array('jquery','wp-color-picker'), CT4GG_VERSION, true   );
+            wp_enqueue_style(CT4GG_NAME, CT4GG_URL . 'assets/css/style.min.css');
+        }
+    }
+
+    function admin_enqueue()
+    {
+        // enqueue all our scripts
+        //wp_enqueue_script( 'media-upload' );
+        wp_enqueue_media();
+        wp_enqueue_script('jquery');
+        wp_enqueue_style('wp-color-picker');
+        wp_enqueue_script('wp-color-picker');
+        
+        if (WP_DEBUG) {
+            wp_enqueue_style(CT4GG_NAME, CT4GG_URL . 'assets/css/admin.css');
+            wp_enqueue_script(CT4GG_NAME, CT4GG_URL . 'assets/js/admin.js', array('jquery','wp-color-picker'), CT4GG_VERSION, true);
+        } else {
+            wp_enqueue_style(CT4GG_NAME, CT4GG_URL . 'assets/css/admin.min.css');
+            wp_enqueue_script(CT4GG_NAME, CT4GG_URL . 'assets/js/admin.min.js', array('jquery','wp-color-picker'), CT4GG_VERSION, true);
         }
 
-		if( stripos($_SERVER["SCRIPT_NAME"], strrchr(wp_login_url(), '/')) !== false ) {
-			$custom_css='';
-			$opt = get_option( CT4GG_NAME . '_plugin' );
-			if ( $opt['login_screen_logo_enable'] ) {
-				$custom_css .= ".login h1 a { 
+        if (stripos(sanitize_text_field($_SERVER["SCRIPT_NAME"]), strrchr(wp_login_url(), '/')) !== false) {
+            $custom_css='';
+            $opt = get_option(CT4GG_NAME . '_plugin');
+            if ($opt['login_screen_logo_enable']) {
+                $custom_css .= ".login h1 a { 
 					background-image: url('" . $opt['login_screen_logo'] . "'); 
 				}";
-			}
-			if ( $opt['login_screen_background_enable'] ) {
-				$color_img=str_replace("#","",$opt['login_screen_btn_color']);
-				$custom_css .= "body {background: " . $opt['login_screen_background_color'] . " url('" . $opt['login_screen_background_img'] . "');}
+            }
+            if ($opt['login_screen_background_enable']) {
+                $color_img=str_replace("#", "", $opt['login_screen_btn_color']);
+                $custom_css .= "body {background: " . $opt['login_screen_background_color'] . " url('" . $opt['login_screen_background_img'] . "');}
 				body.login { 
 					background-attachment: fixed; 
 					background-position: center;
@@ -71,17 +75,19 @@ class Enqueue
 				.login #login_error, .login .message, .login .success {
 					color: " . $opt['login_screen_text_color'] . ";	border-left: 4px solid " . $opt['login_screen_text_color'] . ";	background-color: " . $opt['login_screen_form_bg_color'] . ";}
 				";
-			}
+            }
 
-			if ( $custom_css != '') {
-				if (!WP_DEBUG) {$custom_css = $this->compress_css($custom_css);}
-				wp_add_inline_style( CT4GG_NAME, $custom_css );
-			}
-		}
-	}
-
-	private static function compress_css($css) {
-        return preg_replace("/\s+/", " ", $css);
+            if ($custom_css != '') {
+                if (!WP_DEBUG) {
+                    $custom_css = $this->compress_css($custom_css);
+                }
+                wp_add_inline_style(CT4GG_NAME, $custom_css);
+            }
+        }
     }
 
+    private static function compress_css($css)
+    {
+        return preg_replace("/\s+/", " ", $css);
+    }
 }

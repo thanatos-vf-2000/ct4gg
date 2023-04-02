@@ -1,7 +1,7 @@
 <?php
 /**
- * @package  CT4GGPlugin
- * @Version 1.4.5
+ * @package CT4GGPlugin
+ * @version 1.4.8
  */
 return array(
     'admin_del_logo_wp'                 => false,
