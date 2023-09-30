@@ -1,7 +1,16 @@
 <?php
 /**
- * @package CT4GGPlugin
- * @version 1.4.8
+ * File Security
+ *
+ * PHP version 7
+ *
+ * @category  PHP
+ * @package   CT4GGPlugin
+ * @author    Franck VANHOUCKE <ct4gg@ginkgos.net>
+ * @copyright 2021-2023 Copyright 2023, Inc. All rights reserved.
+ * @license   GNU General Public License version 2 or later
+ * @version   1.4.8 GIT:https://github.com/thanatos-vf-2000/WordPress
+ * @link      https://ginkgos.net
  */
 
 namespace CT4GG\Api;
@@ -10,8 +19,8 @@ use CT4GG\Core\BaseController;
 use CT4GG\Core\Options;
 
 /**
-*
-*/
+ *
+ */
 class FileSecurity extends BaseController
 {
     private $location  = '';
@@ -41,49 +50,49 @@ class FileSecurity extends BaseController
     }
 
 
-    private function add_security_contact()
+    private function _add_security_contact()
     {
         $this->items[] = "Contact: " . Options::get_option('security_contact');
     }
 
-    private function add_security_expires_date()
+    private function _add_security_expires_date()
     {
         $this->items[] = "Expires: ". Options::get_option('security_expires_date') . "T" . Options::get_option('security_expires_time') . ":00.000Z";
     }
 
-    private function add_security_encryption()
+    private function _add_security_encryption()
     {
         $this->items[] = "Encryption: " . Options::get_option('security_encryption');
     }
 
-    private function add_security_acknowledgments()
+    private function _add_security_acknowledgments()
     {
         $this->items[] = "Acknowledgments: " . Options::get_option('security_acknowledgments');
     }
 
-    private function add_security_preferred_languages()
+    private function _add_security_preferred_languages()
     {
         $this->items[] = "Preferred-Languages: " . Options::get_option('security_preferred_languages');
     }
 
-    private function add_security_canonical()
+    private function _add_security_canonical()
     {
         $this->items[] = "Canonical: " . Options::get_option('security_canonical');
     }
 
-    private function add_security_policy()
+    private function _add_security_policy()
     {
         $this->items[] = "Policy: " . Options::get_option('security_policy');
     }
 
-    private function add_security_hiring()
+    private function _add_security_hiring()
     {
         $this->items[] = "Hiring: " . Options::get_option('security_hiring');
     }
  
     public function add($item)
     {
-        $target = 'add_' . $item;
+        $target = '_add_' . $item;
 
         if (method_exists($this, $target)) {
             $this->$target();

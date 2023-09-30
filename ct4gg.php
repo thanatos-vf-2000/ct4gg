@@ -3,9 +3,9 @@
 Plugin Name: ct4gg
 Plugin URI: https://ginkgos.net/plugin/ct4gg/
 Description: Customiser Tools For GinkGos - Plugin / Customiser Tools for Wordpress.
-Version: 1.4.8
+Version: 1.5.0
 Requires at least: 5.2
-Tested up to: 6.2
+Tested up to: 6.3.1
 Requires PHP: 7.4
 Author: Franck VANHOUCKE
 Author URI: https://ginkgos.net/
@@ -34,13 +34,13 @@ defined('ABSPATH') or die('Hey, what are you doing here? You silly human!');
 
 
 if (file_exists(dirname(__FILE__) . '/vendor/autoload.php')) {
-    require_once dirname(__FILE__) . '/vendor/autoload.php';
+    include_once dirname(__FILE__) . '/vendor/autoload.php';
 }
 
 /**
  * Plugin variable information
  */
-define('CT4GG_VERSION', '1.4.8');
+define('CT4GG_VERSION', '1.5.0');
 define('CT4GG_NAME', 'ct4gg');
 define('CT4GG_FILE', __FILE__);
 define('CT4GG_PATH', plugin_dir_path(CT4GG_FILE));
@@ -48,21 +48,25 @@ define('CT4GG_URL', plugin_dir_url(CT4GG_FILE));
 
 /**
  * The code that runs during plugin activation
+ *
+ * @return None
  */
-function activate_ct4gg_plugin()
+function CT4GG_Activate_plugin()
 {
     CT4GG\Core\Activate::activate();
 }
-register_activation_hook(__FILE__, 'activate_ct4gg_plugin');
+register_activation_hook(__FILE__, 'CT4GG_Activate_plugin');
 
 /**
  * The code that runs during plugin deactivation
+ *
+ * @return None
  */
-function deactivate_ct4gg_plugin()
+function CT4GG_Deactivate_plugin()
 {
     CT4GG\Core\Deactivate::deactivate();
 }
-register_deactivation_hook(__FILE__, 'deactivate_ct4gg_plugin');
+register_deactivation_hook(__FILE__, 'CT4GG_Deactivate_plugin');
 
 /**
  * The code that run for Core executing

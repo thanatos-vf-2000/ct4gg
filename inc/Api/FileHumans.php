@@ -1,7 +1,16 @@
 <?php
 /**
- * @package CT4GGPlugin
- * @version 1.4.8
+ * File Humans
+ *
+ * PHP version 7
+ *
+ * @category  PHP
+ * @package   CT4GGPlugin
+ * @author    Franck VANHOUCKE <ct4gg@ginkgos.net>
+ * @copyright 2021-2023 Copyright 2023, Inc. All rights reserved.
+ * @license   GNU General Public License version 2 or later
+ * @version   1.4.8 GIT:https://github.com/thanatos-vf-2000/WordPress
+ * @link      https://ginkgos.net
  */
 
 namespace CT4GG\Api;
@@ -10,8 +19,8 @@ use CT4GG\Core\BaseController;
 use CT4GG\Core\Options;
 
 /**
-*
-*/
+ *
+ */
 class FileHumans extends BaseController
 {
     private $location  = '';
@@ -41,21 +50,21 @@ class FileHumans extends BaseController
     }
 
 
-    private function add_humans_team()
+    private function _add_humans_team()
     {
         $this->items[] = '/* TEAM */';
         $this->items[] = Options::get_option('humans_team');
         $this->items[] = '';
     }
 
-    private function add_humans_thanks()
+    private function _add_humans_thanks()
     {
         $this->items[] = '/* THANKS */';
         $this->items[] = Options::get_option('humans_thanks');
         $this->items[] = '';
     }
 
-    private function add_humans_site()
+    private function _add_humans_site()
     {
         $this->items[] = '/* SITE */';
         $this->items[] = Options::get_option('humans_site');
@@ -64,7 +73,7 @@ class FileHumans extends BaseController
  
     public function add($item)
     {
-        $target = 'add_' . $item;
+        $target = '_add_' . $item;
 
         if (method_exists($this, $target)) {
             $this->$target();

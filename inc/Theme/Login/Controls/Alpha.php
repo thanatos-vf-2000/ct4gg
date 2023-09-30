@@ -18,16 +18,17 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with this Alpha Color Picker. If not, see <https://www.gnu.org/licenses/>.
+ * 
  * @subpackage Range 1.3.0
  */
 
 namespace CT4GG\Theme\Login\Controls;
 
-include_once ABSPATH . 'wp-includes/class-wp-customize-control.php';
+require_once ABSPATH . 'wp-includes/class-wp-customize-control.php';
 
 /**
  * Alpha Color Control Class for Customizer
- * @author Hardeep Asrani
+ * @author  Hardeep Asrani
  * @version 2.2.0
  * @correction F. VANHOUCKE 1.4.8
  */

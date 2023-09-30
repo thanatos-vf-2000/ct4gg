@@ -1,7 +1,17 @@
 <?php
 /**
- * @package CT4GGPlugin
- * @version 1.4.8
+ * Manager Callbacks
+ *
+ * PHP version 7
+ *
+ * @category  PHP
+ * @package   CT4GGPlugin
+ * @author    Franck VANHOUCKE <ct4gg@ginkgos.net>
+ * @copyright 2021-2023 Copyright 2023, Inc. All rights reserved.
+ * @license   GNU General Public License version 2 or later
+ * @version   1.5.0 GIT:https://github.com/thanatos-vf-2000/WordPress
+ * @link      https://ginkgos.net
+ * @since     1.0.0
  */
 namespace CT4GG\Api\Callbacks;
 
@@ -10,11 +20,18 @@ use CT4GG\Core\Options;
 
 class ManagerCallbacks extends BaseController
 {
+    /**
+     * Function checkboxSanitize
+     *
+     * @param array $input Array data
+     *
+     * @return Output
+     */
     public function checkboxSanitize($input)
     {
         $output = array();
 
-        $all_defaults = $this->loadPHPConfig(CT4GG_PATH . 'assets/defaults.php');
+        $all_defaults = $this->_loadPHPConfig(CT4GG_PATH . 'assets/defaults.php');
 
         foreach ($this->managers as $key => $value) {
             if (isset($all_defaults[$key])) {
@@ -30,11 +47,21 @@ class ManagerCallbacks extends BaseController
         return $output;
     }
 
+    /**
+     * Function adminIndexSectionManager
+     *
+     * @return message
+     */
     public function adminIndexSectionManager()
     {
         echo __('Manage the Sections and Features of this Plugin by activating options.', 'ct4gg');
     }
 
+    /**
+     * Function adminLoginSectionManager
+     *
+     * @return message
+     */
     public function adminLoginSectionManager()
     {
         if (Options::get_option('login_screen_v2') == false) {
@@ -42,46 +69,103 @@ class ManagerCallbacks extends BaseController
         }
     }
 
+    /**
+     * Function adminSettingSectionManager
+     *
+     * @return message
+     */
     public function adminSettingSectionManager()
     {
         echo __('Manage the Sections and Features of WP Administration Dashboard by activating options.', 'ct4gg');
     }
 
+    /**
+     * Function postSettingSectionManager
+     *
+     * @return message
+     */
     public function postSettingSectionManager()
     {
         echo __('Manage the Sections and Features of post and articles activating the checkboxes from the following list.', 'ct4gg');
     }
 
+    /**
+     * Function htaccessSettingSectionManager
+     *
+     * @return message
+     */
     public function htaccessSettingSectionManager()
     {
         echo __('Management of options to be included in the .htaccess file.', 'ct4gg');
     }
 
+    /**
+     * Function robotsSettingSectionManager
+     *
+     * @return message
+     */
     public function robotsSettingSectionManager()
     {
         echo __('Management of options to be included in the robots.txt file.', 'ct4gg');
     }
 
+    /**
+     * Function humansSettingSectionManager
+     *
+     * @return message
+     */
     public function humansSettingSectionManager()
     {
         echo __('Management of options to be included in the humans.txt file.', 'ct4gg');
     }
 
+    /**
+     * Function securitySettingSectionManager
+     *
+     * @return message
+     */
     public function securitySettingSectionManager()
     {
         echo __('Security of options to be included in the security.txt file.', 'ct4gg');
     }
 
+    /**
+     * Function loginSettingSectionManager
+     *
+     * @return message
+     */
     public function loginSettingSectionManager()
     {
         _e('Manage the screen login <b style="color:blue">New version</b>.<br>After saving the options go to <b>"Appearance (Themes)"</b> and choose <b>"Login Custom"</b> <b style="color:red">or</b> in the menu of <b>this plugin</b> chose <b>"Login Custom"</b>.', 'ct4gg');
     }
 
+    /**
+     * Function socialbuttonsSettingSectionManager
+     *
+     * @return message
+     */
     public function socialbuttonsSettingSectionManager()
     {
         _e('Management of options for Social Buttons.<br>This will create a wordpress shortcode <b style="color:blue">[ct4gg_social]</b>.', 'ct4gg');
     }
 
+    /**
+     * Function adminHeaderCheckManager
+     *
+     * @return message
+     */
+    public function adminHeaderCheckManager()
+    {
+        _e('Management of options for headers check (Security, Information and cache).', 'ct4gg');
+    }
+
+    /**
+     * Function checkboxField
+     *
+     * @param array $args Array data
+     *
+     * @return Output
+     */
     public function checkboxField($args)
     {
         $name = $args['label_for'];
@@ -97,6 +181,13 @@ class ManagerCallbacks extends BaseController
         }
     }
 
+    /**
+     * Function listField
+     *
+     * @param array $args Array data
+     *
+     * @return Output
+     */
     public function listField($args)
     {
         $name = $args['label_for'];
@@ -117,7 +208,14 @@ class ManagerCallbacks extends BaseController
         }
     }
 
-    public function ImageField($args)
+    /**
+     * Function imageField
+     *
+     * @param array $args Array data
+     *
+     * @return Output
+     */
+    public function imageField($args)
     {
         $name = $args['label_for'];
         $classes = $args['class'];
@@ -130,7 +228,14 @@ class ManagerCallbacks extends BaseController
 			</div>';
     }
 
-    public function ColorField($args)
+    /**
+     * Function colorField
+     *
+     * @param array $args Array data
+     *
+     * @return Output
+     */
+    public function colorField($args)
     {
         $name = $args['label_for'];
         $classes = $args['class'];
@@ -141,7 +246,14 @@ class ManagerCallbacks extends BaseController
 		</p>';
     }
 
-    public function TextField($args)
+    /**
+     * Function textField
+     *
+     * @param array $args Array data
+     *
+     * @return Output
+     */
+    public function textField($args)
     {
         $name = $args['label_for'];
         $classes = $args['class'];
@@ -154,7 +266,14 @@ class ManagerCallbacks extends BaseController
         }
     }
 
-    public function TextAreaField($args)
+    /**
+     * Function textAreaField
+     *
+     * @param array $args Array data
+     *
+     * @return Output
+     */
+    public function textAreaField($args)
     {
         $name = $args['label_for'];
         $classes = $args['class'];
@@ -167,7 +286,14 @@ class ManagerCallbacks extends BaseController
         }
     }
 
-    public function TextFieldUrl($args)
+    /**
+     * Function textFieldUrl
+     *
+     * @param array $args Array data
+     *
+     * @return Output
+     */
+    public function textFieldUrl($args)
     {
         $value = $args['value'];
         $name = $args['label_for'];
@@ -181,7 +307,14 @@ class ManagerCallbacks extends BaseController
 			</div>';
     }
 
-    public function DateField($args)
+    /**
+     * Function dateField
+     *
+     * @param array $args Array data
+     *
+     * @return Output
+     */
+    public function dateField($args)
     {
         $name = $args['label_for'];
         $classes = $args['class'];
@@ -194,7 +327,14 @@ class ManagerCallbacks extends BaseController
         }
     }
 
-    public function TimeField($args)
+    /**
+     * Function timeField
+     *
+     * @param array $args Array data
+     *
+     * @return Output
+     */
+    public function timeField($args)
     {
         $name = $args['label_for'];
         $classes = $args['class'];
@@ -207,12 +347,19 @@ class ManagerCallbacks extends BaseController
         }
     }
 
-    private function loadPHPConfig($path)
+    /**
+     * Function _loadPHPConfig
+     *
+     * @param string $path File name
+     *
+     * @return Content of file
+     */
+    private function _loadPHPConfig($path)
     {
         if (! file_exists($path)) {
             return array();
         }
-            $content = require $path;
+            $content = include $path;
             return $content;
     }
 }

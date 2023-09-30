@@ -1,7 +1,7 @@
 <?php
 /**
  * @package CT4GGPlugin
- * @version 1.4.8
+ * @version 1.5.0
  */
 
 namespace CT4GG\Pages;
@@ -12,8 +12,8 @@ use CT4GG\Api\Callbacks\AdminCallbacks;
 use CT4GG\Api\Callbacks\ManagerCallbacks;
 
 /**
-*
-*/
+ *
+ */
 class Dashboard extends BaseController
 {
     public $settings;
@@ -45,7 +45,7 @@ class Dashboard extends BaseController
     {
         $icon_svg = CT4GG_URL . 'assets/img/logo-end.png';
         if (!function_exists('get_plugin_data')) {
-            require_once(ABSPATH . 'wp-admin/includes/plugin.php');
+            include_once ABSPATH . 'wp-admin/includes/plugin.php';
         }
         $plugin_data = get_plugin_data(CT4GG_FILE);
         $this->pages = array(
@@ -80,6 +80,12 @@ class Dashboard extends BaseController
                 'id' => CT4GG_NAME.'_admin_index',
                 'title' => __('Settings Manager', 'ct4gg'),
                 'callback' => array( $this->callbacks_mngr, 'adminIndexSectionManager' ),
+                'page' => CT4GG_NAME.'_plugin'
+            ),
+            array(
+                'id' => CT4GG_NAME.'_header_check',
+                'title' => __('Security headers check', 'ct4gg'),
+                'callback' => array( $this->callbacks_mngr, 'adminHeaderCheckManager' ),
                 'page' => CT4GG_NAME.'_plugin'
             ),
             array(
@@ -138,6 +144,31 @@ class Dashboard extends BaseController
             )
         );
 
+        // $checkpage = filter_input(INPUT_GET, 'page', FILTER_SANITIZE_STRING);
+
+        // if ($checkpage === CT4GG_NAME.'_header') {
+        //     $args =  array_filter($args, function ($item) {
+        //         return $item['id'] ===  CT4GG_NAME.'_header_check';
+        //     });
+        // } elseif ($checkpage === CT4GG_NAME.'_htaccess') {
+        //     $args =  array_filter($args, function ($item) {
+        //         return $item['id'] ===  CT4GG_NAME.'_htaccess';
+        //     });
+        // } elseif ($checkpage === CT4GG_NAME.'_robots') {
+        //     $args =  array_filter($args, function ($item) {
+        //         return $item['id'] ===  CT4GG_NAME.'_robots';
+        //     });
+        // } elseif ($checkpage === CT4GG_NAME.'_Humans') {
+        //     $args =  array_filter($args, function ($item) {
+        //         return $item['id'] ===  CT4GG_NAME.'_humans';
+        //     });
+        // }
+        // elseif ($checkpage === CT4GG_NAME.'_security') {
+        //     $args =  array_filter($args, function ($item) {
+        //         return $item['id'] ===  CT4GG_NAME.'_security';
+        //     });
+        // }
+
         $this->settings->setSections($args);
     }
 
@@ -147,6 +178,7 @@ class Dashboard extends BaseController
         $defaults = $this->get_customizer_configuration_defaults();
         $all_defaults = $this->loadPHPConfig(CT4GG_PATH . 'assets/defaults.php');
         $all_options = $this->loadPHPConfig(CT4GG_PATH . 'assets/options.php');
+
         foreach ($this->managers as $key => $value) {
             $value = ($value == '') ? $all_options[$key] : $value;
             if (!in_array($key, array('version','t'))) {
@@ -154,151 +186,151 @@ class Dashboard extends BaseController
                 switch ($config['type']) {
                     case 'checkboxField':
                         $args[] = array(
-                            'id' => $key,
-                            'title' => $config['title'],
-                            'callback' => array( $this->callbacks_mngr, 'checkboxField' ),
-                            'page' => CT4GG_NAME.'_plugin',
-                            'section' => $config['section'],
-                            'args' => array(
-                                'option_name' => CT4GG_NAME.'_plugin',
-                                'label_for' => $key,
-                                'value' => $value,
-                                'message'   => $config['message'],
-                                'class' => 'ct4gg-ui-toggle'
-                            )
+                        'id' => $key,
+                        'title' => $config['title'],
+                        'callback' => array( $this->callbacks_mngr, 'checkboxField' ),
+                        'page' => CT4GG_NAME.'_plugin',
+                        'section' => $config['section'],
+                        'args' => array(
+                            'option_name' => CT4GG_NAME.'_plugin',
+                            'label_for' => $key,
+                            'value' => $value,
+                            'message'   => $config['message'],
+                            'class' => 'ct4gg-ui-toggle'
+                        )
                         );
                         break;
                     case 'listField':
                         $args[] = array(
-                            'id' => $key,
-                            'title' => $config['title'],
-                            'callback' => array( $this->callbacks_mngr, 'listField' ),
-                            'page' => CT4GG_NAME.'_plugin',
-                            'section' => $config['section'],
-                            'args' => array(
-                                'option_name' => CT4GG_NAME.'_plugin',
-                                'label_for' => $key,
-                                'value' => $value,
-                                'message'   => $config['message'],
-                                'class' => 'ct4gg-ui-toggle',
-                                'choices' => $config['choices']
-                            )
+                        'id' => $key,
+                        'title' => $config['title'],
+                        'callback' => array( $this->callbacks_mngr, 'listField' ),
+                        'page' => CT4GG_NAME.'_plugin',
+                        'section' => $config['section'],
+                        'args' => array(
+                            'option_name' => CT4GG_NAME.'_plugin',
+                            'label_for' => $key,
+                            'value' => $value,
+                            'message'   => $config['message'],
+                            'class' => 'ct4gg-ui-toggle',
+                            'choices' => $config['choices']
+                        )
                         );
                         break;
-                    case 'ImageField':
+                    case 'imageField':
                         $args[] = array(
-                            'id' => $key,
-                            'title' => $config['title'],
-                            'callback' => array( $this->callbacks_mngr, 'ImageField' ),
-                            'page' => CT4GG_NAME.'_plugin',
-                            'section' => $config['section'],
-                            'args' => array(
-                                'option_name' => CT4GG_NAME.'_plugin',
-                                'label_for' => $key,
-                                'value' => $value,
-                                'message'   => $config['message'],
-                                'class' => 'ct4gg-ui-toggle',
-                                'height'    => $config['height'],
-                                'width'     => $config['width']
-                            )
+                        'id' => $key,
+                        'title' => $config['title'],
+                        'callback' => array( $this->callbacks_mngr, 'imageField' ),
+                        'page' => CT4GG_NAME.'_plugin',
+                        'section' => $config['section'],
+                        'args' => array(
+                            'option_name' => CT4GG_NAME.'_plugin',
+                            'label_for' => $key,
+                            'value' => $value,
+                            'message'   => $config['message'],
+                            'class' => 'ct4gg-ui-toggle',
+                            'height'    => $config['height'],
+                            'width'     => $config['width']
+                        )
                         );
                         break;
-                    case 'ColorField':
+                    case 'colorField':
                         $args[] = array(
-                            'id' => $key,
-                            'title' => $config['title'],
-                            'callback' => array( $this->callbacks_mngr, 'ColorField' ),
-                            'page' => CT4GG_NAME.'_plugin',
-                            'section' => $config['section'],
-                            'args' => array(
-                                'option_name' => CT4GG_NAME.'_plugin',
-                                'label_for' => $key,
-                                'value' => $value,
-                                'message'   => $config['message'],
-                                'class' => 'ct4gg-ui-toggle'
-                            )
+                        'id' => $key,
+                        'title' => $config['title'],
+                        'callback' => array( $this->callbacks_mngr, 'colorField' ),
+                        'page' => CT4GG_NAME.'_plugin',
+                        'section' => $config['section'],
+                        'args' => array(
+                            'option_name' => CT4GG_NAME.'_plugin',
+                            'label_for' => $key,
+                            'value' => $value,
+                            'message'   => $config['message'],
+                            'class' => 'ct4gg-ui-toggle'
+                        )
                         );
                         break;
-                    case 'TextField':
+                    case 'textField':
                         $args[] = array(
-                            'id' => $key,
-                            'title' => $config['title'],
-                            'callback' => array( $this->callbacks_mngr, 'TextField' ),
-                            'page' => CT4GG_NAME.'_plugin',
-                            'section' => $config['section'],
-                            'args' => array(
-                                'option_name' => CT4GG_NAME.'_plugin',
-                                'label_for' => $key,
-                                'value' => $value,
-                                'message'   => $config['message'],
-                                'class' => 'ct4gg-ui-toggle'
-                            )
+                        'id' => $key,
+                        'title' => $config['title'],
+                        'callback' => array( $this->callbacks_mngr, 'textField' ),
+                        'page' => CT4GG_NAME.'_plugin',
+                        'section' => $config['section'],
+                        'args' => array(
+                            'option_name' => CT4GG_NAME.'_plugin',
+                            'label_for' => $key,
+                            'value' => $value,
+                            'message'   => $config['message'],
+                            'class' => 'ct4gg-ui-toggle'
+                        )
                         );
                         break;
-                    case 'TextFieldUrl':
+                    case 'textFieldUrl':
                         $args[] = array(
-                            'id' => $key,
-                            'title' => $config['title'],
-                            'callback' => array( $this->callbacks_mngr,'TextFieldUrl' ),
-                            'page' => CT4GG_NAME.'_plugin',
-                            'section' => $config['section'],
-                            'args' => array(
-                                'option_name' => CT4GG_NAME.'_plugin',
-                                'label_for' => $key,
-                                'value' => $value,
-                                'message'   => $config['message'],
-                                'class' => 'ct4gg-ui-toggle'
-                            )
+                        'id' => $key,
+                        'title' => $config['title'],
+                        'callback' => array( $this->callbacks_mngr,'textFieldUrl' ),
+                        'page' => CT4GG_NAME.'_plugin',
+                        'section' => $config['section'],
+                        'args' => array(
+                            'option_name' => CT4GG_NAME.'_plugin',
+                            'label_for' => $key,
+                            'value' => $value,
+                            'message'   => $config['message'],
+                            'class' => 'ct4gg-ui-toggle'
+                        )
                         );
                         break;
-                    case 'TextAreaField':
+                    case 'textAreaField':
                         $args[] = array(
-                            'id' => $key,
-                            'title' => $config['title'],
-                            'callback' => array( $this->callbacks_mngr, 'TextAreaField' ),
-                            'page' => CT4GG_NAME.'_plugin',
-                            'section' => $config['section'],
-                            'args' => array(
-                                'option_name' => CT4GG_NAME.'_plugin',
-                                'label_for' => $key,
-                                'value' => $value,
-                                'message'   => $config['message'],
-                                'cols'  => $config['cols'],
-                                'rows'  => $config['rows'],
-                                'class' => 'ct4gg-ui-toggle'
-                            )
+                        'id' => $key,
+                        'title' => $config['title'],
+                        'callback' => array( $this->callbacks_mngr, 'textAreaField' ),
+                        'page' => CT4GG_NAME.'_plugin',
+                        'section' => $config['section'],
+                        'args' => array(
+                            'option_name' => CT4GG_NAME.'_plugin',
+                            'label_for' => $key,
+                            'value' => $value,
+                            'message'   => $config['message'],
+                            'cols'  => $config['cols'],
+                            'rows'  => $config['rows'],
+                            'class' => 'ct4gg-ui-toggle'
+                        )
                         );
                         break;
-                    case 'DateField':
+                    case 'dateField':
                         $args[] = array(
-                            'id' => $key,
-                            'title' => $config['title'],
-                            'callback' => array( $this->callbacks_mngr, 'DateField' ),
-                            'page' => CT4GG_NAME.'_plugin',
-                            'section' => $config['section'],
-                            'args' => array(
-                                'option_name' => CT4GG_NAME.'_plugin',
-                                'label_for' => $key,
-                                'value' => $value,
-                                'message'   => $config['message'],
-                                'class' => 'ct4gg-ui-toggle'
-                            )
+                        'id' => $key,
+                        'title' => $config['title'],
+                        'callback' => array( $this->callbacks_mngr, 'dateField' ),
+                        'page' => CT4GG_NAME.'_plugin',
+                        'section' => $config['section'],
+                        'args' => array(
+                            'option_name' => CT4GG_NAME.'_plugin',
+                            'label_for' => $key,
+                            'value' => $value,
+                            'message'   => $config['message'],
+                            'class' => 'ct4gg-ui-toggle'
+                        )
                         );
                         break;
-                    case 'TimeField':
+                    case 'timeField':
                         $args[] = array(
-                            'id' => $key,
-                            'title' => $config['title'],
-                            'callback' => array( $this->callbacks_mngr, 'TimeField' ),
-                            'page' => CT4GG_NAME.'_plugin',
-                            'section' => $config['section'],
-                            'args' => array(
-                                'option_name' => CT4GG_NAME.'_plugin',
-                                'label_for' => $key,
-                                'value' => $value,
-                                'message'   => $config['message'],
-                                'class' => 'ct4gg-ui-toggle'
-                            )
+                        'id' => $key,
+                        'title' => $config['title'],
+                        'callback' => array( $this->callbacks_mngr, 'timeField' ),
+                        'page' => CT4GG_NAME.'_plugin',
+                        'section' => $config['section'],
+                        'args' => array(
+                            'option_name' => CT4GG_NAME.'_plugin',
+                            'label_for' => $key,
+                            'value' => $value,
+                            'message'   => $config['message'],
+                            'class' => 'ct4gg-ui-toggle'
+                        )
                         );
                         break;
                 }
@@ -330,7 +362,7 @@ class Dashboard extends BaseController
         if (! file_exists($path)) {
             return array();
         }
-            $content = require $path;
-            return $content;
+        $content = include $path;
+        return $content;
     }
 }

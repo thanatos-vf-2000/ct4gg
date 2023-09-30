@@ -1,8 +1,18 @@
 <?php
 /**
- * @package CT4GGPlugin
- * @version 1.4.8
+ * Default options
+ *
+ * PHP version 7
+ *
+ * @category  PHP
+ * @package   CT4GGPlugin
+ * @author    Franck VANHOUCKE <ct4gg@ginkgos.net>
+ * @copyright 2021-2023 Copyright 2023, Inc. All rights reserved.
+ * @license   GNU General Public License version 2 or later
+ * @version   1.5.0 GIT:https://github.com/thanatos-vf-2000/WordPress
+ * @link      https://ginkgos.net
  */
+
 return array(
     'admin_del_logo_wp' => array(
         'title'     => __('Delete Wordpress Logo on top admin menu.', 'ct4gg'),
@@ -69,7 +79,7 @@ return array(
             'section'   => CT4GG_NAME.'_admin_login',
             'height'    => '84px',
             'width'     => '84px',
-            'type'      => 'ImageField') ,
+            'type'      => 'imageField') ,
         'login_screen_background_enable' => array(
             'title'     => __('Enable change background login screen.', 'ct4gg'),
             'section'   => CT4GG_NAME.'_admin_login',
@@ -80,27 +90,27 @@ return array(
             'section'   => CT4GG_NAME.'_admin_login',
             'height'    => '84px',
             'width'     => '84px',
-            'type'      => 'ImageField') ,
+            'type'      => 'imageField') ,
         'login_screen_background_color' => array(
             'title'     => __('Login Screen background color:', 'ct4gg'),
             'section'   => CT4GG_NAME.'_admin_login',
-            'type'      => 'ColorField') ,
+            'type'      => 'colorField') ,
         'login_screen_link_color' => array(
             'title'     => __('Login Screen Link color:', 'ct4gg'),
             'section'   => CT4GG_NAME.'_admin_login',
-            'type'      => 'ColorField') ,
+            'type'      => 'colorField') ,
         'login_screen_text_color' => array(
             'title'     => __('Login Screen Text color:', 'ct4gg'),
             'section'   => CT4GG_NAME.'_admin_login',
-            'type'      => 'ColorField') ,
+            'type'      => 'colorField') ,
         'login_screen_btn_color' => array(
             'title'     => __('Login Screen Bottum color:', 'ct4gg'),
             'section'   => CT4GG_NAME.'_admin_login',
-            'type'      => 'ColorField') ,
+            'type'      => 'colorField') ,
         'login_screen_form_bg_color' => array(
             'title'     => __('Login Screen Form  background color:', 'ct4gg'),
             'section'   => CT4GG_NAME.'_admin_login',
-            'type'      => 'ColorField') ,
+            'type'      => 'colorField') ,
         'login_redirect_after_logout' => array(
             'title'     => __('Redirect to home after logout.', 'ct4gg'),
             'section'   => CT4GG_NAME.'_admin_login',
@@ -120,7 +130,7 @@ return array(
         'post_minimal_comment_length' => array(
             'title'     => __('Minimal comment length.', 'ct4gg'),
             'section'   => CT4GG_NAME.'_post_setting',
-            'type'      => 'TextField') ,
+            'type'      => 'textField') ,
         'post_hide_meta_generator' => array(
             'title'     => __('Hide meta generator (Wordpress version).', 'ct4gg'),
             'section'   => CT4GG_NAME.'_post_setting',
@@ -129,7 +139,7 @@ return array(
             'title'     => __('Old post notice.', 'ct4gg'),
             'message'   => __('After xxx Days (default 60 days).', 'ct4gg'),
             'section'   => CT4GG_NAME.'_post_setting',
-            'type'      => 'TextField') ,
+            'type'      => 'textField') ,
         'htaccess_disable_show_directory' => array(
             'title'     => __('Disable display of directory contents.', 'ct4gg'),
             'section'   => CT4GG_NAME.'_htaccess',
@@ -150,7 +160,7 @@ return array(
             'title'     => __('Force download for these file types.', 'ct4gg'),
             'message'   => __('Exemple: .doc .docx .xls .xlsx .csv .mp3 .mp4', 'ct4gg'),
             'section'   => CT4GG_NAME.'_htaccess',
-            'type'      => 'TextField') ,
+            'type'      => 'textField') ,
         'htaccess_enable_cache' => array(
             'title'     => __('Enable cache expires.', 'ct4gg'),
             'section'   => CT4GG_NAME.'_htaccess',
@@ -167,48 +177,58 @@ return array(
             'title'     => __('Wordpress default options.', 'ct4gg'),
             'section'   => CT4GG_NAME.'_robots',
             'type'      => 'checkboxField') ,
+        'robots_crawl_chatgpt' => array(
+            'title'     => __('Disable crawl for ChatGPT.', 'ct4gg'),
+            'message'   => "https://platform.openai.com/docs/gptbot",
+            'section'   => CT4GG_NAME.'_robots',
+            'type'      => 'checkboxField') ,
+        'robots_crawl_chatgpt_user' => array(
+            'title'     => __('Disable crawl for ChatGPT plugin.', 'ct4gg'),
+            'message'   => "https://platform.openai.com/docs/plugins/bot",
+            'section'   => CT4GG_NAME.'_robots',
+            'type'      => 'checkboxField') ,
         'humans_team' => array(
             'title'     => __('Team.', 'ct4gg'),
             'section'   => CT4GG_NAME.'_humans',
             'rows'      => 3,
             'cols'      => 100,
-            'type'      => 'TextAreaField') ,
+            'type'      => 'textAreaField') ,
         'humans_thanks' => array(
             'title'     => __('Thanks.', 'ct4gg'),
             'section'   => CT4GG_NAME.'_humans',
             'rows'      => 4,
             'cols'      => 100,
-            'type'      => 'TextAreaField') ,
+            'type'      => 'textAreaField') ,
         'humans_site' => array(
             'title'     => __('Site.', 'ct4gg'),
             'section'   => CT4GG_NAME.'_humans',
             'rows'      => 7,
             'cols'      => 100,
-            'type'      => 'TextAreaField') ,
+            'type'      => 'textAreaField') ,
         'login_slugs_login' => array(
             'title'     => __('login', 'ct4gg'),
             'section'   => CT4GG_NAME.'_login',
-            'type'      => 'TextFieldUrl') ,
+            'type'      => 'textFieldUrl') ,
         'login_slugs_logout' => array(
             'title'     => __('Logout', 'ct4gg'),
             'section'   => CT4GG_NAME.'_login',
-            'type'      => 'TextFieldUrl') ,
+            'type'      => 'textFieldUrl') ,
         'login_slugs_register' => array(
             'title'     => __('Register', 'ct4gg'),
             'section'   => CT4GG_NAME.'_login',
-            'type'      => 'TextFieldUrl') ,
+            'type'      => 'textFieldUrl') ,
         'login_slugs_lostpassword' => array(
             'title'     => __('Lost password', 'ct4gg'),
             'section'   => CT4GG_NAME.'_login',
-            'type'      => 'TextFieldUrl') ,
+            'type'      => 'textFieldUrl') ,
         'login_slugs_resetpass' => array(
             'title'     => __('Reset password', 'ct4gg'),
             'section'   => CT4GG_NAME.'_login',
-            'type'      => 'TextFieldUrl') ,
+            'type'      => 'textFieldUrl') ,
         'login_slugs_postpass' => array(
             'title'     => __('Post Password', 'ct4gg'),
             'section'   => CT4GG_NAME.'_login',
-            'type'      => 'TextFieldUrl') ,
+            'type'      => 'textFieldUrl') ,
         'socialbuttons_activated' => array(
             'title'     => __('Activate Social Buttons.', 'ct4gg'),
             'section'   => CT4GG_NAME.'_socialbuttons',
@@ -250,44 +270,59 @@ return array(
             'title'     => __('Contact.', 'ct4gg'),
             'message'   => __('A link or e-mail address for people to contact you about security issues. Remember to include "https://" for URLs, and "mailto:" for e-mails.', 'ct4gg'),
             'section'   => CT4GG_NAME.'_security',
-            'type'      => 'TextField') ,
+            'type'      => 'textField') ,
         'security_expires_date' => array(
             'title'     => __('Expire date.', 'ct4gg'),
             'message'   => __('The date and time when the content of the security.txt file should be considered stale (so security researchers should then not trust it). Make sure you update this value periodically and keep your file under review.', 'ct4gg'),
             'section'   => CT4GG_NAME.'_security',
-            'type'      => 'DateField') ,
+            'type'      => 'dateField') ,
         'security_expires_time' => array(
             'title'     => __('Expire time.', 'ct4gg'),
             'section'   => CT4GG_NAME.'_security',
-            'type'      => 'TimeField') ,
+            'type'      => 'timeField') ,
         'security_encryption' => array(
             'title'     => __('Encryption.', 'ct4gg'),
             'message'   => __('A link to a key which security researchers should use to securely talk to you. Remember to include "https://".', 'ct4gg'),
             'section'   => CT4GG_NAME.'_security',
-            'type'      => 'TextField') ,
+            'type'      => 'textField') ,
         'security_acknowledgments' => array(
             'title'     => __('Acknowledgments.', 'ct4gg'),
             'message'   => __('A link to a web page where you say thank you to security researchers who have helped you. Remember to include "https://.', 'ct4gg'),
             'section'   => CT4GG_NAME.'_security',
-            'type'      => 'TextField') ,
+            'type'      => 'textField') ,
         'security_preferred_languages' => array(
             'title'     => __('Preferred-Languages.', 'ct4gg'),
             'message'   => __('A comma-separated list of language codes that your security team speaks. You may include more than one language.', 'ct4gg'),
             'section'   => CT4GG_NAME.'_security',
-            'type'      => 'TextField') ,
+            'type'      => 'textField') ,
         'security_canonical' => array(
             'title'     => __('Canonical.', 'ct4gg'),
             'message'   => __('The URLs for accessing your security.txt file. It is important to include this if you are digitally signing the security.txt file, so that the location of the security.txt file can be digitally signed too.', 'ct4gg'),
             'section'   => CT4GG_NAME.'_security',
-            'type'      => 'TextField') ,
+            'type'      => 'textField') ,
         'security_policy' => array(
             'title'     => __('Policy.', 'ct4gg'),
             'message'   => __('A link to a policy detailing what security researchers should do when searching for or reporting security issues. Remember to include "https://".', 'ct4gg'),
             'section'   => CT4GG_NAME.'_security',
-            'type'      => 'TextField') ,
+            'type'      => 'textField') ,
         'security_hiring' => array(
             'title'     => __('Hiring.', 'ct4gg'),
             'message'   => __('A link to any security-related job openings in your organisation. Remember to include "https://".', 'ct4gg'),
             'section'   => CT4GG_NAME.'_security',
-            'type'      => 'TextField') ,
+            'type'      => 'textField') ,
+        'header_sec' => array(
+            'title'     => __('Security headers that should be enabled.', 'ct4gg'),
+            'message'   => __('Check header site: X-XSS-Protection, X-Frame-Options, X-Content-Type-Options, ...', 'ct4gg'),
+            'section' => CT4GG_NAME.'_header_check',
+            'type'      => 'checkboxField') ,
+        'header_info' => array(
+            'title'     => __('header Information.', 'ct4gg'),
+            'message'   => __('Check information header site: X-Powered-By, Server, X-AspNet-Version and X-AspNetMvc-Version', 'ct4gg'),
+            'section' => CT4GG_NAME.'_header_check',
+            'type'      => 'checkboxField') ,
+        'header_cache' => array(
+            'title'     => __('header Cache.', 'ct4gg'),
+            'message'   => __('Check cache header site: Cache-Control, Pragma, Last-Modified, Expires, ETag.', 'ct4gg'),
+            'section' => CT4GG_NAME.'_header_check',
+            'type'      => 'checkboxField') ,
 );

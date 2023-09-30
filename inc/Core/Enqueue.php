@@ -1,7 +1,16 @@
 <?php
 /**
- * @package CT4GGPlugin
- * @version 1.4.8
+ * Enqueue file
+ *
+ * PHP version 7
+ *
+ * @category  PHP
+ * @package   CT4GGPlugin
+ * @author    Franck VANHOUCKE <ct4gg@ginkgos.net>
+ * @copyright 2021-2023 Copyright 2023, Inc. All rights reserved.
+ * @license   GNU General Public License version 2 or later
+ * @version   1.5.0 GIT:https://github.com/thanatos-vf-2000/WordPress
+ * @link      https://ginkgos.net
  */
 namespace CT4GG\Core;
 
@@ -41,9 +50,11 @@ class Enqueue
         if (WP_DEBUG) {
             wp_enqueue_style(CT4GG_NAME, CT4GG_URL . 'assets/css/admin.css');
             wp_enqueue_script(CT4GG_NAME, CT4GG_URL . 'assets/js/admin.js', array('jquery','wp-color-picker'), CT4GG_VERSION, true);
+            wp_enqueue_script(CT4GG_NAME."-header", CT4GG_URL . 'assets/js/admin-header.js', array(), CT4GG_VERSION);
         } else {
             wp_enqueue_style(CT4GG_NAME, CT4GG_URL . 'assets/css/admin.min.css');
             wp_enqueue_script(CT4GG_NAME, CT4GG_URL . 'assets/js/admin.min.js', array('jquery','wp-color-picker'), CT4GG_VERSION, true);
+            wp_enqueue_script(CT4GG_NAME."-header", CT4GG_URL . 'assets/js/admin-header.min.js', array(), CT4GG_VERSION);
         }
 
         if (stripos(sanitize_text_field($_SERVER["SCRIPT_NAME"]), strrchr(wp_login_url(), '/')) !== false) {

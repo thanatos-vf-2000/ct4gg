@@ -1,7 +1,16 @@
 <?php
 /**
- * @package CT4GGPlugin
- * @version 1.4.8
+ * Init file
+ *
+ * PHP version 7
+ *
+ * @category  PHP
+ * @package   CT4GGPlugin
+ * @author    Franck VANHOUCKE <ct4gg@ginkgos.net>
+ * @copyright 2021-2023 Copyright 2023, Inc. All rights reserved.
+ * @license   GNU General Public License version 2 or later
+ * @version   1.5.0 GIT:https://github.com/thanatos-vf-2000/WordPress
+ * @link      https://ginkgos.net
  */
 
 namespace CT4GG;
@@ -12,6 +21,7 @@ final class Init
 {
     /**
      * Store all the classes inside an array
+     *
      * @return array Full list of classes
      */
     public static function get_services()
@@ -20,12 +30,14 @@ final class Init
             Core\SettingsLinks::class,
             Core\Enqueue::class,
             Pages\Dashboard::class,
+            Pages\Header::class,
             Pages\HTAccess::class,
             Pages\Robots::class,
             Pages\Humans::class,
             Pages\Security::class,
             Theme\Login::class,
             Ui\Admin::class,
+            Ui\AdminAjax::class,
             Ui\Login::class,
             Ui\Post::class,
             Ui\Humans_Header::class,
@@ -38,6 +50,7 @@ final class Init
     /**
      * Loop through the classes, initialize them,
      * and call the register() method if it exists
+     *
      * @return
      */
     public static function register_services()
@@ -62,7 +75,9 @@ final class Init
 
     /**
      * Initialize the class
+     *
      * @param  class $class    class from the services array
+     *
      * @return class instance  new instance of the class
      */
     private static function instantiate($class)

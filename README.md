@@ -9,9 +9,9 @@
 Contributors: vanhoucke
 Tags: tools, customiser, homepage, redirect, Jetpack, performance, login, speed, comments, min comments, meta generator, htaccess, cache
 Requires at least: 5.7
-Tested up to: 6.2
+Tested up to: 6.3.1
 Requires PHP: 7.4
-Stable tag: 1.4.8
+Stable tag: 1.5.0
 License: GPLv2
 
 Wordpress customiser tools for beginer and confirmed users.
@@ -36,8 +36,9 @@ CT4GG is the Wordpress complementary tool which adds additional options. It allo
 * Force the minimum comment lenght,
 * Hide meta generator (Wordpress Version),
 * Display message on old post,
-* Manage option in .htaccess file (caches and security).
-* Build robots.txt, humans.txt and security.txt
+* Manage option in .htaccess file (caches and security),
+* Build robots.txt, humans.txt and security.txt,
+* Check Header Security, Information display and cache configuration.
 
 ### Please Note
 Adding an additional customization option to help us personalize our sites is a help for everyone. We all seek to hide or personalize options or displays; that's why your feedback is important to me. Thank you for helping me make WordPress the best blogging platform in the world.
@@ -95,6 +96,8 @@ ct4gg is multisite compatible, in case of problem contact me.
  Enable cache expires
  Compressing static files
 * Generate robots.txt
+ Disable ChatGPT
+ Disable ChatGPT plugin
 * Generate humans.txt
 * Generate security.txt
 
@@ -124,11 +127,15 @@ If you want a new feature, you can contact me by email at contact@ginkgos.net
 
 ## Changelog
 
-### 1.4.8 (2304-SFP1)
-*Release Date - 2 April 2023*
+### 1.5.0 (2309-SFP1)
+*Release Date - 30 September 2023*
 
-* Sanitized Data, Escaped, and Validated (used sanitize_text_field),
-* Variables and options must be escaped.
+* Test up Woodpress 6.3.1,
+* Add Header check Security,
+* Add Header check information,
+* Add Header check Cache,
+* Add function to desable ChatGPT and ChatGPT pluging in Robot.txt,
+* Correction phpcs 3.7.2 error.
 
 See [changelog.txt](https://plugins.svn.wordpress.org/ct4gg/trunk/changelog.txt) for older changelog
 

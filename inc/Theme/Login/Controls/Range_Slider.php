@@ -19,12 +19,12 @@
  * You should have received a copy of the GNU General Public License
  * along with this library. If not, see <https://www.gnu.org/licenses/>.
  *
- * @package O2 Customizer Library
+ * @package    O2 Customizer Library
  * @subpackage Range 1.3.0
  */
 namespace CT4GG\Theme\Login\Controls;
 
-include_once ABSPATH . 'wp-includes/class-wp-customize-control.php';
+require_once ABSPATH . 'wp-includes/class-wp-customize-control.php';
 
 class Range_Slider extends \WP_Customize_Control
 {

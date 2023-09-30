@@ -1,7 +1,16 @@
 <?php
 /**
- * @package CT4GGPlugin
- * @version 1.4.8
+ * Class Options
+ *
+ * PHP version 7
+ *
+ * @category  PHP
+ * @package   CT4GGPlugin
+ * @author    Franck VANHOUCKE <ct4gg@ginkgos.net>
+ * @copyright 2021-2023 Copyright 2023, Inc. All rights reserved.
+ * @license   GNU General Public License version 2 or later
+ * @version   1.4.8 GIT:https://github.com/thanatos-vf-2000/WordPress
+ * @link      https://ginkgos.net
  */
 namespace CT4GG\Core;
 
@@ -10,18 +19,18 @@ class Options
     /**
      * Class instance.
      *
-     * @since 0.0.1
+     * @since  0.0.1
      * @access private
-     * @var $instance Class instance.
+     * @var    $instance Class instance.
      */
     private static $instance;
 
     /**
      * A static option variable.
      *
-     * @since 0.0.1
+     * @since  0.0.1
      * @access private
-     * @var mixed $db_options
+     * @var    mixed $db_options
      */
     private static $db_options;
 
@@ -52,7 +61,7 @@ class Options
     /**
      * LoadPHPConfig - load default config for plugin
      *
-     * @since 1.3.0
+     * @since  1.3.0
      * @return array()
      */
     public static function loadPHPConfig($path)
@@ -70,7 +79,7 @@ class Options
     /**
      * Set default option values
      *
-     * @since 0.0.1
+     * @since  0.0.1
      * @return default values of the .
      */
     public static function defaults()
@@ -87,7 +96,7 @@ class Options
     /**
      * Get options from static array()
      *
-     * @since 0.0.1
+     * @since  0.0.1
      * @return array    Return array of options.
      */
     public static function get_options()
@@ -101,7 +110,7 @@ class Options
     /**
      * Get specific option
      *
-     * @since 0.0.1
+     * @since  0.0.1
      * @return array    Return array of options.
      */
     public static function get_option($opt)
@@ -128,7 +137,7 @@ class Options
     /**
      * Get options from static array() from database
      *
-     * @since 0.0.1
+     * @since  0.0.1
      * @return array    Return array of options from database.
      */
     public static function get_db_options()
@@ -140,7 +149,7 @@ class Options
     /**
      * Set option to database
      *
-     * @since 0.0.1
+     * @since  0.0.1
      * @return true/false
      */
     public static function set_option($name, $value)
@@ -157,7 +166,7 @@ class Options
     /**
      * Delete option to database
      *
-     * @since 0.0.1
+     * @since  0.0.1
      * @return true/false
      */
     public static function del_option($name)

@@ -1,6 +1,6 @@
 <?php
 /**
- * Page Humans
+ * Page Header
  *
  * PHP version 7
  *
@@ -9,7 +9,7 @@
  * @author    Franck VANHOUCKE <ct4gg@ginkgos.net>
  * @copyright 2021-2023 Copyright 2023, Inc. All rights reserved.
  * @license   GNU General Public License version 2 or later
- * @version   1.4.8 GIT:https://github.com/thanatos-vf-2000/WordPress
+ * @version   1.5.0 GIT:https://github.com/thanatos-vf-2000/WordPress
  * @link      https://ginkgos.net
  */
 
@@ -20,9 +20,9 @@ use CT4GG\Api\SettingsApi;
 use CT4GG\Api\Callbacks\AdminCallbacks;
 
 /**
- *
- */
-class Humans extends BaseController
+*
+*/
+class Header extends BaseController
 {
     public $callbacks;
 
@@ -44,11 +44,11 @@ class Humans extends BaseController
         $this->subpages = array(
             array(
                 'parent_slug' => CT4GG_NAME.'_plugin',
-                'page_title' => 'Humans',
-                'menu_title' => 'Humans',
+                'page_title' => 'Header',
+                'menu_title' => 'Header',
                 'capability' => 'manage_options',
-                'menu_slug' => CT4GG_NAME.'_Humans',
-                'callback' => array( $this->callbacks, 'adminHumans' )
+                'menu_slug' => CT4GG_NAME.'_header',
+                'callback' => array( $this->callbacks, 'adminHeader' )
             )
         );
     }

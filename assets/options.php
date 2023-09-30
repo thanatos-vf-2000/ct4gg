@@ -1,8 +1,19 @@
 <?php
 /**
- * @package CT4GGPlugin
- * @version 1.4.8
+ * Options
+ *
+ * PHP version 7
+ *
+ * @category  PHP
+ * @package   CT4GGPlugin
+ * @author    Franck VANHOUCKE <ct4gg@ginkgos.net>
+ * @copyright 2021-2023 Copyright 2023, Inc. All rights reserved.
+ * @license   GNU General Public License version 2 or later
+ * @version   1.4.8 GIT:https://github.com/thanatos-vf-2000/WordPress
+ * @link      https://ginkgos.net
+ * @since     1.0.0
  */
+
 return array(
     'admin_del_logo_wp'                 => false,
     'classic_widgets'                   => false,
@@ -36,6 +47,8 @@ return array(
     'htaccess_enable_compress_statics_files' => false,
     'robots_sitemap'                    => false,
     'robots_wordpress'                  => false,
+    'robots_crawl_chatgpt'              => false,
+    'robots_crawl_chatgpt_user'         => false,
     'humans_team'                       => 'Founder: Dupont DUPOND
 Contact: dupont.dupond [at] exemple.com
 From: Paris, France
@@ -75,4 +88,7 @@ Software: WordPress',
     'security_canonical'        => 'https://example.com/security.txt',
     'security_policy'           => 'None',
     'security_hiring'           => 'None',
+    'header_sec'                => true,
+    'header_info'               => true,
+    'header_cache'              => true,
 );

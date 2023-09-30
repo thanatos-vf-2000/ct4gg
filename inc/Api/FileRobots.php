@@ -1,7 +1,16 @@
 <?php
 /**
- * @package CT4GGPlugin
- * @version 1.4.8
+ * File Robots
+ *
+ * PHP version 7
+ *
+ * @category  PHP
+ * @package   CT4GGPlugin
+ * @author    Franck VANHOUCKE <ct4gg@ginkgos.net>
+ * @copyright 2021-2023 Copyright 2023, Inc. All rights reserved.
+ * @license   GNU General Public License version 2 or later
+ * @version   1.5.0 GIT:https://github.com/thanatos-vf-2000/WordPress
+ * @link      https://ginkgos.net
  */
 
 namespace CT4GG\Api;
@@ -10,8 +19,8 @@ use CT4GG\Core\BaseController;
 use CT4GG\Core\Options;
 
 /**
-*
-*/
+ *
+ */
 class FileRobots extends BaseController
 {
     private $location  = '';
@@ -40,12 +49,12 @@ class FileRobots extends BaseController
         }
     }
 
-    private function add_robots_sitemap()
+    private function _add_robots_sitemap()
     {
         $this->items[] = 'Sitemap: '. get_site_url() .'/sitemap_index.xml';
     }
 
-    private function add_robots_wordpress()
+    private function _add_robots_wordpress()
     {
         $this->items[] = 'User-agent: *';
         $this->items[] = '';
@@ -63,10 +72,22 @@ class FileRobots extends BaseController
         $this->items[] = 'Disallow: /wp-login.php';
         $this->items[] = '';
     }
+
+    private function _add_robots_crawl_chatgpt()
+    {
+        $this->items[] = 'UserAgent: GPTBot';
+        $this->items[] = 'Disallow: /';
+    }
+
+    private function _add_robots_crawl_chatgpt_user()
+    {
+        $this->items[] = 'UserAgent: ChatGPT-User';
+        $this->items[] = 'Disallow: /';
+    }
  
     public function add($item)
     {
-        $target = 'add_' . $item;
+        $target = '_add_' . $item;
 
         if (method_exists($this, $target)) {
             $this->$target();

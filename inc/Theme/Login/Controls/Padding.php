@@ -5,9 +5,10 @@
  *
  * @subpackage Range 1.3.0
 */
+
 namespace CT4GG\Theme\Login\Controls;
 
-include_once ABSPATH . 'wp-includes/class-wp-customize-control.php';
+require_once ABSPATH . 'wp-includes/class-wp-customize-control.php';
 
 /**
  * Padding Control Class

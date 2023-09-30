@@ -45,6 +45,19 @@
   }, true)
 
   /**
+   * Admin Tab Graph
+   */
+  on('click', 'ul.ct4gg-nav-tabs-graph > li', function(e) {
+    e.preventDefault(),
+	document.querySelector("ul.ct4gg-nav-tabs-graph li.active").classList.remove("active"),
+		document.querySelector(".ct4gg-tab-pane.active").classList.remove("active");
+	var t=e.currentTarget,
+		n=e.target.getAttribute("href");
+	t.classList.add("active"),
+		document.querySelector(n).classList.add("active");
+  }, true)
+
+  /**
    * Images
    */
    var custom_uploader;

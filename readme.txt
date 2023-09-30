@@ -2,9 +2,9 @@
 Contributors: vanhoucke
 Tags: tools, customiser, homepage, redirect, Jetpack, performance, login, speed, comments, min comments, meta generator, htaccess, cache, robots.txt, robots, humans.txt, Share, sharing, share buttons, share button, share social media, share icons, social buttons, sharing buttons, sharing icons, social media icons, social share, social sharing
 Requires at least: 5.2
-Tested up to: 6.2
+Tested up to: 6.3.1
 Requires PHP: 7.4
-Stable tag: 1.4.8
+Stable tag: 1.5.0
 License: GPLv2
 
 Wordpress customiser tools for beginer and confirmed users.
@@ -123,11 +123,15 @@ If you want a new feature, you can contact me by email at contact@ginkgos.net
 
 == Changelog ==
 
-= 1.4.8 (2304-SFP1) =
-*Release Date - 2 April 2023*
+= 1.5.0 (2309-SFP1) =
+*Release Date - 30 September 2023*
 
-* Sanitized Data, Escaped, and Validated (used sanitize_text_field),
-* Variables and options must be escaped.
+* Test up Woodpress 6.3.1,
+* Add Header check Security,
+* Add Header check information,
+* Add Header check Cache,
+* Add function to desable ChatGPT and ChatGPT pluging in Robot.txt,
+* Correction phpcs 3.7.2 error.
 
 
 See [changelog.txt](https://plugins.svn.wordpress.org/ct4gg/trunk/changelog.txt) for older changelog

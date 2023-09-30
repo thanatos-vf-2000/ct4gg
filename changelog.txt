@@ -5,6 +5,16 @@
 This file contains older changelog entries, so we can keep the size of the standard WordPress readme.txt file reasonable.
 For the latest changes, please see the "Changelog" section of the [readme.txt file](https://plugins.svn.wordpress.org/ct4gg/trunk/readme.txt).
 
+= 1.5.0 (2309-SFP1) =
+*Release Date - 30 September 2023*
+
+* Test up Woodpress 6.3.1,
+* Add Header check Security,
+* Add Header check information,
+* Add Header check Cache,
+* Add function to desable ChatGPT and ChatGPT pluging in Robot.txt,
+* Correction phpcs 3.7.2 error.
+
 = 1.4.8 (2304-SFP1) =
 *Release Date - 2 April 2023*
 

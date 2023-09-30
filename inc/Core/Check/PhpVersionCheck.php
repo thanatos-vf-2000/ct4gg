@@ -1,7 +1,16 @@
 <?php
 /**
- * @package CT4GGPlugin
- * @version 1.4.8
+ * Check PHP Version
+ *
+ * PHP version 7
+ *
+ * @category  PHP
+ * @package   CT4GGPlugin
+ * @author    Franck VANHOUCKE <ct4gg@ginkgos.net>
+ * @copyright 2021-2023 Copyright 2023, Inc. All rights reserved.
+ * @license   GNU General Public License version 2 or later
+ * @version   1.4.8 GIT:https://github.com/thanatos-vf-2000/WordPress
+ * @link      https://ginkgos.net
  */
 namespace CT4GG\Core\Check;
 
@@ -10,9 +19,9 @@ class PhpVersionCheck
     /**
      * Class instance.
      *
-     * @since 0.0.1
+     * @since  0.0.1
      * @access private
-     * @var $instance Class instance.
+     * @var    $instance Class instance.
      */
     private static $instance;
 
@@ -23,7 +32,7 @@ class PhpVersionCheck
         }
         if (is_admin()) {
             if (! function_exists('get_plugin_data')) {
-                require_once(ABSPATH . 'wp-admin/includes/plugin.php');
+                include_once ABSPATH . 'wp-admin/includes/plugin.php';
             }
             $plugin_data = get_plugin_data(CT4GG_FILE);
             if (self::check($plugin_data['RequiresPHP'], '8.0.10') === false) {
@@ -53,7 +62,7 @@ class PhpVersionCheck
     public static function notice()
     {
         if (! function_exists('get_plugin_data')) {
-            require_once(ABSPATH . 'wp-admin/includes/plugin.php');
+            include_once ABSPATH . 'wp-admin/includes/plugin.php';
         }
         $plugin_data = get_plugin_data(CT4GG_FILE);
         ?>

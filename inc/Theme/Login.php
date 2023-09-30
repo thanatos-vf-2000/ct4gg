@@ -1,9 +1,17 @@
 <?php
 /**
- * @package CT4GGPlugin
- * @version 1.4.8
+ * Theme Login
+ *
+ * PHP version 7
+ *
+ * @category  PHP
+ * @package   CT4GGPlugin
+ * @author    Franck VANHOUCKE <ct4gg@ginkgos.net>
+ * @copyright 2021-2023 Copyright 2023, Inc. All rights reserved.
+ * @license   GNU General Public License version 2 or later
+ * @version   1.4.8 GIT:https://github.com/thanatos-vf-2000/WordPress
+ * @link      https://ginkgos.net
  */
-
 namespace CT4GG\Theme;
 
 use CT4GG\Core\BaseController;
@@ -16,12 +24,12 @@ use CT4GG\Theme\Login\Controls\Padding;
 use CT4GG\Theme\Login\Controls\Radio_Images;
 use CT4GG\Theme\Login\Controls\Toggle;
 
-include_once ABSPATH . 'wp-includes/class-wp-customize-control.php';
-include_once ABSPATH . 'wp-includes/customize/class-wp-customize-background-position-control.php';
+require_once ABSPATH . 'wp-includes/class-wp-customize-control.php';
+require_once ABSPATH . 'wp-includes/customize/class-wp-customize-background-position-control.php';
 
 /**
-*
-*/
+ *
+ */
 class Login extends BaseController
 {
     public $callbacks;
@@ -99,7 +107,7 @@ class Login extends BaseController
         $submenu['themes.php'][] = array( 'Login Custom', 'manage_options', $login_url, CT4GG_NAME.'_login_panel' );
     }
 
-        /**
+    /**
      * Sanitizer for Background Radio Control
      */
     function ct4gg_radio_option($input, $setting)
@@ -165,9 +173,9 @@ class Login extends BaseController
                             $wp_customize->add_section(
                                 $config['section'],
                                 array(
-                                    'priority' => $config['priority'],
-                                    'title' => $config['title'],
-                                    'panel'  => CT4GG_NAME.'_login_panel',
+                                'priority' => $config['priority'],
+                                'title' => $config['title'],
+                                'panel'  => CT4GG_NAME.'_login_panel',
                                 )
                             );
                             break;
@@ -175,41 +183,41 @@ class Login extends BaseController
                             $wp_customize->add_setting(
                                 $config['name'],
                                 array(
-                                    'default' => $config['default'],
-                                    'type' => 'option',
-                                    'capability' => 'edit_theme_options',
-                                    'sanitize_callback' => $config['sanitize_callback'],
-                                    'transport' => 'postMessage',
+                                'default' => $config['default'],
+                                'type' => 'option',
+                                'capability' => 'edit_theme_options',
+                                'sanitize_callback' => $config['sanitize_callback'],
+                                'transport' => 'postMessage',
                                 )
                             );
-                            
+                        
                             $wp_customize->add_control(new \WP_Customize_Color_Control($wp_customize, $config['name'], array(
-                                        'label' => $config['title'],
-                                        'section' => $config['section'],
-                                        'priority' =>  $config['priority'],
-                                        'settings' => $config['name'],
-                                    )));
+                                    'label' => $config['title'],
+                                    'section' => $config['section'],
+                                    'priority' =>  $config['priority'],
+                                    'settings' => $config['name'],
+                                )));
                             break;
                         case 'opt-image':
                             $wp_customize->add_setting(
                                 $config['name'],
                                 array(
-                                    'type' => 'option',
-                                    'capability' => 'edit_theme_options',
-                                    'sanitize_callback' => $config['sanitize_callback'],
-                                    'transport' => 'postMessage',
+                                'type' => 'option',
+                                'capability' => 'edit_theme_options',
+                                'sanitize_callback' => $config['sanitize_callback'],
+                                'transport' => 'postMessage',
                                 )
                             );
-                            
+                        
                             $wp_customize->add_control(
                                 new \WP_Customize_Image_Control(
                                     $wp_customize,
                                     $config['name'],
                                     array(
-                                        'label' => $config['title'],
-                                        'section' => $config['section'],
-                                        'priority' => $config['priority'],
-                                        'settings' => $config['name'],
+                                    'label' => $config['title'],
+                                    'section' => $config['section'],
+                                    'priority' => $config['priority'],
+                                    'settings' => $config['name'],
                                     )
                                 )
                             );
@@ -218,22 +226,22 @@ class Login extends BaseController
                             $wp_customize->add_setting(
                                 $config['name'],
                                 array(
-                                    'default' => $config['default'],
-                                    'type' => 'option',
-                                    'capability' => 'edit_theme_options',
-                                    'sanitize_callback' => array($this,'ct4gg_radio_option'),
-                                    'transport' => 'postMessage',
+                                'default' => $config['default'],
+                                'type' => 'option',
+                                'capability' => 'edit_theme_options',
+                                'sanitize_callback' => array($this,'ct4gg_radio_option'),
+                                'transport' => 'postMessage',
                                 )
                             );
                             $wp_customize->add_control(
                                 $config['name'],
                                 array(
-                                    'label' => $config['title'],
-                                    'section' => $config['section'],
-                                    'type' => 'select',
-                                    'choices' => $config['choices'],
-                                    'priority' => $config['priority'],
-                                    'settings' => $config['name'],
+                                'label' => $config['title'],
+                                'section' => $config['section'],
+                                'type' => 'select',
+                                'choices' => $config['choices'],
+                                'priority' => $config['priority'],
+                                'settings' => $config['name'],
                                 )
                             );
                             break;
@@ -241,20 +249,20 @@ class Login extends BaseController
                             $wp_customize->add_setting(
                                 $config['name'],
                                 array(
-                                    'type' => 'option',
-                                    'capability' => 'edit_theme_options',
-                                    'sanitize_callback' => $config['sanitize_callback'],
-                                    'transport' => 'postMessage',
+                                'type' => 'option',
+                                'capability' => 'edit_theme_options',
+                                'sanitize_callback' => $config['sanitize_callback'],
+                                'transport' => 'postMessage',
                                 )
                             );
-                            
+                        
                             $wp_customize->add_control(
                                 $config['name'],
                                 array(
-                                    'label' => $config['title'],
-                                    'section' => $config['section'],
-                                    'priority' => $config['priority'],
-                                    'settings' => $config['name'],
+                                'label' => $config['title'],
+                                'section' => $config['section'],
+                                'priority' => $config['priority'],
+                                'settings' => $config['name'],
                                 )
                             );
                             break;
@@ -262,38 +270,38 @@ class Login extends BaseController
                             $wp_customize->add_setting(
                                 $config['name-x'],
                                 array(
-                                    'default' => $config['default-x'],
-                                    'type' => 'option',
-                                    'capability' => 'edit_theme_options',
-                                    'sanitize_callback' => array( $this,'ct4gg_sanitize_position'),
-                                    'transport' => 'postMessage',
+                                'default' => $config['default-x'],
+                                'type' => 'option',
+                                'capability' => 'edit_theme_options',
+                                'sanitize_callback' => array( $this,'ct4gg_sanitize_position'),
+                                'transport' => 'postMessage',
                                 )
                             );
-                            
-                            
+                        
+                        
                             $wp_customize->add_setting(
                                 $config['name-y'],
                                 array(
-                                    'default' => $config['default-y'],
-                                    'type' => 'option',
-                                    'capability' => 'edit_theme_options',
-                                    'sanitize_callback' => array( $this,'ct4gg_sanitize_position'),
-                                    'transport' => 'postMessage',
+                                'default' => $config['default-y'],
+                                'type' => 'option',
+                                'capability' => 'edit_theme_options',
+                                'sanitize_callback' => array( $this,'ct4gg_sanitize_position'),
+                                'transport' => 'postMessage',
                                 )
                             );
-                            
+                        
                             $wp_customize->add_control(
                                 new \WP_Customize_Background_Position_Control(
                                     $wp_customize,
                                     $config['name'],
                                     array(
-                                        'label' => $config['title'],
-                                        'section' => $config['section'],
-                                        'priority' => $config['priority'],
-                                        'settings' => array(
-                                            'x' => $config['name-x'],
-                                            'y' => $config['name-y'],
-                                        ),
+                                    'label' => $config['title'],
+                                    'section' => $config['section'],
+                                    'priority' => $config['priority'],
+                                    'settings' => array(
+                                        'x' => $config['name-x'],
+                                        'y' => $config['name-y'],
+                                    ),
                                     )
                                 )
                             );
@@ -302,25 +310,25 @@ class Login extends BaseController
                             $wp_customize->add_setting(
                                 $config['name'],
                                 array(
-                                    'default' => $config['default'],
-                                    'type' => 'option',
-                                    'capability' => 'edit_theme_options',
-                                    'sanitize_callback' => $config['sanitize_callback'],
-                                    'transport' => 'postMessage',
+                                'default' => $config['default'],
+                                'type' => 'option',
+                                'capability' => 'edit_theme_options',
+                                'sanitize_callback' => $config['sanitize_callback'],
+                                'transport' => 'postMessage',
                                 )
                             );
-                            
+                        
                             $wp_customize->add_control(
                                 new Range_Slider(
                                     $wp_customize,
                                     $config['name'],
                                     array(
-                                        'label' => $config['title'],
-                                        'section' => $config['section'],
-                                        'priority' => $config['priority'],
-                                        'settings' => $config['name'],
-                                        'choices' => $config['choices'],
-                                        'input_attrs' => $config['input_attrs'],
+                                    'label' => $config['title'],
+                                    'section' => $config['section'],
+                                    'priority' => $config['priority'],
+                                    'settings' => $config['name'],
+                                    'choices' => $config['choices'],
+                                    'input_attrs' => $config['input_attrs'],
                                     )
                                 )
                             );
@@ -329,22 +337,22 @@ class Login extends BaseController
                             $wp_customize->add_setting(
                                 $config['name'],
                                 array(
-                                    'default' => $config['default'],
-                                    'type' => 'option',
-                                    'capability' => 'edit_theme_options',
-                                    'sanitize_callback' => $config['sanitize_callback'],
-                                    'transport' => 'postMessage',
+                                'default' => $config['default'],
+                                'type' => 'option',
+                                'capability' => 'edit_theme_options',
+                                'sanitize_callback' => $config['sanitize_callback'],
+                                'transport' => 'postMessage',
                                 )
                             );
-                            
+                        
                             $wp_customize->add_control(
                                 $config['name'],
                                 array(
-                                    'label' => $config['title'],
-                                    'description' => $config['description'],
-                                    'section' => $config['section'],
-                                    'priority' => $config['priority'],
-                                    'settings' => $config['name'],
+                                'label' => $config['title'],
+                                'description' => $config['description'],
+                                'section' => $config['section'],
+                                'priority' => $config['priority'],
+                                'settings' => $config['name'],
                                 )
                             );
                             break;
@@ -352,23 +360,23 @@ class Login extends BaseController
                             $wp_customize->add_setting(
                                 $config['name'],
                                 array(
-                                    'default' => $config['default'],
-                                    'type' => 'option',
-                                    'capability' => 'edit_theme_options',
-                                    'sanitize_callback' => 'sanitize_text_field',
-                                    'transport' => 'postMessage',
+                                'default' => $config['default'],
+                                'type' => 'option',
+                                'capability' => 'edit_theme_options',
+                                'sanitize_callback' => 'sanitize_text_field',
+                                'transport' => 'postMessage',
                                 )
                             );
-                    
+                
                             $wp_customize->add_control(
                                 new Alpha(
                                     $wp_customize,
                                     $config['name'],
                                     array(
-                                        'label' => $config['title'],
-                                        'section' => $config['section'],
-                                        'priority' => $config['priority'],
-                                        'settings' => $config['name'],
+                                    'label' => $config['title'],
+                                    'section' => $config['section'],
+                                    'priority' => $config['priority'],
+                                    'settings' => $config['name'],
                                     )
                                 )
                             );
@@ -377,23 +385,23 @@ class Login extends BaseController
                             $wp_customize->add_setting(
                                 $config['name'],
                                 array(
-                                    'default' => $config['default'],
-                                    'type' => 'option',
-                                    'capability' => 'edit_theme_options',
-                                    'sanitize_callback' => $config['sanitize_callback'],
-                                    'transport' => 'postMessage',
+                                'default' => $config['default'],
+                                'type' => 'option',
+                                'capability' => 'edit_theme_options',
+                                'sanitize_callback' => $config['sanitize_callback'],
+                                'transport' => 'postMessage',
                                 )
                             );
-                    
+                
                             $wp_customize->add_control(
                                 new Padding(
                                     $wp_customize,
                                     $config['name'],
                                     array(
-                                        'label' => $config['title'],
-                                        'section' => $config['section'],
-                                        'priority' =>  $config['priority'],
-                                        'settings' => $config['name'],
+                                    'label' => $config['title'],
+                                    'section' => $config['section'],
+                                    'priority' =>  $config['priority'],
+                                    'settings' => $config['name'],
                                     )
                                 )
                             );
@@ -402,23 +410,23 @@ class Login extends BaseController
                             $wp_customize->add_setting(
                                 $config['name'],
                                 array(
-                                    'default' => $config['default'],
-                                    'type' => 'option',
-                                    'capability' => 'edit_theme_options',
-                                    'sanitize_callback' => $config['sanitize_callback'],
-                                    'transport' => 'postMessage',
+                                'default' => $config['default'],
+                                'type' => 'option',
+                                'capability' => 'edit_theme_options',
+                                'sanitize_callback' => $config['sanitize_callback'],
+                                'transport' => 'postMessage',
                                 )
                             );
-                    
+                
                             $wp_customize->add_control(
                                 new Toggle(
                                     $wp_customize,
                                     $config['name'],
                                     array(
-                                        'label' => $config['title'],
-                                        'section' => $config['section'],
-                                        'priority' => $config['priority'],
-                                        'settings' => $config['name'],
+                                    'label' => $config['title'],
+                                    'section' => $config['section'],
+                                    'priority' => $config['priority'],
+                                    'settings' => $config['name'],
                                     )
                                 )
                             );
@@ -427,62 +435,62 @@ class Login extends BaseController
                             $wp_customize->add_setting(
                                 $config['name'],
                                 array(
-                                    'default' => $config['default'],
-                                    'type' => 'option',
-                                    'capability' => 'edit_theme_options',
-                                    'sanitize_callback' => $config['sanitize_callback'],
-                                    'transport' => 'postMessage',
+                                'default' => $config['default'],
+                                'type' => 'option',
+                                'capability' => 'edit_theme_options',
+                                'sanitize_callback' => $config['sanitize_callback'],
+                                'transport' => 'postMessage',
                                 )
                             );
                             $wp_customize->add_control(
                                 $config['name'],
                                 array(
-                                    'label' => $config['title'],
-                                    'section' => $config['section'],
-                                    'type' => 'select',
-                                    'choices' => $config['choices'],
-                                    'priority' => $config['priority'],
-                                    'settings' => $config['name'],
+                                'label' => $config['title'],
+                                'section' => $config['section'],
+                                'type' => 'select',
+                                'choices' => $config['choices'],
+                                'priority' => $config['priority'],
+                                'settings' => $config['name'],
                                 )
                             );
-                            break;
+                        break;
                         case 'opt-radio-images':
                             $wp_customize->add_setting(
                                 $config['name'],
                                 array(
-                                    'default' => $config['default'],
-                                    'type' => 'option',
-                                    'capability' => 'edit_theme_options',
-                                    'sanitize_callback' => function ($input, $setting) {
-                                        // global wp_customize
-                                        global $wp_customize;
-                                        
-                                        // Get control ID
-                                        $control = $wp_customize->get_control($setting->id);
-                                
-                                        // Check if option exists in choice array
-                                        if (array_key_exists($input, $control->choices)) {
-                                            // If it does, return the value
-                                            return $input;
-                                        } else {
-                                            // Else, return default value
-                                            return $setting->default;
-                                        }
-                                    },
+                                'default' => $config['default'],
+                                'type' => 'option',
+                                'capability' => 'edit_theme_options',
+                                'sanitize_callback' => function ($input, $setting) {
+                                    // global wp_customize
+                                    global $wp_customize;
+                                    
+                                    // Get control ID
+                                    $control = $wp_customize->get_control($setting->id);
+                            
+                                    // Check if option exists in choice array
+                                    if (array_key_exists($input, $control->choices)) {
+                                        // If it does, return the value
+                                        return $input;
+                                    } else {
+                                        // Else, return default value
+                                        return $setting->default;
+                                    }
+                                },
                                 )
                             );
-                    
-                    
+                
+                
                             $wp_customize->add_control(
                                 new Radio_Images(
                                     $wp_customize,
                                     $config['name'],
                                     array(
-                                        'label' => $config['title'],
-                                        'section' => $config['section'],
-                                        'priority' => $config['priority'],
-                                        'settings' => $config['name'],
-                                        'choices' => $config['choices'],
+                                    'label' => $config['title'],
+                                    'section' => $config['section'],
+                                    'priority' => $config['priority'],
+                                    'settings' => $config['name'],
+                                    'choices' => $config['choices'],
                                     )
                                 )
                             );
