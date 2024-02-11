@@ -9,9 +9,9 @@
 Contributors: vanhoucke
 Tags: tools, customiser, homepage, redirect, Jetpack, performance, login, speed, comments, min comments, meta generator, htaccess, cache
 Requires at least: 5.7
-Tested up to: 6.3.1
+Tested up to: 6.4.3
 Requires PHP: 7.4
-Stable tag: 1.5.0
+Stable tag: 1.5.1
 License: GPLv2
 
 Wordpress customiser tools for beginer and confirmed users.
@@ -127,10 +127,10 @@ If you want a new feature, you can contact me by email at contact@ginkgos.net
 
 ## Changelog
 
-### 1.5.0 (2309-SFP1)
-*Release Date - 30 September 2023*
+### 1.5.1 (2402-SFP1)
+*Release Date - 11 Febrary 2024*
 
-* Test up Woodpress 6.3.1,
+* Test up Woodpress 6.4.3,
 * Add Header check Security,
 * Add Header check information,
 * Add Header check Cache,

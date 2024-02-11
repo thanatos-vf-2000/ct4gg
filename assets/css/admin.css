@@ -287,3 +287,261 @@ div#ct4gg-dismiss-messages {
 
 .ct4gg-messages-txt {
   margin-top: inherit; }
+
+#ct4gg-graph-sec {
+  position: relative;
+  display: block;
+  padding: 10px;
+  background-color: #fff;
+  height: 210px;
+  width: 98%; }
+
+#ct4gg-graph-sec .ct4gg-graph-progress {
+  transition: all 2s ease-in-out; }
+
+#ct4gg-graph-info {
+  position: relative;
+  display: block;
+  padding: 10px;
+  background-color: #fff;
+  height: 210px;
+  width: 98%; }
+
+#ct4gg-graph-info .ct4gg-graph-progress {
+  transition: all 2s ease-in-out; }
+
+#ct4gg-graph-cache {
+  position: relative;
+  display: block;
+  padding: 10px;
+  background-color: #fff;
+  height: 210px;
+  width: 98%; }
+
+#ct4gg-graph-cache .ct4gg-graph-progress {
+  transition: all 2s ease-in-out; }
+
+.ct4gg-graph-bg {
+  z-index: 1;
+  position: absolute;
+  background-color: rgba(79, 39, 10, 0.2);
+  width: 400px;
+  height: 200px;
+  top: 0%;
+  border-radius: 250px 250px 0px 0px; }
+
+.ct4gg-graph-text {
+  z-index: 3;
+  position: absolute;
+  width: 250px;
+  height: 125px;
+  top: 75px;
+  margin-left: 75px;
+  margin-right: auto;
+  border-radius: 250px 250px 0px 0px;
+  background-color: #fdfcf7; }
+
+.ct4gg-graph-progress {
+  z-index: 2;
+  position: absolute;
+  background-color: #ce9e27;
+  width: 400px;
+  height: 200px;
+  top: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0px 0px 200px 200px;
+  transform-origin: center top;
+  transition: all 1.3s ease-in-out;
+  transform: rotate(0); }
+
+.ct4gg-graph-data {
+  z-index: 4;
+  color: #000;
+  font-size: 1.5em;
+  line-height: 25px;
+  position: absolute;
+  width: 400px;
+  height: 50px;
+  top: 130px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all 1s ease-out;
+  font-size: 24px; }
+
+.ct4gg-graph-container {
+  width: 400px;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  float: left; }
+
+.ct4gg-graph-text {
+  background-color: #F9F9F9; }
+
+.ct4gg-nav-tabs-graph {
+  float: left;
+  margin: 0;
+  list-style-type: none;
+  border-bottom: 1px solid transparent;
+  background-color: #fff; }
+  .ct4gg-nav-tabs-graph > li {
+    float: left;
+    margin-bottom: -1px; }
+    .ct4gg-nav-tabs-graph > li > a {
+      margin-right: 2px;
+      line-height: 1.5;
+      padding: 10px;
+      border: 1px solid transparent;
+      border-radius: 4px 4px 0 0;
+      float: left;
+      text-decoration: none; }
+      .ct4gg-nav-tabs-graph > li > a:hover {
+        border-color: #eee #eee #ddd; }
+    .ct4gg-nav-tabs-graph > li.active > a, .ct4gg-nav-tabs-graph > li.active > a:hover, .ct4gg-nav-tabs-graph > li.active > a:focus {
+      color: #fff;
+      cursor: default;
+      background-color: #ce9e27;
+      border-color: transparent; }
+
+/* ----------------------------------------------------------------------------
+   Primary Button Style
+---------------------------------------------------------------------------- */
+.wp-core-ui .button-primary {
+  background: #ce9e27;
+  border-color: #ce9e27;
+  color: #fff;
+  text-decoration: none;
+  text-shadow: none; }
+
+.wp-core-ui .button-primary.hover,
+.wp-core-ui .button-primary:hover,
+.wp-core-ui .button-primary.focus,
+.wp-core-ui .button-primary:focus {
+  background: #ce9f27c2;
+  border-color: #ce9f27c2;
+  color: #fff; }
+
+.wp-core-ui .button-primary.focus,
+.wp-core-ui .button-primary:focus {
+  box-shadow: 0 0 0 1px #fff, 0 0 0 3px #ce9e27; }
+
+.wp-core-ui .button-primary.active,
+.wp-core-ui .button-primary.active:hover,
+.wp-core-ui .button-primary.active:focus,
+.wp-core-ui .button-primary:active {
+  background: #ce9f27c2;
+  border-color: #ce9f27c2;
+  box-shadow: none;
+  color: #fff; }
+
+.wp-core-ui .button-primary[disabled],
+.wp-core-ui .button-primary:disabled,
+.wp-core-ui .button-primary-disabled,
+.wp-core-ui .button-primary.disabled {
+  color: #a7aaad !important;
+  background: #f6f7f7 !important;
+  border-color: #dcdcde !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  cursor: default; }
+
+#ct4gg-headers-container-sec {
+  display: inline-block;
+  width: 100%; }
+
+#ct4gg-headers-container-sec .found-headers-info small {
+  background-color: #f7fcfe;
+  padding: 3px 5px;
+  border: 1px dashed red; }
+
+#ct4gg-headers-container-sec .important {
+  color: #d54e21; }
+
+#ct4gg-headers-container-sec span.ct4gg-pro {
+  font-size: 10px;
+  font-weight: normal;
+  padding: 1px 3px; }
+
+#ct4gg-headers-container-info {
+  display: inline-block;
+  width: 100%; }
+
+#ct4gg-headers-container-info .found-headers-info small {
+  background-color: #f7fcfe;
+  padding: 3px 5px;
+  border: 1px dashed red; }
+
+#ct4gg-headers-container-info .important {
+  color: #d54e21; }
+
+#ct4gg-headers-container-info span.ct4gg-pro {
+  font-size: 10px;
+  font-weight: normal;
+  padding: 1px 3px; }
+
+#ct4gg-headers-container-cache {
+  display: inline-block;
+  width: 100%; }
+
+#ct4gg-headers-container-cache .found-headers-info small {
+  background-color: #f7fcfe;
+  padding: 3px 5px;
+  border: 1px dashed red; }
+
+#ct4gg-headers-container-cache .important {
+  color: #d54e21; }
+
+#ct4gg-headers-container-cache span.ct4gg-pro {
+  font-size: 10px;
+  font-weight: normal;
+  padding: 1px 3px; }
+
+#ct4gg-headers {
+  margin-top: 30px;
+  border-left: 4px solid #ce9e27;
+  margin-left: -12px;
+  padding-left: 12px; }
+
+#ct4gg-headers table {
+  width: 48%; }
+
+#ct4gg-headers thead th {
+  font-weight: bold; }
+
+#ct4gg-headers .ct4gg-check-header td:first-child {
+  border-left: 5px solid #65916b; }
+
+td.ct4gg-check-header-warning {
+  border-left: 5px solid orange; }
+
+td.ct4gg-check-header-deprecated {
+  border-left: 5px solid blueviolet; }
+
+td.ct4gg-check-header-error {
+  border-left: 5px solid red; }
+
+td.ct4gg-check-header-present {
+  border-left: 5px solid cyan; }
+
+#ct4gg-headers tr td {
+  border-bottom: 1px solid #dddddd; }
+
+.ct4gg-headers-table {
+  display: inline-table; }
+
+.ct4gg-headers-table td, .ct4gg-headers-table th {
+  padding: 8px 10px; }
+
+.ct4gg-dashicons-warning, .ct4gg-dashicons-warning::before {
+  color: orange; }
+
+.ct4gg-dashicons-deprecated, .ct4gg-dashicons-deprecated::before {
+  color: blueviolet; }
+
+.ct4gg-dashicons-error, .ct4gg-dashicons-error::before {
+  color: red; }
+
+.ct4gg-dashicons-present, .ct4gg-dashicons-present::before {
+  color: cyan; }
