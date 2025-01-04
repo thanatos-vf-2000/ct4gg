@@ -9,7 +9,7 @@
  * @author    Franck VANHOUCKE <ct4gg@ginkgos.net>
  * @copyright 2021-2023 Copyright 2023, Inc. All rights reserved.
  * @license   GNU General Public License version 2 or later
- * @version   1.5.1 GIT:https://github.com/thanatos-vf-2000/WordPress
+ * @version   1.5.2 GIT:https://github.com/thanatos-vf-2000/WordPress
  * @link      https://ginkgos.net
  */
 
@@ -109,13 +109,14 @@ class Post extends BaseController {
 	 * Display a message at the top of articles older than X days
 	 */
 	public static function old_post_notice( $content ) {
-		if ( ! is_front_page() && ! is_home() && ! is_admin() ) {
+		global $post;
+		if ( ! is_front_page() && ! is_home() && ! is_admin()  && (is_page() || is_single() || is_archive() || is_category())) {
 			$opt = get_option( CT4GG_NAME . '_plugin' );
 
 			/*
 			 * Calculation of the "seniority" of the article since January 1, 1970, called Unix time
 			 */
-			$anciennete_unix = get_the_time( 'U' );
+			$anciennete_unix = strtotime(get_the_time('U'),$post->ID);
 
 			/*
 			 * We calculate the age in seconds of the article between the present time and its age in Unix time.

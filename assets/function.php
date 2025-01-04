@@ -1,6 +1,5 @@
 <?php
-/**
- * Template header
+/**FunctionTemplate header
  *
  * PHP version 7
  *
@@ -13,6 +12,9 @@
  * @link      https://ginkgos.net
  */
 
- if ( ! defined( 'ABSPATH' ) ) exit;
-
- self::get_template( array( 'header', 'header/nav-tabs', 'header/tab-content', 'footer' ) );
+ if (!(PHP_VERSION_ID <= 80000)) {
+    function esc_txt( $text ) {
+        $safe_text = (string) $text;
+        return apply_filters( 'esc_txt', $safe_text, $text );
+    }
+}

@@ -6,6 +6,8 @@
  * Desciption: Header
  */
 
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 ?>
 <div class="wrap">
 	<h1>Customer Tools For GinkGos - Plugin</h1>

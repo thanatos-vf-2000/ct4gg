@@ -5,6 +5,19 @@
 This file contains older changelog entries, so we can keep the size of the standard WordPress readme.txt file reasonable.
 For the latest changes, please see the "Changelog" section of the [readme.txt file](https://plugins.svn.wordpress.org/ct4gg/trunk/readme.txt).
 
+= 1.5.2 (2402-SFP2) =
+*Release Date - 25 Febrary 2024*
+
+* Test up Woodpress 6.5.4,
+* Compatible PHP8.3 and change Requires PHP to 8.0,
+* Correction function old post notice
+* Add Header check Security,
+* Add Header check information,
+* Add Header check Cache,
+* Add function to desable ChatGPT and ChatGPT pluging in Robot.txt,
+* Correction phpcs 3.7.2 error,
+* Add security Deletion file.
+
 = 1.5.1 (2402-SFP1) =
 *Release Date - 11 Febrary 2024*
 

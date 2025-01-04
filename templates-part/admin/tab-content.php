@@ -38,21 +38,44 @@
 				$nb = 0;
 				global $wp_filesystem;
 				if ( ! is_a( $wp_filesystem, 'WP_Filesystem_Base' ) ) {
-					include_once ABSPATH . 'wp-admin/includes/file.php';
-					$creds = request_filesystem_credentials( site_url() );
-					wp_filesystem( $creds );
+					if ( ! function_exists( 'request_filesystem_credentials' ) ) {
+						require_once( ABSPATH . 'wp-admin/includes/file.php' );
+					}
 				}
-				$file->get_contents( CT4GG_PATH . 'changelog.txt' );
-				while ( ! feof( $file ) ) {
-					$line = fgets( $file );
-					if ( preg_match( '/= (.*) =/', $line, $matches ) ) {
-						$nb++;
-						$ver = $matches[1];
-					} elseif ( preg_match( '/\*Release Date -(.*)\*/', $line, $matches ) ) {
-						$nb++;
-						echo '<dt><b>' . esc_html( $ver ) . '</b>: ' . esc_html( $matches[1] ) . '</dt>';
-					} elseif ( $nb > 2 ) {
-						echo '<dd>' . esc_html( $line ) . '</dd>';
+				// Demander les informations d'identification du système de fichiers, si nécessaire.
+				if ( false === ( $creds = request_filesystem_credentials( site_url() ) ) ) {
+					// Si les informations d'identification ne peuvent pas être obtenues, arrêter ici.
+					esc_html_e( 'Error during checking identification.', 'ct4gg' );
+					return;
+				}
+				// Initialiser le système de fichiers global.
+				if ( ! WP_Filesystem( $creds ) ) {
+					// Si la connexion échoue, arrêter ici.
+					esc_html_e( 'Error during Initialize global file system.', 'ct4gg' );
+					return;
+				}
+				$file_path = CT4GG_PATH . '/changelog.txt';
+				// Vérifier si le fichier existe.
+				if ( ! $wp_filesystem->exists( $file_path ) ) {
+					esc_html_e( 'File changelog.txt not found.', 'ct4gg' );
+					return;
+				}
+				$contents = $wp_filesystem->get_contents_array( $file_path  );
+				if ( ! $contents ) {
+					esc_html_e( 'Error accessing file.', 'ct4gg' );
+				} else {
+					//echo '<dd>' . esc_html( $contents ) . '</dd>';
+					//$contents = (is_array($contents) ? $contents : [$contents]);
+					foreach ( ($contents) as $line)  {
+						if ( preg_match( '/= (.*) =/', $line, $matches ) ) {
+							$nb++;
+							$ver = $matches[1];
+						} elseif ( preg_match( '/\*Release Date -(.*)\*/', $line, $matches ) ) {
+							$nb++;
+							echo '<dt><b>' . esc_html( $ver ) . '</b>: ' . esc_html( $matches[1] ) . '</dt>';
+						} elseif ( $nb > 2 ) {
+							echo '<dd>' . esc_html( $line ) . '</dd>';
+						}
 					}
 				}
 				?>

@@ -9,7 +9,7 @@
  * @author    Franck VANHOUCKE <ct4gg@ginkgos.net>
  * @copyright 2021-2023 Copyright 2023, Inc. All rights reserved.
  * @license   GNU General Public License version 2 or later
- * @version   1.5.1 GIT:https://github.com/thanatos-vf-2000/WordPress
+ * @version   1.5.2 GIT:https://github.com/thanatos-vf-2000/WordPress
  * @link      https://ginkgos.net
  */
 
@@ -19,34 +19,41 @@ $robots_file = new FileRobots();
 
 
 if ( isset( $_POST[ CT4GG_NAME . '-verif' ] ) && wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST[ CT4GG_NAME . '-verif' ] ) ), CT4GG_NAME . '-opt' ) ) {
+	$robots_nonce = wp_create_nonce( CT4GG_NAME . '-verif' );
+	if ( isset( $_POST['ct4gg-robots'] ) ) {
+		$robots_tmp = sanitize_text_field( wp_unslash( $_POST['ct4gg-robots'] ) );
+		if ( ! preg_match( '~robots*~', $robots_tmp ) ) {
+			unset($_POST, $robots_tmp) ; $_POST = array();
+		}
+	}
 	if ( isset( $_POST['submit-robots-restore'] ) ) {
 		if ( $robots_file->backup() ) {
-			if ( isset( $_POST['ct4gg-robots'] ) ) {
-				if ( copy( ABSPATH . sanitize_text_field( wp_unslash( $_POST['ct4gg-robots'] ) ), ABSPATH . 'robots.txt' ) ) {
-					self::view( 'robots', array( 'type' => 'copy-ok' ) );
+			if ( isset( $robots_tmp ) ) {
+				if ( copy( ABSPATH . $robots_tmp, ABSPATH . 'robots.txt' ) ) {
+					self::view( 'robots', array( 'type' => 'copy-ok', 'nonce' => $robots_nonce ) );
 				} else {
-					self::view( 'robots', array( 'type' => 'copy-ko' ) );
+					self::view( 'robots', array( 'type' => 'copy-ko', 'nonce' => $robots_nonce ) );
 				}
 			} else {
-				self::view( 'robots', array( 'type' => 'ct4gg-robots-ko' ) );
+				self::view( 'robots', array( 'type' => 'ct4gg-robots-ko', 'nonce' => $robots_nonce ) );
 			}
 		} else {
-			self::view( 'robots', array( 'type' => 'backup-ko' ) );
+			self::view( 'robots', array( 'type' => 'backup-ko', 'nonce' => $robots_nonce ) );
 		}
 	} elseif ( isset( $_POST['submit-robots-delete'] ) ) {
-		if ( isset( $_POST['ct4gg-robots'] ) ) {
-			if ( unlink( ABSPATH . sanitize_text_field( wp_unslash( $_POST['ct4gg-robots'] ) ) ) ) {
-				self::view( 'robots', array( 'type' => 'delete-ok' ) );
+		if ( isset( $robots_tmp ) ) {
+			if ( unlink( ABSPATH . $robots_tmp ) ) {
+				self::view( 'robots', array( 'type' => 'delete-ok', 'nonce' => $robots_nonce ) );
 			} else {
-				self::view( 'robots', array( 'type' => 'delete-ko' ) );
+				self::view( 'robots', array( 'type' => 'delete-ko', 'nonce' => $robots_nonce ) );
 			}
 		} else {
-			self::view( 'robots', array( 'type' => 'ct4gg-robots-ko' ) );
+			self::view( 'robots', array( 'type' => 'ct4gg-robots-ko', 'nonce' => $robots_nonce ) );
 		}
 	} elseif ( isset( $_POST['submit-build-robots'] ) && isset( $_POST['robots-content'] ) ) {
-		if ( file_exists( ABSPATH . '.htaccess' ) ) {
+		if ( file_exists( ABSPATH . 'robots.txt' ) ) {
 			$robots_file->backup();
-			$robots_file->save_mod( sanitize_text_field( wp_unslash( $_POST['robots-content'] ) ) );
+			$robots_file->save_mod( esc_txt( $_POST['robots-content'] ) );
 		}
 	} else {
 		$robots_params = array(
@@ -61,18 +68,18 @@ if ( isset( $_POST[ CT4GG_NAME . '-verif' ] ) && wp_verify_nonce( sanitize_text_
 		if ( file_exists( ABSPATH . 'robots.txt' ) ) {
 			if ( $robots_file->backup() ) {
 				if ( ! $robots_file->save() ) {
-					self::view( 'robots', array( 'type' => 'update-ko' ) );
+					self::view( 'robots', array( 'type' => 'update-ko', 'nonce' => $robots_nonce ) );
 				} else {
-					self::view( 'robots', array( 'type' => 'update-ok' ) );
+					self::view( 'robots', array( 'type' => 'update-ok', 'nonce' => $robots_nonce ) );
 				}
 			} else {
-				self::view( 'robots', array( 'type' => 'backup-ko' ) );
+				self::view( 'robots', array( 'type' => 'backup-ko', 'nonce' => $robots_nonce ) );
 			}
 		} else {
 			if ( ! $robots_file->save() ) {
-				self::view( 'robots', array( 'type' => 'update-ko' ) );
+				self::view( 'robots', array( 'type' => 'update-ko', 'nonce' => $robots_nonce ) );
 			} else {
-				self::view( 'robots', array( 'type' => 'update-ok' ) );
+				self::view( 'robots', array( 'type' => 'update-ok', 'nonce' => $robots_nonce ) );
 			}
 		}
 	}

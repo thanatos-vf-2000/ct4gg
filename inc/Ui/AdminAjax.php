@@ -9,7 +9,7 @@
  * @author    Franck VANHOUCKE <ct4gg@ginkgos.net>
  * @copyright 2021-2023 Copyright 2023, Inc. All rights reserved.
  * @license   GNU General Public License version 2 or later
- * @version   1.5.1 GIT:https://github.com/thanatos-vf-2000/WordPress
+ * @version   1.5.2 GIT:https://github.com/thanatos-vf-2000/WordPress
  * @link      https://ginkgos.net
  */
 
@@ -152,9 +152,9 @@ class AdminAjax extends BaseController {
 							<td>
 								<?php
 								if ( is_array( $header_value ) ) {
-									echo esc_html( implode( '<br />', array_map( 'htmlspecialchars', $header_value ) ) );
+									echo esc_txt( implode( '<br />', array_map( 'esc_txt', $header_value ) ) );
 								} else {
-									echo esc_html( htmlspecialchars( $header_value ) );
+									echo esc_txt( $header_value );
 								}
 								?>
 								</td>
@@ -205,9 +205,9 @@ class AdminAjax extends BaseController {
 						}
 
 						echo '<tr>
-                            <td ' . esc_html( $css_name ) . '>' . esc_html( $name ) . ' </td>
-                            <td> ' . esc_html( $type ) . '</td>
-                            <td> ' . esc_html( $description ) . '</td>
+                            <td ' . esc_txt( $css_name ) . '>' . esc_txt( $name ) . ' </td>
+                            <td> ' . esc_txt( $type ) . '</td>
+                            <td> ' . esc_txt( $description ) . '</td>
                         </tr>';
 					}
 					?>

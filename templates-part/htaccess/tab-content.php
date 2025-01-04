@@ -9,7 +9,7 @@
  * @author    Franck VANHOUCKE <ct4gg@ginkgos.net>
  * @copyright 2021-2023 Copyright 2023, Inc. All rights reserved.
  * @license   GNU General Public License version 2 or later
- * @version   1.5.1 GIT:https://github.com/thanatos-vf-2000/WordPress
+ * @version   1.5.2 GIT:https://github.com/thanatos-vf-2000/WordPress
  * @link      https://ginkgos.net
  */
 
@@ -25,11 +25,40 @@ use CT4GG\Api\FileHTAcccess;
 					<p><?php submit_button( __( 'Update Htaccess', 'ct4gg' ), 'primary', 'submit-build-htaccess', false ); ?></p>
 					<?php
 					$htaccess_file = ABSPATH . '.htaccess';
-					if ( file_exists( $htaccess_file ) ) {
-						echo '<p>' . esc_html( $htaccess_file . __( ' updated on ', 'ct4gg' ) . gmdate( 'F d Y H:i:s.', filemtime( $htaccess_file ) ) ) . '</p>';
-						?>
-						<textarea cols="150" style="margin-top: 0px; margin-bottom: 0px; height: 500px;" name="htaccess-content" ><?php echo esc_html( wp_remote_get( $htaccess_file ) ); ?></textarea>
-					<?php } ?>
+					global $wp_filesystem;
+					if ( ! is_a( $wp_filesystem, 'WP_Filesystem_Base' ) ) {
+						if ( ! function_exists( 'request_filesystem_credentials' ) ) {
+							require_once( ABSPATH . 'wp-admin/includes/file.php' );
+						}
+					}
+					// Demander les informations d'identification du système de fichiers, si nécessaire.
+					if ( false === ( $creds = request_filesystem_credentials( site_url() ) ) ) {
+						// Si les informations d'identification ne peuvent pas être obtenues, arrêter ici.
+						esc_html_e( 'Error during checking identification.', 'ct4gg' );
+						return;
+					}
+					// Initialiser le système de fichiers global.
+					if ( ! WP_Filesystem( $creds ) ) {
+						// Si la connexion échoue, arrêter ici.
+						esc_html_e( 'Error during Initialize global file system.', 'ct4gg' );
+						return;
+					}
+					// Vérifier si le fichier existe.
+					if ( ! $wp_filesystem->exists( $htaccess_file ) ) {
+						esc_html_e( 'File htaccess.txt not found.', 'ct4gg' );
+						return;
+					}
+					$contents = $wp_filesystem->get_contents( $htaccess_file  );
+					if ( ! $contents ) {
+						esc_html_e( 'Error accessing file.', 'ct4gg' );
+					} else {
+						if ( file_exists( $htaccess_file ) ) {
+							echo '<p>' . esc_html( $htaccess_file . __( ' updated on ', 'ct4gg' ) . gmdate( 'F d Y H:i:s.', filemtime( $htaccess_file ) ) ) . '</p>';
+							?>
+							<textarea cols="150" style="margin-top: 0px; margin-bottom: 0px; height: 500px;" name="htaccess-content" ><?php echo esc_html( $contents ); ?></textarea>
+						<?php } 
+					}
+					?>
 				</form>
 			</div>
 			<div class="ct4gg-advertise">
@@ -54,11 +83,11 @@ use CT4GG\Api\FileHTAcccess;
 							} else {
 								$check = '<input type="checkbox" class="radio" value="' . esc_attr( basename( $htaccess_filename ) ) . '" id="ct4gg-htaccess" name="ct4gg-htaccess" />';
 							}
-							echo '<dt>' . esc_html( $check ) . '<b>' . esc_html( basename( $htaccess_filename ) ) . '</b> - ' . esc_html( gmdate( 'Ymd H:i:s.', filemtime( ABSPATH . $htaccess_filename ) ) ) . '</dt>';
+							echo '<dt>' . esc_txt( $check ) . '<b>' . esc_html( basename( $htaccess_filename ) ) . '</b> - ' . esc_html( gmdate( 'Ymd H:i:s.', filemtime( ABSPATH . $htaccess_filename ) ) ) . '</dt>';
 						}
 					}
-						submit_button( __( 'Restore', 'ct4gg' ), 'primary', 'submit-htaccess-restore', false );
-						submit_button( __( 'Delete', 'ct4gg' ), 'secondary', 'submit-htaccess-delete', false );
+					submit_button( __( 'Restore', 'ct4gg' ), 'primary', 'submit-htaccess-restore', false );
+					submit_button( __( 'Delete', 'ct4gg' ), 'secondary', 'submit-htaccess-delete', false );
 					?>
 					</dl>
 				</form>

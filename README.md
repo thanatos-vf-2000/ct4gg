@@ -11,7 +11,7 @@ Tags: tools, customiser, homepage, redirect, Jetpack, performance, login, speed,
 Requires at least: 5.7
 Tested up to: 6.4.3
 Requires PHP: 7.4
-Stable tag: 1.5.1
+Stable tag: 1.5.2
 License: GPLv2
 
 Wordpress customiser tools for beginer and confirmed users.
@@ -127,15 +127,18 @@ If you want a new feature, you can contact me by email at contact@ginkgos.net
 
 ## Changelog
 
-### 1.5.1 (2402-SFP1)
-*Release Date - 11 Febrary 2024*
+### 1.5.2 (2402-SFP2) =
+*Release Date - 25 Febrary 2024*
 
-* Test up Woodpress 6.4.3,
+* Test up Woodpress 6.5.4,
+* Compatible PHP8.3 and change Requires PHP to 8.0,
+* Correction function old post notice
 * Add Header check Security,
 * Add Header check information,
 * Add Header check Cache,
 * Add function to desable ChatGPT and ChatGPT pluging in Robot.txt,
-* Correction phpcs 3.7.2 error.
+* Correction phpcs 3.7.2 error,
+* Add security Deletion file.
 
 See [changelog.txt](https://plugins.svn.wordpress.org/ct4gg/trunk/changelog.txt) for older changelog
 
