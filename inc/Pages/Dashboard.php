@@ -1,7 +1,7 @@
 <?php
 /**
  * @package CT4GGPlugin
- * @version 1.5.1
+ * @version 1.5.3
  */
 
 namespace CT4GG\Pages;
@@ -15,6 +15,7 @@ use CT4GG\Api\Callbacks\ManagerCallbacks;
  *
  */
 class Dashboard extends BaseController {
+
 
 	public $settings;
 

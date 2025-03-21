@@ -9,24 +9,27 @@
  * @author    Franck VANHOUCKE <ct4gg@ginkgos.net>
  * @copyright 2021-2023 Copyright 2023, Inc. All rights reserved.
  * @license   GNU General Public License version 2 or later
- * @version   1.5.2 GIT:https://github.com/thanatos-vf-2000/WordPress
+ * @version   1.5.3 GIT:https://github.com/thanatos-vf-2000/WordPress
  * @link      https://ginkgos.net
  * @since     1.3.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) exit;
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
- if ( isset( $_POST[ CT4GG_NAME . '-verif' ] ) && wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST[ CT4GG_NAME . '-verif' ] ) ), CT4GG_NAME . '-opt' ) ) {
+if ( isset( $_POST[ CT4GG_NAME . '-verif' ] ) && wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST[ CT4GG_NAME . '-verif' ] ) ), CT4GG_NAME . '-opt' ) ) {
 
 	if ( isset( $_POST['ct4gg-robots'] ) ) {
 		$ct4gg_robots = sanitize_text_field( wp_unslash( $_POST['ct4gg-robots'] ) );
 	} else {
-		$ct4gg_robots = '';}
+		$ct4gg_robots = '';
+	}
 	if ( 'ct4gg-robots-ko' === $type ) :?>
 		<div class="notice notice-alt notice-error notice-large">
 			<h4><?php esc_html_e( '$_POST error (ct4gg-robots-ko)', 'ct4gg' ); ?></h4>
 			<p>
-				<?php esc_html_e( 'impossible to retrieve the variable <strong>ct4gg-robots-ko</strong>.', 'ct4gg' ); ?> <br/>
+		<?php esc_html_e( 'impossible to retrieve the variable <strong>ct4gg-robots-ko</strong>.', 'ct4gg' ); ?> <br/>
 			</p>
 		</div>
 		<?php
@@ -36,7 +39,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		<div class="notice notice-alt notice-error notice-large">
 			<h4><?php esc_html_e( 'Backup failed!', 'ct4gg' ); ?></h4>
 			<p>
-				<?php esc_html_e( 'backup file robots.txt failed. ', 'ct4gg' ); ?><br/>
+		<?php esc_html_e( 'backup file robots.txt failed. ', 'ct4gg' ); ?><br/>
 			</p>
 		</div>
 		<?php
@@ -46,7 +49,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		<div class="notice notice-alt notice-error notice-large">
 			<h4><?php esc_html_e( 'Delete failed!', 'ct4gg' ); ?></h4>
 			<p>
-				<?php esc_html_e( 'Unable to delete the file: ', 'ct4gg' ); ?><strong><?php echo esc_html( $ct4gg_robots ); ?> </strong> <br/>
+		<?php esc_html_e( 'Unable to delete the file: ', 'ct4gg' ); ?><strong><?php echo esc_html( $ct4gg_robots ); ?> </strong> <br/>
 			</p>
 		</div>
 		<?php
@@ -56,7 +59,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		<div class="notice notice-alt notice-success notice-large">
 			<h4><?php esc_html_e( 'Delete file successfuly.', 'ct4gg' ); ?></h4>
 			<p>
-				<?php esc_html_e( 'Delete file: ', 'ct4gg' ); ?> <strong><?php echo esc_html( $ct4gg_robots ); ?> </strong> <br/>
+		<?php esc_html_e( 'Delete file: ', 'ct4gg' ); ?> <strong><?php echo esc_html( $ct4gg_robots ); ?> </strong> <br/>
 			</p>
 		</div>
 		<?php
@@ -66,7 +69,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		<div class="notice notice-alt notice-error notice-large">
 			<h4><?php esc_html_e( 'Copy failed!', 'ct4gg' ); ?></h4>
 			<p>
-				<?php esc_html_e( 'Unable to copy the file: ', 'ct4gg' ); ?><strong><?php echo esc_html( $ct4gg_robots ); ?> </strong> => robots.txt<br/>
+		<?php esc_html_e( 'Unable to copy the file: ', 'ct4gg' ); ?><strong><?php echo esc_html( $ct4gg_robots ); ?> </strong> => robots.txt<br/>
 			</p>
 		</div>
 		<?php
@@ -76,7 +79,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		<div class="notice notice-alt notice-success notice-large">
 			<h4><?php esc_html_e( 'Copy file successfuly.', 'ct4gg' ); ?></h4>
 			<p>
-				<?php esc_html_e( 'Copy file: ', 'ct4gg' ); ?> <strong><?php echo esc_html( $ct4gg_robots ); ?> </strong> => robots.txt<br/>
+		<?php esc_html_e( 'Copy file: ', 'ct4gg' ); ?> <strong><?php echo esc_html( $ct4gg_robots ); ?> </strong> => robots.txt<br/>
 			</p>
 		</div>
 		<?php
@@ -86,7 +89,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		<div class="notice notice-alt notice-error notice-large">
 			<h4><?php esc_html_e( 'Update failed!', 'ct4gg' ); ?></h4>
 			<p>
-				<?php esc_html_e( 'Unable to update the file: ', 'ct4gg' ); ?><strong>robots.txt </strong>.<br/>
+		<?php esc_html_e( 'Unable to update the file: ', 'ct4gg' ); ?><strong>robots.txt </strong>.<br/>
 			</p>
 		</div>
 		<?php
@@ -96,8 +99,9 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		<div class="notice notice-alt notice-success notice-large">
 			<h4><?php esc_html_e( 'Update file successfuly.', 'ct4gg' ); ?></h4>
 			<p>
-				<?php esc_html_e( 'Update file: ', 'ct4gg' ); ?> <strong>robots.txt </strong>.<br/>
+		<?php esc_html_e( 'Update file: ', 'ct4gg' ); ?> <strong>robots.txt </strong>.<br/>
 			</p>
 		</div>
-	<?php endif;
- }
+		<?php
+	endif;
+}

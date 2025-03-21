@@ -9,7 +9,7 @@
  * @author    Franck VANHOUCKE <ct4gg@ginkgos.net>
  * @copyright 2021-2023 Copyright 2023, Inc. All rights reserved.
  * @license   GNU General Public License version 2 or later
- * @version   1.5.2 GIT:https://github.com/thanatos-vf-2000/WordPress
+ * @version   1.5.3 GIT:https://github.com/thanatos-vf-2000/WordPress
  * @link      https://ginkgos.net
  */
 
@@ -23,6 +23,7 @@ use CT4GG\Core\Options;
  * Messages
  */
 class Messages extends BaseController {
+
 
 	public function register() {
 		add_action( 'init', array( $this, 'init' ) );
@@ -49,11 +50,11 @@ class Messages extends BaseController {
 				</div>
 				<div class="ct4gg-messages-txt">
 					<p>
-						<?php
-						$link         = admin_url( 'admin.php?page=ct4gg_plugin' );
-						$current_user = wp_get_current_user();
-						printf( esc_html__( 'Hey <b>%1$s</b>, %2$s v1.3.0 add a new options for customize login page (New Version only), see %3$s.', 'ct4gg' ), esc_html( $current_user->user_login ), '<em>CT4GG</em>', '<a href="' . esc_html( $link ) . '"><em>' . esc_html( __( 'Settings', 'ct4gg' ) . '</em></a>' ) );
-						?>
+			<?php
+			$link         = admin_url( 'admin.php?page=ct4gg_plugin' );
+			$current_user = wp_get_current_user();
+			printf( esc_html__( 'Hey <b>%1$s</b>, %2$s v1.3.0 add a new options for customize login page (New Version only), see %3$s.', 'ct4gg' ), esc_html( $current_user->user_login ), '<em>CT4GG</em>', '<a href="' . esc_html( $link ) . '"><em>' . esc_html( __( 'Settings', 'ct4gg' ) . '</em></a>' ) );
+			?>
 					</p>
 					<p><?php esc_html_e( 'Enable New Version for customize login page in the plugin options.', 'ct4gg' ); ?> <a href="<?php echo esc_html( admin_url( 'admin.php?page=ct4gg_plugin' ) ); ?>"><?php esc_html_e( 'Settings.', 'ct4gg' ); ?></a></p>
 				</div>

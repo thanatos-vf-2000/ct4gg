@@ -9,7 +9,7 @@
  * @author    Franck VANHOUCKE <ct4gg@ginkgos.net>
  * @copyright 2021-2023 Copyright 2023, Inc. All rights reserved.
  * @license   GNU General Public License version 2 or later
- * @version   1.5.1 GIT:https://github.com/thanatos-vf-2000/WordPress
+ * @version   1.5.3 GIT:https://github.com/thanatos-vf-2000/WordPress
  * @link      https://ginkgos.net
  */
 
@@ -21,8 +21,8 @@ use CT4GG\Api\FileSecurity;
 
 if ( isset( $_SERVER['REQUEST_URI'] ) && strpos( sanitize_text_field( wp_unslash( $_SERVER['REQUEST_URI'] ) ), 'settings-updated=true' ) !== false ) {
 	/*
-	 * File htaccess
-	 */
+	* File htaccess
+	*/
 	$htaccess_file   = new FileHTAccess();
 	$htaccess_params = array(
 		'login_screen_v2',
@@ -57,8 +57,8 @@ if ( isset( $_SERVER['REQUEST_URI'] ) && strpos( sanitize_text_field( wp_unslash
 	}
 
 	/*
-	 * File humans
-	 */
+	* File humans
+	*/
 	$humans_file   = new FileHumans();
 	$humans_params = array(
 		'humans_team',
@@ -89,8 +89,8 @@ if ( isset( $_SERVER['REQUEST_URI'] ) && strpos( sanitize_text_field( wp_unslash
 	}
 
 	/*
-	 * File robots
-	 */
+	* File robots
+	*/
 	$robots_file   = new FileRobots();
 	$robots_params = array(
 		'robots_sitemap',
@@ -120,8 +120,8 @@ if ( isset( $_SERVER['REQUEST_URI'] ) && strpos( sanitize_text_field( wp_unslash
 	}
 
 	/*
-	 * File security
-	 */
+	* File security
+	*/
 	$security_file   = new Filesecurity();
 	$security_params = array(
 		'security_contact',

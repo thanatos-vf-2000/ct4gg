@@ -9,7 +9,7 @@
  * @author    Franck VANHOUCKE <ct4gg@ginkgos.net>
  * @copyright 2021-2023 Copyright 2023, Inc. All rights reserved.
  * @license   GNU General Public License version 2 or later
- * @version   1.5.1 GIT:https://github.com/thanatos-vf-2000/WordPress
+ * @version   1.5.3 GIT:https://github.com/thanatos-vf-2000/WordPress
  * @link      https://ginkgos.net
  */
 
@@ -21,6 +21,7 @@ use CT4GG\Core\BaseController;
  * Social Buttons
  */
 class SocialButtons extends BaseController {
+
 
 	public function register() {
 		if ( $this->activated( 'socialbuttons_activated' ) ) {
@@ -46,23 +47,23 @@ class SocialButtons extends BaseController {
 		global $post;
 		if ( is_singular() || is_home() ) {
 			/*
-			 * Get current page URL
-			 */
+			* Get current page URL
+			*/
 			$sb_url = rawurlencode( get_permalink() );
 
 			/*
-			 * Get current page title
-			 */
+			* Get current page title
+			*/
 			$sb_title = str_replace( ' ', '%20', get_the_title() );
 
 			/*
-			 * Get Post Thumbnail for pinterest
-			 */
+			* Get Post Thumbnail for pinterest
+			*/
 			$sb_thumb = $this->get_the_post_thumbnail_src( get_the_post_thumbnail() );
 
 			/*
-			 * Construct sharing URL without using any script
-			 */
+			* Construct sharing URL without using any script
+			*/
 			$twitter_url  = 'https://twitter.com/intent/tweet?text=' . $sb_title . '&amp;url=' . $sb_url . '&amp;via=wpvkp';
 			$facebook_url = 'https://www.facebook.com/sharer/sharer.php?u=' . $sb_url;
 			$buffer_url   = 'https://bufferapp.com/add?url=' . $sb_url . '&amp;text=' . $sb_title;
@@ -76,21 +77,21 @@ class SocialButtons extends BaseController {
 			}
 
 			/*
-			 * Based on popular demand added Pinterest too
-			 */
+			* Based on popular demand added Pinterest too
+			*/
 			$pinterest_url = 'https://pinterest.com/pin/create/button/?url=' . $sb_url . '&amp;media=' . $sb_thumb[0] . '&amp;description=' . $sb_title;
 
 			$mail_subject = str_replace( ' ', '%20', __( 'Your friend has shared an article you with you.', 'ct4gg' ) );
 			$mail_url     = 'mailto:?subject=' . $mail_subject . '&body=' . $sb_title . '%20' . $sb_url;
 
 			/*
-			 * Display type
-			 */
+			* Display type
+			*/
 			$btn = ( $this->activated( 'socialbuttons_txt' ) ) ? 'ct4gg-social-1' : 'ct4gg-social-2';
 
 			/*
-			 * Add sharing button at the end of page/page content
-			 */
+			* Add sharing button at the end of page/page content
+			*/
 			$content .= '<div class="ct4gg-social-box"><div class="ct4gg-social-btn">';
 			if ( $this->activated( 'socialbuttons_twitter' ) ) {
 				$content .= '<a class="' . $btn . ' sbtn ct4gg-twitter" href="' . $twitter_url . '" target="_blank" rel="nofollow"><span>Twitter</span></a>';
@@ -118,8 +119,8 @@ class SocialButtons extends BaseController {
 			return $content;
 		} else {
 			/*
-			 * if not a post/page then don't include sharing button
-			 */
+			* if not a post/page then don't include sharing button
+			*/
 			return $content;
 		}
 	}

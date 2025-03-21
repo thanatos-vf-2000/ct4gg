@@ -9,7 +9,7 @@
  * @author    Franck VANHOUCKE <ct4gg@ginkgos.net>
  * @copyright 2021-2023 Copyright 2023, Inc. All rights reserved.
  * @license   GNU General Public License version 2 or later
- * @version   1.5.1 GIT:https://github.com/thanatos-vf-2000/WordPress
+ * @version   1.5.3 GIT:https://github.com/thanatos-vf-2000/WordPress
  * @link      https://ginkgos.net
  */
 
@@ -32,6 +32,7 @@ require_once ABSPATH . 'wp-includes/customize/class-wp-customize-background-posi
  *
  */
 class Login extends BaseController {
+
 
 	public $callbacks;
 
@@ -113,7 +114,7 @@ class Login extends BaseController {
 		/**
 		 * Add submenu item to Theme configuration
 		 */
-		// phpcs:ignore WordPress.WP.GlobalVariablesOverride
+     // phpcs:ignore WordPress.WP.GlobalVariablesOverride
 		$submenu['themes.php'][] = array( 'Login Custom', 'manage_options', $login_url, CT4GG_NAME . '_login_panel' );
 	}
 
@@ -503,15 +504,15 @@ class Login extends BaseController {
 										 * Check if option exists in choice array
 										 */
 										if ( array_key_exists( $input, $control->choices ) ) {
-											/**
-											 * If it does, return the value
-											 */
-											return $input;
+											 /**
+											  * If it does, return the value
+											  */
+											 return $input;
 										} else {
-											/**
-											 * Else, return default value
-											 */
-											return $setting->default;
+											  /**
+											   * Else, return default value
+											   */
+											  return $setting->default;
 										}
 									},
 								)
@@ -672,8 +673,8 @@ class Login extends BaseController {
 		/*
 		* Button
 		*/
-		$custom_css     .= '#login form .submit .button {';
-			$custom_css .= 'height: auto;';
+		$custom_css .= '#login form .submit .button {';
+		$custom_css .= 'height: auto;';
 		if ( ! empty( $options['ct4gg_button_bg'] ) ) {
 			$custom_css .= 'background-color: ' . $options['ct4gg_button_bg'] . ';';
 		}
@@ -700,36 +701,36 @@ class Login extends BaseController {
 		* Other Styling
 		*/
 		if ( ! empty( $options['ct4gg_field_back_blog'] ) && 1 === $options['ct4gg_field_back_blog'] ) {
-			$custom_css     .= '#login #backtoblog {';
-				$custom_css .= 'display: none;';
-			$custom_css     .= '}';
+			$custom_css .= '#login #backtoblog {';
+			$custom_css .= 'display: none;';
+			$custom_css .= '}';
 		}
 		if ( ! empty( $options['ct4gg_other_color'] ) ) {
-			$custom_css     .= '.login #nav, .login #nav a, .login #backtoblog a, .login .privacy-policy-page-link a {';
-				$custom_css .= 'color: ' . $options['ct4gg_other_color'] . ';';
-			$custom_css     .= '}';
+			$custom_css .= '.login #nav, .login #nav a, .login #backtoblog a, .login .privacy-policy-page-link a {';
+			$custom_css .= 'color: ' . $options['ct4gg_other_color'] . ';';
+			$custom_css .= '}';
 		}
 		if ( ! empty( $options['ct4gg_other_color_hover'] ) ) {
-			$custom_css     .= '.login #backtoblog a:hover, .login #nav a:hover, .login .privacy-policy-page-link a:hover {';
-				$custom_css .= 'color: ' . $options['ct4gg_other_color_hover'] . ';';
-			$custom_css     .= '}';
+			$custom_css .= '.login #backtoblog a:hover, .login #nav a:hover, .login .privacy-policy-page-link a:hover {';
+			$custom_css .= 'color: ' . $options['ct4gg_other_color_hover'] . ';';
+			$custom_css .= '}';
 		}
 		/**
 		 * Lost Password Link CSS
 		 */
 		if ( ! empty( $options['ct4gg_field_lost_password'] ) && 1 === $options['ct4gg_field_lost_password'] ) {
-			$custom_css     .= '#login #nav a:last-child {';
-				$custom_css .= 'display: none;';
-			$custom_css     .= '}';
+			$custom_css .= '#login #nav a:last-child {';
+			$custom_css .= 'display: none;';
+			$custom_css .= '}';
 		}
 
 		/**
 		 * Register Link
 		 */
 		if ( ! empty( $options['ct4gg_field_register_link'] ) && 1 === $options['ct4gg_field_register_link'] ) {
-			$custom_css     .= '#login #nav a:first-child {';
-				$custom_css .= 'display: none;';
-			$custom_css     .= '}';
+			$custom_css .= '#login #nav a:first-child {';
+			$custom_css .= 'display: none;';
+			$custom_css .= '}';
 		}
 
 		/**

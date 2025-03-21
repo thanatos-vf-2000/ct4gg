@@ -9,13 +9,14 @@
  * @author    Franck VANHOUCKE <ct4gg@ginkgos.net>
  * @copyright 2021-2023 Copyright 2023, Inc. All rights reserved.
  * @license   GNU General Public License version 2 or later
- * @version   1.5.1 GIT:https://github.com/thanatos-vf-2000/WordPress
+ * @version   1.5.3 GIT:https://github.com/thanatos-vf-2000/WordPress
  * @link      https://ginkgos.net
  */
 
 namespace CT4GG\Core;
 
 class Options {
+
 
 	/**
 	 * Class instance.
@@ -38,9 +39,9 @@ class Options {
 	/**
 	 * A static option variable.
 	 *
-	 * @since 0.0.1
+	 * @since  0.0.1
 	 * @access private
-	 * @var mixed $db_options
+	 * @var    mixed $db_options
 	 */
 	private static $db_options_no_defaults;
 
@@ -70,7 +71,7 @@ class Options {
 			return array();
 		}
 
-		$content = require $path;
+		$content = include $path;
 
 		return $content;
 	}

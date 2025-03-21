@@ -29,11 +29,12 @@ require_once ABSPATH . 'wp-includes/class-wp-customize-control.php';
 /**
  * Alpha Color Control Class for Customizer
  *
- * @author  Hardeep Asrani
- * @version 2.2.0
+ * @author     Hardeep Asrani
+ * @version    2.2.0
  * @correction F. VANHOUCKE 1.5.1
  */
 class Alpha extends \WP_Customize_Control {
+
 
 
 	public $type    = 'alphacolor';

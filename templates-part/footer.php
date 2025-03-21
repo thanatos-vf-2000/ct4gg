@@ -1,7 +1,7 @@
 <?php
 /**
  * @package CT4GGPlugin
- * @version 1.5.1
+ * @version 1.5.3
  *
  * Desciption: Footer
  */

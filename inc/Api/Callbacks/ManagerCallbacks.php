@@ -9,7 +9,7 @@
  * @author    Franck VANHOUCKE <ct4gg@ginkgos.net>
  * @copyright 2021-2023 Copyright 2023, Inc. All rights reserved.
  * @license   GNU General Public License version 2 or later
- * @version   1.5.2 GIT:https://github.com/thanatos-vf-2000/WordPress
+ * @version   1.5.3 GIT:https://github.com/thanatos-vf-2000/WordPress
  * @link      https://ginkgos.net
  * @since     1.0.0
  */
@@ -23,6 +23,7 @@ use CT4GG\Core\Options;
  * Class ManagerCallbacks
  */
 class ManagerCallbacks extends BaseController {
+
 
 	/**
 	 * Function checkboxSanitize
@@ -213,7 +214,7 @@ class ManagerCallbacks extends BaseController {
 				<input id="upload_image" type="text" size="36" name="' . esc_attr( $option_name ) . '[' . esc_attr( $name ) . ']" value="' . esc_attr( $args['value'] ) . '" /> 
 				<input id="upload_image_button" for="' . esc_attr( $option_name ) . '[' . esc_attr( $name ) . ']" class="button" type="button" value="' . esc_attr( __( 'Upload Menu', 'ct4gg' ) ) . '" />
 				<br>';
-		if ( ! empty($args['value']) ) {
+		if ( ! empty( $args['value'] ) ) {
 			echo '<img id="imageBox" name="' . esc_attr( $option_name ) . '[' . esc_attr( $name ) . ']" style="height: ' . esc_attr( $args['height'] ) . '; width: ' . esc_attr( $args['width'] ) . ';" src="' . esc_url( $args['value'] ) . '" alt="' . esc_attr( $name ) . '">';
 		}
 		echo '</div>';
@@ -343,7 +344,7 @@ class ManagerCallbacks extends BaseController {
 		if ( ! file_exists( $path ) ) {
 			return array();
 		}
-			$content = include $path;
-			return $content;
+		$content = include $path;
+		return $content;
 	}
 }

@@ -9,7 +9,7 @@
  * @author    Franck VANHOUCKE <ct4gg@ginkgos.net>
  * @copyright 2021-2023 Copyright 2023, Inc. All rights reserved.
  * @license   GNU General Public License version 2 or later
- * @version   1.5.1 GIT:https://github.com/thanatos-vf-2000/WordPress
+ * @version   1.5.3 GIT:https://github.com/thanatos-vf-2000/WordPress
  * @link      https://ginkgos.net
  */
 
@@ -21,6 +21,7 @@ use CT4GG\Core\BaseController;
  *
  */
 class Admin extends BaseController {
+
 
 	public function register() {
 		if ( $this->activated( 'classic_widgets' ) ) {
@@ -87,7 +88,7 @@ class Admin extends BaseController {
 
 		if ( $is_ct4gg_screen ) {
 			$footer_text = sprintf(
-				/* translators: 1: Elementor, 2: Link to plugin review */
+			/* translators: 1: Elementor, 2: Link to plugin review */
 				__( 'Enjoyed %1$s? Please leave us a %2$s rating. We really appreciate your support!', 'ct4gg' ),
 				'<strong>' . esc_html__( 'CT4GG', 'ct4gg' ) . '</strong>',
 				'<a href="https://wordpress.org/support/plugin/ct4gg/reviews/#new-post" target="_blank" class ="ct4gg-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</a>'

@@ -9,7 +9,7 @@
  * @author    Franck VANHOUCKE <ct4gg@ginkgos.net>
  * @copyright 2021-2023 Copyright 2023, Inc. All rights reserved.
  * @license   GNU General Public License version 2 or later
- * @version   1.5.1 GIT:https://github.com/thanatos-vf-2000/WordPress
+ * @version   1.5.3 GIT:https://github.com/thanatos-vf-2000/WordPress
  * @link      https://ginkgos.net
  * @since     1.0.0
  */
@@ -22,6 +22,7 @@ use CT4GG\Core\BaseController;
  * Class AdminCallbacks
  */
 class AdminCallbacks extends BaseController {
+
 
 	/**
 	 * Function adminDashboard

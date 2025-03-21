@@ -9,7 +9,7 @@
  * @author    Franck VANHOUCKE <ct4gg@ginkgos.net>
  * @copyright 2021-2023 Copyright 2023, Inc. All rights reserved.
  * @license   GNU General Public License version 2 or later
- * @version   1.5.1 GIT:https://github.com/thanatos-vf-2000/WordPress
+ * @version   1.5.3 GIT:https://github.com/thanatos-vf-2000/WordPress
  * @link      https://ginkgos.net
  */
 
@@ -19,9 +19,9 @@
 			<div class="ct4gg-infos">
 				<form method="post" action="options.php">
 					<?php
-						settings_fields( CT4GG_NAME . '_plugin_settings' );
-						do_settings_sections( CT4GG_NAME . '_plugin' );
-						submit_button();
+					settings_fields( CT4GG_NAME . '_plugin_settings' );
+					do_settings_sections( CT4GG_NAME . '_plugin' );
+					submit_button();
 					?>
 				</form>
 			</div>
@@ -39,7 +39,7 @@
 				global $wp_filesystem;
 				if ( ! is_a( $wp_filesystem, 'WP_Filesystem_Base' ) ) {
 					if ( ! function_exists( 'request_filesystem_credentials' ) ) {
-						require_once( ABSPATH . 'wp-admin/includes/file.php' );
+						include_once ABSPATH . 'wp-admin/includes/file.php';
 					}
 				}
 				// Demander les informations d'identification du système de fichiers, si nécessaire.
@@ -60,13 +60,13 @@
 					esc_html_e( 'File changelog.txt not found.', 'ct4gg' );
 					return;
 				}
-				$contents = $wp_filesystem->get_contents_array( $file_path  );
+				$contents = $wp_filesystem->get_contents_array( $file_path );
 				if ( ! $contents ) {
 					esc_html_e( 'Error accessing file.', 'ct4gg' );
 				} else {
-					//echo '<dd>' . esc_html( $contents ) . '</dd>';
-					//$contents = (is_array($contents) ? $contents : [$contents]);
-					foreach ( ($contents) as $line)  {
+					// echo '<dd>' . esc_html( $contents ) . '</dd>';
+					// $contents = (is_array($contents) ? $contents : [$contents]);
+					foreach ( ( $contents ) as $line ) {
 						if ( preg_match( '/= (.*) =/', $line, $matches ) ) {
 							$nb++;
 							$ver = $matches[1];

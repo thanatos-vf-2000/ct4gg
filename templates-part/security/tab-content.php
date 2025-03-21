@@ -9,7 +9,7 @@
  * @author    Franck VANHOUCKE <ct4gg@ginkgos.net>
  * @copyright 2021-2023 Copyright 2023, Inc. All rights reserved.
  * @license   GNU General Public License version 2 or later
- * @version   1.5.2 GIT:https://github.com/thanatos-vf-2000/WordPress
+ * @version   1.5.3 GIT:https://github.com/thanatos-vf-2000/WordPress
  * @link      https://ginkgos.net
  */
 
@@ -29,7 +29,7 @@ use CT4GG\Api\FileHumans;
 					global $wp_filesystem;
 					if ( ! is_a( $wp_filesystem, 'WP_Filesystem_Base' ) ) {
 						if ( ! function_exists( 'request_filesystem_credentials' ) ) {
-							require_once( ABSPATH . 'wp-admin/includes/file.php' );
+							include_once ABSPATH . 'wp-admin/includes/file.php';
 						}
 					}
 					// Demander les informations d'identification du système de fichiers, si nécessaire.
@@ -49,7 +49,7 @@ use CT4GG\Api\FileHumans;
 						esc_html_e( 'File security.txt not found.', 'ct4gg' );
 						return;
 					}
-					$contents = $wp_filesystem->get_contents( $security_file  );
+					$contents = $wp_filesystem->get_contents( $security_file );
 					if ( ! $contents ) {
 						esc_html_e( 'Error accessing file.', 'ct4gg' );
 					} else {
@@ -57,10 +57,11 @@ use CT4GG\Api\FileHumans;
 							echo '<p>' . esc_html( $security_file . __( ' updated on ', 'ct4gg' ) . gmdate( 'F d Y H:i:s.', filemtime( $security_file ) ) ) . '</p>';
 							?>
 							<textarea cols="150" style="margin-top: 0px; margin-bottom: 0px; height: 500px;" name="security-content"><?php echo esc_html( $contents ); ?></textarea>
-						<?php } 
+							<?php
+						}
 					}
-					?>				
-				</form>
+					?>
+									</form>
 			</div>
 			<div class="ct4gg-advertise">
 				<?php self::get_template( array( 'support' ) ); ?>
@@ -80,11 +81,12 @@ use CT4GG\Api\FileHumans;
 					foreach ( scandir( ABSPATH ) as $security_filename ) {
 						if ( preg_match( '~security*~', $security_filename ) ) {
 							if ( basename( $security_filename ) === 'security.txt' ) {
-								$check = '';
+										 $check = '';
 							} else {
 								$check = '<input type="checkbox" class="radio" value="' . esc_attr( basename( $security_filename ) ) . '" id="ct4gg-security" name="ct4gg-security" />';
 							}
-							echo '<dt>' . esc_txt( $check ) . '<b>' . esc_html( basename( $security_filename ) ) . '</b> - ' . esc_html( gmdate( 'Ymd H:i:s.', filemtime( ABSPATH . $security_filename ) ) ) . '</dt>';
+							$display = '<dt>' . esc_txt( $check ) . '<b>' . esc_html( basename( $security_filename ) ) . '</b> - ' . esc_html( gmdate( 'Ymd H:i:s.', filemtime( ABSPATH . $security_filename ) ) ) . '</dt>';
+							echo esc_html( $display );
 						}
 					}
 					submit_button( __( 'Restore', 'ct4gg' ), 'primary', 'submit-security-restore', false );

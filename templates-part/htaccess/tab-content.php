@@ -9,7 +9,7 @@
  * @author    Franck VANHOUCKE <ct4gg@ginkgos.net>
  * @copyright 2021-2023 Copyright 2023, Inc. All rights reserved.
  * @license   GNU General Public License version 2 or later
- * @version   1.5.2 GIT:https://github.com/thanatos-vf-2000/WordPress
+ * @version   1.5.3 GIT:https://github.com/thanatos-vf-2000/WordPress
  * @link      https://ginkgos.net
  */
 
@@ -28,7 +28,7 @@ use CT4GG\Api\FileHTAcccess;
 					global $wp_filesystem;
 					if ( ! is_a( $wp_filesystem, 'WP_Filesystem_Base' ) ) {
 						if ( ! function_exists( 'request_filesystem_credentials' ) ) {
-							require_once( ABSPATH . 'wp-admin/includes/file.php' );
+							include_once ABSPATH . 'wp-admin/includes/file.php';
 						}
 					}
 					// Demander les informations d'identification du système de fichiers, si nécessaire.
@@ -48,7 +48,7 @@ use CT4GG\Api\FileHTAcccess;
 						esc_html_e( 'File htaccess.txt not found.', 'ct4gg' );
 						return;
 					}
-					$contents = $wp_filesystem->get_contents( $htaccess_file  );
+					$contents = $wp_filesystem->get_contents( $htaccess_file );
 					if ( ! $contents ) {
 						esc_html_e( 'Error accessing file.', 'ct4gg' );
 					} else {
@@ -56,7 +56,8 @@ use CT4GG\Api\FileHTAcccess;
 							echo '<p>' . esc_html( $htaccess_file . __( ' updated on ', 'ct4gg' ) . gmdate( 'F d Y H:i:s.', filemtime( $htaccess_file ) ) ) . '</p>';
 							?>
 							<textarea cols="150" style="margin-top: 0px; margin-bottom: 0px; height: 500px;" name="htaccess-content" ><?php echo esc_html( $contents ); ?></textarea>
-						<?php } 
+							<?php
+						}
 					}
 					?>
 				</form>
@@ -79,11 +80,12 @@ use CT4GG\Api\FileHTAcccess;
 					foreach ( scandir( ABSPATH ) as $htaccess_filename ) {
 						if ( preg_match( '~htaccess*~', $htaccess_filename ) ) {
 							if ( basename( $htaccess_filename ) === '.htaccess' ) {
-								$check = '';
+										 $check = '';
 							} else {
 								$check = '<input type="checkbox" class="radio" value="' . esc_attr( basename( $htaccess_filename ) ) . '" id="ct4gg-htaccess" name="ct4gg-htaccess" />';
 							}
-							echo '<dt>' . esc_txt( $check ) . '<b>' . esc_html( basename( $htaccess_filename ) ) . '</b> - ' . esc_html( gmdate( 'Ymd H:i:s.', filemtime( ABSPATH . $htaccess_filename ) ) ) . '</dt>';
+							$display = '<dt>' . esc_txt( $check ) . '<b>' . esc_html( basename( $htaccess_filename ) ) . '</b> - ' . esc_html( gmdate( 'Ymd H:i:s.', filemtime( ABSPATH . $htaccess_filename ) ) ) . '</dt>';
+							echo esc_html( $display );
 						}
 					}
 					submit_button( __( 'Restore', 'ct4gg' ), 'primary', 'submit-htaccess-restore', false );

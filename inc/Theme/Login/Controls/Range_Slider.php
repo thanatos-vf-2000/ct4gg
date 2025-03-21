@@ -32,6 +32,7 @@ require_once ABSPATH . 'wp-includes/class-wp-customize-control.php';
 class Range_Slider extends \WP_Customize_Control {
 
 
+
 	public $type = 'o2-range-slider';
 
 	public function to_json() {
@@ -64,30 +65,30 @@ class Range_Slider extends \WP_Customize_Control {
 		?>
 
 		<div>
-			<?php if ( ! empty( $this->label ) ) : ?>
+		<?php if ( ! empty( $this->label ) ) : ?>
 				<span class="customize-control-title"><?php echo esc_html( $this->label ); ?>
-				<?php if ( isset( $this->choices['percent'] ) && ( false !== $this->choices['percent'] ) ) : ?>
+			<?php if ( isset( $this->choices['percent'] ) && ( false !== $this->choices['percent'] ) ) : ?>
 					<div class="button-group" data-setting="align">
 						<input type="radio" class="o2-range-slider-buttonset" id="px-<?php echo esc_attr( $this->id ); ?>" name="<?php echo esc_attr( $this->id ); ?>" value="px" />
 						<label class="button" for="px-<?php echo esc_attr( $this->id ); ?>"><?php esc_html_e( 'px', 'ct4gg' ); ?></label>
 						<input type="radio" class="o2-range-slider-buttonset" id="percent-<?php echo esc_attr( $this->id ); ?>" name="<?php echo esc_attr( $this->id ); ?>" value="%" />
 						<label class="button" for="percent-<?php echo esc_attr( $this->id ); ?>"><?php esc_html_e( '%', 'ct4gg' ); ?></label>
 					</div>
-				<?php endif; ?>
-				</span>
-				<?php
-			endif;
-			if ( ! empty( $this->description ) ) :
-				?>
-				<span class="description customize-control-description"><?php echo esc_html( $this->description ); ?></span>
 			<?php endif; ?>
+				</span>
+			<?php
+		endif;
+		if ( ! empty( $this->description ) ) :
+			?>
+				<span class="description customize-control-description"><?php echo esc_html( $this->description ); ?></span>
+		<?php endif; ?>
 			<div id="<?php echo esc_attr( $this->id ); ?>">
 				<div class="o2-range-slider">
 					<input class="o2-range-slider-range" type="range" value="<?php echo intval( $this->value() ); ?>" <?php $this->input_attrs(); ?> />
 					<input class="o2-range-slider-value" type="number" value="<?php echo intval( $this->value() ); ?>" <?php $this->input_attrs(); ?> />
-					<?php if ( ! empty( $this->setting->default ) ) : ?>
+		<?php if ( ! empty( $this->setting->default ) ) : ?>
 						<span class="o2-range-reset-slider" title="<?php esc_html_e( 'Reset', 'ct4gg' ); ?>"><span class="dashicons dashicons-image-rotate"></span></span>
-					<?php endif; ?>
+		<?php endif; ?>
 				</div>
 			</div>
 		</div>

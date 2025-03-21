@@ -9,7 +9,7 @@
  * @author    Franck VANHOUCKE <ct4gg@ginkgos.net>
  * @copyright 2021-2023 Copyright 2023, Inc. All rights reserved.
  * @license   GNU General Public License version 2 or later
- * @version   1.5.1 GIT:https://github.com/thanatos-vf-2000/WordPress
+ * @version   1.5.3 GIT:https://github.com/thanatos-vf-2000/WordPress
  * @link      https://ginkgos.net
  */
 
@@ -18,6 +18,7 @@ namespace CT4GG;
 use CT4GG\Core\Options;
 
 final class Init {
+
 
 	/**
 	 * Store all the classes inside an array
@@ -70,7 +71,7 @@ final class Init {
 	/**
 	 * Initialize the class
 	 *
-	 * @param  class $class    class from the services array
+	 * @param class $class class from the services array
 	 *
 	 * @return class instance  new instance of the class
 	 */

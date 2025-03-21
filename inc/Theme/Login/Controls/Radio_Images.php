@@ -33,6 +33,7 @@ require_once ABSPATH . 'wp-includes/class-wp-customize-control.php';
 class Radio_Images extends \WP_Customize_Control {
 
 
+
 	public $type = 'o2-radio-images';
 
 	public function enqueue() {
@@ -42,21 +43,21 @@ class Radio_Images extends \WP_Customize_Control {
 	public function render_content() {
 		?>
 		<label>
-			<?php if ( ! empty( $this->label ) ) : ?>
+		<?php if ( ! empty( $this->label ) ) : ?>
 				<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
-			<?php endif; ?>
-			<?php if ( ! empty( $this->description ) ) : ?>
+		<?php endif; ?>
+		<?php if ( ! empty( $this->description ) ) : ?>
 				<span class="description customize-control-description"><?php echo esc_html( $this->description ); ?></span>
-			<?php endif; ?>
+		<?php endif; ?>
 			<div id="input_<?php echo esc_attr( $this->id ); ?>" class="image">
-			<?php foreach ( $this->choices as $value => $label ) : ?>
+		<?php foreach ( $this->choices as $value => $label ) : ?>
 				<input class="image-select" type="radio" value="<?php echo esc_attr( $value ); ?>" name="_customize-radio-<?php echo esc_attr( $this->id ); ?>" id="<?php echo esc_attr( $this->id ); ?><?php echo esc_attr( $value ); ?>" <?php $this->link(); ?> <?php checked( $this->value(), $value ); ?> >
 					<label for="<?php echo esc_attr( $this->id ); ?><?php echo esc_attr( $value ); ?>">
 						<img src="<?php echo esc_attr( $label ); ?>">
 						<span class="image-clickable"></span>
 					</label>
 				</input>
-			<?php endforeach; ?>
+		<?php endforeach; ?>
 			</div>
 		</label>
 		<?php
