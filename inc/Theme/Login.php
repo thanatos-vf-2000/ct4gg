@@ -9,7 +9,7 @@
  * @author    Franck VANHOUCKE <ct4gg@ginkgos.net>
  * @copyright 2021-2023 Copyright 2023, Inc. All rights reserved.
  * @license   GNU General Public License version 2 or later
- * @version   1.5.3 GIT:https://github.com/thanatos-vf-2000/WordPress
+ * @version   1.5.4 GIT:https://github.com/thanatos-vf-2000/WordPress
  * @link      https://ginkgos.net
  */
 
@@ -175,8 +175,8 @@ class Login extends BaseController {
 			array(
 				'priority'    => 30,
 				'capability'  => 'edit_theme_options',
-				'title'       => __( 'Login Custom', 'c2b4wp' ),
-				'description' => __( 'This section allows you to customize the login page of your website. Made with ❤ by <a target="_blank" rel="nofollow" href="https://loginpress.pro/?utm_source=login-customizer-lite&utm_medium=customizer">Hardeep Asrani</a> team.', 'c4b4wp' ),
+				'title'       => __( 'Login Custom', 'ct4gg' ),
+				'description' => __( 'This section allows you to customize the login page of your website.', 'ct4gg' ),
 			)
 		);
 
@@ -504,15 +504,15 @@ class Login extends BaseController {
 										 * Check if option exists in choice array
 										 */
 										if ( array_key_exists( $input, $control->choices ) ) {
-											 /**
-											  * If it does, return the value
-											  */
-											 return $input;
+											/**
+											 * If it does, return the value
+											 */
+											return $input;
 										} else {
-											  /**
-											   * Else, return default value
-											   */
-											  return $setting->default;
+												/**
+												* Else, return default value
+												*/
+												return $setting->default;
 										}
 									},
 								)
@@ -623,10 +623,8 @@ class Login extends BaseController {
 		$custom_css .= 'body.login div#login h1 a {';
 		if ( ! empty( $options['ct4gg_logo_show'] ) && 1 === $options['ct4gg_logo_show'] ) {
 			$custom_css .= 'display: none;';
-		} else {
-			if ( ! empty( $options['ct4gg_logo'] ) ) {
+		} elseif ( ! empty( $options['ct4gg_logo'] ) ) {
 				$custom_css .= 'background-image: url(" ' . $options['ct4gg_logo'] . ' ");';
-			}
 		}
 		$custom_css .= '}';
 
@@ -736,7 +734,7 @@ class Login extends BaseController {
 		/**
 		 * Hook inline styles to stylesheet
 		 */
-		wp_add_inline_style( CT4GG_NAME, $custom_css );
+		wp_add_inline_style( CT4GG_NAME, esc_attr( $custom_css ) );
 	}
 
 	/**

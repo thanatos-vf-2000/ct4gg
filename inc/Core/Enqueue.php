@@ -9,7 +9,7 @@
  * @author    Franck VANHOUCKE <ct4gg@ginkgos.net>
  * @copyright 2021-2023 Copyright 2023, Inc. All rights reserved.
  * @license   GNU General Public License version 2 or later
- * @version   1.5.3 GIT:https://github.com/thanatos-vf-2000/WordPress
+ * @version   1.5.4 GIT:https://github.com/thanatos-vf-2000/WordPress
  * @link      https://ginkgos.net
  */
 
@@ -19,14 +19,9 @@ class Enqueue {
 
 
 	public function register() {
-		add_action( 'init', array( $this, 'init' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue' ) );
 		add_action( 'admin_enqueue_scripts', array( $this, 'admin_enqueue' ) );
 		add_action( 'login_enqueue_scripts', array( $this, 'admin_enqueue' ) );
-	}
-
-	public function init() {
-		load_plugin_textdomain( 'ct4gg', false, CT4GG_PATH . '/languages' );
 	}
 
 	public function enqueue() {
@@ -39,18 +34,32 @@ class Enqueue {
 
 	public function admin_enqueue() {
 		wp_enqueue_media();
+		
 		wp_enqueue_script( 'jquery' );
+		/*
+		wp_dequeue_script( 'jquery' );
+		wp_dequeue_script( 'jquery-core' );
+		wp_dequeue_script( 'jquery-migrate' );
+		wp_enqueue_script( 'jquery', false, array(), false, true );
+		wp_enqueue_script( 'jquery-core', false, array(), false, true );
+		wp_enqueue_script( 'jquery-migrate', false, array(), false, true );
+		*/
+
 		wp_enqueue_style( 'wp-color-picker' );
 		wp_enqueue_script( 'wp-color-picker' );
+		$argsjsheader = array( 
+			'in_footer' => false,
+			'strategy'  => 'async',
+		);
 
 		if ( WP_DEBUG ) {
 			wp_enqueue_style( CT4GG_NAME, CT4GG_URL . 'assets/css/admin.css', array(), CT4GG_VERSION );
 			wp_enqueue_script( CT4GG_NAME, CT4GG_URL . 'assets/js/admin.js', array( 'jquery', 'wp-color-picker' ), CT4GG_VERSION, true );
-			wp_enqueue_script( CT4GG_NAME . '-header', CT4GG_URL . 'assets/js/admin-header.js', array(), CT4GG_VERSION, true );
+			wp_enqueue_script( CT4GG_NAME . '-header', CT4GG_URL . 'assets/js/admin-header.js', array( 'jquery' ), CT4GG_VERSION, false);
 		} else {
 			wp_enqueue_style( CT4GG_NAME, CT4GG_URL . 'assets/css/admin.min.css', array(), CT4GG_VERSION );
 			wp_enqueue_script( CT4GG_NAME, CT4GG_URL . 'assets/js/admin.min.js', array( 'jquery', 'wp-color-picker' ), CT4GG_VERSION, true );
-			wp_enqueue_script( CT4GG_NAME . '-header', CT4GG_URL . 'assets/js/admin-header.min.js', array(), CT4GG_VERSION, true );
+			wp_enqueue_script( CT4GG_NAME . '-header', CT4GG_URL . 'assets/js/admin-header.min.js', array('jquery' ), CT4GG_VERSION, false);
 		}
 
 		if ( isset( $_SERVER['SCRIPT_NAME'] ) && stripos( sanitize_text_field( wp_unslash( $_SERVER['SCRIPT_NAME'] ) ), strrchr( wp_login_url(), '/' ) ) !== false ) {
@@ -88,7 +97,7 @@ class Enqueue {
 				if ( ! WP_DEBUG ) {
 					$custom_css = $this->compress_css( $custom_css );
 				}
-				wp_add_inline_style( CT4GG_NAME, $custom_css );
+				wp_add_inline_style( CT4GG_NAME, esc_attr( $custom_css ) );
 			}
 		}
 	}
@@ -96,4 +105,5 @@ class Enqueue {
 	private static function compress_css( $css ) {
 		return preg_replace( '/\s+/', ' ', $css );
 	}
+
 }

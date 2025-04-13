@@ -1,16 +1,16 @@
 .customize-control-ct4gg-padding .field-area {
- width: 100%;
+width: 100%;
 }
 
 .customize-control-ct4gg-padding .field-icon {
- display: inline-table;
- width: 20%;
+display: inline-table;
+width: 20%;
 }
 
 .customize-control-ct4gg-padding input[type=number] {
- width: 25%;
+width: 25%;
 }
 
 .customize-control-ct4gg-padding input[type=text] {
- display: none;
+display: none;
 }

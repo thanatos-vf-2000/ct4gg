@@ -1,10 +1,10 @@
 === ct4gg ===
 Contributors: vanhoucke
-Tags: tools, customiser, homepage, meta generator, htaccess, cache, robots.txt, robots, humans.txt
+Tags: customiser, homepage, meta generator, htaccess, cache
 Requires at least: 5.2
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 1.5.3
+Stable tag: 1.5.4
 License: GPLv2
 
 Wordpress customiser tools for beginer and confirmed users.
@@ -123,11 +123,17 @@ If you want a new feature, you can contact me by email at contact@ginkgos.net
 
 == Changelog ==
 
-= 1.5.3 (2503-SFP1) =
-*Release Date - 21 March 2025*
+= 1.5.4 (2504-SFP1) =
+*Release Date - 13 April 2025*
 
-* Test up Woodpress 6.8,
-* Compatible PHP8.3 and change Requires PHP to 7.4.
+* Test up Wordpress 6.8-RC3,
+* Security: Calling files remotely (fontawesome 6.7.2),
+* Warning: Using load_plugin_textdomain() for loading the plugin translations is not needed for WordPress.org directory since WordPress 4.6,
+* Warning: Internationalization: Don't use variables or defines as text, context or text domain parameters,
+* Warning: Internationalization: Text domain does not match plugin slug,
+* Warning: Variables and options must be escaped when echo'd,
+* Security: Allowing Direct File Access to plugin files,
+* ERROR: WordPress.WP.I18n.MissingArgDomain.
 
 
 

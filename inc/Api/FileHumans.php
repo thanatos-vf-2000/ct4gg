@@ -158,7 +158,7 @@ class FileHumans extends BaseController {
 		$day = date( 'Ymd' );
 		$nb  = 0;
 		while ( file_exists( $this->location . 'humans.txt_' . $day . '-' . $nb ) ) :
-			$nb++;
+			++$nb;
 		endwhile;
 		if ( ! copy( $this->location . 'humans.txt', $this->location . 'humans.txt_' . $day . '-' . $nb ) ) {
 			return false;

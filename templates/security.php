@@ -9,13 +9,12 @@
  * @author    Franck VANHOUCKE <ct4gg@ginkgos.net>
  * @copyright 2021-2023 Copyright 2023, Inc. All rights reserved.
  * @license   GNU General Public License version 2 or later
- * @version   1.5.3 GIT:https://github.com/thanatos-vf-2000/WordPress
+ * @version   1.5.4 GIT:https://github.com/thanatos-vf-2000/WordPress
  * @link      https://ginkgos.net
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 use CT4GG\Api\FileSecurity;
 
 $security_file = new FileSecurity();
@@ -64,7 +63,7 @@ if ( isset( $_POST[ CT4GG_NAME . '-verif' ] ) && wp_verify_nonce( sanitize_text_
 		}
 	} elseif ( isset( $_POST['submit-security-delete'] ) ) {
 		if ( isset( $security_tmp ) ) {
-			if ( unlink( ABSPATH . $security_tmp ) ) {
+			if ( wp_delete_file( ABSPATH . $security_tmp ) ) {
 				self::view(
 					'security',
 					array(
@@ -134,8 +133,7 @@ if ( isset( $_POST[ CT4GG_NAME . '-verif' ] ) && wp_verify_nonce( sanitize_text_
 					)
 				);
 			}
-		} else {
-			if ( ! $security_file->save() ) {
+		} elseif ( ! $security_file->save() ) {
 				self::view(
 					'security',
 					array(
@@ -143,15 +141,14 @@ if ( isset( $_POST[ CT4GG_NAME . '-verif' ] ) && wp_verify_nonce( sanitize_text_
 						'nonce' => $security_nonce,
 					)
 				);
-			} else {
-				self::view(
-					'security',
-					array(
-						'type'  => 'update-ok',
-						'nonce' => $security_nonce,
-					)
-				);
-			}
+		} else {
+			self::view(
+				'security',
+				array(
+					'type'  => 'update-ok',
+					'nonce' => $security_nonce,
+				)
+			);
 		}
 	}
 }

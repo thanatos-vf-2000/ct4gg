@@ -171,7 +171,7 @@ class FileRobots extends BaseController {
 		$day = date( 'Ymd' );
 		$nb  = 0;
 		while ( file_exists( $this->location . 'robots.txt_' . $day . '-' . $nb ) ) :
-			$nb++;
+			++$nb;
 		endwhile;
 		if ( ! copy( $this->location . 'robots.txt', $this->location . 'robots.txt_' . $day . '-' . $nb ) ) {
 			return false;

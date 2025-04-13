@@ -9,7 +9,7 @@
  * @author    Franck VANHOUCKE <ct4gg@ginkgos.net>
  * @copyright 2021-2023 Copyright 2023, Inc. All rights reserved.
  * @license   GNU General Public License version 2 or later
- * @version   1.5.3 GIT:https://github.com/thanatos-vf-2000/WordPress
+ * @version   1.5.4 GIT:https://github.com/thanatos-vf-2000/WordPress
  * @link      https://ginkgos.net
  */
 
@@ -72,7 +72,7 @@ class PhpVersionCheck {
 			<p>
 		<?php
 		$str = 'CT4GG Plugin: ' . __( 'Your system is running a very old version of PHP (%1$s) that is no longer supported by %2$s.', 'ct4gg' );
-		printf( esc_html( $str ), PHP_VERSION, CT4GG_NAME );
+		printf( esc_html( $str ), esc_html( PHP_VERSION ), esc_html( CT4GG_NAME ) );
 
 		$str  = __( 'Please ask your host or server administrator to update to PHP %1s or greater.', 'ct4gg' ) . '<br/>';
 		$str .= __( 'If this is not possible, please visit the FAQ link titled ', 'ct4gg' );
@@ -80,7 +80,7 @@ class PhpVersionCheck {
 		$str .= __( '"What version of PHP Does Support?"', 'ct4gg' );
 		$str .= '</a>';
 		$str .= __( ' for instructions on how to download a previous version of this plugin compatible with PHP %2s.', 'ct4gg' );
-		printf( esc_html( $str ), self::$suggested_ver, PHP_VERSION );
+		printf( esc_html( $str ), esc_html( self::$suggested_ver) , esc_html( PHP_VERSION ) );
 		?>
 			</p>
 		</div>

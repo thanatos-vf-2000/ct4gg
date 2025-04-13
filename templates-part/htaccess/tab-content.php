@@ -9,9 +9,11 @@
  * @author    Franck VANHOUCKE <ct4gg@ginkgos.net>
  * @copyright 2021-2023 Copyright 2023, Inc. All rights reserved.
  * @license   GNU General Public License version 2 or later
- * @version   1.5.3 GIT:https://github.com/thanatos-vf-2000/WordPress
+ * @version   1.5.4 GIT:https://github.com/thanatos-vf-2000/WordPress
  * @link      https://ginkgos.net
  */
+
+if ( ! defined( 'ABSPATH' ) ) exit;
 
 use CT4GG\Api\FileHTAcccess;
 ?>
@@ -51,13 +53,12 @@ use CT4GG\Api\FileHTAcccess;
 					$contents = $wp_filesystem->get_contents( $htaccess_file );
 					if ( ! $contents ) {
 						esc_html_e( 'Error accessing file.', 'ct4gg' );
-					} else {
-						if ( file_exists( $htaccess_file ) ) {
+					} elseif ( file_exists( $htaccess_file ) ) {
 							echo '<p>' . esc_html( $htaccess_file . __( ' updated on ', 'ct4gg' ) . gmdate( 'F d Y H:i:s.', filemtime( $htaccess_file ) ) ) . '</p>';
-							?>
+						?>
 							<textarea cols="150" style="margin-top: 0px; margin-bottom: 0px; height: 500px;" name="htaccess-content" ><?php echo esc_html( $contents ); ?></textarea>
 							<?php
-						}
+
 					}
 					?>
 				</form>
@@ -80,12 +81,19 @@ use CT4GG\Api\FileHTAcccess;
 					foreach ( scandir( ABSPATH ) as $htaccess_filename ) {
 						if ( preg_match( '~htaccess*~', $htaccess_filename ) ) {
 							if ( basename( $htaccess_filename ) === '.htaccess' ) {
-										 $check = '';
+										$check = '';
 							} else {
 								$check = '<input type="checkbox" class="radio" value="' . esc_attr( basename( $htaccess_filename ) ) . '" id="ct4gg-htaccess" name="ct4gg-htaccess" />';
 							}
 							$display = '<dt>' . esc_txt( $check ) . '<b>' . esc_html( basename( $htaccess_filename ) ) . '</b> - ' . esc_html( gmdate( 'Ymd H:i:s.', filemtime( ABSPATH . $htaccess_filename ) ) ) . '</dt>';
-							echo esc_html( $display );
+							
+							$allowed_html = array(  'dt' => array(),
+													'b' => array(),
+													'input' => array( 'type' => true, 'class' => true, 'value' => true, 'id' => true, 'name' => true),
+													'a' => array( 'href' => true, 'target' => true ),
+												);
+							echo wp_kses($display ,$allowed_html );
+							
 						}
 					}
 					submit_button( __( 'Restore', 'ct4gg' ), 'primary', 'submit-htaccess-restore', false );

@@ -172,7 +172,7 @@ class FileSecurity extends BaseController {
 		$day = date( 'Ymd' );
 		$nb  = 0;
 		while ( file_exists( $this->location . 'security.txt_' . $day . '-' . $nb ) ) :
-			$nb++;
+			++$nb;
 		endwhile;
 		if ( ! copy( $this->location . 'security.txt', $this->location . 'security.txt_' . $day . '-' . $nb ) ) {
 			return false;

@@ -9,10 +9,10 @@
  * @author    Franck VANHOUCKE <ct4gg@ginkgos.net>
  * @copyright 2021-2023 Copyright 2023, Inc. All rights reserved.
  * @license   GNU General Public License version 2 or later
- * @version   1.5.3 GIT:https://github.com/thanatos-vf-2000/WordPress
+ * @version   1.5.4 GIT:https://github.com/thanatos-vf-2000/WordPress
  * @link      https://ginkgos.net
  */
-
+if ( ! defined( 'ABSPATH' ) ) exit;
 ?>
 	<div class="ct4gg-tab-content">
 		<div id="tab-1" class="ct4gg-tab-pane active">
@@ -68,10 +68,10 @@
 					// $contents = (is_array($contents) ? $contents : [$contents]);
 					foreach ( ( $contents ) as $line ) {
 						if ( preg_match( '/= (.*) =/', $line, $matches ) ) {
-							$nb++;
+							++$nb;
 							$ver = $matches[1];
 						} elseif ( preg_match( '/\*Release Date -(.*)\*/', $line, $matches ) ) {
-							$nb++;
+							++$nb;
 							echo '<dt><b>' . esc_html( $ver ) . '</b>: ' . esc_html( $matches[1] ) . '</dt>';
 						} elseif ( $nb > 2 ) {
 							echo '<dd>' . esc_html( $line ) . '</dd>';

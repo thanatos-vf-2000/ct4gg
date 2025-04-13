@@ -9,7 +9,7 @@
  * @author    Franck VANHOUCKE <ct4gg@ginkgos.net>
  * @copyright 2021-2023 Copyright 2023, Inc. All rights reserved.
  * @license   GNU General Public License version 2 or later
- * @version   1.5.3 GIT:https://github.com/thanatos-vf-2000/WordPress
+ * @version   1.5.4 GIT:https://github.com/thanatos-vf-2000/WordPress
  * @link      https://ginkgos.net
  */
 
@@ -37,9 +37,9 @@ class SettingsLinks {
 		}
 		if ( $plugin === $ct4gg_file ) {
 			$plugin_data = get_plugin_data( CT4GG_FILE );
-			$actions[]   = '<a href="admin.php?page=' . CT4GG_NAME . '_plugin">' . __( 'Settings' ) . '</a>';
-			$actions[]   = '<a href="' . $plugin_data['PluginURI'] . '" target="_blank">' . __( 'Support' ) . '</a>';
-			$actions[]   = '<a href="' . $plugin_data['AuthorURI'] . '" target="_blank">' . __( 'all GinkGos plugins ' ) . '</a>';
+			$actions[]   = '<a href="admin.php?page=' . CT4GG_NAME . '_plugin">' . esc_html( 'Settings', 'ct4gg') . '</a>';
+			$actions[]   = '<a href="' . $plugin_data['PluginURI'] . '" target="_blank">' . esc_html( 'Support', 'ct4gg' ) . '</a>';
+			$actions[]   = '<a href="' . $plugin_data['AuthorURI'] . '" target="_blank">' . esc_html( 'all GinkGos plugins', 'ct4gg' ) . '</a>';
 		}
 
 		return $actions;

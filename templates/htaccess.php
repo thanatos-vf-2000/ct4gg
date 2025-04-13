@@ -9,13 +9,11 @@
  * @author    Franck VANHOUCKE <ct4gg@ginkgos.net>
  * @copyright 2021-2023 Copyright 2023, Inc. All rights reserved.
  * @license   GNU General Public License version 2 or later
- * @version   1.5.3 GIT:https://github.com/thanatos-vf-2000/WordPress
+ * @version   1.5.4 GIT:https://github.com/thanatos-vf-2000/WordPress
  * @link      https://ginkgos.net
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
+if ( ! defined( 'ABSPATH' ) ) exit;
 
 use CT4GG\Api\FileHTAccess;
 
@@ -72,7 +70,7 @@ if ( isset( $_POST[ CT4GG_NAME . '-verif' ] ) && wp_verify_nonce( sanitize_text_
 		}
 	} elseif ( isset( $_POST['submit-htaccess-delete'] ) ) {
 		if ( isset( $htaccess_tmp ) ) {
-			if ( unlink( ABSPATH . $htaccess_tmp ) ) {
+			if ( wp_delete_file( ABSPATH . $htaccess_tmp ) ) {
 				self::view(
 					'htaccess',
 					array(
@@ -146,8 +144,7 @@ if ( isset( $_POST[ CT4GG_NAME . '-verif' ] ) && wp_verify_nonce( sanitize_text_
 					)
 				);
 			}
-		} else {
-			if ( ! $htaccess_file->save() ) {
+		} elseif ( ! $htaccess_file->save() ) {
 				self::view(
 					'htaccess',
 					array(
@@ -155,15 +152,14 @@ if ( isset( $_POST[ CT4GG_NAME . '-verif' ] ) && wp_verify_nonce( sanitize_text_
 						'nonce' => $htaccess_nonce,
 					)
 				);
-			} else {
-				self::view(
-					'htaccess',
-					array(
-						'type'  => 'update-ok',
-						'nonce' => $htaccess_nonce,
-					)
-				);
-			}
+		} else {
+			self::view(
+				'htaccess',
+				array(
+					'type'  => 'update-ok',
+					'nonce' => $htaccess_nonce,
+				)
+			);
 		}
 	}
 }

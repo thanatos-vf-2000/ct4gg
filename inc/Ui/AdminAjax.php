@@ -9,7 +9,7 @@
  * @author    Franck VANHOUCKE <ct4gg@ginkgos.net>
  * @copyright 2021-2023 Copyright 2023, Inc. All rights reserved.
  * @license   GNU General Public License version 2 or later
- * @version   1.5.3 GIT:https://github.com/thanatos-vf-2000/WordPress
+ * @version   1.5.4 GIT:https://github.com/thanatos-vf-2000/WordPress
  * @link      https://ginkgos.net
  */
 
@@ -153,9 +153,9 @@ class AdminAjax extends BaseController {
 							<td>
 			<?php
 			if ( is_array( $header_value ) ) {
-				echo esc_txt( implode( '<br />', array_map( 'esc_txt', $header_value ) ) );
+				echo esc_html(  implode( '<br />', array_map( 'esc_txt', $header_value ) )  );
 			} else {
-				echo esc_txt( $header_value );
+				echo esc_html( $header_value );
 			}
 			?>
 								</td>
@@ -205,11 +205,19 @@ class AdminAjax extends BaseController {
 				$description = $value['description'] . '<br><a href="' . $value['link'] . '" target="_blank"><code>' . $key . '</code></a>';
 			}
 
-			echo '<tr>
-                            <td ' . esc_txt( $css_name ) . '>' . esc_txt( $name ) . ' </td>
-                            <td> ' . esc_txt( $type ) . '</td>
-                            <td> ' . esc_txt( $description ) . '</td>
-                        </tr>';
+			$linetab =  '<tr>
+                            <td ' .  $css_name  . '>' .  $name  . ' </td>
+                            <td> ' .  $type  . '</td>
+                            <td> ' .  $description  . '</td>
+                        </tr>' ;
+			$allowed_html = array(  'tr' => array(),
+									'td' => array( 'style' => true, 'class' => true), 
+									'br' => array(), 
+									'code' => array(),
+									'span' => array( 'class' => true ),
+									'a' => array( 'href' => true, 'target' => true ),
+								);
+			echo wp_kses($linetab ,$allowed_html );
 		}
 		?>
 				</tbody>

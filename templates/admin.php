@@ -9,9 +9,11 @@
  * @author    Franck VANHOUCKE <ct4gg@ginkgos.net>
  * @copyright 2021-2023 Copyright 2023, Inc. All rights reserved.
  * @license   GNU General Public License version 2 or later
- * @version   1.5.3 GIT:https://github.com/thanatos-vf-2000/WordPress
+ * @version   1.5.4 GIT:https://github.com/thanatos-vf-2000/WordPress
  * @link      https://ginkgos.net
  */
+
+if ( ! defined( 'ABSPATH' ) ) exit;
 
 use CT4GG\Core\BaseController;
 use CT4GG\Api\FileHTAccess;
@@ -48,12 +50,10 @@ if ( isset( $_SERVER['REQUEST_URI'] ) && strpos( sanitize_text_field( wp_unslash
 		} else {
 			self::view( 'htaccess', array( 'type' => 'backup-ko' ) );
 		}
-	} else {
-		if ( ! $htaccess_file->save() ) {
+	} elseif ( ! $htaccess_file->save() ) {
 			self::view( 'htaccess', array( 'type' => 'update-ko' ) );
-		} else {
-			self::view( 'htaccess', array( 'type' => 'update-ok' ) );
-		}
+	} else {
+		self::view( 'htaccess', array( 'type' => 'update-ok' ) );
 	}
 
 	/*
@@ -80,12 +80,10 @@ if ( isset( $_SERVER['REQUEST_URI'] ) && strpos( sanitize_text_field( wp_unslash
 		} else {
 			self::view( 'humans', array( 'type' => 'backup-ko' ) );
 		}
-	} else {
-		if ( ! $humans_file->save() ) {
+	} elseif ( ! $humans_file->save() ) {
 			self::view( 'humans', array( 'type' => 'update-ko' ) );
-		} else {
-			self::view( 'humans', array( 'type' => 'update-ok' ) );
-		}
+	} else {
+		self::view( 'humans', array( 'type' => 'update-ok' ) );
 	}
 
 	/*
@@ -111,12 +109,10 @@ if ( isset( $_SERVER['REQUEST_URI'] ) && strpos( sanitize_text_field( wp_unslash
 		} else {
 			self::view( 'robots', array( 'type' => 'backup-ko' ) );
 		}
-	} else {
-		if ( ! $robots_file->save() ) {
+	} elseif ( ! $robots_file->save() ) {
 			self::view( 'robots', array( 'type' => 'update-ko' ) );
-		} else {
-			self::view( 'robots', array( 'type' => 'update-ok' ) );
-		}
+	} else {
+		self::view( 'robots', array( 'type' => 'update-ok' ) );
 	}
 
 	/*
@@ -148,12 +144,10 @@ if ( isset( $_SERVER['REQUEST_URI'] ) && strpos( sanitize_text_field( wp_unslash
 		} else {
 			self::view( 'security', array( 'type' => 'backup-ko' ) );
 		}
-	} else {
-		if ( ! $security_file->save() ) {
+	} elseif ( ! $security_file->save() ) {
 			self::view( 'security', array( 'type' => 'update-ko' ) );
-		} else {
-			self::view( 'security', array( 'type' => 'update-ok' ) );
-		}
+	} else {
+		self::view( 'security', array( 'type' => 'update-ok' ) );
 	}
 }
 self::get_template( array( 'header', 'admin/nav-tabs', 'admin/tab-content', 'footer' ) );

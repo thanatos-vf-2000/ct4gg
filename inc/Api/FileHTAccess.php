@@ -77,7 +77,7 @@ class FileHTAccess extends BaseController {
 					$this->items[] = '<IfModule mod_rewrite.c>';
 					$this->items[] = 'RewriteEngine On';
 					$this->items[] = 'RewriteBase /';
-					$head++;
+					++$head;
 				}
 				switch ( $key ) {
 					case 'login_slugs_login':
@@ -365,7 +365,7 @@ class FileHTAccess extends BaseController {
 		$day = date( 'Ymd' );
 		$nb  = 0;
 		while ( file_exists( $this->location . '.htaccess_' . $day . '-' . $nb ) ) :
-			$nb++;
+			++$nb;
 		endwhile;
 		if ( ! copy( $this->location . '.htaccess', $this->location . '.htaccess_' . $day . '-' . $nb ) ) {
 			return false;

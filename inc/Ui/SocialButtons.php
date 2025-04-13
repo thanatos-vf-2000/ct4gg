@@ -9,7 +9,7 @@
  * @author    Franck VANHOUCKE <ct4gg@ginkgos.net>
  * @copyright 2021-2023 Copyright 2023, Inc. All rights reserved.
  * @license   GNU General Public License version 2 or later
- * @version   1.5.3 GIT:https://github.com/thanatos-vf-2000/WordPress
+ * @version   1.5.4 GIT:https://github.com/thanatos-vf-2000/WordPress
  * @link      https://ginkgos.net
  */
 
@@ -127,7 +127,7 @@ class SocialButtons extends BaseController {
 
 	public function add_fontawesome_scripts() {
 		if ( ! \wp_style_is( 'font-awesome', 'enqueued' ) && ! \wp_style_is( 'fontawesome', 'enqueued' ) ) {
-			\wp_enqueue_style( 'font-awesome', '//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/fontawesome.min.css', array(), '6.0.0' );
+			\wp_enqueue_style( 'font-awesome', CT4GG_URL . 'assets/fontawesome/css/fontawesome.min.css', array(), '6.7.2' );
 		}
 	}
 }

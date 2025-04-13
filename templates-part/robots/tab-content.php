@@ -9,9 +9,11 @@
  * @author    Franck VANHOUCKE <ct4gg@ginkgos.net>
  * @copyright 2021-2023 Copyright 2023, Inc. All rights reserved.
  * @license   GNU General Public License version 2 or later
- * @version   1.5.3 GIT:https://github.com/thanatos-vf-2000/WordPress
+ * @version   1.5.4 GIT:https://github.com/thanatos-vf-2000/WordPress
  * @link      https://ginkgos.net
  */
+
+if ( ! defined( 'ABSPATH' ) ) exit;
 
 use CT4GG\Api\FileRobots;
 ?>
@@ -51,13 +53,12 @@ use CT4GG\Api\FileRobots;
 					$contents = $wp_filesystem->get_contents( $robots_file );
 					if ( ! $contents ) {
 						esc_html_e( 'Error accessing file.', 'ct4gg' );
-					} else {
-						if ( file_exists( $robots_file ) ) {
+					} elseif ( file_exists( $robots_file ) ) {
 							echo '<p>' . esc_html( $robots_file . __( ' updated on ', 'ct4gg' ) . gmdate( 'F d Y H:i:s.', filemtime( $robots_file ) ) ) . '</p>';
-							?>
+						?>
 							<textarea cols="150" style="margin-top: 0px; margin-bottom: 0px; height: 500px;" name="robots-content"><?php echo esc_html( $contents ); ?></textarea>
 							<?php
-						}
+
 					}
 					?>
 				</form>
@@ -80,12 +81,17 @@ use CT4GG\Api\FileRobots;
 					foreach ( scandir( ABSPATH ) as $robots_filename ) {
 						if ( preg_match( '~robots*~', $robots_filename ) ) {
 							if ( basename( $robots_filename ) === 'robots.txt' ) {
-										 $check = '';
+										$check = '';
 							} else {
 								$check = '<input type="checkbox" class="radio" value="' . esc_attr( basename( $robots_filename ) ) . '" id="ct4gg-robots" name="ct4gg-robots" />';
 							}
 							$display = '<dt>' . esc_txt( $check ) . '<b>' . esc_html( basename( $robots_filename ) ) . '</b> - ' . esc_html( gmdate( 'Ymd H:i:s.', filemtime( ABSPATH . $robots_filename ) ) ) . '</dt>';
-							echo esc_html( $display );
+							$allowed_html = array(  'dt' => array(),
+													'b' => array(),
+													'input' => array( 'type' => true, 'class' => true, 'value' => true, 'id' => true, 'name' => true),
+													'a' => array( 'href' => true, 'target' => true ),
+												);
+							echo wp_kses($display ,$allowed_html );
 						}
 					}
 					submit_button( __( 'Restore', 'ct4gg' ), 'primary', 'submit-robots-restore', false );
