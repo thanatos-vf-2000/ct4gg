@@ -7,9 +7,9 @@
  * @category  PHP
  * @package   CT4GGPlugin
  * @author    Franck VANHOUCKE <ct4gg@ginkgos.net>
- * @copyright 2021-2023 Copyright 2023, Inc. All rights reserved.
+ * @copyright 2021-2026 Copyright 2026, Inc. All rights reserved.
  * @license   GNU General Public License version 2 or later
- * @version   1.5.3 GIT:https://github.com/thanatos-vf-2000/WordPress
+ * @version   1.5.5 GIT:https://github.com/thanatos-vf-2000/WordPress
  * @link      https://ginkgos.net
  * @since     1.0.0
  */
@@ -67,7 +67,14 @@ class ManagerCallbacks extends BaseController {
 	 */
 	public function adminLoginSectionManager() {
 		if ( Options::get_option( 'login_screen_v2' ) === false ) {
-			esc_html_e( 'Manage the screen login <b style="color:red">Old version please use the new version section "Login Custom"</b>.', 'ct4gg' );
+			echo wp_kses(
+				__( 'Manage the screen login <b style="color:red">Old version please use the new version section "Login Custom"</b>.', 'ct4gg' ),
+				[
+					'b' => [
+						'style' => []
+					],
+				]
+			);
 		}
 	}
 
@@ -131,7 +138,14 @@ class ManagerCallbacks extends BaseController {
 	 * @return message
 	 */
 	public function loginSettingSectionManager() {
-		esc_html_e( 'Manage the screen login <b style="color:blue">New version</b>.<br>After saving the options go to <b>"Appearance (Themes)"</b> and choose <b>"Login Custom"</b> <b style="color:red">or</b> in the menu of <b>this plugin</b> chose <b>"Login Custom"</b>.', 'ct4gg' );
+		echo wp_kses(
+				__( 'Manage the screen login <b style="color:blue">New version</b>.<br>After saving the options go to <b>"Appearance (Themes)"</b> and choose <b>"Login Custom"</b> <b style="color:red">or</b> in the menu of <b>this plugin</b> chose <b>"Login Custom"</b>.', 'ct4gg' ),
+				[
+					'b' => [
+						'style' => []
+					],
+				]
+			);
 	}
 
 	/**
@@ -140,7 +154,14 @@ class ManagerCallbacks extends BaseController {
 	 * @return message
 	 */
 	public function socialbuttonsSettingSectionManager() {
-		esc_html_e( 'Management of options for Social Buttons.<br>This will create a WordPress shortcode <b style="color:blue">[ct4gg_social]</b>.', 'ct4gg' );
+		echo wp_kses(
+				__( 'Management of options for Social Buttons.<br>This will create a WordPress shortcode <b style="color:blue">[ct4gg_social]</b>.', 'ct4gg' ),
+				[
+					'b' => [
+						'style' => []
+					],
+				]
+			);
 	}
 
 	/**

@@ -1,10 +1,4 @@
 /*
-Plugin Name: ct4gg
-Author: Franck VANHOUCKE
-Author URI: https://ginkgos.net/
-Version: 1.4.7
-*/
-/*
 Variables global
 */
 /*
@@ -55,6 +49,9 @@ Import Core
   box-shadow: 0 5px 4px -2px rgba(0, 0, 0, 0.15);
 }
 
+/*
+Variables global
+*/
 div.ct4gg-ui-toggle {
   margin: 0;
   padding: 0;
@@ -199,6 +196,9 @@ input#submit-robots-restore, input#submit-robots-delete {
   margin-bottom: 0;
 }
 
+/*
+Variables global
+*/
 /*
 Variables Admin Customizer
 */
@@ -656,3 +656,9 @@ td.ct4gg-check-header-present {
 .ct4gg-dashicons-present, .ct4gg-dashicons-present::before {
   color: cyan;
 }
+/*
+Plugin Name: ct4gg
+Author: Franck VANHOUCKE
+Author URI: https://ginkgos.net/
+Version: 1.4.7
+*/

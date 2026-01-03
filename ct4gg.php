@@ -3,10 +3,10 @@
 Plugin Name: ct4gg
 Plugin URI: https://ginkgos.net/plugin/ct4gg/
 Description: Customiser Tools For GinkGos - Plugin / Customiser Tools for WordPress.
-Version: 1.5.4
+Version: 1.5.5
 Requires at least: 5.2
-Tested up to: 6.8
-Requires PHP: 7.4
+Tested up to: 6.9
+Requires PHP: 8.0
 Author: Franck VANHOUCKE
 Author URI: https://ginkgos.net/
 Network: true
@@ -14,7 +14,7 @@ License: GPLv2 or later
 Domain Path: /languages
 Text Domain: ct4gg
 
-Copyright 2020-2021 Franck VANHOUCKE
+Copyright 2020-2026 Franck VANHOUCKE
 
 	This program is free software; you can redistribute it and/or modify
 	it under the terms of the GNU General Public License, version 2, as
@@ -46,7 +46,7 @@ if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
 /**
  * Plugin variable information
  */
-define( 'CT4GG_VERSION', '1.5.4' );
+define( 'CT4GG_VERSION', '1.5.5' );
 define( 'CT4GG_NAME', 'ct4gg' );
 define( 'CT4GG_FILE', __FILE__ );
 define( 'CT4GG_PATH', plugin_dir_path( CT4GG_FILE ) );

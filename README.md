@@ -9,9 +9,9 @@
 Contributors: vanhoucke
 Tags: tools, customiser, homepage, redirect, Jetpack, performance, login, speed, comments, min comments, meta generator, htaccess, cache
 Requires at least: 5.7
-Tested up to: 6.8
-Requires PHP: 7.4
-Stable tag: 1.5.4
+Tested up to: 6.9
+Requires PHP: 8.0
+Stable tag: 1.5.5
 License: GPLv2
 
 Wordpress customiser tools for beginer and confirmed users.
@@ -128,17 +128,12 @@ If you want a new feature, you can contact me by email at contact@ginkgos.net
 ## Changelog
 
 
-### 1.5.4 (2504-SFP1) 
-*Release Date - 13 April 2025*
+### 1.5.5 (2601-SFP1)
+*Release Date - 03 January 2026*
 
-* Test up Wordpress 6.8-RC3,
-* Security: Calling files remotely (fontawesome 6.7.2),
-* Warning: Using load_plugin_textdomain() for loading the plugin translations is not needed for WordPress.org directory since WordPress 4.6,
-* Warning: Internationalization: Don't use variables or defines as text, context or text domain parameters,
-* Warning: Internationalization: Text domain does not match plugin slug,
-* Warning: Variables and options must be escaped when echo'd,
-* Security: Allowing Direct File Access to plugin files,
-* ERROR: WordPress.WP.I18n.MissingArgDomain.
+* Test up Wordpress 6.9.1-alpha-61393,
+* Requires PHP 8.x,
+* Update text display.
 
 See [changelog.txt](https://plugins.svn.wordpress.org/ct4gg/trunk/changelog.txt) for older changelog
 
