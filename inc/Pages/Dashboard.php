@@ -1,7 +1,7 @@
 <?php
 /**
  * @package CT4GGPlugin
- * @version 1.5.3
+ * @version 1.5.6
  */
 
 namespace CT4GG\Pages;
@@ -38,15 +38,15 @@ class Dashboard extends BaseController {
 		$this->set_sections();
 		$this->set_fields();
 
-		$this->settings->add_pages( $this->pages )->with_sub_page( __( 'Settings', 'ct4gg' ) )->register();
+		$this->settings->add_pages( $this->pages )->with_sub_page( ct4gg_t( 'Settings', 'ct4gg' ) )->register();
 	}
 
 	public function setPages() {
-		$icon_svg = CT4GG_URL . 'assets/img/logo-end.png';
+		//$icon_svg = CT4GG_URL . 'assets/img/logo-end.png';
 		if ( ! function_exists( 'get_plugin_data' ) ) {
 			include_once ABSPATH . 'wp-admin/includes/plugin.php';
 		}
-		$plugin_data = get_plugin_data( CT4GG_FILE );
+		$plugin_data = get_plugin_data( CT4GG_FILE, false, false );
 		$this->pages = array(
 			array(
 				'page_title' => $plugin_data['Name'],
@@ -54,7 +54,7 @@ class Dashboard extends BaseController {
 				'capability' => 'manage_options',
 				'menu_slug'  => CT4GG_NAME . '_plugin',
 				'callback'   => array( $this->callbacks, 'adminDashboard' ),
-				'icon_url'   => $icon_svg,
+				'icon_url'   => 'dashicons-admin-generic',
 				'position'   => 110,
 			),
 		);
@@ -75,67 +75,67 @@ class Dashboard extends BaseController {
 		$args = array(
 			array(
 				'id'       => CT4GG_NAME . '_admin_index',
-				'title'    => __( 'Settings Manager', 'ct4gg' ),
+				'title'    => ct4gg_t( 'Settings Manager', 'ct4gg' ),
 				'callback' => array( $this->callbacks_mngr, 'adminIndexSectionManager' ),
 				'page'     => CT4GG_NAME . '_plugin',
 			),
 			array(
 				'id'       => CT4GG_NAME . '_header_check',
-				'title'    => __( 'Security headers check', 'ct4gg' ),
+				'title'    => ct4gg_t( 'Security headers check', 'ct4gg' ),
 				'callback' => array( $this->callbacks_mngr, 'adminHeaderCheckManager' ),
 				'page'     => CT4GG_NAME . '_plugin',
 			),
 			array(
 				'id'       => CT4GG_NAME . '_admin_login',
-				'title'    => __( 'Login Manager screen', 'ct4gg' ),
+				'title'    => ct4gg_t( 'Login Manager screen', 'ct4gg' ),
 				'callback' => array( $this->callbacks_mngr, 'adminLoginSectionManager' ),
 				'page'     => CT4GG_NAME . '_plugin',
 			),
 			array(
 				'id'       => CT4GG_NAME . '_login',
-				'title'    => __( 'Login Custom', 'ct4gg' ),
+				'title'    => ct4gg_t( 'Login Custom', 'ct4gg' ),
 				'callback' => array( $this->callbacks_mngr, 'loginSettingSectionManager' ),
 				'page'     => CT4GG_NAME . '_plugin',
 			),
 			array(
 				'id'       => CT4GG_NAME . '_admin_setting',
-				'title'    => __( 'Administration - Settings Manager', 'ct4gg' ),
+				'title'    => ct4gg_t( 'Administration - Settings Manager', 'ct4gg' ),
 				'callback' => array( $this->callbacks_mngr, 'adminSettingSectionManager' ),
 				'page'     => CT4GG_NAME . '_plugin',
 			),
 			array(
 				'id'       => CT4GG_NAME . '_post_setting',
-				'title'    => __( 'Post - Settings Manager', 'ct4gg' ),
+				'title'    => ct4gg_t( 'Post - Settings Manager', 'ct4gg' ),
 				'callback' => array( $this->callbacks_mngr, 'postSettingSectionManager' ),
 				'page'     => CT4GG_NAME . '_plugin',
 			),
 			array(
 				'id'       => CT4GG_NAME . '_socialbuttons',
-				'title'    => __( 'Social Buttons', 'ct4gg' ),
+				'title'    => ct4gg_t( 'Social Buttons', 'ct4gg' ),
 				'callback' => array( $this->callbacks_mngr, 'socialbuttonsSettingSectionManager' ),
 				'page'     => CT4GG_NAME . '_plugin',
 			),
 			array(
 				'id'       => CT4GG_NAME . '_htaccess',
-				'title'    => __( 'Htaccess', 'ct4gg' ),
+				'title'    => ct4gg_t( 'Htaccess', 'ct4gg' ),
 				'callback' => array( $this->callbacks_mngr, 'htaccessSettingSectionManager' ),
 				'page'     => CT4GG_NAME . '_plugin',
 			),
 			array(
 				'id'       => CT4GG_NAME . '_robots',
-				'title'    => __( 'Robots', 'ct4gg' ),
+				'title'    => ct4gg_t( 'Robots', 'ct4gg' ),
 				'callback' => array( $this->callbacks_mngr, 'robotsSettingSectionManager' ),
 				'page'     => CT4GG_NAME . '_plugin',
 			),
 			array(
 				'id'       => CT4GG_NAME . '_humans',
-				'title'    => __( 'Humans', 'ct4gg' ),
+				'title'    => ct4gg_t( 'Humans', 'ct4gg' ),
 				'callback' => array( $this->callbacks_mngr, 'humansSettingSectionManager' ),
 				'page'     => CT4GG_NAME . '_plugin',
 			),
 			array(
 				'id'       => CT4GG_NAME . '_security',
-				'title'    => __( 'Security', 'ct4gg' ),
+				'title'    => ct4gg_t( 'Security', 'ct4gg' ),
 				'callback' => array( $this->callbacks_mngr, 'securitySettingSectionManager' ),
 				'page'     => CT4GG_NAME . '_plugin',
 			),

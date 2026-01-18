@@ -4,7 +4,7 @@ Tags: customiser, homepage, meta generator, htaccess, cache
 Requires at least: 5.2
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 1.5.5
+Stable tag: 1.5.6
 License: GPLv2
 
 Wordpress customiser tools for beginer and confirmed users.
@@ -123,12 +123,13 @@ If you want a new feature, you can contact me by email at contact@ginkgos.net
 
 == Changelog ==
 
-= 1.5.5 (2601-SFP1) =
-*Release Date - 03 January 2026*
+= 1.5.6 (2601-SFP2) =
+*Release Date - 18 January 2026*
 
-* Test up Wordpress 6.9.1-alpha-61393,
-* Requires PHP 8.x,
-* Update text display.
+* Error - Icon not display into Admin menu,
+* Error - All image corrupted,
+* Error - Display HTML tag,
+* Function _load_textdomain_just_in_time was called incorrectly. Translation loading for the ct4gg domain was triggered too early. This is usually an indicator for some code in the plugin or theme running too early. Translations should be loaded at the init action or later. Please see Debugging in WordPress for more information. (This message was added in version 6.7.0.).
 
 See [changelog.txt](https://plugins.svn.wordpress.org/ct4gg/trunk/changelog.txt) for older changelog
 

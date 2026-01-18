@@ -7,15 +7,17 @@
  * @category  PHP
  * @package   CT4GGPlugin
  * @author    Franck VANHOUCKE <ct4gg@ginkgos.net>
- * @copyright 2021-2023 Copyright 2023, Inc. All rights reserved.
+ * @copyright 2021-2027 Copyright 2027, Inc. All rights reserved.
  * @license   GNU General Public License version 2 or later
- * @version   1.5.3 GIT:https://github.com/thanatos-vf-2000/WordPress
+ * @version   1.5.6 GIT:https://github.com/thanatos-vf-2000/WordPress
  * @link      https://ginkgos.net
  */
 
 namespace CT4GG;
 
 use CT4GG\Core\Options;
+
+require CT4GG_PATH . 'inc/Core/Fonctions.php';
 
 final class Init {
 
@@ -27,6 +29,7 @@ final class Init {
 	 */
 	public static function get_services() {
 		return array(
+			Core\I18n::class,
 			Core\SettingsLinks::class,
 			Core\Enqueue::class,
 			Pages\Dashboard::class,

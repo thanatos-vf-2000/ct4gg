@@ -11,7 +11,7 @@ Tags: tools, customiser, homepage, redirect, Jetpack, performance, login, speed,
 Requires at least: 5.7
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 1.5.5
+Stable tag: 1.5.6
 License: GPLv2
 
 Wordpress customiser tools for beginer and confirmed users.
@@ -126,14 +126,6 @@ ct4gg is multisite compatible, in case of problem contact me.
 If you want a new feature, you can contact me by email at contact@ginkgos.net 
 
 ## Changelog
-
-
-### 1.5.5 (2601-SFP1)
-*Release Date - 03 January 2026*
-
-* Test up Wordpress 6.9.1-alpha-61393,
-* Requires PHP 8.x,
-* Update text display.
 
 See [changelog.txt](https://plugins.svn.wordpress.org/ct4gg/trunk/changelog.txt) for older changelog
 
