@@ -2,9 +2,9 @@
 Contributors: vanhoucke
 Tags: customiser, homepage, meta generator, htaccess, cache
 Requires at least: 5.2
-Tested up to: 6.9
-Requires PHP: 8.0
-Stable tag: 1.5.6
+Tested up to: 7.1
+Requires PHP: 8.3
+Stable tag: 1.5.7
 License: GPLv2
 
 Wordpress customiser tools for beginer and confirmed users.
