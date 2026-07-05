@@ -9,7 +9,7 @@
  * @author    Franck VANHOUCKE <ct4gg@ginkgos.net>
  * @copyright 2021-2023 Copyright 2023, Inc. All rights reserved.
  * @license   GNU General Public License version 2 or later
- * @version   1.5.6 GIT:https://github.com/thanatos-vf-2000/WordPress
+ * @version   1.5.6 GIT:https://github.com/thanatos-vf-2000/ct4gg
  * @link      https://ginkgos.net
  */
 

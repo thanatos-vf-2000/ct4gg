@@ -1,10 +1,10 @@
 === ct4gg ===
 Contributors: vanhoucke
-Tags: customiser, homepage, meta generator, htaccess, cache
+Tags: customiser, homepage, meta generator, htaccess, cache, llms.txt
 Requires at least: 5.2
 Tested up to: 7.1
 Requires PHP: 8.3
-Stable tag: 1.5.7
+Stable tag: 1.6.0
 License: GPLv2
 
 Wordpress customiser tools for beginer and confirmed users.
@@ -31,6 +31,7 @@ CT4GG is the Wordpress complementary tool which adds additional customiser optio
 * Display message on old post,
 * Manage option in .htaccess file (caches and security).
 * Build robots.txt, humans.txt and security.txt
+* Build llms.txt (site description for Large Language Models, see llmstxt.org)
 
 = Please Note =
 Adding an additional customization option to help us personalize our sites is a help for everyone. We all seek to hide or personalize options or displays; that's why your feedback is important to me. Thank you for helping me make WordPress the best blogging platform in the world.
@@ -49,7 +50,8 @@ This plugin doesn't require technical knowledge or to be a web developer. The ac
 4. Exemple of screenshot robots.txt file,
 5. Exemple of screenshot humans.txt file,
 6. Exemple of screenshot security.txt file,
-7. Example of restoration menu for htaccess files.
+7. Example of restoration menu for htaccess files,
+8. Exemple of screenshot llms.txt file.
 
 == Frequently Asked Questions ==
 
@@ -86,6 +88,7 @@ ct4gg is multisite compatible, in case of problem contact me.
 * Management robots.txt,
 * Management humans.txt,
 * Management security.txt,
+* Management llms.txt,
 * Social media sharing buttons.
 
 = Can I use a shortcode to place the share buttons? =
@@ -118,18 +121,24 @@ Alternatively, you can place the followin into your codes: <?php echo do_shortco
 3. you can modify the file if needed
 4. click on "Update security.txt" button
 
+= Apply changes in the file llms.txt =
+1. Activate the settings in Dashboard menu (title, summary, details, sitemap, pages, posts, optional links) and save them
+2. go to the llms menu
+3. you can modify the generated file if needed
+4. click on "Update llms.txt" button
+
+The llms.txt file is a proposed standard ([llmstxt.org](https://llmstxt.org/)) that lets you describe your site in a Markdown file so that Large Language Models can read and understand it more easily.
+
 = new features =
 If you want a new feature, you can contact me by email at contact@ginkgos.net 
 
 == Changelog ==
 
-= 1.5.6 (2601-SFP2) =
-*Release Date - 18 January 2026*
+= 1.6.0 (2607-SFP1) =
+*Release Date - 05 July 2026*
 
-* Error - Icon not display into Admin menu,
-* Error - All image corrupted,
-* Error - Display HTML tag,
-* Function _load_textdomain_just_in_time was called incorrectly. Translation loading for the ct4gg domain was triggered too early. This is usually an indicator for some code in the plugin or theme running too early. Translations should be loaded at the init action or later. Please see Debugging in WordPress for more information. (This message was added in version 6.7.0.).
+* Test up Wordpress 7.1-alpha-62633,
+* New - Management of the llms.txt file (title, summary, details, sitemap link, Pages list, Posts list, optional links), with build, backup and restore, following the llmstxt.org standard.
 
 See [changelog.txt](https://plugins.svn.wordpress.org/ct4gg/trunk/changelog.txt) for older changelog
 

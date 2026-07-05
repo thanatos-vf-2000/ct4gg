@@ -1,7 +1,12 @@
 <?php
 /**
- * @package CT4GGPlugin
- * @version 1.5.6
+ * @category  PHP
+ * @package   CT4GGPlugin
+ * @author    Franck VANHOUCKE <ct4gg@ginkgos.net>
+ * @copyright 2021-2026 Copyright 2026, Inc. All rights reserved.
+ * @license   GNU General Public License version 2 or later
+ * @version   1.6.0 GIT:https://github.com/thanatos-vf-2000/ct4gg
+ * @link      https://ginkgos.net
  */
 
 namespace CT4GG\Pages;
@@ -125,6 +130,12 @@ class Dashboard extends BaseController {
 				'id'       => CT4GG_NAME . '_robots',
 				'title'    => ct4gg_t( 'Robots', 'ct4gg' ),
 				'callback' => array( $this->callbacks_mngr, 'robotsSettingSectionManager' ),
+				'page'     => CT4GG_NAME . '_plugin',
+			),
+			array(
+				'id'       => CT4GG_NAME . '_llms',
+				'title'    => ct4gg_t( 'Llms', 'ct4gg' ),
+				'callback' => array( $this->callbacks_mngr, 'llmsSettingSectionManager' ),
 				'page'     => CT4GG_NAME . '_plugin',
 			),
 			array(

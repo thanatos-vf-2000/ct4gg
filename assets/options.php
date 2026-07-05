@@ -9,7 +9,7 @@
  * @author    Franck VANHOUCKE <ct4gg@ginkgos.net>
  * @copyright 2021-2023 Copyright 2023, Inc. All rights reserved.
  * @license   GNU General Public License version 2 or later
- * @version   1.5.4 GIT:https://github.com/thanatos-vf-2000/WordPress
+ * @version   1.6.0 GIT:https://github.com/thanatos-vf-2000/ct4gg
  * @link      https://ginkgos.net
  * @since     1.0.0
  */
@@ -51,6 +51,14 @@ return array(
 	'robots_wordpress'                       => false,
 	'robots_crawl_chatgpt'                   => false,
 	'robots_crawl_chatgpt_user'              => false,
+	'llms_title'                             => '',
+	'llms_summary'                           => '',
+	'llms_details'                           => '',
+	'llms_sitemap'                           => false,
+	'llms_pages'                             => false,
+	'llms_posts'                             => false,
+	'llms_posts_number'                      => 10,
+	'llms_optional'                          => '',
 	'humans_team'                            => 'Founder: Dupont DUPOND
 Contact: dupont.dupond [at] exemple.com
 From: Paris, France

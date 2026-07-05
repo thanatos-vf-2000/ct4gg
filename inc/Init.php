@@ -9,7 +9,7 @@
  * @author    Franck VANHOUCKE <ct4gg@ginkgos.net>
  * @copyright 2021-2027 Copyright 2027, Inc. All rights reserved.
  * @license   GNU General Public License version 2 or later
- * @version   1.5.6 GIT:https://github.com/thanatos-vf-2000/WordPress
+ * @version   1.6.0 GIT:https://github.com/thanatos-vf-2000/ct4gg
  * @link      https://ginkgos.net
  */
 
@@ -36,6 +36,7 @@ final class Init {
 			Pages\Header::class,
 			Pages\HTAccess::class,
 			Pages\Robots::class,
+			Pages\Llms::class,
 			Pages\Humans::class,
 			Pages\Security::class,
 			Theme\Login::class,

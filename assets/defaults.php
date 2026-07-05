@@ -9,7 +9,7 @@
  * @author    Franck VANHOUCKE <ct4gg@ginkgos.net>
  * @copyright 2021-2023 Copyright 2023, Inc. All rights reserved.
  * @license   GNU General Public License version 2 or later
- * @version   1.5.4 GIT:https://github.com/thanatos-vf-2000/WordPress
+ * @version   1.6.0 GIT:https://github.com/thanatos-vf-2000/ct4gg
  * @link      https://ginkgos.net
  */
 if ( ! defined( 'ABSPATH' ) ) exit;
@@ -219,6 +219,54 @@ return array(
 		'message' => 'https://platform.openai.com/docs/plugins/bot',
 		'section' => CT4GG_NAME . '_robots',
 		'type'    => 'checkboxField',
+	),
+	'llms_title'                             => array(
+		'title'   => ct4gg_t( 'Title.', 'ct4gg' ),
+		'message' => ct4gg_t( 'H1 title of the llms.txt file. Defaults to the site name if left empty.', 'ct4gg' ),
+		'section' => CT4GG_NAME . '_llms',
+		'type'    => 'textField',
+	),
+	'llms_summary'                           => array(
+		'title'   => ct4gg_t( 'Summary.', 'ct4gg' ),
+		'message' => ct4gg_t( 'Short blockquote summary. Defaults to the site tagline if left empty.', 'ct4gg' ),
+		'section' => CT4GG_NAME . '_llms',
+		'type'    => 'textField',
+	),
+	'llms_details'                           => array(
+		'title'   => ct4gg_t( 'Details.', 'ct4gg' ),
+		'message' => ct4gg_t( 'Optional free paragraph(s) describing the site, in Markdown.', 'ct4gg' ),
+		'section' => CT4GG_NAME . '_llms',
+		'rows'    => 5,
+		'cols'    => 100,
+		'type'    => 'textAreaField',
+	),
+	'llms_sitemap'                           => array(
+		'title'   => ct4gg_t( 'Add a link to the XML sitemap.', 'ct4gg' ),
+		'section' => CT4GG_NAME . '_llms',
+		'type'    => 'checkboxField',
+	),
+	'llms_pages'                             => array(
+		'title'   => ct4gg_t( 'List published Pages.', 'ct4gg' ),
+		'section' => CT4GG_NAME . '_llms',
+		'type'    => 'checkboxField',
+	),
+	'llms_posts'                             => array(
+		'title'   => ct4gg_t( 'List latest published Posts.', 'ct4gg' ),
+		'section' => CT4GG_NAME . '_llms',
+		'type'    => 'checkboxField',
+	),
+	'llms_posts_number'                      => array(
+		'title'   => ct4gg_t( 'Number of Posts to list.', 'ct4gg' ),
+		'section' => CT4GG_NAME . '_llms',
+		'type'    => 'textField',
+	),
+	'llms_optional'                          => array(
+		'title'   => ct4gg_t( 'Optional section.', 'ct4gg' ),
+		'message' => ct4gg_t( 'Free Markdown content (e.g. secondary links) added under an "## Optional" heading.', 'ct4gg' ),
+		'section' => CT4GG_NAME . '_llms',
+		'rows'    => 5,
+		'cols'    => 100,
+		'type'    => 'textAreaField',
 	),
 	'humans_team'                            => array(
 		'title'   => ct4gg_t( 'Team.', 'ct4gg' ),

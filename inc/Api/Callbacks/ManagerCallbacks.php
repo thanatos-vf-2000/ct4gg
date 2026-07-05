@@ -9,7 +9,7 @@
  * @author    Franck VANHOUCKE <ct4gg@ginkgos.net>
  * @copyright 2021-2026 Copyright 2026, Inc. All rights reserved.
  * @license   GNU General Public License version 2 or later
- * @version   1.5.5 GIT:https://github.com/thanatos-vf-2000/WordPress
+ * @version   1.6.0 GIT:https://github.com/thanatos-vf-2000/ct4gg
  * @link      https://ginkgos.net
  * @since     1.0.0
  */
@@ -112,6 +112,15 @@ class ManagerCallbacks extends BaseController {
 	 */
 	public function robotsSettingSectionManager() {
 		esc_html_e( 'Management of options to be included in the robots.txt file.', 'ct4gg' );
+	}
+
+	/**
+	 * Function llmsSettingSectionManager
+	 *
+	 * @return message
+	 */
+	public function llmsSettingSectionManager() {
+		esc_html_e( 'Management of options to be included in the llms.txt file.', 'ct4gg' );
 	}
 
 	/**

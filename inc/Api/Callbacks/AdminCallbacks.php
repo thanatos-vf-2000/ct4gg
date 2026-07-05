@@ -9,7 +9,7 @@
  * @author    Franck VANHOUCKE <ct4gg@ginkgos.net>
  * @copyright 2021-2023 Copyright 2023, Inc. All rights reserved.
  * @license   GNU General Public License version 2 or later
- * @version   1.5.3 GIT:https://github.com/thanatos-vf-2000/WordPress
+ * @version   1.6.0 GIT:https://github.com/thanatos-vf-2000/ct4gg
  * @link      https://ginkgos.net
  * @since     1.0.0
  */
@@ -49,6 +49,15 @@ class AdminCallbacks extends BaseController {
 	 */
 	public function adminRobots() {
 		return include_once "$this->plugin_path/templates/robots.php";
+	}
+
+	/**
+	 * Function adminLlms
+	 *
+	 * @return Page
+	 */
+	public function adminLlms() {
+		return include_once "$this->plugin_path/templates/llms.php";
 	}
 
 	/**

@@ -7,16 +7,15 @@
  * @category  PHP
  * @package   CT4GGPlugin
  * @author    Franck VANHOUCKE <ct4gg@ginkgos.net>
- * @copyright 2021-2023 Copyright 2023, Inc. All rights reserved.
+ * @copyright 2021-2026 Copyright 2026, Inc. All rights reserved.
  * @license   GNU General Public License version 2 or later
- * @version   1.5.4 GIT:https://github.com/thanatos-vf-2000/ct4gg
+ * @version   1.6.0 GIT:https://github.com/thanatos-vf-2000/ct4gg
  * @link      https://ginkgos.net
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit;
-
 ?>
 	<ul class="nav ct4gg-nav-tabs">
 		<li class="<?php echo esc_html( ( ( isset( $_POST['tab'] ) && sanitize_text_field( wp_unslash( $_POST['tab'] ) ) === 'tab-1' ) || ! isset( $_POST['tab'] ) ) ? 'active' : '' ); ?>"><a href="#tab-1"><?php esc_html_e( 'Display', 'ct4gg' ); ?></a></li>
-		<li class="<?php echo esc_html( ( isset( $_POST['tab'] ) && sanitize_text_field( wp_unslash( $_POST['tab'] ) ) === 'tab-2' ) ? 'active' : '' ); ?>"><a href="#tab-2"><?php esc_html_e( 'Restore humans.txt', 'ct4gg' ); ?></a></li>
+		<li class="<?php echo esc_html( ( isset( $_POST['tab'] ) && sanitize_text_field( wp_unslash( $_POST['tab'] ) ) === 'tab-2' ) ? 'active' : '' ); ?>"><a href="#tab-2"><?php esc_html_e( 'Restore llms.txt', 'ct4gg' ); ?></a></li>
 	</ul>

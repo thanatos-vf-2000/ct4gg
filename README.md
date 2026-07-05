@@ -11,7 +11,7 @@ Tags: tools, customiser, homepage, redirect, Jetpack, performance, login, speed,
 Requires at least: 5.7
 Tested up to: 7.1
 Requires PHP: 8.3
-Stable tag: 1.5.7
+Stable tag: 1.6.0
 License: GPLv2
 
 Wordpress customiser tools for beginer and confirmed users.
@@ -36,9 +36,9 @@ CT4GG is the Wordpress complementary tool which adds additional options. It allo
 * Force the minimum comment lenght,
 * Hide meta generator (Wordpress Version),
 * Display message on old post,
-* Manage option in .htaccess file (caches and security),
-* Build robots.txt, humans.txt and security.txt,
-* Check Header Security, Information display and cache configuration.
+* Manage option in .htaccess file (caches and security).
+* Build robots.txt, humans.txt and security.txt
+* Build llms.txt (site description for Large Language Models, see llmstxt.org)
 
 ### Please Note
 Adding an additional customization option to help us personalize our sites is a help for everyone. We all seek to hide or personalize options or displays; that's why your feedback is important to me. Thank you for helping me make WordPress the best blogging platform in the world.
@@ -57,7 +57,8 @@ This plugin doesn't require technical knowledge or to be a web developer. The ac
 4. Exemple of screenshot robots.txt file,
 5. Exemple of screenshot humans.txt file,
 6. Exemple of screenshot security.txt file,
-7. Example of restoration menu for htaccess files.
+7. Example of restoration menu for htaccess files,
+8. Exemple of screenshot llms.txt file.
 
 
 <img src="https://github.com/thanatos-vf-2000/ct4gg/blob/master/assets/img/screenshot-1.png" width="30%"></img> <img src="https://github.com/thanatos-vf-2000/ct4gg/blob/master/assets/img/screenshot-2.png" width="30%"></img> <img src="https://github.com/thanatos-vf-2000/ct4gg/blob/master/assets/img/screenshot-3.png" width="30%"></img><img src="https://github.com/thanatos-vf-2000/ct4gg/blob/master/assets/img/screenshot-4.png" width="30%"></img><img src="https://github.com/thanatos-vf-2000/ct4gg/blob/master/assets/img/screenshot-5.png" width="30%"></img><img src="https://github.com/thanatos-vf-2000/ct4gg/blob/master/assets/img/screenshot-6.png" width="30%"></img><img src="https://github.com/thanatos-vf-2000/ct4gg/blob/master/assets/img/screenshot-7.png" width="30%"></img> 
@@ -89,17 +90,17 @@ ct4gg is multisite compatible, in case of problem contact me.
 * Hide meta generator (Wordpress Version),
 * Display message on old post,
 * Management of the .htaccess file:
- Disable display of directory contents
- Hide server information
- Protect .htaccess and .htpasswds files
- Enable Force download
- Enable cache expires
- Compressing static files
-* Generate robots.txt
- Disable ChatGPT
- Disable ChatGPT plugin
-* Generate humans.txt
-* Generate security.txt
+    Disable display of directory contents
+    Hide server information
+    Protect .htaccess and .htpasswds files
+    Enable Force download
+    Enable cache expires
+    Compressing static files
+* Management robots.txt,
+* Management humans.txt,
+* Management security.txt,
+* Management llms.txt,
+* Social media sharing buttons.
 
 ### Apply changes in the file .htaccess
 1. Activate the settings and save them
@@ -121,6 +122,15 @@ ct4gg is multisite compatible, in case of problem contact me.
 2. go to the security menu
 3. you can modify the file if needed
 4. click on "Update security.txt" button
+
+### Apply changes in the file llms.txt =
+1. Activate the settings in Dashboard menu (title, summary, details, sitemap, pages, posts, optional links) and save them
+2. go to the llms menu
+3. you can modify the generated file if needed
+4. click on "Update llms.txt" button
+
+The llms.txt file is a proposed standard ([llmstxt.org](https://llmstxt.org/)) that lets you describe your site in a Markdown file so that Large Language Models can read and understand it more easily.
+
 
 ## new features
 If you want a new feature, you can contact me by email at contact@ginkgos.net 
