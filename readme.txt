@@ -2,9 +2,9 @@
 Contributors: vanhoucke
 Tags: customiser, homepage, meta generator, htaccess, cache, llms.txt
 Requires at least: 5.2
-Tested up to: 7.1
+Tested up to: 7.2
 Requires PHP: 8.3
-Stable tag: 1.6.0
+Stable tag: 1.6.1
 License: GPLv2
 
 Wordpress customiser tools for beginer and confirmed users.
@@ -134,11 +134,10 @@ If you want a new feature, you can contact me by email at contact@ginkgos.net
 
 == Changelog ==
 
-= 1.6.0 (2607-SFP1) =
-*Release Date - 05 July 2026*
+= 1.6.1 (2609-SFP1) =
+*Release Date - 05 September 2026*
 
-* Test up Wordpress 7.1-alpha-62633,
-* New - Management of the llms.txt file (title, summary, details, sitemap link, Pages list, Posts list, optional links), with build, backup and restore, following the llmstxt.org standard.
+* Test up Wordpress 7.2-alpha-63482.
 
 See [changelog.txt](https://plugins.svn.wordpress.org/ct4gg/trunk/changelog.txt) for older changelog
 

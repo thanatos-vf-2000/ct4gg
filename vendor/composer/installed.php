@@ -3,7 +3,7 @@
         'name' => 'thanatos-vf-2000/ct4gg',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => 'e1462bf4a488b6666fafaed3e7e87909572e1229',
+        'reference' => 'efb1009aec38fdd8694097599be199dde734b22e',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'thanatos-vf-2000/ct4gg' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => 'e1462bf4a488b6666fafaed3e7e87909572e1229',
+            'reference' => 'efb1009aec38fdd8694097599be199dde734b22e',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
