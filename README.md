@@ -8,10 +8,10 @@
 
 Contributors: vanhoucke
 Tags: tools, customiser, homepage, redirect, Jetpack, performance, login, speed, comments, min comments, meta generator, htaccess, cache
-Requires at least: 5.7
+Requires at least: 7.1
 Tested up to: 7.2
-Requires PHP: 8.3
-Stable tag: 1.6.1
+Requires PHP: 8.5
+Stable tag: 1.6.2
 License: GPLv2
 
 Wordpress customiser tools for beginer and confirmed users.

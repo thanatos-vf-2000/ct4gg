@@ -1,10 +1,10 @@
 === ct4gg ===
 Contributors: vanhoucke
-Tags: customiser, homepage, meta generator, htaccess, cache, llms.txt
-Requires at least: 5.2
+Tags: customiser, homepage, meta generator, htaccess, llms
+Requires at least: 7.1
 Tested up to: 7.2
-Requires PHP: 8.3
-Stable tag: 1.6.1
+Requires PHP: 8.5
+Stable tag: 1.6.2
 License: GPLv2
 
 Wordpress customiser tools for beginer and confirmed users.
@@ -134,10 +134,13 @@ If you want a new feature, you can contact me by email at contact@ginkgos.net
 
 == Changelog ==
 
-= 1.6.1 (2609-SFP1) =
-*Release Date - 05 September 2026*
+= 1.6.2 (2610-SFP1) =
+*Release Date - 18 October 2026*
 
-* Test up Wordpress 7.2-alpha-63482.
+* Test up Wordpress 7.2-alpha-64452,
+* Requires PHP 8.5 (Minimum recommended version for Wordpress 7.1),
+* PHP 8.5:
+    - Deprecated:  Implicitly marking parameter <var> as nullable is deprecated, the explicit nullable type must be used instead.
 
 See [changelog.txt](https://plugins.svn.wordpress.org/ct4gg/trunk/changelog.txt) for older changelog
 

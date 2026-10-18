@@ -2,14 +2,14 @@
 /**
  * Setting API
  *
- * PHP version 7
+ * PHP version 8
  *
  * @category  PHP
  * @package   CT4GGPlugin
  * @author    Franck VANHOUCKE <ct4gg@ginkgos.net>
  * @copyright 2021-2023 Copyright 2023, Inc. All rights reserved.
  * @license   GNU General Public License version 2 or later
- * @version   1.5.3 GIT:https://github.com/thanatos-vf-2000/ct4gg
+ * @version   1.6.2 GIT:https://github.com/thanatos-vf-2000/ct4gg
  * @link      https://ginkgos.net
  */
 namespace CT4GG\Api;
@@ -43,7 +43,7 @@ class SettingsApi {
 		return $this;
 	}
 
-	public function with_sub_page( string $title = null ) {
+	public function with_sub_page( ?string $title = null ) {
 		if ( empty( $this->admin_pages ) ) {
 			return $this;
 		}
